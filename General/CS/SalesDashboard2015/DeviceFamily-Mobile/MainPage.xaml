@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="SalesDashboard2015.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SalesDashboard2015"
+    xmlns:data="using:SalesDashboard2015.DataModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <data:SampleDataSource x:Key="dataSource"/>
+    </Page.Resources>
+    <Page.DataContext>
+        <Binding Source="{StaticResource dataSource}"/>
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image x:Name="bgImage" Source="Assets/wood_bg.png" Stretch="Fill">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="transform" Angle="0" />
+            </Image.RenderTransform>
+        </Image>
+        <Pivot>
+            <Pivot.Title>
+                <TextBlock x:Name="pageTitle" Text="{Binding AppName_Text,Source={StaticResource SalesDashboardLocalization}}" IsHitTestVisible="False" Style="{StaticResource PhonePageHeaderTextStyle}" />
+            </Pivot.Title>
+            <PivotItem Header="{Binding PhoneQuarterly_Header,Source={StaticResource SalesDashboardLocalization}}">
+                <local:QuarterlySales/>
+            </PivotItem>
+            <PivotItem Header="{Binding PhoneTotal_Header,Source={StaticResource SalesDashboardLocalization}}">
+                <local:TotalSales/>
+            </PivotItem>
+            <PivotItem Header="{Binding PhoneType_Header,Source={StaticResource SalesDashboardLocalization}}">
+                <local:SalesByType/>
+            </PivotItem>
+            <PivotItem Header="{Binding PhoneRegion_Header,Source={StaticResource SalesDashboardLocalization}}">
+                <local:SalesByRegion/>
+            </PivotItem>
+            <PivotItem Header="{Binding PhonePartner_Header,Source={StaticResource SalesDashboardLocalization}}">
+                <local:SalesByPartner/>
+            </PivotItem>
+            <PivotItem Header="{Binding PhoneCategory_Header,Source={StaticResource SalesDashboardLocalization}}">
+                <local:SalesByCategory/>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

@@ -1,0 +1,82 @@
+﻿<Page x:Class="FlexChart101.FunnelChart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:FlexChart101"
+      xmlns:Chart="using:C1.Xaml.Chart"
+      xmlns:Xaml="using:C1.Xaml"
+      mc:Ignorable="d" 
+      DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel.Resources>
+                <local:FormatConverter x:Key="FTConverter" />
+                <Style TargetType="Xaml:C1NumericBox">
+                    <Setter Property="Width" Value="200" />
+                    <Setter Property="Margin" Value="5 0 5 0" />
+                    <Setter Property="Format" Value="f1" />
+                </Style>
+            </StackPanel.Resources>
+            <StackPanel Orientation="Vertical">
+                <StackPanel.RenderTransform>
+                    <ScaleTransform ScaleX="0.7" ScaleY="0.7" />
+                </StackPanel.RenderTransform>
+                <TextBlock Text="{Binding Source={StaticResource FlexChart101Localization}, Path=NeckWidth}" Margin="0 0 0 3"/>
+                <Xaml:C1NumericBox Minimum="0" Maximum="1" Increment="0.1" Value="{Binding ElementName=funnelChart, Path=Options.FunnelNeckWidth, Mode=TwoWay, Converter={StaticResource FTConverter}}" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="-60 0 0 0">
+                <StackPanel.RenderTransform>
+                    <ScaleTransform ScaleX="0.7" ScaleY="0.7" />
+                </StackPanel.RenderTransform>
+                <TextBlock Text="{Binding Source={StaticResource FlexChart101Localization}, Path=NeckHeight}" Margin="0 0 0 3"/>
+                <Xaml:C1NumericBox Minimum="0" Maximum="1" Increment="0.1" Value="{Binding ElementName=funnelChart, Path=Options.FunnelNeckHeight, Mode=TwoWay, Converter={StaticResource FTConverter}}" />
+            </StackPanel>
+        </StackPanel>
+        <Chart:C1FlexChart x:Name="funnelChart"
+                           LegendPosition="Bottom"
+                           ChartType="Funnel" 
+                           SelectionMode="Series"
+                           FontSize="10"
+                           Margin="0 -10 0 0"
+                           BindingX="Country" 
+                           ItemsSource="{Binding Data}" 
+                           Grid.Row="1">
+            <Chart:Series SeriesName="Sales" Binding="Sales" />
+            <Chart:C1FlexChart.DataLabel>
+                <Chart:DataLabel Content="{}{y}" Position="Center" />
+            </Chart:C1FlexChart.DataLabel>
+            <Chart:C1FlexChart.Options>
+                <Chart:ChartOptions FunnelType="Default" FunnelNeckHeight="0.2" />
+            </Chart:C1FlexChart.Options>
+        </Chart:C1FlexChart>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar>
+            <AppBar.Resources>
+                <local:EnumConverter x:Key="enumConverter" />
+                <Style TargetType="ComboBox">
+                    <Setter Property="ItemTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Inlines>
+                                        <Run Text="{Binding Source={StaticResource FlexChart101Localization}, Path=FunnelType}" />
+                                        <Run Text="{Binding}"/>
+                                    </TextBlock.Inlines>
+                                </TextBlock>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </AppBar.Resources>
+            <ComboBox Width="200" ItemsSource="{Binding FunnelTypes}"
+                      SelectedValue="{Binding Path=Funnel.Options.FunnelType, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=FunnelChartType}" />
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

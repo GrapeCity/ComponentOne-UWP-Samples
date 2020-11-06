@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="C1FlexReportExplorer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:C1FlexReportExplorer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fv="using:C1.Xaml.FlexViewer" 
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="White" >
+        <fv:C1FlexViewer
+            x:Name="flexViewer"
+            Grid.Column="1"
+            />
+        <ProgressRing
+            x:Name="progressRing"
+            Grid.Column="1"
+            Width="60"
+            Height="60"
+            />
+    </Grid>
+
+</Page>

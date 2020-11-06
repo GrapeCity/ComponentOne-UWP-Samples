@@ -1,0 +1,82 @@
+﻿<UserControl
+    x:Class="OfflineMaps.ScaleTool"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <SolidColorBrush x:Key="MapBackgroundThemeBrush" Color="#66000000"/>
+                    <SolidColorBrush x:Key="MapForegroundThemeBrush" Color="White"/>
+                    <Thickness x:Key="MapBorderThemeThickness">2</Thickness>
+                    <SolidColorBrush x:Key="MapBorderThemeBrush" Color="White"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="MapBackgroundThemeBrush" Color="#66FFFFFF"/>
+                    <SolidColorBrush x:Key="MapForegroundThemeBrush" Color="#FF000000"/>
+                    <Thickness x:Key="MapBorderThemeThickness">2</Thickness>
+                    <SolidColorBrush x:Key="MapBorderThemeBrush" Color="#FF000000"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <SolidColorBrush x:Key="MapBackgroundThemeBrush" Color="Black"/>
+                    <SolidColorBrush x:Key="MapForegroundThemeBrush" Color="#FFFFFF00"/>
+                    <Thickness x:Key="MapBorderThemeThickness">2</Thickness>
+                    <SolidColorBrush x:Key="MapBorderThemeBrush" Color="White"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrastBlack">
+                    <SolidColorBrush x:Key="MapBackgroundThemeBrush" Color="Black"/>
+                    <SolidColorBrush x:Key="MapForegroundThemeBrush" Color="White"/>
+                    <Thickness x:Key="MapBorderThemeThickness">2</Thickness>
+                    <SolidColorBrush x:Key="MapBorderThemeBrush" Color="White"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrastWhite">
+                    <SolidColorBrush x:Key="MapBackgroundThemeBrush" Color="White"/>
+                    <SolidColorBrush x:Key="MapForegroundThemeBrush" Color="Black"/>
+                    <Thickness x:Key="MapBorderThemeThickness">2</Thickness>
+                    <SolidColorBrush x:Key="MapBorderThemeBrush" Color="Black"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+
+            <Style x:Key="MapScaleItemStyle" TargetType="Border">
+                <Setter Property="MinWidth" Value="20" />
+                <Setter Property="MaxWidth" Value="158" />
+                <Setter Property="Height" Value="12" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Background" Value="#FF4617B4"/>
+            </Style>
+
+            <!-- Style @ C1Map Scale Label -->
+            <Style x:Key="MapScaleLabelStyle" TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Right" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Margin" Value="3" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <Border Background="{ThemeResource MapBackgroundThemeBrush}" BorderThickness="{ThemeResource MapBorderThemeThickness}" BorderBrush="{ThemeResource MapBorderThemeBrush}" Padding="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="55" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border x:Name="MetersScale" Grid.Column="1" Style="{StaticResource MapScaleItemStyle}" IsHitTestVisible="true" Margin="0,0,0,4" VerticalAlignment="Bottom" />
+            <Border x:Name="MilesScale" Grid.Column="1" Grid.Row="1" Style="{StaticResource MapScaleItemStyle}" IsHitTestVisible="true" />
+            <TextBlock x:Name="MetersLabel" Foreground="{Binding Foreground}" Text="" Style="{StaticResource MapScaleLabelStyle}" />
+            <TextBlock x:Name="MilesLabel" Grid.Row="1" Foreground="{Binding Foreground}" Text="" Style="{StaticResource MapScaleLabelStyle}" />
+        </Grid>
+    </Border>
+</UserControl>

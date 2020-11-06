@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="DashboardUWP.Products"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DashboardUWP"
+    xmlns:model="using:DashboardModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Style/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Page.DataContext>
+        <model:ProductsPageViewModel/>
+    </Page.DataContext>
+    <Grid Background="#f7f7f7">
+        <Grid Style="{ThemeResource RootGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{ThemeResource Tilte}" x:Uid="ProductsPageTitle" />
+            <Pivot Grid.Row="1" Background="White">
+                <PivotItem x:Uid="All">
+                    <ListBox Style="{ThemeResource ProductsViewStyle}" ItemsSource="{Binding ProductAllItemSource}"/>
+                </PivotItem>
+                <PivotItem x:Uid="Sports">
+                    <ListBox Style="{ThemeResource ProductsViewStyle}" ItemsSource="{Binding ProductSportsItemSource}"/>
+                </PivotItem>
+                <PivotItem x:Uid="City">
+                    <ListBox Style="{ThemeResource ProductsViewStyle}" ItemsSource="{Binding ProductCityItemSource}"/>
+                </PivotItem>
+                <PivotItem x:Uid="MultiUtility">
+                    <ListBox Style="{ThemeResource ProductsViewStyle}" ItemsSource="{Binding ProductMultiUtilityItemSource}"/>
+                </PivotItem>
+                <PivotItem x:Uid="NewEntry">
+                    <ListBox Style="{ThemeResource ProductsViewStyle}" ItemsSource="{Binding ProductNewEntryItemSource}"/>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

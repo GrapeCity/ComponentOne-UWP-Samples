@@ -1,0 +1,434 @@
+﻿<Page
+    x:Class="RichTextBoxSamples.RichTextBoxFormatting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RichTextBoxSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:c1RTB="using:C1.Xaml.RichTextBox"
+    xmlns:c1Doc="using:C1.Xaml.RichTextBox.Documents"
+    mc:Ignorable="d"
+    d:DesignHeight="300"    
+    d:DesignWidth="400" RequestedTheme="Light">
+    <Grid x:Name="LayoutRoot">
+        <c1RTB:C1RichTextBoxMenu x:Name="rtbMenu" RichTextBox="{Binding ElementName=rtb}"/>
+        <c1RTB:C1RichTextBox x:Name="rtb">
+            <c1Doc:C1Document>
+                <c1Doc:C1List MarkerStyle="Decimal">
+                    <c1Doc:C1List.Children>
+                        <c1Doc:C1ListItem FontSize="20">
+                            <c1Doc:C1Paragraph>
+                                <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataTextFormat" Text="Text formatting:" />
+                            </c1Doc:C1Paragraph>
+                        </c1Doc:C1ListItem>
+                        <c1Doc:C1List FontSize="20" MarkerStyle="Disc">
+                            <c1Doc:C1ListItem>
+                                <c1Doc:C1Paragraph>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataFont" Text="Font" FontFamily="Times New Roman"/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataSpace" Text=" " />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataFamilies" Text="families" FontFamily="Comic Sans MS"/>
+                                </c1Doc:C1Paragraph>
+                            </c1Doc:C1ListItem>
+
+                            <c1Doc:C1ListItem>
+                                <c1Doc:C1Paragraph>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataBold" Text="Bold" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataAnd" Text=" and " />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataItalic" Text="Italic" FontStyle="Italic" />
+                                </c1Doc:C1Paragraph>
+                            </c1Doc:C1ListItem>
+                            <c1Doc:C1ListItem>
+                                <c1Doc:C1Paragraph>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataF" Text="F" FontSize="20" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataO" Text="o" FontSize="16" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataN" Text="n" FontSize="13" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataT" Text="t" FontSize="10" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataSpace" Text=" " />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataS" Text="s" FontSize="7"/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataI" Text="i" FontSize="10"/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataZ" Text="z" FontSize="13"/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataE" Text="e"  FontSize="16"/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataS" Text="s" FontSize="20"/>
+                                </c1Doc:C1Paragraph>
+                            </c1Doc:C1ListItem>
+
+                            <c1Doc:C1ListItem>
+                                <c1Doc:C1Paragraph>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataForeground" Text="Foreground" Foreground="Blue" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataComma" Text=", "/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataRBoder" Text="round borders" BorderBrush="Green" BorderThickness="1" CornerRadius="4" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataAnd" Text=" and " />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataBackground" Text="background" Background="Yellow" />
+                                </c1Doc:C1Paragraph>
+                            </c1Doc:C1ListItem>
+
+                            <c1Doc:C1ListItem>
+                                <c1Doc:C1Paragraph>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataSuper" Text="Super" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataScript" Text="script" VerticalAlignment="Super"  FontSize="15"/>
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataAnd" Text=" and " />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataSub" Text="Sub" />
+                                    <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataScript" Text="script" VerticalAlignment="Sub"  FontSize="15"/>
+                                </c1Doc:C1Paragraph>
+                            </c1Doc:C1ListItem>
+                        </c1Doc:C1List>
+
+                        <c1Doc:C1ListItem FontSize="20">
+                            <c1Doc:C1Paragraph>
+                                <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataParaFormat" Text="Paragraph formatting:" />
+                            </c1Doc:C1Paragraph>
+                            <c1Doc:C1List FontSize="18" MarkerStyle="Disc">
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara1" 
+                                                     Text="Left, center, right and justify alignments:"/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Paragraph TextAlignment="Left" Margin="30 0 50 10">
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara2"
+                                                     Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Paragraph TextAlignment="Center" Margin="30 0 50 10">
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara3"
+                                                     Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Paragraph TextAlignment="Right" Margin="30 0 50 10">
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara4"
+                                                     Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Paragraph TextAlignment="Justify" Margin="30 0 50 10">
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara5" 
+                                                     Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    </c1Doc:C1Paragraph>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara6" 
+                                                     Text="Margins, border, padding and background:"/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Paragraph Margin="30 0 50 10" Padding="30" BorderBrush="Blue" BorderThickness="5" Background="Beige">
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara7" 
+                                                     Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    </c1Doc:C1Paragraph>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara8" 
+                                                     Text="Indent and line height:"/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Paragraph Margin="30 0 50 10" TextIndent="40" LineHeight="2">
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataPara9"
+                                                     Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+                                    </c1Doc:C1Paragraph>
+                                </c1Doc:C1ListItem>
+
+                            </c1Doc:C1List>
+                        </c1Doc:C1ListItem>
+
+                        <c1Doc:C1ListItem FontSize="20">
+                            <c1Doc:C1Paragraph>
+                                <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataTableFormat" Text="Table formatting:"/>
+                            </c1Doc:C1Paragraph>
+                            <c1Doc:C1List FontSize="20" MarkerStyle="Disc">
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCBorder" Text="Collapsible borders:" />
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1Doc:C1TableRowGroup>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Blue" BorderThickness="6">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell" />
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                        </c1Doc:C1TableRowGroup>
+                                    </c1Doc:C1Table>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataBSpace" Text="Border spacing:"/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Table BorderSpacing="3 3" Margin="30 0 50 10">
+                                        <c1Doc:C1TableRowGroup>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Blue" BorderThickness="6">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                        </c1Doc:C1TableRowGroup>
+                                    </c1Doc:C1Table>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCRSpan" Text="Column and row spans:"/>
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1Doc:C1TableRowGroup>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2" RowSpan="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2" ColumnSpan="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                        </c1Doc:C1TableRowGroup>
+                                    </c1Doc:C1Table>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCRBack" Text="Row and column backgrounds:" />
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1Doc:C1Table.Columns>
+                                            <c1Doc:C1TableColumn />
+                                            <c1Doc:C1TableColumn Background="Salmon"/>
+                                        </c1Doc:C1Table.Columns>
+                                        <c1Doc:C1TableRowGroup>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell" />
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                            <c1Doc:C1TableRow Background="LightBlue">
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell" />
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell" />
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell" />
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCell" Text="Cell"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                        </c1Doc:C1TableRowGroup>
+                                    </c1Doc:C1Table>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataCWidth" Text="Column widths:" />
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1Doc:C1Table.Columns>
+                                            <c1Doc:C1TableColumn />
+                                            <c1Doc:C1TableColumn />
+                                        </c1Doc:C1Table.Columns>
+                                        <c1Doc:C1TableRowGroup>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataFiftyPer" Text="50%"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataFifty" Text="50px"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataAuto" Text="Auto" />
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                        </c1Doc:C1TableRowGroup>
+                                    </c1Doc:C1Table>
+                                </c1Doc:C1ListItem>
+
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataVAlign" Text="Vertical alignment:" />
+                                    </c1Doc:C1Paragraph>
+                                    <c1Doc:C1Table BorderCollapse="True" Margin="30 0 50 10">
+                                        <c1Doc:C1TableRowGroup>
+                                            <c1Doc:C1TableRow>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataTop" Text="Top&amp;#xA;&amp;#xA;&amp;#xA;&amp;#xA;&amp;#xA;"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2" VerticalAlignment="Middle">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataMiddle" Text="Middle"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                                <c1Doc:C1TableCell BorderBrush="Black" BorderThickness="2" VerticalAlignment="Bottom">
+                                                    <c1Doc:C1Paragraph Margin="2">
+                                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataBottom" Text="Bottom"/>
+                                                    </c1Doc:C1Paragraph>
+                                                </c1Doc:C1TableCell>
+                                            </c1Doc:C1TableRow>
+                                        </c1Doc:C1TableRowGroup>
+                                    </c1Doc:C1Table>
+                                </c1Doc:C1ListItem>
+
+                            </c1Doc:C1List>
+                        </c1Doc:C1ListItem>
+
+                        <c1Doc:C1ListItem FontSize="20">
+                            <c1Doc:C1Paragraph>
+                                <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataMisc" Text="Miscellaneous:" />
+                            </c1Doc:C1Paragraph>
+                            <c1Doc:C1List FontSize="20" MarkerStyle="Disc">
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataInline" Text="Inline"/>
+                                        <c1Doc:C1InlineUIContainer IsEditable="False">
+                                            <c1Doc:C1InlineUIContainer.Content>
+                                                <Image Source="../Assets/c1icon.png" />
+                                            </c1Doc:C1InlineUIContainer.Content>
+                                        </c1Doc:C1InlineUIContainer>
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataImg" Text="images" />
+                                    </c1Doc:C1Paragraph>
+                                </c1Doc:C1ListItem>
+                                <c1Doc:C1ListItem>
+                                    <c1Doc:C1Paragraph>
+                                        <c1Doc:C1Run />
+                                        <c1Doc:C1Run x:Uid="/RichTextBoxSamplesLib/Resources/FormatDataElement" Text="Uneditable, but deletable, elements" IsEditable="False" />
+                                        <c1Doc:C1Run />
+                                    </c1Doc:C1Paragraph>
+                                </c1Doc:C1ListItem>
+                            </c1Doc:C1List>
+                        </c1Doc:C1ListItem>
+                    </c1Doc:C1List.Children>
+                </c1Doc:C1List>
+            </c1Doc:C1Document>
+        </c1RTB:C1RichTextBox>
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="rtbMenu.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="StockAnalysis.Partial.UserControls.Display"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StockAnalysis.Partial.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:fcbase="using:C1.Chart.Finance" 
+  xmlns:cc="using:StockAnalysis.Partial.CustomControls"
+  mc:Ignorable="d"
+   d:DesignHeight="400" d:DesignWidth="210" Background="White">
+
+  <UserControl.Resources>
+    <fcbase:FinancialChartType x:Key="Candlestick">Candlestick</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="ArmsCandleVolume">ArmsCandleVolume</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="CandleVolume">CandleVolume</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="HeikinAshi">HeikinAshi</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="HighLowOpenClose">HighLowOpenClose</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="Line">Line</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="LineSymbols">LineSymbols</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="Kagi">Kagi</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="Renko">Renko</fcbase:FinancialChartType>
+    <fcbase:FinancialChartType x:Key="PointAndFigure">PointAndFigure</fcbase:FinancialChartType>
+    
+  </UserControl.Resources>
+  <StackPanel x:Name="stackPanel" MinWidth="217">
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" IsChecked="True" IsShowSetting="False" Content="Candle" Tag="{StaticResource Candlestick}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" Content="ArmsCandleVolume" Tag="{StaticResource ArmsCandleVolume}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" Content="CandleVolume" Tag="{StaticResource CandleVolume}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" Content="HeikinAshi" Tag="{StaticResource HeikinAshi}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" Content="HILO" Tag="{StaticResource HighLowOpenClose}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" Content="Line" Tag="{StaticResource Line}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <cc:SettableRadioButton HorizontalContentAlignment="Left" Content="LineSymbols" Tag="{StaticResource LineSymbols}" MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" />
+    <Rectangle HorizontalAlignment="Stretch" Height="1" Margin="0, 10" Fill="#D3D3D3"/>
+    <cc:SettableRadioButton HorizontalContentAlignment="Left"  Content="Kagi" Tag="{StaticResource Kagi}"
+                                 SettingCommand="{StaticResource SettingCommand}" CommandParameter="Kagi"
+                                MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" Unchecked="SettableRadioButton_Unchecked"/>
+    <cc:SettableRadioButton HorizontalContentAlignment="Left"  Content="Renko" Tag="{StaticResource Renko}"
+                                 SettingCommand="{StaticResource SettingCommand}" CommandParameter="Renko"
+                                MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" Unchecked="SettableRadioButton_Unchecked"/>
+    <cc:SettableRadioButton HorizontalContentAlignment="Left"  Content="Point and Figure" Tag="{StaticResource PointAndFigure}"
+                                 SettingCommand="{StaticResource SettingCommand}" CommandParameter="PointAndFigure"
+                                MinWidth="160" MinHeight="29" Padding="15, 3" Checked="SettableRadioButton_Checked" Unchecked="SettableRadioButton_Unchecked"/>    
+  </StackPanel>
+</UserControl>

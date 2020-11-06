@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3EE6A45-0C54-481C-B689-786F6036B6CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlexChartExplorer</RootNamespace>
+    <AssemblyName>FlexChartExplorerLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <PRIResource Include="Strings\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters.cs" />
+    <Compile Include="DataCreator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\DateTimeAxisGrouping.xaml.cs">
+      <DependentUpon>DateTimeAxisGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\NumericAxisGrouping.xaml.cs">
+      <DependentUpon>NumericAxisGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\AxisGrouping.xaml.cs">
+      <DependentUpon>AxisGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Axes.xaml.cs">
+      <DependentUpon>Axes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Binding.xaml.cs">
+      <DependentUpon>Binding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ErrorBar.xaml.cs">
+      <DependentUpon>ErrorBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\BoxWhisker.xaml.cs">
+      <DependentUpon>BoxWhisker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Bubble.xaml.cs">
+      <DependentUpon>Bubble.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Financial.xaml.cs">
+      <DependentUpon>Financial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HeaderAndFooter.xaml.cs">
+      <DependentUpon>HeaderAndFooter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Histogram.xaml.cs">
+      <DependentUpon>Histogram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\AutoLabels.xaml.cs">
+      <DependentUpon>AutoLabels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Pareto.xaml.cs">
+      <DependentUpon>Pareto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MultiPie.xaml.cs">
+      <DependentUpon>MultiPie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\RangedHistogram.xaml.cs">
+      <DependentUpon>RangedHistogram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\TreeMapNodeColor.xaml.cs">
+      <DependentUpon>TreeMapNodeColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\TreeMap.xaml.cs">
+      <DependentUpon>TreeMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Legend.xaml.cs">
+      <DependentUpon>Legend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\PlotAreas.xaml.cs">
+      <DependentUpon>PlotAreas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\HitTest.xaml.cs">
+      <DependentUpon>HitTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ImageExport.xaml.cs">
+      <DependentUpon>ImageExport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Introduction.xaml.cs">
+      <DependentUpon>Introduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Labels.xaml.cs">
+      <DependentUpon>Labels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\PieIntroduction.xaml.cs">
+      <DependentUpon>PieIntroduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\PieSelection.xaml.cs">
+      <DependentUpon>PieSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Selection.xaml.cs">
+      <DependentUpon>Selection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\AixsBinding.xaml.cs">
+      <DependentUpon>AixsBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SeriesBinding.xaml.cs">
+      <DependentUpon>SeriesBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\AxisLabels.xaml.cs">
+      <DependentUpon>AxisLabels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\TrendLine.xaml.cs">
+      <DependentUpon>TrendLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Waterfall.xaml.cs">
+      <DependentUpon>Waterfall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Zones.xaml.cs">
+      <DependentUpon>Zones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Zoom.xaml.cs">
+      <DependentUpon>Zoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.cs" />
+    <EmbeddedResource Include="Properties\FlexChartExplorerLib.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Samples\DateTimeAxisGrouping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\NumericAxisGrouping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\AxisGrouping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Axes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\Binding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\ErrorBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ErrorBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\BoxWhisker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Bubble.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Binding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\BoxWhisker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Financial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Introduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Labels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Selection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\TrendLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Waterfall.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\Zones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Financial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\HeaderAndFooter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\Histogram.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\AutoLabels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Pareto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MultiPie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\RangedHistogram.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\TreeMapNodeColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\TreeMap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Legend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\PlotAreas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\HitTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\ImageExport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\Introduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\Labels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\PieIntroduction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\PieSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Selection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\AixsBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SeriesBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\AxisLabels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\TrendLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Waterfall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\Zones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\Zoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.DX, Version=10.0">
+      <Name>C1.UWP.DX</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart, Version=10.0">
+      <Name>C1.UWP.FlexChart</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox, Version=10.0">
+      <Name>C1.UWP.RichTextBox</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

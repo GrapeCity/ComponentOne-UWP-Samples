@@ -1,0 +1,246 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.EntranceTab"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="TabListStyle" TargetType="c1:C1TabControl">
+            <Setter Property="Margin" Value="20 10" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="SelectedBackground" Value="#ff90cd97" />
+            <Setter Property="TabStripBackground" Value="#555555" />
+            <Setter Property="CanUserReorder" Value="False" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+        <Style x:Key="TabItemStyle" TargetType="c1:C1TabItem">
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="SectionTitleTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Margin" Value="20 5" />
+        </Style>
+        <Style x:Key="SectionContentTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="WideTabHeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Width" Value="160" />
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="NarrowTabHeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Width" Value="70" />
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="WideTabHeaderIconStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="NarrowTabHeaderIconStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="TransitionGrid" TargetType="Grid">
+            <Setter Property="Transitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <EntranceThemeTransition />
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#555555" RequestedTheme="Light">
+        <c1:C1TabControl x:Name="c1TabControl1"
+                         CanUserReorder="False"
+                         TabStripPlacement="Left"
+                         TabStripBackground="#555555"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Padding="0"
+                         SelectedBackground="#ff90cd97">
+            <!-- Singer Tab-->
+            <c1:C1TabItem Padding="10 5">
+                <c1:C1TabItem.Header>
+                    <Grid>
+                        <TextBlock x:Name="collectionIcon" Text="&#xE189;" 
+                                   Style="{StaticResource WideTabHeaderIconStyle}" />
+                        <TextBlock x:Name="collectionText" Text="{Binding EntranceTab_TabItem1_TB_Header_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                                   Style="{StaticResource WideTabHeaderTextStyle}"/>
+                    </Grid>
+                </c1:C1TabItem.Header>
+                <Grid Background="White" 
+                      RequestedTheme="Light">
+                    <Grid Style="{StaticResource TransitionGrid}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding EntranceTab_TabItem1_TB_Header_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                                   Style="{StaticResource SectionTitleTextStyle}"/>
+                        <c1:C1TabControl x:Name="c1TabControl2"
+                                         Grid.Row="1"
+                                         Style="{StaticResource TabListStyle}">
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem1_Header_1_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem1_Content1_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem1_Header_2_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem1_Content2_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem1_Header_3_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem1_Content3_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                        </c1:C1TabControl>
+                    </Grid>
+                </Grid>
+            </c1:C1TabItem>
+            <!-- Movie Tab-->
+            <c1:C1TabItem Padding="10 5">
+                <c1:C1TabItem.Header>
+                    <Grid>
+                        <TextBlock x:Name="radioIcon" Text="&#xE204;"
+                                   Style="{StaticResource WideTabHeaderIconStyle}"/>
+                        <TextBlock x:Name="radioText" Text="{Binding EntranceTab_TabItem2_TB_Header_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                                   Style="{StaticResource WideTabHeaderTextStyle}"/>
+                    </Grid>
+
+                </c1:C1TabItem.Header>
+                <Grid Background="White" 
+                      RequestedTheme="Light">
+                    <Grid Style="{StaticResource TransitionGrid}">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding EntranceTab_TabItem2_TB_Header_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                                   Style="{StaticResource SectionTitleTextStyle}"/>
+                        <c1:C1TabControl x:Name="c1TabControl3"
+                                         Grid.Row="1"
+                                         Style="{StaticResource TabListStyle}">
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem2_Header_1_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem2_Content1_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem2_Header_2_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem2_Content2_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem2_Header_3_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem2_Content3_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                        </c1:C1TabControl>
+                    </Grid>
+                </Grid>
+            </c1:C1TabItem>
+            <!-- TV Tab-->
+            <c1:C1TabItem Padding="10 5">
+                <c1:C1TabItem.Header>
+                    <Grid>
+                        <TextBlock x:Name="exploreIcon" Text="&#xE1E4;"
+                                   Style="{StaticResource WideTabHeaderIconStyle}"/>
+                        <TextBlock x:Name="exploreText" Text="{Binding EntranceTab_TabItem3_TB_Header_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                                   Style="{StaticResource WideTabHeaderTextStyle}"/>
+                    </Grid>
+
+                </c1:C1TabItem.Header>
+                <Grid Background="White" 
+                      RequestedTheme="Light">
+                    <Grid Style="{StaticResource TransitionGrid}">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding EntranceTab_TabItem3_TB_Header_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                                   Style="{StaticResource SectionTitleTextStyle}"/>
+                        <c1:C1TabControl x:Name="c1TabControl4"
+                                         Grid.Row="1"
+                                         Style="{StaticResource TabListStyle}">
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem3_Header_1_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem3_Content1_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem3_Header_2_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem3_Content2_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                            <c1:C1TabItem Header="{Binding EntranceTab_TabItem3_Header_3_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource TabItemStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="Transparent" Margin="0" Padding="0">
+                                    <Grid Style="{StaticResource TransitionGrid}">
+                                        <TextBlock Style="{StaticResource SectionContentTextStyle}" Text="{Binding EntranceTab_TabItem3_Content3_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                                    </Grid>
+                                </ScrollViewer>
+                            </c1:C1TabItem>
+                        </c1:C1TabControl>
+                    </Grid>
+                </Grid>
+            </c1:C1TabItem>
+        </c1:C1TabControl>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="collectionIcon.Style" Value="{StaticResource NarrowTabHeaderIconStyle}"/>
+                        <Setter Target="radioIcon.Style" Value="{StaticResource NarrowTabHeaderIconStyle}"/>
+                        <Setter Target="exploreIcon.Style" Value="{StaticResource NarrowTabHeaderIconStyle}"/>
+                        <Setter Target="collectionText.Style" Value="{StaticResource NarrowTabHeaderTextStyle}"/>
+                        <Setter Target="radioText.Style" Value="{StaticResource NarrowTabHeaderTextStyle}"/>
+                        <Setter Target="exploreText.Style" Value="{StaticResource NarrowTabHeaderTextStyle}"/>
+                        <Setter Target="c1TabControl2.FontSize" Value="8"/>
+                        <Setter Target="c1TabControl3.FontSize" Value="7"/>
+                        <Setter Target="c1TabControl4.FontSize" Value="6"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

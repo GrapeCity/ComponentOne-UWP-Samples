@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="DashboardUWP.Tasks"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DashboardUWP"
+    xmlns:c1="using:C1.Xaml.FlexGrid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="OnLoaded">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Style/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="#f7f7f7">
+        <Grid Style="{ThemeResource RootGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Style="{ThemeResource Tilte}" x:Uid="TaskPageTitle" />
+            <Pivot Grid.Row="1" x:Name="RootPivot" Background="White" SelectionChanged="OnSelectionChanged">
+                <PivotItem x:Uid="AllTasks">
+                    <c1:C1FlexGrid Style="{ThemeResource TaskFlexGridStyle}" x:Name="All">
+                        <c1:C1FlexGrid.Columns>
+                            <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding DueDate}" Width="Auto" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                        </c1:C1FlexGrid.Columns>
+                    </c1:C1FlexGrid>
+                </PivotItem>
+                <PivotItem x:Uid="InProgress">
+                    <c1:C1FlexGrid Style="{ThemeResource TaskFlexGridStyle}" x:Name="InProgress">
+                        <c1:C1FlexGrid.Columns>
+                            <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding DueDate}" Width="Auto" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                        </c1:C1FlexGrid.Columns>
+                    </c1:C1FlexGrid>
+                </PivotItem>
+                <PivotItem x:Uid="Completed">
+                    <c1:C1FlexGrid Style="{ThemeResource TaskFlexGridStyle}" x:Name="Completed">
+                        <c1:C1FlexGrid.Columns>
+                            <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding DueDate}" Width="Auto" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                        </c1:C1FlexGrid.Columns>
+                    </c1:C1FlexGrid>
+                </PivotItem>
+                <PivotItem x:Uid="Deferred">
+                    <c1:C1FlexGrid Style="{ThemeResource TaskFlexGridStyle}" x:Name="Deferred">
+                        <c1:C1FlexGrid.Columns>
+                            <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding DueDate}" Width="Auto" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                        </c1:C1FlexGrid.Columns>
+                    </c1:C1FlexGrid>
+                </PivotItem>
+                <PivotItem x:Uid="Urgent">
+                    <c1:C1FlexGrid Style="{ThemeResource TaskFlexGridStyle}" x:Name="Urgent">
+                        <c1:C1FlexGrid.Columns>
+                            <c1:Column Binding="{Binding Subject}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding AssignedTo}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding ItemName}" Width="2*" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding DueDate}" Width="Auto" IsReadOnly="True"/>
+                            <c1:Column Binding="{Binding Complete}" Width="3*" IsReadOnly="True"/>
+                        </c1:C1FlexGrid.Columns>
+                    </c1:C1FlexGrid>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

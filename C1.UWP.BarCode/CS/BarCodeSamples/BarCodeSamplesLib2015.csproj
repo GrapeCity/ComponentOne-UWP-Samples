@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3332DBD4-E4E0-4A17-9CA5-3BA8F3EC6D48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BarCodeSamples</RootNamespace>
+    <AssemblyName>BarCodeSamplesLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <PRIResource Include="Strings\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\NewBarcodes.xaml.cs">
+      <DependentUpon>NewBarcodes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\PhoneBarCodePage.xaml.cs">
+      <DependentUpon>PhoneBarCodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DemoBarCode.xaml.cs">
+      <DependentUpon>DemoBarCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Editor\Editor.xaml.cs">
+      <DependentUpon>Editor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Editor\Email.xaml.cs">
+      <DependentUpon>Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Editor\Text.xaml.cs">
+      <DependentUpon>Text.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Editor\Url.xaml.cs">
+      <DependentUpon>Url.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Editor\VCard.xaml.cs">
+      <DependentUpon>VCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\EncodingFormat.xaml.cs">
+      <DependentUpon>EncodingFormat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Generator.xaml.cs">
+      <DependentUpon>Generator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ViewModel\ViewModel.cs">
+      <DependentUpon>ViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.cs" />
+    <Compile Include="StringToEnumConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Samples\NewBarcodes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\PhoneBarCodePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DemoBarCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\DemoBarCode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editor\DeviceFamily-Mobile\Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editor\Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editor\Email.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editor\Text.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editor\Url.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editor\VCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\EncodingFormat.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Generator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.BarCode, Version=10.0">
+      <Name>C1.UWP.BarCode</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\c1logo1.png" />
+    <Content Include="Assets\uwpLogo_64.png" />
+    <Content Include="Properties\BarCodeSamplesLib.rd.xml" />
+    <Content Include="Assets\Code39X.png" />
+    <Content Include="Assets\DataMatrix.png" />
+    <Content Include="Assets\Email.png" />
+    <Content Include="Assets\PDF417.png" />
+    <Content Include="Assets\QRCode.png" />
+    <Content Include="Assets\Text.png" />
+    <Content Include="Assets\Url.png" />
+    <Content Include="Assets\VCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.17134.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

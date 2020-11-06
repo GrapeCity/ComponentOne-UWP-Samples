@@ -1,0 +1,137 @@
+﻿<Page x:Class="DrillDown.BasicDrillDownSample"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="using:DrillDown"      
+      xmlns:Chart="using:C1.Xaml.Chart"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid Margin="10">
+        <Grid.Resources>
+            <local:IntToVisibilityConverter x:Key="ITVConverter"/>
+            <local:ShowNavigateConverter x:Key="SNConverter"/>
+            <local:Select2VisibilityConverter x:Key="Select2VisibilityConverter"/>
+            <local:ChartTypeConverter x:Key="chartTypeConverter"/>
+            <Style TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="Margin" Value="0 5"/>
+            </Style>
+            <Style TargetType="ComboBox">
+                <Setter Property="Margin" Value="10 0"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Margin="0,0,5,0" HorizontalAlignment="Left">
+                        <TextBlock Text="GroupBy" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbGroupBy"
+                                      SelectedValuePath="Value"
+                                      DisplayMemberPath="Key"
+                                      ItemsSource="{Binding Groups}"
+                                      MinWidth="180"
+                                      SelectedValue="{Binding GroupBy, Mode=TwoWay}"
+                                      />
+                    </StackPanel>
+                    <StackPanel Margin="5,0,0,0">
+                        <TextBlock Text="Aggregate Type" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbAggregate"
+                                      DisplayMemberPath="Key"
+                                      SelectedValuePath="Value"
+                                      ItemsSource="{Binding Aggregates}"
+                                      SelectedValue="{Binding AggregateType, Mode=TwoWay}"
+                                      />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="ChartType" FontWeight="Bold" VerticalAlignment="Center" />
+                        <ComboBox x:Name="cbChartTypes" ItemsSource="{Binding ChartTypes}" 
+                             SelectedValue="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource chartTypeConverter}}" />
+                    </StackPanel>
+                    <StackPanel>
+                        <CheckBox x:Name="chkEnableDrillDown" 
+                                  Content="Enable DrillDown" 
+                                  IsChecked="True" 
+                                  VerticalAlignment="Center"
+                                  Checked="OnCheckChanged" 
+                                  Unchecked="OnCheckChanged"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Visibility="{Binding ElementName=cbChartTypes, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter='0 1 2'}">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontSize" Value="15"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Visibility="{Binding Manager.DrillDownLevel, Converter={StaticResource SNConverter}, ConverterParameter=1}">
+                        <HyperlinkButton
+                                    Content="{Binding Manager.GroupNames[0]}"
+                                    Command="{Binding Manager.BackCommand}"
+                                    CommandParameter="{Binding Manager.GroupNames[0]}"
+                                    FontSize="15"/>
+                        <TextBlock Text=" \ "/>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding Manager.DrillDownLevel, Converter={StaticResource SNConverter}, ConverterParameter=2}">
+                        <HyperlinkButton
+                                    Content="{Binding Manager.GroupNames[1]}"
+                                    Command="{Binding Manager.BackCommand}"
+                                    CommandParameter="{Binding Manager.GroupNames[1]}"
+                                    FontSize="15"/>
+                        <TextBlock Text=" \ "/>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding Manager.DrillDownLevel, Converter={StaticResource SNConverter}, ConverterParameter=1}">
+                        <TextBlock Text="{Binding Manager.Current.Group}"/>
+                        <TextBlock Text=" - "/>
+                    </StackPanel>
+                    <TextBlock>
+                        <TextBlock.Inlines>
+                            <Run Text="{Binding ElementName=cbAggregate, Path=SelectedItem.Key, Mode=OneWay}"/>
+                            <Run Text=" By "/>
+                            <Run Text="{Binding Manager.BindingX}" />
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <Chart:C1FlexChart
+                        x:Name="flexChart"
+                        DataContext="{Binding Manager}"
+                        ToolTipContent="{}{name}"
+                        Grid.Row="1"
+                        ToolTip="{x:Null}"
+                        ItemsSource="{Binding ItemsSource}"
+                        BindingX="{Binding BindingX}"
+                        Binding="{Binding Binding}"
+                        Tapped="Chart_Tapped"
+                        Visibility="{Binding ElementName=cbChartTypes, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter='0 1'}"
+                        >
+                <Chart:Series/>
+                <Chart:C1FlexChart.DataLabel>
+                    <Chart:DataLabel Content="{}{value}" Position="Top"/>
+                </Chart:C1FlexChart.DataLabel>
+            </Chart:C1FlexChart>
+            <Chart:C1FlexPie
+                        x:Name="pieChart"
+                        Grid.Row="1"
+                        ToolTip="{x:Null}"
+                        DataContext="{Binding Manager}"
+                        ItemsSource="{Binding ItemsSource}"
+                        BindingName="{Binding BindingX}"
+                        Binding="{Binding Binding}"
+                        Tapped="Chart_Tapped"
+                        Visibility="{Binding ElementName=cbChartTypes, Path=SelectedIndex, Converter={StaticResource ITVConverter}, ConverterParameter=2}"
+                        >
+                <Chart:C1FlexPie.DataLabel>
+                    <Chart:PieDataLabel Content="{}{name}" Position="Center"/>
+                </Chart:C1FlexPie.DataLabel>
+            </Chart:C1FlexPie>
+        </Grid>
+    </Grid>
+</Page>

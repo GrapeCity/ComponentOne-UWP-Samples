@@ -1,0 +1,90 @@
+﻿<Application
+    x:Class="FlexGrid101.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexGrid101">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0BA;</x:String>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <x:String x:Key="BackButtonGlyph">&#xE0A6;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0C4;</x:String>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+
+            <!-- Application-specific resources -->
+            <local:Strings x:Key="FlexGridSamplesLocalization" />
+            <!-- Page layout roots typically use entrance animations and a theme-appropriate background color -->
+
+            <Style x:Key="LayoutRootStyle" TargetType="Panel">
+                <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+                <Setter Property="ChildrenTransitions">
+                    <Setter.Value>
+                        <TransitionCollection>
+                            <EntranceThemeTransition/>
+                        </TransitionCollection>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--***************** CONTROL ICONS *****************-->
+
+            <SolidColorBrush x:Key="IconBrush" Color="White"/>
+
+            <SolidColorBrush x:Key="IconGrayBackground" Color="#FF777777"/>
+
+            <Style x:Key="IconName" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource IconBrush}"/>
+                <!-- <Setter Property="FontSize" Value="12"/>-->
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Margin" Value="-5,0,-5,1"/>
+            </Style>
+
+            <DataTemplate x:Key="IconC1Gray">
+                <Grid Background="{StaticResource IconGrayBackground}" Height="60" Width="60">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding}" Style="{StaticResource IconName}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard250x250ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="150" Height="150">
+                    <Border Background="#FF2C383D">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill"/>
+                    </Border>
+                    <Border Height="50" VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe WP" FontSize="18" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard80ItemTemplate">
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Title}" Foreground="#9D2235" Style="{ThemeResource BodyTextBlockStyle}" MaxHeight="40"/>
+                        <TextBlock Text="{Binding Description}" Style="{ThemeResource CaptionTextBlockStyle}" TextWrapping="WrapWholeWords"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Name="IconC1IntegrateC1FlexGrid">
+                <Path Data="M158.445,131.143 L164,131.143 L164,141.116 C164,149.542 157.17,156.372 148.744,156.372 L139.393,156.372 L139.393,151.383 C139.393,151.383 140.366,151.364 140.366,151.364 L144,155 C146.511,157.511 153.036,154.604 155.546,152.093 L160.093,147.547 C162.604,145.037 163.636,137.51 161.125,135 L157.671,131.546 C157.671,131.546 158.445,131.143 158.445,131.143 z M41.9535,118.233 L41.9535,141.116 L72.4651,141.116 L72.4651,118.233 z M15.2558,118 L15.2558,122.047 L15.2558,133.488 L15.2558,137.302 C15.2558,139.409 16.9634,141.116 19.0698,141.116 L22.8837,141.116 L26.6977,141.116 L34.3256,141.116 L34.3256,133.488 L34.3256,125.86 L34.3256,118 z M126,108.065 C131.182,108.065 135.383,112.266 135.383,117.448 C135.383,122.63 131.182,126.831 126,126.831 C120.818,126.831 116.616,122.63 116.616,117.448 C116.616,112.266 120.818,108.065 126,108.065 z M126,98.1302 C115.331,98.1302 106.682,106.779 106.682,117.448 C106.682,128.117 115.331,136.766 126,136.766 C136.669,136.766 145.318,128.117 145.318,117.448 C145.318,106.779 136.669,98.1302 126,98.1302 z M15.2558,88 L15.2558,111 L34.3256,111 L34.3256,88 z M72.4651,87.7209 L41.9535,88 L41.9535,110.605 L72.4651,110.605 z M110.998,83.8426 L111.125,83.9621 L111.086,83.9621 C111.187,83.8992 110.815,83.9461 110.965,83.8588 z M123.24,79.364 L128.76,79.364 C131.808,79.364 134.279,81.8352 134.279,84.8834 L134.279,88.2343 L134.311,88.2428 C136.696,88.9205 138.963,89.8826 141.071,91.0904 L141.152,91.1393 L143.563,88.7288 C145.718,86.5734 149.213,86.5734 151.368,88.7288 L155.271,92.6317 C157.426,94.7871 157.426,98.2818 155.271,100.437 L152.705,103.003 L152.737,103.059 C153.747,104.932 154.566,106.924 155.168,109.008 L155.362,109.721 L159.116,109.721 C162.165,109.721 164.636,112.192 164.636,115.24 L164.636,120.76 C164.636,123.808 162.165,126.279 159.116,126.279 L155.049,126.279 L154.897,126.775 C154.328,128.539 153.602,130.231 152.737,131.837 L152.306,132.598 L155.272,135.563 C157.427,137.718 157.427,141.213 155.272,143.368 L151.368,147.272 C149.213,149.427 145.718,149.427 143.563,147.272 L140.442,144.15 L140.004,144.389 C138.204,145.326 136.299,146.089 134.311,146.653 L134.279,146.662 L134.279,151.117 C134.279,154.165 131.808,156.636 128.76,156.636 L123.24,156.636 C120.192,156.636 117.721,154.165 117.721,151.117 L117.721,146.662 L117.689,146.653 C115.701,146.089 113.796,145.326 111.996,144.389 L111.559,144.15 L108.437,147.272 C106.282,149.427 102.787,149.427 100.632,147.272 L96.7287,143.368 C94.5732,141.213 94.5732,137.718 96.7287,135.563 L99.6935,132.598 L99.2634,131.837 C98.3974,130.231 97.6717,128.539 97.103,126.775 L96.9514,126.279 L92.8834,126.279 C89.8352,126.279 87.364,123.808 87.364,120.76 L87.364,115.24 C87.364,112.192 89.8352,109.721 92.8834,109.721 L96.6378,109.721 L96.8318,109.008 C97.4337,106.924 98.253,104.932 99.2634,103.059 L99.2948,103.003 L96.7288,100.437 C94.5734,98.2818 94.5734,94.7871 96.7288,92.6316 L100.632,88.7288 C102.787,86.5734 106.282,86.5734 108.437,88.7288 L110.848,91.1393 L110.929,91.0904 C113.037,89.8826 115.303,88.9205 117.689,88.2428 L117.721,88.2343 L117.721,84.8834 C117.721,81.8352 120.192,79.364 123.24,79.364 z M80.093,57.2093 L80.093,80.093 L110.605,80.093 L110.605,57.2093 z M41.9535,57.2093 L41.9535,80 L72.4651,80.093 L72.4651,57.2093 z M15.2558,57.2093 L15.2558,80 L34.3256,80 L34.3256,57.2093 z M19.0698,15.2558 C16.9634,15.2558 15.2558,16.9634 15.2558,19.0698 L15.2558,49.5814 L148.744,49.5814 L148.744,34.3256 L148.744,19.0698 C148.744,16.9634 147.037,15.2558 144.93,15.2558 z M15.2558,0 L148.744,0 C157.17,0 164,6.83026 164,15.2558 L164,105 L159.302,105 C159.302,105 158.84,103.61 158.84,103.61 L161.828,100.622 C164.338,98.1131 164.338,94.0428 161.828,91.5323 L155.546,83.9074 C153.036,81.3969 147.177,78.5677 144.666,81.0782 L141.764,83.8287 C139.309,82.422 140,83.1678 140,83.1678 L140,79.9294 L148.744,80.093 L148.744,57.2093 L118.233,57.2093 L118,73.394 L114.419,75.3394 C113.502,76.4506 112.951,77.8753 112.951,79.4285 L112.917,83.2865 L112.73,83.2964 C111.688,83.5924 111.221,83.7443 111.035,83.8244 L110.998,83.8426 L109.26,82.2068 C106.75,79.6963 102.679,79.6963 100.163,82.2068 L92.6395,87.7209 L80.093,87.7209 L80.093,110.605 L82.5512,110.605 L82.468,110.697 C81.5509,111.808 81,113.232 81,114.786 L81,118.233 L80.093,118.233 L80.093,141.116 L90.3084,141.116 L89.9141,141.171 C89.2668,143.358 90.1812,145.821 91.9072,147.547 L99,153.625 C101.51,156.136 105.581,156.136 108.091,153.625 L111.727,149.989 C111.727,149.989 113.232,151.383 113.232,151.383 L113.232,156.372 L15.2558,156.372 C6.83026,156.372 0,149.542 0,141.116 L0,15.2558 C0,6.83026 6.83026,0 15.2558,0 z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

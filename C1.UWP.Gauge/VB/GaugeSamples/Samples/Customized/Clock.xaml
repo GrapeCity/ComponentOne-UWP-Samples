@@ -1,0 +1,149 @@
+﻿<Page
+    x:Class="GaugeSamples.Clock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GaugeSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml.Gauge"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- Rectangular Pointer -->
+        <Style x:Key="NeedleRectangle" TargetType="c1:C1RadialGaugePointer">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="c1:C1RadialGaugePointer">
+                            <Rectangle x:Name="Root" Stretch="Fill" 
+                                      Stroke="{TemplateBinding BorderBrush}"
+                                      Fill="{TemplateBinding Background}"
+                                      StrokeThickness="{TemplateBinding Thickness}" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+
+        <!-- hour resources -->
+        <DataTemplate x:Key="HourMark">
+            <Rectangle Margin="-2 0 0 0" Width="4" Height="14" 
+						  Fill="#515151" />
+        </DataTemplate>
+
+        <SolidColorBrush x:Key="HourBorderBrush" Color="#88BDE6"/>
+
+        <!-- Minute resources -->
+        <DataTemplate x:Key="MinuteMark">
+            <Ellipse Margin="-2 0 0 0" Height="4" Width="4">
+                <Ellipse.Fill>
+                    <SolidColorBrush Color="#515151"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </DataTemplate>
+
+        <SolidColorBrush x:Key="MinuteBackground" Color="Transparent"/>
+        <SolidColorBrush x:Key="MinuteBorderBrush" Color="#88BDE6" />
+
+
+        <!-- Seconds resources -->
+        <DataTemplate x:Key="GlassEffect">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".4*" />
+                    <RowDefinition Height=".6*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".13*" />
+                    <ColumnDefinition Width=".8*" />
+                    <ColumnDefinition Width=".07*" />
+                </Grid.ColumnDefinitions>
+                <Path RenderTransformOrigin="0.5,0.600000023841858" Grid.Row="1" Grid.Column="1"
+								Data="M108,0.5 C125.21802,0.49999928 144.27174,7.3084793 158.64531,14.745525 C159.79529,36.62101 159.06741,43.381516 157.07854,54.759068 C150.33452,93.338905 119.46741,147.38158 65.839401,149.05733 C36.257538,149.98169 13.429331,135.90892 3.0853901,124.48584 C1.2306149,119.87174 0.50000012,115.47794 0.5,110.017 C0.50000012,49.532429 48.629391,0.49999928 108,0.5 z" 
+								Stretch="Fill" Margin="0,0,2.30699992179871,-3.59999990463257">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform/>
+                            <RotateTransform Angle="14.197"/>
+                            <TranslateTransform X="-0.49460484754694889" Y="-0.34892082202527419"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <SolidColorBrush Color="#19698DAC"/>
+                    </Path.Fill>
+                </Path>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot" Margin="20">
+
+        <!-- Hours -->
+        <c1:C1RadialGauge x:Name="clockHours"
+                          Value="9"
+                          Minimum="0" Maximum="12" StartAngle="0" SweepAngle="360" Radius="0.8" 
+                          BorderThickness="50" Background="#FFF5F5F5"
+                          PointerCapSize="0,0"
+                          PointerStyle="{StaticResource NeedleRectangle}" PointerFill="#88BDE6" PointerStrokeThickness="0" 
+                          PointerLength="0.3" PointerWidth="0.015" PointerOffset="0"
+                          BorderBrush="{ThemeResource HourBorderBrush}">
+            <c1:C1GaugeMark From="0" To="12" Interval="1" Template="{StaticResource HourMark}" />
+            <c1:C1GaugeLabel x:Name="gaugeLabel" From="3" To="12" Interval="3" Alignment="Out" AlignmentOffset="1" FontSize="24"/>
+        </c1:C1RadialGauge>
+
+        <!-- Minutes -->
+        <c1:C1RadialGauge x:Name="clockMins" Grid.Row="3"
+                          Value="0"
+                          Minimum="0" Maximum="60" StartAngle="0" SweepAngle="360" Radius="0.8" BorderThickness="4" 
+                          Background="{ThemeResource MinuteBackground}" FaceVisibility="Collapsed"
+                          BorderBrush="{ThemeResource MinuteBorderBrush}"
+                          PointerCapSize="0,0"
+                          PointerStyle="{StaticResource NeedleRectangle}" PointerFill="#88BDE6" PointerStrokeThickness="0" 
+                          PointerLength="0.4" PointerWidth="0.0125" PointerOffset="0"
+                          Margin="1,1,1,1">
+            <c1:C1GaugeMark Interval="1" From="1" To="4" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="6" To="9" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="11" To="14" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="16" To="19" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="21" To="24" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="26" To="29" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="31" To="34" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="36" To="39" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="41" To="44" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="46" To="49" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="51" To="54" Template="{StaticResource MinuteMark}"/>
+            <c1:C1GaugeMark Interval="1" From="56" To="59" Template="{StaticResource MinuteMark}"/>
+        </c1:C1RadialGauge>
+
+        <!-- Seconds -->
+        <c1:C1RadialGauge x:Name="clockSecs" Grid.Row="2"
+                          Value="20"
+                          Minimum="0" Maximum="60" StartAngle="0" SweepAngle="360" Radius="0.8" 
+                          Background="Transparent" BorderThickness="0" FaceVisibility="Collapsed"  
+                          PointerCapSize="0.045,0.045" PointerCapFill="#F5F5F5" PointerFill="#88BDE6" PointerCapStrokeThickness="1" 
+                          PointerStyle="{StaticResource NeedleRectangle}" PointerStrokeThickness="0" 
+                          PointerLength="0.55"  PointerWidth="0.008" PointerOffset="-0.15"
+                          CoverTemplate="{StaticResource GlassEffect}" />
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="LayoutRoot.Margin" Value="0" />
+                        <Setter Target="gaugeLabel.FontSize" Value="16" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

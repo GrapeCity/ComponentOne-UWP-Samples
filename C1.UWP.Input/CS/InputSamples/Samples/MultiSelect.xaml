@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="InputSamples.MultiSelect"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InputSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="using:System"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:input="using:C1.Xaml.Input"
+    xmlns:chart="using:C1.Xaml.Chart"
+    mc:Ignorable="d" Loaded="OnLoaded" >
+    <Page.Resources>
+        <local:VisibleConverter x:Key="VisibleConverter"/>
+        <local:SymbolIconConverter x:Key="SymbolIconConverter"/>
+    </Page.Resources>
+    <SplitView x:Name="RootView" CompactPaneLength="60" DisplayMode="CompactInline" IsPaneOpen="True" >
+        <SplitView.Pane>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>                    
+                </Grid.RowDefinitions>
+                <Button Margin="5" Background="Transparent" Command="{x:Bind ToggleSwitchCommand}" CommandParameter="{Binding ElementName=RootView}">
+                    <SymbolIcon Symbol="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource SymbolIconConverter}}"/>
+                </Button>
+                <TextBlock x:Uid="FamilyMembers" Text="Family Members" Grid.Row="1" Margin="5" VerticalAlignment="Center" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <input:C1MultiSelect x:Name="FamilyMemberSelect" SelectedBackground="Transparent" ShowSelectAll="True" Separator="*" DisplayMode="Text" SelectionChanged="OnFamilyMemberSelectionChanged" Grid.Row="2" Margin="5" VerticalAlignment="Center" ItemsSource="{x:Bind FamilyMembers}" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <TextBlock x:Uid="AccountType" Text="Account Type" Grid.Row="3" Margin="5" VerticalAlignment="Center" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <input:C1MultiSelect x:Name="AccountSelect" SelectedBackground="Transparent" ShowSelectAll="True" Separator=";" DisplayMode="Text" SelectionChanged="OnAccountSelectionChanged" Grid.Row="4" Margin="5" VerticalAlignment="Center" DisplayMemberPath="Key" ItemsSource="{x:Bind AccountTypes}"  Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <TextBlock x:Uid="IncomeDetails" Text="Income Details" Grid.Row="5" Margin="5" VerticalAlignment="Center" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <input:C1MultiSelect x:Name="IncomeDetailsSelect" SelectedBackground="Transparent" ShowSelectAll="True" DisplayMode="Text" Grid.Row="6" Margin="5" SelectionChanged="OnIncomeDetailsSelectionChanged" VerticalAlignment="Center" DisplayMemberPath="Key" ItemsSource="{x:Bind IncomeTypes}" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <TextBlock x:Uid="ExpenseDetails" Text="Expense Details" Grid.Row="7" Margin="5" VerticalAlignment="Center" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+                <input:C1MultiSelect x:Name="ExpenseDetailsSelect" SelectedBackground="Transparent" ShowSelectAll="True" DisplayMode="Text" Grid.Row="8" Margin="5" SelectionChanged="OnExpenseDetailsSelectionChanged" VerticalAlignment="Top" DisplayMemberPath="Key" ItemsSource="{x:Bind ExpenseTypes}" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}"/>
+            </Grid>
+        </SplitView.Pane>
+        <Pivot>
+            <PivotItem x:Uid="Incomes" Header="Incomes">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <chart:C1Sunburst x:Uid="IncomesTitle" Header="Jenkins Family Incomes" Palette="Cyborg" Binding="Cost" SelectionMode="Point" SelectedItemOffset="0.1" SelectedItemPosition="Auto" InnerRadius="0.2" ItemsSource="{x:Bind Incomes}" MinHeight="450" MinWidth="450">
+                        <chart:C1Sunburst.DataLabel>
+                            <chart:PieDataLabel Position="Center" Content="{}{name}" />
+                        </chart:C1Sunburst.DataLabel>
+                    </chart:C1Sunburst>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem x:Uid="Expenses" Header="Expenses">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <chart:C1Sunburst x:Uid="ExpensesTitle" Header="Jenkins Family Expenses" Palette="Dark" Binding="Cost" SelectionMode="Point" SelectedItemOffset="0.1" SelectedItemPosition="Auto" InnerRadius="0.2" ItemsSource="{x:Bind Expenses}" MinHeight="450" MinWidth="450">
+                        <chart:C1Sunburst.DataLabel>
+                            <chart:PieDataLabel Position="Center" Content="{}{name}" />
+                        </chart:C1Sunburst.DataLabel>
+                    </chart:C1Sunburst>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
+    </SplitView>
+</Page>

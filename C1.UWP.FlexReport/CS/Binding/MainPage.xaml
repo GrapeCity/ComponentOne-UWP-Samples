@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Binding.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Binding"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fv="using:C1.Xaml.FlexViewer"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <RichTextBlock Margin="0,0,0,10">
+            <Paragraph FontWeight="Bold">Demonstrates how a report can be bound at runtime to existing data.</Paragraph>
+            <Paragraph>This sample uses the Simple.OData.Client library which is installed automaticallyas a Nuget package.</Paragraph>
+        </RichTextBlock>
+
+        <StackPanel  Grid.Row="1" Orientation="Horizontal">
+            <TextBlock x:Name="lblReport" Text="{Binding lblReport_Text, Source={StaticResource BindingLocalization}}" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <ComboBox x:Name="cbReport" Grid.Row="0" SelectedIndex="0">
+                <ComboBoxItem Content="Categories"/>
+                <ComboBoxItem Content="Products"/>
+            </ComboBox>
+        </StackPanel>
+
+        <fv:C1FlexViewerPane Grid.Row="2" x:Name="flexViewerPane" Padding="2" />
+        <ProgressRing x:Name="prMain" Grid.Row="2" Width="60" Height="60"/>
+    </Grid>
+</Page>

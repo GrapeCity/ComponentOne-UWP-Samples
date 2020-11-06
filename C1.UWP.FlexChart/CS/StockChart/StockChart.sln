@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockChart", "StockChart\StockChart.csproj", "{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|ARM = GCRelease|ARM
+		GCRelease|x64 = GCRelease|x64
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|Any CPU.Build.0 = Debug|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|ARM.Build.0 = Debug|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|x64.ActiveCfg = Debug|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|x64.Build.0 = Debug|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|x64.Deploy.0 = Debug|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|x86.ActiveCfg = Debug|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|x86.Build.0 = Debug|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Debug|x86.Deploy.0 = Debug|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|Any CPU.ActiveCfg = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|Any CPU.Build.0 = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|Any CPU.Deploy.0 = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|ARM.ActiveCfg = Release|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|ARM.Build.0 = Release|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|ARM.Deploy.0 = Release|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|x64.ActiveCfg = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|x64.Build.0 = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|x64.Deploy.0 = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|x86.ActiveCfg = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|x86.Build.0 = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.GCRelease|x86.Deploy.0 = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|Any CPU.ActiveCfg = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|Any CPU.Build.0 = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|Any CPU.Deploy.0 = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|ARM.ActiveCfg = Release|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|ARM.Build.0 = Release|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|ARM.Deploy.0 = Release|ARM
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|x64.ActiveCfg = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|x64.Build.0 = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|x64.Deploy.0 = Release|x64
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|x86.ActiveCfg = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|x86.Build.0 = Release|x86
+		{E87036BB-CF8E-4625-B1E4-1EA2257BFFA6}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {714053C8-3A39-4975-8E94-0DBE0041BAD2}
+	EndGlobalSection
+EndGlobal

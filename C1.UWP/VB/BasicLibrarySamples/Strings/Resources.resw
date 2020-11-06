@@ -1,0 +1,1645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Algeria" xml:space="preserve">
+    <value>Algeria</value>
+  </data>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>BasicLibrarySamples</value>
+  </data>
+  <data name="Argentina" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="AssistantCounselor" xml:space="preserve">
+    <value>Assistant Counselor:</value>
+  </data>
+  <data name="AssistantDean" xml:space="preserve">
+    <value>Assistant Dean:</value>
+  </data>
+  <data name="AssistantManager" xml:space="preserve">
+    <value>Assistant Manager:</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="AutoCompleteDropDownDescription" xml:space="preserve">
+    <value>Create an auto-complete textbox with the C1DropDown control.</value>
+  </data>
+  <data name="AutoCompleteDropDownTitle" xml:space="preserve">
+    <value>AutoComplete</value>
+  </data>
+  <data name="AutoCompleteDropDown_TB_Text" xml:space="preserve">
+    <value>Stock Symbol:</value>
+  </data>
+  <data name="BindingToC1CollectionViewDescription" xml:space="preserve">
+    <value>This sample shows how to setup ListBox and GridView controls to work with C1CollectionView in the group mode.</value>
+  </data>
+  <data name="BindingToC1CollectionViewTitle" xml:space="preserve">
+    <value>Grouping</value>
+  </data>
+  <data name="BindingToC1CollectionView_TB_1_Text" xml:space="preserve">
+    <value>Grouped ListBox</value>
+  </data>
+  <data name="BindingToC1CollectionView_TB_2_Text" xml:space="preserve">
+    <value>Grouped GridView</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="Cameroon" xml:space="preserve">
+    <value>Cameroon</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem1_TB_Header_Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem2_1_TB_Header_Text" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem2_2_TB_Header_Text" xml:space="preserve">
+    <value>Public Downloads</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem2_3_TB_Header_Text" xml:space="preserve">
+    <value>Public Music</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem2_4_TB_Header_Text" xml:space="preserve">
+    <value>Public Pictures</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem2_5_TB_Header_Text" xml:space="preserve">
+    <value>Public Videos</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem2_TB_Header_Text" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem3_1_1_TB_Header_Text" xml:space="preserve">
+    <value>Program Files</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem3_1_2_TB_Header_Text" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem3_1_3_TB_Header_Text" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem3_1_TB_Header_Text" xml:space="preserve">
+    <value>Local Disk (C:)</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem3_2_TB_Header_Text" xml:space="preserve">
+    <value>DVD Drive (D:)</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem3_TB_Header_Text" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem4_TB_Header_Text" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem5_TB_Header_Text" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem6_TB_Header_Text" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="CheckBoxSample_TreeViewItem_TB_Header_Text" xml:space="preserve">
+    <value>Desktop</value>
+  </data>
+  <data name="CheckBoxTreeViewDescription" xml:space="preserve">
+    <value>Display check boxes on the nodes of the C1TreeView.</value>
+  </data>
+  <data name="CheckBoxTreeViewTitle" xml:space="preserve">
+    <value>CheckBoxTreeView</value>
+  </data>
+  <data name="Chile" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="ClearStyleTabControlDescription" xml:space="preserve">
+    <value>Align the tabs along any edge of the control.</value>
+  </data>
+  <data name="ClearStyleTabControlTitle" xml:space="preserve">
+    <value>Tab Placement</value>
+  </data>
+  <data name="ClearStyleTabControl_ComboBox_Item1_Content" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="ClearStyleTabControl_ComboBox_Item2_Content" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="ClearStyleTabControl_ComboBox_Item3_Content" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ClearStyleTabControl_ComboBox_Item4_Content" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_TB_Text" xml:space="preserve">
+    <value>Sales Agents</value>
+  </data>
+  <data name="ClearStyleTabControl_TabItem1_TB_Header_Text" xml:space="preserve">
+    <value>Sales Per Month</value>
+  </data>
+  <data name="ClearStyleTabControl_TabItem2_TB_Header_Text" xml:space="preserve">
+    <value>Sales Per Sales Agent</value>
+  </data>
+  <data name="ClearStyleTabControl_TabItem3_TB_Header_Text" xml:space="preserve">
+    <value>Sales Agents</value>
+  </data>
+  <data name="ClearStyleTabControl_TabItem4_TB_Header_Text" xml:space="preserve">
+    <value>Report Summary</value>
+  </data>
+  <data name="ClearStyleTabControl_TB_Text" xml:space="preserve">
+    <value>TabStripPlacement:</value>
+  </data>
+  <data name="CollectionViewConditionsDescription" xml:space="preserve">
+    <value>C1CollectionView implements the ICollectionView interface and provides live sorting, filtering and grouping for any list control.</value>
+  </data>
+  <data name="CollectionViewConditionsTitle" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="CollectionViewConditions_TB_1_Text" xml:space="preserve">
+    <value>Group on:</value>
+  </data>
+  <data name="CollectionViewConditions_TB_2_Text" xml:space="preserve">
+    <value>Filter on:</value>
+  </data>
+  <data name="CollectionViewConditions_TB_3_Text" xml:space="preserve">
+    <value>Sort on (choose and order properties):</value>
+  </data>
+  <data name="CollectionViewConditions_TB_4_Text" xml:space="preserve">
+    <value>ListBox</value>
+  </data>
+  <data name="CollectionViewCustomerCountries" xml:space="preserve">
+    <value>Austria|Belgium|Canada|Denmark|Egypt|Finland|Guatemala|Haiti|Ireland|Jamaica</value>
+  </data>
+  <data name="CollectionViewCustomerNames" xml:space="preserve">
+    <value>Albert|Bill|Charlie|Dave|Ed|Fred|George|Harry|Ian|Jerry</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyAssets" xml:space="preserve">
+    <value>Assets</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyCountry" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyCreated" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyGrowth" xml:space="preserve">
+    <value>Growth</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CollectionViewCustomerPropertySales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="CollectionViewCustomerPropertyValue" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="CollectionViewNoneItem" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+  <data name="ContextMenuDescription" xml:space="preserve">
+    <value>Represents a control that displays hierarchical context menu.</value>
+  </data>
+  <data name="ContextMenuTitle" xml:space="preserve">
+    <value>ContextMenu</value>
+  </data>
+  <data name="ContextMenu_Desktop_TB_Text" xml:space="preserve">
+    <value>Touch: hold down for a few seconds until the indicator displays.
+Keyboard: press the context-menu button over this text.
+Mouse: right-click over this text.</value>
+  </data>
+  <data name="ContextMenu_Item_Click_TB" xml:space="preserve">
+    <value>Item Clicked:</value>
+  </data>
+  <data name="ContextMenu_Item_Opened_TB_Text" xml:space="preserve">
+    <value>Item Opened:</value>
+  </data>
+  <data name="ContextMenu_MenuItem1_1_Header_Header" xml:space="preserve">
+    <value>New Item</value>
+  </data>
+  <data name="ContextMenu_MenuItem1_2_Header_Header" xml:space="preserve">
+    <value>Existing Item</value>
+  </data>
+  <data name="ContextMenu_MenuItem1_3_Header_Header" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="ContextMenu_MenuItem1_4_Header_Header" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="ContextMenu_MenuItem1_Header_Header" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ContextMenu_MenuItem2_Header_Header" xml:space="preserve">
+    <value>Exclude From Project</value>
+  </data>
+  <data name="ContextMenu_MenuItem3_Header_Header" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="ContextMenu_MenuItem4_Header_Header" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ContextMenu_MenuItem5_Header_Header" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="ContextMenu_MenuItem6_Header_Header" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ContextMenu_MenuItem7_Header_Header" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="ContextMenu_MenuItem8_Header_Header" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="ContextMenu_Phone_TB" xml:space="preserve">
+    <value>Touch: hold down for a few seconds until the indicator displays.</value>
+  </data>
+  <data name="CoteDlvoire" xml:space="preserve">
+    <value>Cote Dlvoire</value>
+  </data>
+  <data name="CouncilOfDirectors" xml:space="preserve">
+    <value>Council of Directors</value>
+  </data>
+  <data name="Counselling" xml:space="preserve">
+    <value>Counselling</value>
+  </data>
+  <data name="Counselor" xml:space="preserve">
+    <value>Counselor:</value>
+  </data>
+  <data name="DeanOfStudents" xml:space="preserve">
+    <value>Dean of Students:</value>
+  </data>
+  <data name="Denmark" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="DockPanelSampleDescription" xml:space="preserve">
+    <value>Dock content along the edges of your page using the C1DockPanel control.</value>
+  </data>
+  <data name="DockPanelSampleTitle" xml:space="preserve">
+    <value>DockPanel</value>
+  </data>
+  <data name="DragDropTreeViewDescription" xml:space="preserve">
+    <value>Shows built-in support for drag-and-drop operations.</value>
+  </data>
+  <data name="DragDropTreeViewTitle" xml:space="preserve">
+    <value>DragDropTreeView</value>
+  </data>
+  <data name="DragDropTreeView_RadioButton_1_Content" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="DragDropTreeView_RadioButton_2_Content" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="DragDropTreeView_TB_Text" xml:space="preserve">
+    <value>DragDrop Action:</value>
+  </data>
+  <data name="DropDownDemo_CheckBox_Content_Content" xml:space="preserve">
+    <value>AutoClose - determines if C1DropDown will automatically close when focus is lost.</value>
+  </data>
+  <data name="DropDownDescription" xml:space="preserve">
+    <value>Host any UIElement in a drop-down with the C1DropDown control.</value>
+  </data>
+  <data name="DropDownTitle" xml:space="preserve">
+    <value>DropDown</value>
+  </data>
+  <data name="EditTreeViewDescription" xml:space="preserve">
+    <value>Add editing support to the nodes of the C1TreeView. Press F2 on the selected node to edit, you can also press and hold the node to edit in touch mode.</value>
+  </data>
+  <data name="EditTreeViewTitle" xml:space="preserve">
+    <value>EditTreeView</value>
+  </data>
+  <data name="England" xml:space="preserve">
+    <value>England</value>
+  </data>
+  <data name="EntranceTabDescription" xml:space="preserve">
+    <value>This demo shows how you can easily switch among multiple pages of content using a C1TabControl.</value>
+  </data>
+  <data name="EntranceTabTitle" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="EntranceTab_TabItem1_Header_1_Header" xml:space="preserve">
+    <value>Taylor Swift</value>
+  </data>
+  <data name="EntranceTab_TabItem1_Header_2_Header" xml:space="preserve">
+    <value>Beyoncé</value>
+  </data>
+  <data name="EntranceTab_TabItem1_Header_3_Header" xml:space="preserve">
+    <value>Jay Z</value>
+  </data>
+  <data name="EntranceTab_TabItem1_TB_Header_Text" xml:space="preserve">
+    <value>Singer</value>
+  </data>
+  <data name="EntranceTab_TabItem2_Header_1_Header" xml:space="preserve">
+    <value>Jennifer Lawrence</value>
+  </data>
+  <data name="EntranceTab_TabItem2_Header_2_Header" xml:space="preserve">
+    <value>Johnny Depp</value>
+  </data>
+  <data name="EntranceTab_TabItem3_Header_1_Header" xml:space="preserve">
+    <value>Ashley Benson</value>
+  </data>
+  <data name="EntranceTab_TabItem3_Header_2_Header" xml:space="preserve">
+    <value>Colin O'Donoghue</value>
+  </data>
+  <data name="EntranceTab_TabItem3_TB_Header_Text" xml:space="preserve">
+    <value>TV Star</value>
+  </data>
+  <data name="FinanceAdmin" xml:space="preserve">
+    <value>Director Of Finance &amp; Admin:</value>
+  </data>
+  <data name="FinanceOffice" xml:space="preserve">
+    <value>Finance Office</value>
+  </data>
+  <data name="France" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="Ghana" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="Greece" xml:space="preserve">
+    <value>Greece</value>
+  </data>
+  <data name="GridSplitterSampleDescription" xml:space="preserve">
+    <value>Use grid splitter to redestribute the space between grid rows and columns.</value>
+  </data>
+  <data name="GridSplitterSampleTitle" xml:space="preserve">
+    <value>GridSplitter</value>
+  </data>
+  <data name="HierarchicalDropDownDescription" xml:space="preserve">
+    <value>Create a hierarchical drop-down combobox by putting a C1TreeView control inside C1DropDown.</value>
+  </data>
+  <data name="HierarchicalDropDownTitle" xml:space="preserve">
+    <value>Hierarchical Tree</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_1_Header" xml:space="preserve">
+    <value>South America</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_1_1_Header" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_1_2_Header" xml:space="preserve">
+    <value>Brasil</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_1_3_Header" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_2_Header" xml:space="preserve">
+    <value>Europe</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_2_1_Header" xml:space="preserve">
+    <value>England</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_2_2_Header" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_2_3_Header" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_2_4_Header" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="HierarchicalDropDown_Item_Header_2_5_Header" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="HierarchicalDropDown_TB_Header_Text" xml:space="preserve">
+    <value>« Pick one »</value>
+  </data>
+  <data name="HierarchicalDropDown_TreeView_Header_Header" xml:space="preserve">
+    <value>Soccer World Cups Winners</value>
+  </data>
+  <data name="HierarchicalTreeViewDescription" xml:space="preserve">
+    <value>Support for Hierarchical Data Templates allows you to easily customize the appearance of the C1Treeview nodes based upon the data items.</value>
+  </data>
+  <data name="HierarchicalTreeViewTitle" xml:space="preserve">
+    <value>HierarchicalTreeView</value>
+  </data>
+  <data name="HierarchicalTreeView_TB_1_Text" xml:space="preserve">
+    <value>World Cups Won:</value>
+  </data>
+  <data name="HierarchicalTreeView_TB_2_Text" xml:space="preserve">
+    <value>TopScorer:</value>
+  </data>
+  <data name="Honduras" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="InputHandlingDescription" xml:space="preserve">
+    <value>Show how to handle drag and zoom gestures using cross-platform helpers.</value>
+  </data>
+  <data name="InputHandlingTitle" xml:space="preserve">
+    <value>Input Handling</value>
+  </data>
+  <data name="InputHandling_Run1_Text" xml:space="preserve">
+    <value>Drag me,</value>
+  </data>
+  <data name="InputHandling_Run2_Text" xml:space="preserve">
+    <value>Zoom me,</value>
+  </data>
+  <data name="InputHandling_Run3_Text" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="InputHandling_Run4_Text" xml:space="preserve">
+    <value>Click me!</value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="KoreaDPR" xml:space="preserve">
+    <value>Korea DPR</value>
+  </data>
+  <data name="KoreaRepublic" xml:space="preserve">
+    <value>Korea Republic</value>
+  </data>
+  <data name="LegalAndProperty" xml:space="preserve">
+    <value>Legal &amp; Property</value>
+  </data>
+  <data name="ListBoxSampleDescription" xml:space="preserve">
+    <value>The C1ListBox control is a high performance list box that has zoom functionality built-in. Users can scale the list of items by intuitively pinching.</value>
+  </data>
+  <data name="ListBoxSampleErrorMessage" xml:space="preserve">
+    <value>There was an error when attempting to download data from Flickr.</value>
+  </data>
+  <data name="ListBoxSampleTitle" xml:space="preserve">
+    <value>ListBox</value>
+  </data>
+  <data name="ListBoxSample_Button_Content" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="ListBoxSample_TB_Text" xml:space="preserve">
+    <value>Retrieving data from Flickr...</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Manager:</value>
+  </data>
+  <data name="MaskedTextBoxDescription" xml:space="preserve">
+    <value>The C1MaskedTextBox control allows users to type text that conforms to a given mask.</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_Bottom_Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_Center_Text" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_DOB_Text" xml:space="preserve">
+    <value>DOB:</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_ID_Text" xml:space="preserve">
+    <value>ID:</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_Left_Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_Phone_Text" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_Right_Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_State_Text" xml:space="preserve">
+    <value>State:</value>
+  </data>
+  <data name="MaskedTextBoxSample_TB_Top_Text" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="MaskedTextBoxTitle" xml:space="preserve">
+    <value>MaskedTextBox</value>
+  </data>
+  <data name="MenuSampleDescription" xml:space="preserve">
+    <value>Represents a control that displays hierarchical data in a menu structure.</value>
+  </data>
+  <data name="MenuSampleTitle" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MenuSample_MenuItem1_1_1_Header_Header" xml:space="preserve">
+    <value>Project...</value>
+  </data>
+  <data name="MenuSample_MenuItem1_1_2_Header_Header" xml:space="preserve">
+    <value>Web Site...</value>
+  </data>
+  <data name="MenuSample_MenuItem1_1_3_Header_Header" xml:space="preserve">
+    <value>Team Project...</value>
+  </data>
+  <data name="MenuSample_MenuItem1_1_4_Header_Header" xml:space="preserve">
+    <value>File...</value>
+  </data>
+  <data name="MenuSample_MenuItem1_1_Header_Header" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="MenuSample_MenuItem1_2_Header_Header" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="MenuSample_MenuItem1_3_Header_Header" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="MenuSample_MenuItem1_4_Header_Header" xml:space="preserve">
+    <value>Close Solution</value>
+  </data>
+  <data name="MenuSample_MenuItem1_5_Header_Header" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MenuSample_MenuItem1_6_Header_Header" xml:space="preserve">
+    <value>Save All</value>
+  </data>
+  <data name="MenuSample_MenuItem1_7_Header_Header" xml:space="preserve">
+    <value>Page Setup</value>
+  </data>
+  <data name="MenuSample_MenuItem1_8_Header_Header" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="MenuSample_MenuItem1_9_Header_Header" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MenuSample_MenuItem1_Header_Header" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MenuSample_MenuItem2_1_Header_Header" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="MenuSample_MenuItem2_2_Header_Header" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="MenuSample_MenuItem2_3_Header_Header" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="MenuSample_MenuItem2_4_Header_Header" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="MenuSample_MenuItem2_5_Header_Header" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="MenuSample_MenuItem2_6_Header_Header" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MenuSample_MenuItem2_Header_Header" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="MenuSample_MenuItem3_1_Header_Header" xml:space="preserve">
+    <value>Document 1</value>
+  </data>
+  <data name="MenuSample_MenuItem3_2_Header_Header" xml:space="preserve">
+    <value>Document 2</value>
+  </data>
+  <data name="MenuSample_MenuItem3_3_Header_Header" xml:space="preserve">
+    <value>Document 3</value>
+  </data>
+  <data name="MenuSample_MenuItem3_4_Header_Header" xml:space="preserve">
+    <value>Document 4</value>
+  </data>
+  <data name="MenuSample_MenuItem3_5_Header_Header" xml:space="preserve">
+    <value>Exclusive 1</value>
+  </data>
+  <data name="MenuSample_MenuItem3_6_Header_Header" xml:space="preserve">
+    <value>Exclusive 2</value>
+  </data>
+  <data name="MenuSample_MenuItem3_7_Header_Header" xml:space="preserve">
+    <value>Exclusive 3</value>
+  </data>
+  <data name="MenuSample_MenuItem3_Header_Header" xml:space="preserve">
+    <value>Window</value>
+  </data>
+  <data name="MenuSample_MenuItem4_1_1_1_1_1_Header_Header" xml:space="preserve">
+    <value>Deep5</value>
+  </data>
+  <data name="MenuSample_MenuItem4_1_1_1_1_Header_Header" xml:space="preserve">
+    <value>Deep4</value>
+  </data>
+  <data name="MenuSample_MenuItem4_1_1_1_Header_Header" xml:space="preserve">
+    <value>Deep3</value>
+  </data>
+  <data name="MenuSample_MenuItem4_1_1_Header_Header" xml:space="preserve">
+    <value>Deep2</value>
+  </data>
+  <data name="MenuSample_MenuItem4_1_Header_Header" xml:space="preserve">
+    <value>Deep1</value>
+  </data>
+  <data name="MenuSample_MenuItem4_Header_Header" xml:space="preserve">
+    <value>Deep</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="Netherlands" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="NewZealand" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="Nigeria" xml:space="preserve">
+    <value>Nigeria</value>
+  </data>
+  <data name="NumericBoxDescription" xml:space="preserve">
+    <value>The C1NumericBox control allows users to type formatted numeric values (use the UP/DOWN buttons to skip by an increment).</value>
+  </data>
+  <data name="NumericBoxSample_TB_Currency_Text" xml:space="preserve">
+    <value>Currency (C2)</value>
+  </data>
+  <data name="NumericBoxSample_TB_Custom_Text" xml:space="preserve">
+    <value>Custom (#,#.00)</value>
+  </data>
+  <data name="NumericBoxSample_TB_Fixed_Text" xml:space="preserve">
+    <value>Fixed (F2)</value>
+  </data>
+  <data name="NumericBoxSample_TB_Number_Text" xml:space="preserve">
+    <value>Number (N2)</value>
+  </data>
+  <data name="NumericBoxSample_TB_Percent_Text" xml:space="preserve">
+    <value>Percent (P0)</value>
+  </data>
+  <data name="NumericBoxTitle" xml:space="preserve">
+    <value>NumericBox</value>
+  </data>
+  <data name="Paraguay" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="Portugal" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="Principal" xml:space="preserve">
+    <value>Principal:</value>
+  </data>
+  <data name="ProgressIndicatorDemoDescription" xml:space="preserve">
+    <value>Indicate to the user that your app is busy with the C1ProgressIndicator control.</value>
+  </data>
+  <data name="ProgressIndicatorDemoTitle" xml:space="preserve">
+    <value>Progress Indicator</value>
+  </data>
+  <data name="ProgressIndicatorDemo_ProgressIndicator_Header_Header" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="RadialMenuClear" xml:space="preserve">
+    <value>Clear Format Command executed</value>
+  </data>
+  <data name="RadialMenuDescription" xml:space="preserve">
+    <value>Represents a control that displays hierarchical data in a touch-friendly menu.</value>
+  </data>
+  <data name="RadialMenuReDo" xml:space="preserve">
+    <value>Redo Command executed</value>
+  </data>
+  <data name="RadialMenuTitle" xml:space="preserve">
+    <value>RadialMenu</value>
+  </data>
+  <data name="RadialMenuUnDo" xml:space="preserve">
+    <value>Undo Command executed</value>
+  </data>
+  <data name="RadialMenu_MenuItem1_1_Header_Header" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="RadialMenu_MenuItem1_2_Header_Header" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="RadialMenu_MenuItem1_3_TB_Text" xml:space="preserve">
+    <value>Clear Format</value>
+  </data>
+  <data name="RadialMenu_MenuItem1_3_ToolTip_ToolTip" xml:space="preserve">
+    <value>Clear Text Formatting</value>
+  </data>
+  <data name="RadialMenu_MenuItem1_Header_Header" xml:space="preserve">
+    <value>UndoRedo</value>
+  </data>
+  <data name="RadialMenu_MenuItem2_1_Header_Header" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="RadialMenu_MenuItem2_2_Header_Header" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="RadialMenu_MenuItem2_3_Header_Header" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="RadialMenu_MenuItem2_Header_Header" xml:space="preserve">
+    <value>Clipboard</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_1_Header_And_ToolTip_Header" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_1_Header_And_ToolTip_ToolTip" xml:space="preserve">
+    <value>New Item1</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_2_Header_And_ToolTip_Header" xml:space="preserve">
+    <value>Existing</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_2_Header_And_ToolTip_ToolTip" xml:space="preserve">
+    <value>Existing Item</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_3_Header_Header" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_4_Header_Header" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="RadialMenu_MenuItem3_Header_Header" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="RadialMenu_MenuItem4_1_Header_And_ToolTip_Header" xml:space="preserve">
+    <value>Exclude</value>
+  </data>
+  <data name="RadialMenu_MenuItem4_1_Header_And_ToolTip_ToolTip" xml:space="preserve">
+    <value>Exclude From Project</value>
+  </data>
+  <data name="RadialMenu_MenuItem4_2_Header_Header" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RadialMenu_MenuItem4_3_Header_Header" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="RadialMenu_MenuItem4_Header_Header" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="RadialMenu_MenuItem5_Header_Header" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="RadialMenu_MenuItem6_Header_Header" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="RadialMenu_MenuItem7_1_Header_And_ToolTip_Header" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RadialMenu_MenuItem7_1_Header_And_ToolTip_ToolTip" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="RadialMenu_MenuItem7_Header_Header" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Aqua_ToolTip" xml:space="preserve">
+    <value>Aqua</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Blue_ToolTip" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Brown_ToolTip" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_DarkBlue_ToolTip" xml:space="preserve">
+    <value>Dark Blue</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_DarkGreen_ToolTip" xml:space="preserve">
+    <value>Dark Green</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_DarkPurple_ToolTip" xml:space="preserve">
+    <value>Dark Purple</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_DarkRed_ToolTip" xml:space="preserve">
+    <value>Dark Red</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Gold_ToolTip" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Green_ToolTip" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_LightGreen_ToolTip" xml:space="preserve">
+    <value>Light Green</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_LightYellow_ToolTip" xml:space="preserve">
+    <value>Light Yellow</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Lime_ToolTip" xml:space="preserve">
+    <value>Lime</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Orange_ToolTip" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Pink_ToolTip" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Plum_ToolTip" xml:space="preserve">
+    <value>Plum</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Purple_ToolTip" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Red_ToolTip" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Rose_ToolTip" xml:space="preserve">
+    <value>Rose</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_SkyBlue_ToolTip" xml:space="preserve">
+    <value>Sky Blue</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_SlateBlue_ToolTip" xml:space="preserve">
+    <value>Slate Blue</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Turquoise_ToolTip" xml:space="preserve">
+    <value>Turquoise</value>
+  </data>
+  <data name="RadialMenu_RadialColorItem_ToolTip_Yellow_ToolTip" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="RadialPanelSampleDescription" xml:space="preserve">
+    <value>Display content in a circle.</value>
+  </data>
+  <data name="RadialPanelSampleTitle" xml:space="preserve">
+    <value>RadialPanel</value>
+  </data>
+  <data name="RadialPanelSample_TB_Text" xml:space="preserve">
+    <value>Start Angle</value>
+  </data>
+  <data name="RadiaMenu_Desktop_TB_Text" xml:space="preserve">
+    <value>Touch: hold down for a few seconds until the indicator displays.
+Keyboard: press the context-menu button over this text.
+Mouse: right-click over this text.</value>
+  </data>
+  <data name="RadiaMenu_Phone_TB_Text" xml:space="preserve">
+    <value>Touch: hold down for a few seconds until the indicator displays.</value>
+  </data>
+  <data name="RangeSliderDescription" xml:space="preserve">
+    <value>Represent a RangeSlider</value>
+  </data>
+  <data name="RangeSliderTitle" xml:space="preserve">
+    <value>RangeSlider</value>
+  </data>
+  <data name="Serbia" xml:space="preserve">
+    <value>Serbia</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="Slovakia" xml:space="preserve">
+    <value>Slovakia</value>
+  </data>
+  <data name="Slovenia" xml:space="preserve">
+    <value>Slovenia</value>
+  </data>
+  <data name="SouthAfrica" xml:space="preserve">
+    <value>South Africa</value>
+  </data>
+  <data name="Spain" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="StudentServices" xml:space="preserve">
+    <value>Student Services</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="Switzerland" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="TabControlSampleDescription" xml:space="preserve">
+    <value>This demo shows a classic looking tab control complete with close and pin buttons.</value>
+  </data>
+  <data name="TabControlSampleTitle" xml:space="preserve">
+    <value>Close and Pin</value>
+  </data>
+  <data name="TabControlSample_ComboBox_Item1_Content" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="TabControlSample_ComboBox_Item2_Content" xml:space="preserve">
+    <value>InEachTab</value>
+  </data>
+  <data name="TabControlSample_ComboBox_Item3_Content" xml:space="preserve">
+    <value>GlobalClose</value>
+  </data>
+  <data name="TabControlSample_TabItem1_TB_Header_Text" xml:space="preserve">
+    <value>Sales Per Month</value>
+  </data>
+  <data name="TabControlSample_TabItem2_TB_Header_Text" xml:space="preserve">
+    <value>Sales Per Sales Agent</value>
+  </data>
+  <data name="TabControlSample_TabItem3_TB_Header_Text" xml:space="preserve">
+    <value>Sales Agents</value>
+  </data>
+  <data name="TabControlSample_TabItem4_TB_Header_Text" xml:space="preserve">
+    <value>Report Summary</value>
+  </data>
+  <data name="TabControlSample_TabItem5_TB_Header_Text" xml:space="preserve">
+    <value>Tab 5</value>
+  </data>
+  <data name="TabControlSample_TabItem6_TB_Header_Text" xml:space="preserve">
+    <value>Tab 6</value>
+  </data>
+  <data name="TabControlSample_TB_1_Text" xml:space="preserve">
+    <value>TabItemClose:</value>
+  </data>
+  <data name="TabControlSample_TB_2_Text" xml:space="preserve">
+    <value>TabStripOverlap:</value>
+  </data>
+  <data name="TravelOffice" xml:space="preserve">
+    <value>Travel Office</value>
+  </data>
+  <data name="TreeViewSampleDescription" xml:space="preserve">
+    <value>The familiar TreeView UI is now available for Windows Store apps with the C1TreeView control.</value>
+  </data>
+  <data name="TreeViewSampleTitle" xml:space="preserve">
+    <value>TreeView</value>
+  </data>
+  <data name="TreeViewSample_CheckBox_1_Content" xml:space="preserve">
+    <value>Show Lines</value>
+  </data>
+  <data name="TreeViewSample_CheckBox_2_Content" xml:space="preserve">
+    <value>Expand on Click/Tap</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem1_TB_Header_Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem2_1_TB_Header_Text" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem2_2_TB_Header_Text" xml:space="preserve">
+    <value>Public Downloads</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem2_3_TB_Header_Text" xml:space="preserve">
+    <value>Public Music</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem2_4_TB_Header_Text" xml:space="preserve">
+    <value>Public Pictures</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem2_5_TB_Header_Text" xml:space="preserve">
+    <value>Public Videos</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem2_TB_Header_Text" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem3_1_1_TB_Header_Text" xml:space="preserve">
+    <value>Program Files</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem3_1_2_TB_Header_Text" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem3_1_3_TB_Header_Text" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem3_1_TB_Header_Text" xml:space="preserve">
+    <value>Local Disk (C:)</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem3_2_TB_Header_Text" xml:space="preserve">
+    <value>DVD Drive (D:)</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem3_TB_Header_Text" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem4_TB_Header_Text" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem5_TB_Header_Text" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem6_TB_Header_Text" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="TreeViewSample_TreeViewItem_TB_Header_Text" xml:space="preserve">
+    <value>Desktop</value>
+  </data>
+  <data name="UniformGridSampleDescription" xml:space="preserve">
+    <value>Display content neatly in a grid using the C1UniformGrid control.</value>
+  </data>
+  <data name="UniformGridSampleTitle" xml:space="preserve">
+    <value>UniformGrid</value>
+  </data>
+  <data name="UniformGridSample_Button_Content_Content" xml:space="preserve">
+    <value>Add Item</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+  <data name="Uruguay" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="USA" xml:space="preserve">
+    <value>USA</value>
+  </data>
+  <data name="WorldCupGroupA" xml:space="preserve">
+    <value>Group A</value>
+  </data>
+  <data name="WorldCupGroupB" xml:space="preserve">
+    <value>Group B</value>
+  </data>
+  <data name="WorldCupGroupC" xml:space="preserve">
+    <value>Group C</value>
+  </data>
+  <data name="WorldCupGroupD" xml:space="preserve">
+    <value>Group D</value>
+  </data>
+  <data name="WorldCupGroupE" xml:space="preserve">
+    <value>Group E</value>
+  </data>
+  <data name="WorldCupGroupF" xml:space="preserve">
+    <value>Group F</value>
+  </data>
+  <data name="WorldCupGroupG" xml:space="preserve">
+    <value>Group G</value>
+  </data>
+  <data name="WorldCupGroupH" xml:space="preserve">
+    <value>Group H</value>
+  </data>
+  <data name="WrapPanelSampleDescription" xml:space="preserve">
+    <value>Wrap content vertically or horizontally using the C1WrapPanel control.</value>
+  </data>
+  <data name="WrapPanelSampleTitle" xml:space="preserve">
+    <value>WrapPanel</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_1_Content" xml:space="preserve">
+    <value>One Text</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_10_Content" xml:space="preserve">
+    <value>Break Before</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_11_Content" xml:space="preserve">
+    <value>Components</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_12_Content" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_13_Content" xml:space="preserve">
+    <value>Helps authors</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_14_Content" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_15_Content" xml:space="preserve">
+    <value>Any other word</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_16_Content" xml:space="preserve">
+    <value>Break After and Before</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_17_Content" xml:space="preserve">
+    <value>Large sentences are really difficult to write</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_18_Content" xml:space="preserve">
+    <value>Small font size is not recommended</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_19_Content" xml:space="preserve">
+    <value>Almost there</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_2_Content" xml:space="preserve">
+    <value>A larger text used for wrapping scenarios</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_20_Content" xml:space="preserve">
+    <value>The End</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_3_Content" xml:space="preserve">
+    <value>A name</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_4_Content" xml:space="preserve">
+    <value>Something else</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_5_Content" xml:space="preserve">
+    <value>Should I break?</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_6_Content" xml:space="preserve">
+    <value>Break After</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_7_Content" xml:space="preserve">
+    <value>Another name</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_8_Content" xml:space="preserve">
+    <value>Content cannot be repeated</value>
+  </data>
+  <data name="WrapPanelSample_HyperlinkButton_Content_9_Content" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="WrapPanelSample_TB_Text_Text" xml:space="preserve">
+    <value>Orientation:</value>
+  </data>
+  <data name="OperationtException" xml:space="preserve">
+    <value>Only one operation in flight at a time.</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="AlgeriaTopScorerName" xml:space="preserve">
+    <value>Rafik SAIFI</value>
+  </data>
+  <data name="ArgentinaTopScorerName" xml:space="preserve">
+    <value>Sergio AGUERO</value>
+  </data>
+  <data name="AustraliaTopScorerName" xml:space="preserve">
+    <value>Tim CAHILL</value>
+  </data>
+  <data name="BindingToC1CollectionView_From_Text" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="BrazilTopScorerName" xml:space="preserve">
+    <value>LUIS FABIANO</value>
+  </data>
+  <data name="CameroonTopScorerName" xml:space="preserve">
+    <value>Samuel ETOO</value>
+  </data>
+  <data name="ChileTopScorerName" xml:space="preserve">
+    <value>Humberto SUAZO</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Email1_TB_Text" xml:space="preserve">
+    <value>sariya0@adventureworks.com</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Email2_TB_Text" xml:space="preserve">
+    <value>russel0@adventureworks.com</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Email3_TB_Text" xml:space="preserve">
+    <value>sann0@adventureworks.com</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Email4_TB_Text" xml:space="preserve">
+    <value>ascott0@adventureworks.com</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Email5_TB_Text" xml:space="preserve">
+    <value>fred0@adventureworks.com</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Everet_TB_Text" xml:space="preserve">
+    <value>Everet</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Name1_TB_Text" xml:space="preserve">
+    <value>Sariya Harnpadoungsataya</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Name2_TB_Text" xml:space="preserve">
+    <value>Russel Hunter</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Name3_TB_Text" xml:space="preserve">
+    <value>Ann Johnson</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Name4_TB_Text" xml:space="preserve">
+    <value>A. Scott Wright</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Name5_TB_Text" xml:space="preserve">
+    <value>Fred Northup</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_NewportHills_TB_Text" xml:space="preserve">
+    <value>Newport Hills</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Number1_TB_Text" xml:space="preserve">
+    <value>399-555-0176</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Number2_TB_Text" xml:space="preserve">
+    <value>786-555-0144</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Number3_TB_Text" xml:space="preserve">
+    <value>778-555-0141</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Number4_TB_Text" xml:space="preserve">
+    <value>992-555-0194</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Number5_TB_Text" xml:space="preserve">
+    <value>818-555-0192</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Seatle_TB_Text" xml:space="preserve">
+    <value>Seatle</value>
+  </data>
+  <data name="ClearStyleTabControl_SalesAgents_Snohomish_TB_Text" xml:space="preserve">
+    <value>Snohomish</value>
+  </data>
+  <data name="CollectionViewConditions_All_Properties_TB_Text" xml:space="preserve">
+    <value>All properties</value>
+  </data>
+  <data name="CollectionViewConditions_Column3_Name_Text" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="CollectionViewConditions_Column4_Name_Text" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="CollectionViewConditions_Column5_Name_Text" xml:space="preserve">
+    <value>Growth</value>
+  </data>
+  <data name="CollectionViewConditions_Selected_Properties_TB_Text" xml:space="preserve">
+    <value>Selected properties</value>
+  </data>
+  <data name="CoteDlvoireTopScorerName" xml:space="preserve">
+    <value>Didier DROGBA</value>
+  </data>
+  <data name="DenmarkTopScorerName" xml:space="preserve">
+    <value>Soren LARSEN</value>
+  </data>
+  <data name="EnglandTopScorerName" xml:space="preserve">
+    <value>Wayne ROONEY</value>
+  </data>
+  <data name="FranceTopScorerName" xml:space="preserve">
+    <value>Andre-Pierre GIGNAC</value>
+  </data>
+  <data name="GermanyTopScorerName" xml:space="preserve">
+    <value>Miroslav KLOSE</value>
+  </data>
+  <data name="GhanaTopScorerName" xml:space="preserve">
+    <value>Matthew AMOAH</value>
+  </data>
+  <data name="GreeceTopScorerName" xml:space="preserve">
+    <value>Theofanis GEKAS</value>
+  </data>
+  <data name="HondurasTopScorerName" xml:space="preserve">
+    <value>Carlos PAVON</value>
+  </data>
+  <data name="ItalyTopScorerName" xml:space="preserve">
+    <value>Alberto GILARDINO</value>
+  </data>
+  <data name="JapanTopScorerName" xml:space="preserve">
+    <value>Shunsuke NAKAMURA</value>
+  </data>
+  <data name="KoreaNorthTopScorerName" xml:space="preserve">
+    <value>JONG Chol Min</value>
+  </data>
+  <data name="KoreaSouthTopScorerName" xml:space="preserve">
+    <value>PARK Ji Sung</value>
+  </data>
+  <data name="MexicoTopScorerName" xml:space="preserve">
+    <value>Jared BORGETTI</value>
+  </data>
+  <data name="NetherlandsTopScorerName" xml:space="preserve">
+    <value>Klaas HUNTELAAR</value>
+  </data>
+  <data name="NewZealandTopScorerName" xml:space="preserve">
+    <value>Shane SMELTZ</value>
+  </data>
+  <data name="NigeriaTopScorerName" xml:space="preserve">
+    <value>Victor OBINNA</value>
+  </data>
+  <data name="ParaguayTopScorerName" xml:space="preserve">
+    <value>Salvador CABANAS</value>
+  </data>
+  <data name="PortugalTopScorerName" xml:space="preserve">
+    <value>SIMAO</value>
+  </data>
+  <data name="SerbiaTopScorerName" xml:space="preserve">
+    <value>Milan JOVANOVIC</value>
+  </data>
+  <data name="SlovakRepublicTopScorerName" xml:space="preserve">
+    <value>Stanislav SESTAK</value>
+  </data>
+  <data name="SloveniaTopScorerName" xml:space="preserve">
+    <value>Milivoje NOVAKOVIC</value>
+  </data>
+  <data name="SouthAfricaTopScorerName" xml:space="preserve">
+    <value>Kagisho DIKGACOI</value>
+  </data>
+  <data name="SpainTopScorerName" xml:space="preserve">
+    <value>David VILLA</value>
+  </data>
+  <data name="SwitzerlandTopScorerName" xml:space="preserve">
+    <value>Alexander FREI</value>
+  </data>
+  <data name="TabControlSample_TabItem5_TB_Content_Text" xml:space="preserve">
+    <value>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</value>
+  </data>
+  <data name="TabControlSample_TabItem6_TB_Content_Text" xml:space="preserve">
+    <value>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</value>
+  </data>
+  <data name="UnitedStatesTopScorerName" xml:space="preserve">
+    <value>Jozy ALTIDORE</value>
+  </data>
+  <data name="UruguayTopScorerName" xml:space="preserve">
+    <value>Diego FORLAN</value>
+  </data>
+  <data name="WrapPanelSample_Horizontal_Content" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="WrapPanelSample_Vertical_Content" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="AlexVera" xml:space="preserve">
+    <value>Alex Vera</value>
+  </data>
+  <data name="BenSmith" xml:space="preserve">
+    <value>Ben Smith</value>
+  </data>
+  <data name="BrunoGates" xml:space="preserve">
+    <value>Bruno Gates</value>
+  </data>
+  <data name="BrunoMaxtor" xml:space="preserve">
+    <value>Bruno Maxtor</value>
+  </data>
+  <data name="JeanJobs" xml:space="preserve">
+    <value>Jean Jobs</value>
+  </data>
+  <data name="JohnMaxto" xml:space="preserve">
+    <value>John Maxto</value>
+  </data>
+  <data name="LeonardJhonson" xml:space="preserve">
+    <value>Leonard Jhonson</value>
+  </data>
+  <data name="MartinDay" xml:space="preserve">
+    <value>Martin Day</value>
+  </data>
+  <data name="MaxDays" xml:space="preserve">
+    <value>Max Days</value>
+  </data>
+  <data name="MichaelVera" xml:space="preserve">
+    <value>Michael Vera</value>
+  </data>
+  <data name="NoelaJohnson" xml:space="preserve">
+    <value>Noela Johnson</value>
+  </data>
+  <data name="PeterMeredith" xml:space="preserve">
+    <value>Peter Meredith</value>
+  </data>
+  <data name="RodrigoBeckham" xml:space="preserve">
+    <value>Rodrigo Beckham</value>
+  </data>
+  <data name="SheelaAlvarez" xml:space="preserve">
+    <value>Sheela Alvarez</value>
+  </data>
+  <data name="VerticalMenu_Content_TB_Text" xml:space="preserve">
+    <value>The C1Menu control enables you to create traditional-looking menus that allow deep nested items. By setting one property, the menu can be displayed using either horizontal or vertical orientation.</value>
+  </data>
+  <data name="VerticalMenu_MenuItem1_Header_Header" xml:space="preserve">
+    <value>Silverlight</value>
+  </data>
+  <data name="VerticalMenu_MenuItem2_Header_Header" xml:space="preserve">
+    <value>WPF</value>
+  </data>
+  <data name="VerticalMenu_MenuItem3_Header_Header" xml:space="preserve">
+    <value>UWP</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_DragDropManager_Header" xml:space="preserve">
+    <value>DragDropManager</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Toolbar_Header" xml:space="preserve">
+    <value>Toolbar</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_DockControl_Header" xml:space="preserve">
+    <value>DockControl</value>
+  </data>
+  <data name="VerticalMenu_TB_Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="EntranceTab_TabItem1_Content1_Text" xml:space="preserve">
+    <value>Taylor Swift is a multi-Grammy award-winning American singer/songwriter who, in 2010 at the age of 20, became the youngest artist in history to win the Grammy Award for Album of the Year. In 2011 Swift was named Billboard's Woman of the Year. She also has been named the American Music Awards Artist of the Year, as well as the Entertainer of the Year for both the Country Music Association and the Academy of Country Music, among many other accolades. As of this writing, she is also the top-selling digital artist in music history.</value>
+  </data>
+  <data name="EntranceTab_TabItem1_Content3_Text" xml:space="preserve">
+    <value>Shawn Corey Carter was born 4 December 1969 in Brooklyn, New York, USA. Raised in Brooklyn, Carter was a school friend of The Notorious B.I.G.. He first started releasing records in the late 1980s. In 1990, he appeared on records by his close friend, Jaz ("The Originators") and Original Flavor ("Can I Get Open"), and later scored an underground hit single with 1995's "In My Lifetime". Drawing on Jaz's dealings with mercenary labels, Jay-Z set up his own Roc-A-Fella imprint in 1996 with entrepreneur 'Damon Dash' and 'Kareem 'Biggs' Burke'. His debut set, "Reasonable Doubt", which reached US number 23 in July, attracted fans with a mixture of hard-hitting street lyrics and rhymes, epitomized by the collaboration with The Notorious B.I.G. on "Brooklyn's Finest". The follow-up, "In My Lifetime, Vol. 1", was released in the aftermath of The Notorious B.I.G.'s murder, and debuted at US number 3 in November 1997. Featuring guest appearances from Sean Combs (aka "Puff Daddy"), Lil' Kim, Too $hort, Blackstreet and DJ Premier, this sombre and intensely personal album included the stand-out tracks, "You Must Love Me" and "Where I'm From". Although in demand as a guest artist, Jay-Z found the time to write, produce, and direct the semi-autobiographical short, "Streets is Watching". The gold-selling soundtrack introduced several of Roc-A-Fella's rising stars, including Memphis Bleek, Rell and Diamonds N' Ruff, and featured the hit single, "It's Alright". Jay-Z then became a major star with the hit singles, "Can I Get A ... " and "Hard Knock Life (Ghetto Anthem)", the latter built around a line from the musical, "Annie". One of the more bizarre samples to be used on a hip-hop track, the single nevertheless became an international hit (UK number 2, December 1998/US number 15, March 1999). The album of the same name featured hotshot producer Tim Mosley (aka "Timbaland"), in addition to the usual team of Ski and DJ Premier. Guest rappers included DMX, Foxy Brown and Too $hort, on a package that diluted Jay-Z's hard-hitting lyrical edge in an attempt to corner the crossover market. "Vol. 2: Hard Knock Life" easily succeeded in its aim, staying at US number 1 for five weeks, before finally being deposed by Alanis Morissette's new album. Despite a hectic schedule as a guest producer/writer and rapper, Jay-Z still found the time to enter the studio and record tracks for his new album. Released in December 1999, "Vol. 3: The Life and Times Of S. Carter" confirmed his status as one of hip-hop's most popular artists when it topped the album charts the following month. The following year's "The Dynasty: Roc La Familia 2000", another US chart-topper, was originally planned as a supergroup collaboration with fellow Roc-A-Fella rappers Beanie Sigel, Memphis Bleek and Amil.</value>
+  </data>
+  <data name="EntranceTab_TabItem1_Content2_Text" xml:space="preserve">
+    <value>Beyoncé was born in Houston, Texas. Her father, Mathew Knowles, manages Destiny's Child. Her mother, Tina Knowles (née Celestine Ann Beyincé), designs their glittering costumes. Solange Knowles, her sister (they're about 5 years apart), has released her debut album. She dances with her big sister during DC-3 concerts. Beyoncé is of African-American and Creole descent.She and her group were discovered by Whitney Houston. One of her favorite songs is "Lovefool" by The Cardigans. Her favorite item of clothing is a pair of path work metallic boots. She writes &amp; produces many of the group's songs, including smash hits "Jumpin Jumpin", "Bootylicious", "Nasty Girl", "Independent Women", "Happy Face" and "Apple Pie a la mode".</value>
+  </data>
+  <data name="AutoCompleteDropDownName" xml:space="preserve">
+    <value>AutoComplete</value>
+  </data>
+  <data name="BindingToC1CollectionViewName" xml:space="preserve">
+    <value>Grouping</value>
+  </data>
+  <data name="CheckBoxTreeViewName" xml:space="preserve">
+    <value>CheckBoxTreeView</value>
+  </data>
+  <data name="ClearStyleTabControlName" xml:space="preserve">
+    <value>Tab Placement</value>
+  </data>
+  <data name="CollectionViewConditionsName" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="ContextMenuName" xml:space="preserve">
+    <value>ContextMenu</value>
+  </data>
+  <data name="DockPanelSampleName" xml:space="preserve">
+    <value>DockPanel</value>
+  </data>
+  <data name="DragDropTreeViewName" xml:space="preserve">
+    <value>DragDropTreeView</value>
+  </data>
+  <data name="DropDownName" xml:space="preserve">
+    <value>DropDown</value>
+  </data>
+  <data name="EditTreeViewName" xml:space="preserve">
+    <value>EditTreeView</value>
+  </data>
+  <data name="EntranceTabName" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="GridSplitterSampleName" xml:space="preserve">
+    <value>GridSplitter</value>
+  </data>
+  <data name="HierarchicalDropDownName" xml:space="preserve">
+    <value>Hierarchical Tree</value>
+  </data>
+  <data name="HierarchicalTreeViewName" xml:space="preserve">
+    <value>HierarchicalTreeView</value>
+  </data>
+  <data name="InputHandlingName" xml:space="preserve">
+    <value>Input Handling</value>
+  </data>
+  <data name="ListBoxSampleName" xml:space="preserve">
+    <value>ListBox</value>
+  </data>
+  <data name="MaskedTextBoxName" xml:space="preserve">
+    <value>MaskedTextBox</value>
+  </data>
+  <data name="MenuSampleName" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="NumericBoxName" xml:space="preserve">
+    <value>NumericBox</value>
+  </data>
+  <data name="ProgressIndicatorDemoName" xml:space="preserve">
+    <value>Progress Indicator</value>
+  </data>
+  <data name="RadialMenuName" xml:space="preserve">
+    <value>RadialMenu</value>
+  </data>
+  <data name="RadialPanelSampleName" xml:space="preserve">
+    <value>RadialPanel</value>
+  </data>
+  <data name="RangeSliderName" xml:space="preserve">
+    <value>RangeSlider</value>
+  </data>
+  <data name="TabControlSampleName" xml:space="preserve">
+    <value>Close and Pin</value>
+  </data>
+  <data name="TreeViewSampleName" xml:space="preserve">
+    <value>TreeView</value>
+  </data>
+  <data name="UniformGridSampleName" xml:space="preserve">
+    <value>UniformGrid</value>
+  </data>
+  <data name="WrapPanelSampleName" xml:space="preserve">
+    <value>WrapPanel</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Accordion_Header" xml:space="preserve">
+    <value>Accordion</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Book_Header" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Carousel_Header" xml:space="preserve">
+    <value>Carousel</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_CoverFlow_Header" xml:space="preserve">
+    <value>CoverFlow</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_HtmlHost_Header" xml:space="preserve">
+    <value>HtmlHost</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_HyperPanel_Header" xml:space="preserve">
+    <value>HyperPanel</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Imaging_Header" xml:space="preserve">
+    <value>Imaging</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_LayoutPanels_Header" xml:space="preserve">
+    <value>Layout Panels</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_MediaPlayer_Header" xml:space="preserve">
+    <value>MediaPlayer</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Menu_Header" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_OutlookBar_Header" xml:space="preserve">
+    <value>OutlookBar</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_ProgressBar_Header" xml:space="preserve">
+    <value>ProgressBar</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_RadialMenu_Header" xml:space="preserve">
+    <value>RadialMenu</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_TabControl_Header" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Tiles_Header" xml:space="preserve">
+    <value>Tiles</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_TileView_Header" xml:space="preserve">
+    <value>TileView</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_TreeView_Header" xml:space="preserve">
+    <value>TreeView</value>
+  </data>
+  <data name="VerticalMenu_MenuItem_Windows_Header" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="EntranceTab_TabItem2_Content1_Text" xml:space="preserve">
+    <value>Academy Award-winning actress Jennifer Lawrence is best known for playing Katniss Everdeen in The Hunger Games (2012), Tiffany Maxwell in Silver Linings Playbook (2012), and Rosalyn Rosenfeld in American Hustle (2013).Jennifer Shrader Lawrence was born on August 15, 1990 in Louisville, Kentucky, to Karen (Koch), who manages a children's camp, and Gary Lawrence, who works in construction. She has two older brothers, Ben and Blaine, and has English, German, Irish, and Scottish ancestry.Before Jennifer became an actress, she was involved in cheer-leading, field hockey, softball, and modeling, none of which she held a passion for. Her career began when she traveled to Manhattan at the age of 14. After conducting her first cold read, agents told her mother that "it was the best cold read by a 14- year-old they had ever heard", and tried to convince her mother that she needed to spend the summer in Manhattan. After leaving the agency, Jen was spotted by an agent in the midst of shooting an H&amp;M ad and asked to take her picture. The next day, that agent followed up with her and invited her to the studio for a cold read audition. Again, the agents were highly impressed and strongly urged her mother to allow her to spend the summer in New York City. As fate would have it, she did, and subsequently appeared in commercials such as MTV's "My Super Sweet 16" and played a role in the movie, The Devil You Know (2013).Her big break came when she played Ree in Winter's Bone (2010), which landed her Academy Award and Golden Globe nominations. Shortly thereafter, she secured the role of Mystique in franchise reboot X: First Class (2011), which went on to be a hit in Summer 2011. Around this time, Lawrence scored the role of a lifetime when she was cast as Katniss Everdeen in the big-screen adaptation of literary sensation The Hunger Games (2012). That went on to become one of the highest-grossing movies ever with over $407 million at the domestic box office, and instantly propelled Lawrence to the A-list among young actors/actresses.Three Hunger Games sequels are scheduled for release in November 2013, 2014, and 2015, with Lawrence reprising her role at least for the first one (The Hunger Games: Catching Fire (2013)). In 2012 the romantic comedy Silver Linings Playbook earned her the Academy Award, Golden Globe Award, Screen Actors Guild Award, Satellite Award and the Independent Spirit Award for Best Actress, amongst other accolades, making her the youngest person ever to be nominated for two Academy Awards for Best Actress and the second-youngest Best Actress winner.Lawrence can also be seen in The Beaver (2011), Like Crazy (2011), House at the End of the Street (2012), and American Hustle (2013). She played the title role, Joy Mangano, in the 2015 David O. Russell film Joy (2015).</value>
+  </data>
+  <data name="EntranceTab_TabItem2_Content2_Text" xml:space="preserve">
+    <value>Johnny Depp is perhaps one of the most versatile actors of his day and age in Hollywood.He was born John Christopher Depp II in Owensboro, Kentucky, on June 9, 1963, to Betty Sue (Wells), who worked as a waitress, and John Christopher Depp, a civil engineer.Depp was raised in Florida. He dropped out of school when he was 15, and fronted a series of music-garage bands, including one named 'The Kids'. However, it was when he married Lori Anne Allison (Lori A. Depp) that he took up the job of being a ballpoint-pen salesman to support himself and his wife. A visit to Los Angeles, California, with his wife, however, happened to be a blessing in disguise, when he met up with actor Nicolas Cage, who advised him to turn to acting, which culminated in Depp's film debut in the low-budget horror film, A Nightmare on Elm Street (1984), where he played a teenager who falls prey to dream-stalking demon Freddy Krueger.In 1987 he shot to stardom when he replaced Jeff Yagher in the role of undercover cop Tommy Hanson in the popular TV series 21 Jump Street (1987).In 1990, after numerous roles in teen-oriented films, his first of a handful of great collaborations with director Tim Burton came about when Depp played the title role in Edward Scissorhands (1990). Following the film's success, Depp carved a niche for himself as a serious, somewhat dark, idiosyncratic performer, consistently selecting roles that surprised critics and audiences alike. He continued to gain critical acclaim and increasing popularity by appearing in many features before re-joining with Burton in the lead role of Ed Wood (1994). In 1997 he played an undercover FBI agent in the fact-based film Donnie Brasco (1997), opposite Al Pacino; in 1998 he appeared in Fear and Loathing in Las Vegas (1998), directed by Terry Gilliam; and then, in 1999, he appeared in the sci-fi/horror film The Astronaut's Wife (1999). The same year he teamed up again with Burton in Sleepy Hollow (1999), brilliantly portraying Ichabod Crane.Depp has played many characters in his career, including another fact-based one, Insp. Fred Abberline in From Hell (2001). He stole the show from screen greats such as Antonio Banderas in the finale to Robert Rodriguez's "mariachi" trilogy, Once Upon a Time in Mexico (2003). In that same year he starred in the marvelous family blockbuster Pirates of the Caribbean: The Curse of the Black Pearl (2003), playing a character that only the likes of Depp could pull off: the charming, conniving and roguish Capt. Jack Sparrow. The film's enormous success has opened several doors for his career and included an Oscar nomination. He appeared as the central character in the Stephen King-based movie, Secret Window (2004); as the kind-hearted novelist James Barrie in the factually-based Finding Neverland (2004), where he co-starred with Kate Winslet; and Rochester in the British film, The Libertine (2004). Depp collaborated again with Burton in a screen adaptation of Roald Dahl's novel, Charlie and the Chocolate Factory (2005), and later in Alice in Wonderland (2010) and Dark Shadows (2012).Off-screen, Depp has dated several female celebrities, and has been engaged to Sherilyn Fenn, Jennifer Grey, Winona Ryder and Kate Moss. He was married to Lori Anne Allison in 1983, but divorced her in 1985. Depp has two children with French singer/actress Vanessa Paradis: Lily-Rose Melody, born in 1999 and Jack, born in 2002. He married actress/producer Amber Heard in 2015.</value>
+  </data>
+  <data name="EntranceTab_TabItem2_Content3_Text" xml:space="preserve">
+    <value>In 2003, she was nominated for two Golden Globe Awards, one for drama (Girl with a Pearl Earring (2003)) and one for comedy (Lost in Translation (2003)), her breakout role, starring opposite Bill Murray, and receiving rave reviews and a Best Actress Award at the Venice Film Festival. Her 2004 film roles include the critically acclaimed Weitz brothers' film "In Good Company," as well as starring opposite John Travolta in "A Love Song For Bobby Long," which garnered her a Golden Globe nomination (her third in two years).She dropped out of Mission: Impossible III (2006) due to scheduling conflicts. Her next film role was in The Island (2005) alongside Ewan McGregor which earned weak reviews from U.S. critics. After this, she appeared in Woody Allen's Match Point (2005) and was nominated again for a Golden Globe Award. In May 2008, she released her album "Anywhere I Lay My Head," a collection of Tom Waits covers featuring one original song. Also that year, she starred in Frank Miller's The Spirit (2008), the Woody Allen film Vicky Cristina Barcelona (2008), and played Mary Boleyn opposite Natalie Portman in The Other Boleyn Girl (2008).Since then, she has appeared as part of an ensemble cast in the romantic comedy He's Just Not That Into You (2009), the action superhero film Iron Man 2 (2010), the comedy-drama We Bought a Zoo (2011) and started as the original scream queen, Janet Leigh, in Hitchcock (2012). She then played her Iron Man 2 character, Black Widow, in the blockbuster action films The Avengers (2012), Captain America: The Winter Soldier (2014), and Avengers: Age of Ultron (2015), and also headlined the science-fiction thriller Lucy (2014), a box office success. With more than a decade of work already under her belt, Scarlett has proven to be one of Hollywood's most talented young actresses.</value>
+  </data>
+  <data name="EntranceTab_TabItem2_Header_3_Header" xml:space="preserve">
+    <value>Scarlett Johansson</value>
+  </data>
+  <data name="EntranceTab_TabItem2_TB_Header_Text" xml:space="preserve">
+    <value>Movie Star</value>
+  </data>
+  <data name="EntranceTab_TabItem3_Content1_Text" xml:space="preserve">
+    <value>Ashley Victoria Benson was born on December 18, 1989 in Anaheim Hills, California, to Shannon (Harte) and Jeff Benson. She has Irish, English, and German ancestry. She has been dancing competitively since she was 2 with hip hop, jazz, ballet, tap and lyrical. She has been singing since she was about 5 and she hopes to pursue that, along with her acting. Ashley started modeling at the age of 5 for dance catalogs. Ashley was then pursued by The Ford Modeling Agency at the age of 8. She worked steadily in print and is still with the Agency. At the age of 10, she wanted to pursue acting. Ashley went on to do 35 commercials, and then on to theatrical roles. Acting was now Ashley's passion. Ashley put all her focus into acting, which left little time for modeling and dancing, anymore. Ashley's most recent role is "Hanna Marin" on ABC Family's Pretty Little Liars (2010). Ashley also had a cameo in Romeo Miller (aka Lil Romeo) and Solange Knowles's music video for the song "True Love". She did a photo shoot with Britney Spears for Vogue Magazine. She is in NLT's music video, "That Girl".</value>
+  </data>
+  <data name="EntranceTab_TabItem3_Content2_Text" xml:space="preserve">
+    <value>O'Donoghue was born and raised in Drogheda, County Louth, in a Roman Catholic family. He initially attended Dundalk Grammar School, and then The Gaiety School of Acting in Dublin. At age 16, O'Donoghue went to Paris, France, for a month to learn the French language. Colin's early career was mainly split between theatre and television work in Ireland and the UK. In 2003, Colin won the Irish Film and Television Award for "Best New Talent" for his role as Norman in "Home For Christmas.</value>
+  </data>
+  <data name="EntranceTab_TabItem3_Content3_Text" xml:space="preserve">
+    <value>Maisie Williams was born on April 15, 1997 in Bristol, England as Margaret Constance Williams. She is an actress and publicist, known for Game of Thrones (2011), Cyberbully (2015) and The Falling (2014).</value>
+  </data>
+  <data name="EntranceTab_TabItem3_Header_3_Header" xml:space="preserve">
+    <value>Maisie Williams</value>
+  </data>
+</root>

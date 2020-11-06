@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="ExpressionEditorSamples.ColumnCalculation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:ExpressionEditorSamples"
+    xmlns:c1="using:C1.Xaml"    
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="200" MaxWidth="600"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <c1:C1WrapPanel Orientation="Horizontal">
+                <TextBlock Text="Choose Expression to Edit: " VerticalAlignment="Center"/>
+                <ComboBox x:Name="comboBox" SelectionChanged="combobox_SelectionChanged">
+                    <ComboBoxItem Tag="CustomField1">Special Price (New Customers)</ComboBoxItem>
+                    <ComboBoxItem Tag="CustomField2">Special Price (Card Holders)</ComboBoxItem>
+                </ComboBox>
+            </c1:C1WrapPanel>
+            <local:ExpressionEditorEE x:Name="editor" Grid.Row="1"/>
+        </Grid>
+        <local:FlexGridEE x:Name="flexGrid" Margin="10,0,0,0" Grid.Column="1"/>
+    </Grid>
+</Page>

@@ -1,0 +1,2 @@
+MainPackage=D:\FlexChart_EditableAnnotations\UWP\FlexChartEditableAnnotations\FlexChartEditableAnnotations\bin\x64\Debug\FlexChartEditableAnnotations_1.0.2.0_x64_Debug.appx
+SymbolPackage=D:\FlexChart_EditableAnnotations\UWP\FlexChartEditableAnnotations\FlexChartEditableAnnotations\AppPackages\FlexChartEditableAnnotations_1.0.2.0_Debug_Test\FlexChartEditableAnnotations_1.0.2.0_x64_Debug.appxsym

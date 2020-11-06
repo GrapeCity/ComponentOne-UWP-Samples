@@ -1,0 +1,25 @@
+﻿<UserControl
+    x:Class="RichTextBoxSamples.InsertImageTool"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RichTextBoxSamples.Tools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="320" Height="100">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Url_Text, Source={StaticResource RichTextBoxSamplesLocalization}}" VerticalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="txtUrl" Grid.Column="1" Margin="5"/>
+            <Button x:Name="btnFromWeb" Grid.Row="1" Grid.ColumnSpan="2" Content="{Binding InsertPic_Content, Source={StaticResource RichTextBoxSamplesLocalization}}" HorizontalAlignment="Right" Click="btnFromWeb_Click" Margin="3 0"/>
+            <Button x:Name="btnChoosePhoto" Grid.Row="1" Grid.ColumnSpan="2" Content="{Binding ChoosePic_Content, Source={StaticResource RichTextBoxSamplesLocalization}}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="btnChoosePhoto_Click" />
+        </Grid>
+    </Grid>
+</UserControl>

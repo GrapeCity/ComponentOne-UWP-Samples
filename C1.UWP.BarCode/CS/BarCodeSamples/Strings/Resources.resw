@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>BarcodeSamples</value>
+  </data>
+  <data name="BarCodeImage.Text" xml:space="preserve">
+    <value>Barcode Image:</value>
+  </data>
+  <data name="BarCodeSamplesDescription" xml:space="preserve">
+    <value>Shows barcode in your apps.</value>
+  </data>
+  <data name="BarCodeSamplesName" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="BarCodeSamplesTitle" xml:space="preserve">
+    <value>See it in action</value>
+  </data>
+  <data name="BarCode_Text" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="EmailAddressInitialValue" xml:space="preserve">
+    <value>us.sales@grapecity.com</value>
+  </data>
+  <data name="EmailCaptionValue" xml:space="preserve">
+    <value>E-mail Address</value>
+  </data>
+  <data name="EmailMark" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Generate.Content" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="SaveImage.Content" xml:space="preserve">
+    <value>Export to Image</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="StringCell" xml:space="preserve">
+    <value>Cell:</value>
+  </data>
+  <data name="StringEmail" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="StringFax" xml:space="preserve">
+    <value>Fax:</value>
+  </data>
+  <data name="StringFirstName" xml:space="preserve">
+    <value>FirstName:</value>
+  </data>
+  <data name="StringFullName" xml:space="preserve">
+    <value>FullName:</value>
+  </data>
+  <data name="StringHomeAddress" xml:space="preserve">
+    <value>Home Address:</value>
+  </data>
+  <data name="StringHomeCity" xml:space="preserve">
+    <value>Home City:</value>
+  </data>
+  <data name="StringHomeCountry" xml:space="preserve">
+    <value>Home Country:</value>
+  </data>
+  <data name="StringHomePhone" xml:space="preserve">
+    <value>Home Phone:</value>
+  </data>
+  <data name="StringHomeState" xml:space="preserve">
+    <value>Home State:</value>
+  </data>
+  <data name="StringHomeZip" xml:space="preserve">
+    <value>Home Zip:</value>
+  </data>
+  <data name="StringLastName" xml:space="preserve">
+    <value>LastName:</value>
+  </data>
+  <data name="StringLogo" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="StringNickname" xml:space="preserve">
+    <value>Nickname:</value>
+  </data>
+  <data name="StringOfficeAddress" xml:space="preserve">
+    <value>Office Address:</value>
+  </data>
+  <data name="StringOfficeCity" xml:space="preserve">
+    <value>Office City:</value>
+  </data>
+  <data name="StringOfficeCountry" xml:space="preserve">
+    <value>Office Country:</value>
+  </data>
+  <data name="StringOfficePhone" xml:space="preserve">
+    <value>Office Phone:</value>
+  </data>
+  <data name="StringOfficeState" xml:space="preserve">
+    <value>Office State:</value>
+  </data>
+  <data name="StringOfficeZip" xml:space="preserve">
+    <value>Office Zip:</value>
+  </data>
+  <data name="StringOrganization" xml:space="preserve">
+    <value>Organization:</value>
+  </data>
+  <data name="StringPhoto" xml:space="preserve">
+    <value>Photo:</value>
+  </data>
+  <data name="StringPrefix" xml:space="preserve">
+    <value>Prefix:</value>
+  </data>
+  <data name="StringRole" xml:space="preserve">
+    <value>Role:</value>
+  </data>
+  <data name="StringSuffix" xml:space="preserve">
+    <value>Suffix:</value>
+  </data>
+  <data name="StringTitle" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="StringWebsite" xml:space="preserve">
+    <value>Website:</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="TextCaptionValue" xml:space="preserve">
+    <value>Input Text</value>
+  </data>
+  <data name="TextInitialValue" xml:space="preserve">
+    <value>Welcome to use C1BarCode control</value>
+  </data>
+  <data name="TextMark" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+  <data name="UrlCaptionValue" xml:space="preserve">
+    <value>Web Url</value>
+  </data>
+  <data name="UrlInitialValue" xml:space="preserve">
+    <value>https://www.grapecity.com/en/componentone</value>
+  </data>
+  <data name="UrlMark" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="VcardCellCaptionValue" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="VcardEmailCaptionValue" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="VcardFaxCaptionValue" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="VcardFirstNameCaptionValue" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="VCardFirstNameInitialValue" xml:space="preserve">
+    <value>C1</value>
+  </data>
+  <data name="VcardFullNameCaptionValue" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="VCardFullNameSuffixInitialValue" xml:space="preserve">
+    <value>Mr.C1.Sales.Jr</value>
+  </data>
+  <data name="VcardHomeAddressCaptionValue" xml:space="preserve">
+    <value>Address(Home)</value>
+  </data>
+  <data name="VcardHomeCityCaptionValue" xml:space="preserve">
+    <value>City(Home)</value>
+  </data>
+  <data name="VcardHomeCountryCaptionValue" xml:space="preserve">
+    <value>Country(Home)</value>
+  </data>
+  <data name="VCardHomeCountryInitialValue" xml:space="preserve">
+    <value>US</value>
+  </data>
+  <data name="VcardHomePhoneCaptionValue" xml:space="preserve">
+    <value>Phone(Home)</value>
+  </data>
+  <data name="VcardHomeStateCaptionValue" xml:space="preserve">
+    <value>State/Region(Home)</value>
+  </data>
+  <data name="VcardHomeZipCaptionValue" xml:space="preserve">
+    <value>Zip/Postal Code(Home)</value>
+  </data>
+  <data name="VcardLastNameCaptionValue" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="VCardLastNameInitialValue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="VcardLogoCaptionValue" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="VCardMark" xml:space="preserve">
+    <value>Vcard</value>
+  </data>
+  <data name="VcardNicknameCaptionValue" xml:space="preserve">
+    <value>Nickname</value>
+  </data>
+  <data name="VCardNicknameInitialValue" xml:space="preserve">
+    <value>C1Sales</value>
+  </data>
+  <data name="VcardOfficeAddressCaptionValue" xml:space="preserve">
+    <value>Address(Office)</value>
+  </data>
+  <data name="VcardOfficeCityCaptionValue" xml:space="preserve">
+    <value>City(Office)</value>
+  </data>
+  <data name="VcardOfficeCountryCaptionValue" xml:space="preserve">
+    <value>Country(Office)</value>
+  </data>
+  <data name="VcardOfficePhoneCaptionValue" xml:space="preserve">
+    <value>Phone(Office)</value>
+  </data>
+  <data name="VcardOfficeStateCaptionValue" xml:space="preserve">
+    <value>State/Region(Office)</value>
+  </data>
+  <data name="VcardOfficeZipCaptionValue" xml:space="preserve">
+    <value>Zip/Postal Code(Office)</value>
+  </data>
+  <data name="VcardOrganizationCaptionValue" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="VcardPhotoCaptionValue" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="VcardPrefixCaptionValue" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="VCardPrefixInitialValue" xml:space="preserve">
+    <value>Mr</value>
+  </data>
+  <data name="VcardRoleCaptionValue" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="VCardRoleInitialValue" xml:space="preserve">
+    <value>Software developer</value>
+  </data>
+  <data name="VcardSuffixCaptionValue" xml:space="preserve">
+    <value>Suffix</value>
+  </data>
+  <data name="VCardSuffixInitialValue" xml:space="preserve">
+    <value>Jr</value>
+  </data>
+  <data name="VcardTitleCaptionValue" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="VCardTitleInitialValue" xml:space="preserve">
+    <value>Developer</value>
+  </data>
+  <data name="VcardWebsiteCaptionValue" xml:space="preserve">
+    <value>Website(https://www.grapecity.com/en/componentone)</value>
+  </data>
+  <data name="BarcodeText_Text" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="BarcodeType_Text" xml:space="preserve">
+    <value>Select Barcode Type:</value>
+  </data>
+  <data name="EmptyDataError" xml:space="preserve">
+    <value>Please type something in Data part!</value>
+  </data>
+  <data name="NewBarCodeSamplesDescription" xml:space="preserve">
+    <value>Explore new bar and qr code types added in 2018.</value>
+  </data>
+  <data name="NewBarCodeSamplesName" xml:space="preserve">
+    <value>New barcode</value>
+  </data>
+  <data name="NewBarCodeSamplesTitle" xml:space="preserve">
+    <value>New Barcode Types</value>
+  </data>
+</root>

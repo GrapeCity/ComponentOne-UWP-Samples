@@ -1,0 +1,87 @@
+﻿<Page x:Class="FinancialChartExplorer.Kagi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c1="using:C1.Xaml"
+      xmlns:Chart="using:C1.Xaml.Chart.Finance"
+      xmlns:local="using:FinancialChartExplorer"
+      mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="EmConverter" />
+            <Style TargetType="ComboBox" x:Key="CompanyStyle">
+                <Setter Property="Margin" Value="10 0" />
+                <Setter Property="Width" Value="120" />
+                <Setter Property="ItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Symbol"/>
+            <ComboBox x:Name="cbSymbol" Style="{StaticResource CompanyStyle}" ItemsSource="{Binding Companies}" SelectionChanged="OnSymbolSelectionChanged"/>
+        </StackPanel>
+        <Chart:C1FinancialChart x:Name="financialChart" ChartType="Kagi" BindingX="Date" Binding="High,Low,Open,Close,Volume" Grid.Row="1">
+            <Chart:C1FinancialChart.Options>
+                <Chart:FinancialChartOptions ReversalAmount="2" />
+            </Chart:C1FinancialChart.Options>
+            <Chart:FinancialSeries />
+        </Chart:C1FinancialChart>
+        <StackPanel x:Name="optionsPanel" Orientation="Horizontal" Margin="10" Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=ReversalAmountCaption, Source={StaticResource FinancialChartExplorerLocalization}}" Margin="10 0"/>
+                <c1:C1NumericBox x:Name="cbReversalAmount" Value="{Binding ElementName=financialChart, Path=Options.ReversalAmount, Mode=TwoWay}" Minimum="1" Maximum="100" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="secondLevelOptions" Orientation="Horizontal">
+                <StackPanel x:Name="spRangeMode" Orientation="Horizontal">
+                    <TextBlock x:Name="tbRangeMode" Text="{Binding Path=RangeModeCaptioin, Source={StaticResource FinancialChartExplorerLocalization}}" Margin="30 0 10 0"/>
+                    <ComboBox x:Name="cbRangeMode" ItemsSource="{Binding RangeMode}" SelectionChanged="OnRangeModeChanged" Width="100"/>
+                </StackPanel>
+                <StackPanel x:Name="spDataFields" Orientation="Horizontal">
+                    <TextBlock x:Name="tbDataFields" Text="{Binding Path=DataFieldsCaption, Source={StaticResource FinancialChartExplorerLocalization}}" Margin="30 0 10 0"/>
+                    <ComboBox x:Name="cbDataFields" ItemsSource="{Binding DataFields}" SelectedItem="{Binding ElementName=financialChart, Path=Options.DataFields, Mode=TwoWay, Converter={StaticResource EmConverter}}" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="financialChart.FontSize" Value="12"/>
+                        <Setter Target="tbRangeMode.Margin" Value="10 0" />
+                        <Setter Target="tbDataFields.Margin" Value="10 0" />
+                        <Setter Target="optionsPanel.Orientation" Value="Vertical" />
+                        <Setter Target="spRangeMode.Margin" Value="0 0 60 0" />
+                        <Setter Target="cbRangeMode.Margin" Value="10 0" />
+                        <Setter Target="cbDataFields.Margin" Value="10 0" />
+                        <Setter Target="spRangeMode.Orientation" Value="Vertical" />
+                        <Setter Target="spDataFields.Orientation" Value="Vertical" />
+                        <Setter Target="cbReversalAmount.Width" Value="160" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="420" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

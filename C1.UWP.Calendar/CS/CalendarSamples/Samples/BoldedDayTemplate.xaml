@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="CalendarSamples.BoldedDayTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CalendarSamples"
+    xmlns:calendar="using:C1.Xaml.Calendar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <DataTemplate x:Key="boldedDaySlotTemplate">
+                <Border Background="#FF92A700" CornerRadius="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="3">
+                    <TextBlock Text="{Binding}" FontSize="24" Foreground="White" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Border>
+            </DataTemplate>
+            <DataTemplate x:Key="PhoneBoldedDaySlotTemplate">
+                <Border Background="#FF92A700" CornerRadius="4"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="1">
+                    <TextBlock Text="{Binding}" FontSize="14" Foreground="White" FontWeight="Black" VerticalAlignment="Center" Margin="4" HorizontalAlignment="Left" />
+                </Border>
+            </DataTemplate>
+        </Grid.Resources>
+        <calendar:C1Calendar x:Name="cal1" ShowWeekNumbers="True" MaxSelectionCount="14" BoldedDaySlotTemplate="{StaticResource boldedDaySlotTemplate}" >
+            
+        </calendar:C1Calendar>
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="cal1.BoldedDaySlotTemplate" Value="{StaticResource PhoneBoldedDaySlotTemplate}"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

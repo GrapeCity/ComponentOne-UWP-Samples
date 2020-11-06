@@ -1,0 +1,70 @@
+﻿<UserControl
+    x:Class="StockAnalysis.Partial.UserControls.Annotations"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StockAnalysis.Partial.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:cc="using:StockAnalysis.Partial.CustomControls"
+  xmlns:data="using:StockAnalysis.Data"
+  mc:Ignorable="d"
+    d:DesignHeight="400" d:DesignWidth="210" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+
+  <Grid Background="White">
+    <cc:NavList x:Name="listbox" BorderThickness="0" IsAutoCloseParentPopup="True" SelectionChanged="listbox_SelectionChanged">     
+      <cc:NavList.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="10" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Width="16" Height="16" Source="{Binding Source}" />
+            <TextBlock Grid.Column="2" Text="{Binding Name}" />
+          </Grid>
+        </DataTemplate>
+      </cc:NavList.ItemTemplate>
+      <data:ImageListDataItem Name="None" Source="/Resources/None.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>None</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Circle" Source="/Resources/Circle.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Circle</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Ellipse" Source="/Resources/Ellipse.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Ellipse</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Line" Source="/Resources/Line.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Line</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Polygon" Source="/Resources/Triangle.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Polygon</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Rectangle" Source="/Resources/Rectangle.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Rectangle</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Square" Source="/Resources/Square.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Square</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+      <data:ImageListDataItem Name="Text" Source="/Resources/Text.png">
+        <data:ImageListDataItem.Tag>
+          <data:NewAnnotationType>Text</data:NewAnnotationType>
+        </data:ImageListDataItem.Tag>
+      </data:ImageListDataItem>
+    </cc:NavList>
+  </Grid>
+</UserControl>

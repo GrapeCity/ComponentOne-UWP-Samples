@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Eatables>
+  <!--Pizzas-->
+  <Category Name="Pizza" DisplayText="Pizza" IsVisible="true"  Image="Pizza">
+    <SubCategory Name="Popular" DisplayText="Popular Pizzas" IsVisible="true" Image="">
+      <Item>
+        <Id>1</Id>
+        <Name>Cheese</Name>
+        <DisplayText>Cheese</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Cheese.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>2</Id>
+        <Name>Pepperoni</Name>
+        <DisplayText>Pepperoni</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Pepperoni.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>5</Rating>
+      <IsVeg>false</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>3</Id>
+        <Name>Meat Lovers</Name>
+        <DisplayText>Meat Lovers</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>MeatLovers.png</ImageName>
+        <AvailableUnit>3</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>4</Rating>
+        <IsVeg>false</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>4</Id>
+        <Name>Supreme</Name>
+        <DisplayText>Supreme</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Supreme.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>false</IsSpecial>
+      </Item>
+    </SubCategory>
+    <SubCategory Name="Meats" DisplayText="Meats Pizzas" IsVisible="true" Image="">
+      <Item>
+        <Id>5</Id>
+        <Name>Supreme</Name>
+        <DisplayText>Supreme</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Supreme.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>4</Rating>
+        <IsVeg>false</IsVeg>
+        <IsSpecial>false</IsSpecial>
+      </Item>
+    <Item>
+      <Id>6</Id>
+        <Name>Meat Lovers</Name>
+        <DisplayText>Meat Lovers</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>MeatLovers.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>7</Id>
+        <Name>Primo Meats</Name>
+        <DisplayText>Primo Meats</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>PrimoMeats.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>8</Id>
+        <Name>Bacon Spinach Alfredo</Name>
+        <DisplayText>Bacon Spinach Alfredo</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BaconSpinachAlfredo.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>9</Id>
+        <Name>Pepperoni Lovers</Name>
+        <DisplayText>Pepperoni Lovers</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>PepperoniLovers.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>2</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+          <Item>
+            <Id>10</Id>
+        <Name>Italian Meatball</Name>
+        <DisplayText>Italian Meatball</DisplayText>
+            <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>ItalianMeatball.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+            <Rating>3</Rating>
+            <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+          <Item>
+            <Id>11</Id>
+        <Name>Five Pepper Pepperoni</Name>
+        <DisplayText>Five Pepper Pepperoni</DisplayText>
+            <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>FivePepperPepperoni.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+            <Rating>4</Rating>
+            <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+<Item>
+  <Id>12</Id>
+        <Name>BBQ Bacon Cheeseburger</Name>
+        <DisplayText>BBQ Bacon Cheeseburger</DisplayText>
+  <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BBQBaconCheeseburger.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+  <Rating>3</Rating>
+  <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    </SubCategory>
+    <SubCategory Name="Chicken" DisplayText="Chicken Pizzas" IsVisible="true" Image="">
+      <Item>
+        <Id>13</Id>
+        <Name>Hawaiian Chicken</Name>
+        <DisplayText>Hawaiian Chicken</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>HawaiianChicken.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>14</Id>
+        <Name>Chicken Bacon Parmesan</Name>
+        <DisplayText>Chicken Bacon Parmesan</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>ChickenBaconParmesan.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>15</Id>
+        <Name>BBQ Chicken</Name>
+        <DisplayText>BBQ Chicken</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BBQChicken.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>16</Id>
+        <Name>Buffalo Chicken</Name>
+        <DisplayText>Buffalo Chicken</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BuffaloChicken.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    </SubCategory>
+    <SubCategory Name="Veggie" DisplayText="Veggie Pizzas" IsVisible="true" Image="">
+      <Item>
+        <Id>17</Id>
+        <Name>Premium Garden Veggie</Name>
+        <DisplayText>Premium Garden Veggie</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>PremiumGardenVeggie.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>18</Id>
+        <Name>Veggie Lovers</Name>
+        <DisplayText>Veggie Lovers</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>VeggieLovers.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>19</Id>
+        <Name>Ultimate Cheese Lovers</Name>
+        <DisplayText>Ultimate Cheese Lovers</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>UltimateCheeseLovers.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    </SubCategory>
+  </Category>
+  <!--Wings-->
+  <Category Name="Wings" DisplayText="Wings" IsVisible="true"  Image="Wings">
+    <SubCategory Name="WingStreet Wings" DisplayText="WingStreet Wings" IsVisible="true" Image="">
+      <Item>
+        <Id>20</Id>
+        <Name>Traditional Bone-In</Name>
+        <DisplayText>Traditional Bone-In</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>TraditionalBone-In.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>21</Id>
+        <Name>Breaded Bone-out</Name>
+        <DisplayText>Breaded Bone-out</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BreadedBone-out.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>22</Id>
+        <Name>Individual Wing Meal</Name>
+        <DisplayText>Individual Wing Meal</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>IndividualWingMeal.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>23</Id>
+        <Name>Family Wing Meal</Name>
+        <DisplayText>Family Wing Meal</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>FamilyWingMeal.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    <Item>
+      <Id>24</Id>
+        <Name>Party Wing Meal</Name>
+        <DisplayText>Party Wing Meal</DisplayText>
+      <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>PartyWingMeal.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+      <Rating>3</Rating>
+      <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    </SubCategory>
+    <SubCategory Name="WingStreet Sides" DisplayText="WingStreet Sides" IsVisible="true" Image="">
+      <Item>
+        <Id>25</Id>
+        <Name>Fries</Name>
+        <DisplayText>Fries</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Fries.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>26</Id>
+        <Name>Apple Pies</Name>
+        <DisplayText>Apple Pies</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>ApplePies.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>      
+    </SubCategory>
+    <SubCategory Name="Dips" DisplayText="Dips" IsVisible="true" Image="">
+      <Item>
+        <Id>27</Id>
+        <Name>Ranch</Name>
+        <DisplayText>Ranch</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Ranch.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>28</Id>
+        <Name>Blue Cheese</Name>
+        <DisplayText>Blue Cheese</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BlueCheese.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>      
+    </SubCategory>    
+  </Category>
+  <!--Sides-->
+  <Category Name="Sides" DisplayText="Sides" IsVisible="true"  Image="SIdes">
+    <SubCategory Name="Sides" DisplayText="Sides" IsVisible="true" Image="">
+      <Item>
+        <Id>29</Id>
+        <Name>New Stuffed Garlic Knots</Name>
+        <DisplayText>New Stuffed Garlic Knots</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>NewStuffedGarlicKnots.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>30</Id>
+        <Name>Breadsticks</Name>
+        <DisplayText>Breadsticks</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Breadsticks.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>31</Id>
+        <Name>CheeseSticks</Name>
+        <DisplayText>CheeseSticks</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>CheeseSticks.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>32</Id>
+        <Name>Fries</Name>
+        <DisplayText>Fries</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Fries.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>    
+    </SubCategory>
+    <SubCategory Name="Sauces" DisplayText="Sauces" IsVisible="true" Image="">
+      <Item>
+        <Id>33</Id>
+        <Name>Marinara</Name>
+        <DisplayText>Marinara</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Marinara.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>34</Id>
+        <Name>Blue Cheese</Name>
+        <DisplayText>Blue Cheese</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>BlueCheese.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>35</Id>
+        <Name>Barbecue</Name>
+        <DisplayText>Barbecue</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Barbecue.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>36</Id>
+        <Name>Ranch</Name>
+        <DisplayText>Ranch</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Ranch.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>37</Id>
+        <Name>Garlic Cheese</Name>
+        <DisplayText>Garlic Cheese</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>GarlicCheese.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>38</Id>
+        <Name>Cheese Sauce</Name>
+        <DisplayText>Cheese Sauce</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>CheeseSauce.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>39</Id>
+        <Name>Icing</Name>
+        <DisplayText>Icing</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Icing.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+    </SubCategory>        
+  </Category>
+  <!--Drinks-->
+  <Category Name="Drinks" DisplayText="Drinks" IsVisible="true"  Image="Drinks">
+    <SubCategory Name="Drinks" DisplayText="Drinks" IsVisible="true" Image="">
+      <Item>
+        <Id>40</Id>
+        <Name>Pepsi</Name>
+        <DisplayText>Pepsi</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>Pepsi.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>41</Id>
+        <Name>Diet Pepsi</Name>
+        <DisplayText>Diet Pepsi</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>DietPepsi.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>42</Id>
+        <Name>Mist Twist</Name>
+        <DisplayText>Mist Twist</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>MistTwist.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>43</Id>
+        <Name>Mountain Dew</Name>
+        <DisplayText>Mountain Dew</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>MountainDew.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>    
+    </SubCategory>            
+  </Category>
+  <!--More-->
+  <Category Name="More" DisplayText="More" IsVisible="true"  Image="More">
+    <SubCategory Name="Pasta" DisplayText="Pasta" IsVisible="true" Image="">
+      <Item>
+        <Id>44</Id>
+        <Name>Tuscani Chicken Alfredo</Name>
+        <DisplayText>Tuscani Chicken Alfredo</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>TuscaniChickenAlfredo.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>45</Id>
+        <Name>Tuscani Meaty Marinara</Name>
+        <DisplayText>Tuscani Meaty Marinara</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>TuscaniMeatyMarinara.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>          
+    </SubCategory>
+    <SubCategory Name="Desserts" DisplayText="Desserts" IsVisible="true" Image="">
+      <Item>
+        <Id>46</Id>
+        <Name>Hot Chocolate Brownie</Name>
+        <DisplayText>Hot Chocolate Brownie</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>HotChocolateBrownie.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>47</Id>
+        <Name>Chocolate Chip Cookie</Name>
+        <DisplayText>Chocolate Chip Cookie</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>ChocolateChipCookie.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>48</Id>
+        <Name>Triple Chocolate Brownie</Name>
+        <DisplayText>Triple Chocolate Brownie</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>TripleChocolateBrownie.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>49</Id>
+        <Name>Cinnamon Sticks</Name>
+        <DisplayText>Cinnamon Sticks</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>CinnamonSticks.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>
+      <Item>
+        <Id>50</Id>
+        <Name>Apple Pies</Name>
+        <DisplayText>Apple Pies</DisplayText>
+        <Description>a large circle of flat bread baked with cheese, tomatoes, and sometimes meat and vegetables spread on top.</Description>
+        <PrizeRegular>200</PrizeRegular>
+        <PrizeMedium>280</PrizeMedium>
+        <PrizeLarge>350</PrizeLarge>
+        <DscountInPercent>10</DscountInPercent>
+        <ImageName>ApplePies.png</ImageName>
+        <AvailableUnit>5</AvailableUnit>
+        <IsVisible>true</IsVisible>
+        <Rating>3</Rating>
+        <IsVeg>true</IsVeg>
+        <IsSpecial>true</IsSpecial>
+      </Item>      
+    </SubCategory>        
+  </Category>
+</Eatables>

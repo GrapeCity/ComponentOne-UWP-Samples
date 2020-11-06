@@ -1,0 +1,56 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CalendarData"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1calendar="using:C1.Xaml.Calendar"
+    x:Class="CalendarData.CalendarDataDemo"
+    mc:Ignorable="d"
+    RequestedTheme="Dark"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <!-- return custom DataTemplates for calendar days -->
+        <local:DaySlotTemplateSelector x:Key="DaySlotTemplateSelector">
+            <c1calendar:DaySlotTemplateSelector.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="BoldedDay">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <!-- show appointments information saved in the DaySlot.DataSource property -->
+                            <TextBlock Grid.Row="0" Text="{Binding Path=DataSource[0].Subject}" FontSize="10" Height="25" TextWrapping="Wrap"/>
+                            <TextBlock Text="{Binding}" Grid.Row="1" 
+                                       Foreground="Plum" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Margin="6,0,0,1"/>
+                        </Grid>
+                    </DataTemplate>
+                    <DataTemplate x:Key="UnboldedDay">
+                        <TextBlock Text="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="6,22,0,4"/>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </c1calendar:DaySlotTemplateSelector.Resources>
+        </local:DaySlotTemplateSelector>
+
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid x:Name="ContentPanel"  Margin="2">
+            <c1calendar:C1Calendar x:Name="calendar" MaxSelectionCount="14" WeekendBrush="LightGreen" MaxHeight="600"
+                                   Loaded="cal1_Loaded" DoubleTapped="calendar_DoubleTapped"
+                                   DisplayDateChanging="cal1_DisplayDateChanging" />
+        </Grid>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Switch" Label="{Binding Alter_Label, Source={StaticResource CalendarDataLocalization}}" Click="AlterAppearance_Click"/>
+                <AppBarButton Icon="Home" Label="{Binding Today_Label, Source={StaticResource CalendarDataLocalization}}" Click="Today_Click"/>
+                <AppBarButton Icon="Help" Label="{Binding Help_Label, Source={StaticResource CalendarDataLocalization}}" Click="Help_Click"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>

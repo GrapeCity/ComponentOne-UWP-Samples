@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="FlexChartExplorer.PieIntroduction"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChartExplorer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <Style TargetType="ComboBox" x:Key="leftPcComboBoxStyle">
+                <Setter Property="Width" Value="160" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="ComboBox" x:Key="rightPcComboBoxStyle">
+                <Setter Property="Width" Value="190" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="ComboBox" x:Key="leftComboBoxStyle">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Width" Value="135" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="ComboBox" x:Key="rightComboBoxStyle">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Width" Value="150" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <local:EnumConverter x:Key="enumConverter" />
+            <local:BooleanConverter x:Key="booleanConverter" />
+            <local:VisibilityConverter x:Key="visibilityConverter" />
+            <Style TargetType="ComboBox">
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <DataTemplate x:Key="cbInnerRadiusTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding InnerRadius_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbOffsetTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Offset_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbStartAngleTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding StartAngle_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbPaletteTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Palette_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbLabelsTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Label_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbLabelBorderTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding LabelsBorders_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding Converter={StaticResource booleanConverter}}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="stackPanel" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="cbInnerRadius"
+                      SelectedValue="{Binding ElementName=pieChart, Path=InnerRadius, Mode=TwoWay}" 
+                      ItemsSource="{Binding DataContext.Radius}" Style="{StaticResource leftPcComboBoxStyle}"
+                      ItemTemplate="{StaticResource cbInnerRadiusTemplate}">
+                </ComboBox>
+                <ComboBox x:Name="cbOffset"
+                      SelectedValue="{Binding ElementName=pieChart, Path=Offset, Mode=TwoWay}"
+                      ItemsSource="{Binding DataContext.Offsets}" Style="{StaticResource leftPcComboBoxStyle}"
+                      ItemTemplate="{StaticResource cbOffsetTemplate}">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="cbStartAngle"
+                      SelectedValue="{Binding ElementName=pieChart, Path=StartAngle, Mode=TwoWay}"
+                      ItemsSource="{Binding DataContext.StartAngles}" Style="{StaticResource leftPcComboBoxStyle}"
+                      ItemTemplate="{StaticResource cbStartAngleTemplate}">
+                </ComboBox>
+                <ComboBox x:Name="cbPalette"
+                      SelectedValue="{Binding ElementName=pieChart, Path=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=Palette}"
+                      ItemsSource="{Binding DataContext.Palettes}" Style="{StaticResource rightPcComboBoxStyle}"
+                      ItemTemplate="{StaticResource cbPaletteTemplate}">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="cbLabels"
+                      SelectedValue="{Binding ElementName=pieChart, Path=DataLabel.Position, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=PieLabelPosition}"
+                      ItemsSource="{Binding LabelPositions}" Style="{StaticResource leftPcComboBoxStyle}"
+                      ItemTemplate="{StaticResource cbLabelsTemplate}">
+                </ComboBox>
+                <ComboBox x:Name="cbLabelBorder"
+                      Visibility="{Binding ElementName=cbLabels, Path=SelectedValue, Converter={StaticResource visibilityConverter}}" 
+                      SelectedValue="{Binding ElementName=pieChart, Path=DataLabel.Border, Mode=TwoWay}" 
+                      ItemsSource="{Binding DataContext.LabelsBorders}" Style="{StaticResource rightPcComboBoxStyle}"
+                      ItemTemplate="{StaticResource cbLabelBorderTemplate}">
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <Chart:C1FlexPie x:Name="pieChart" Grid.Row="1" Binding="April" BindingName="Fruit" ItemsSource="{Binding DataContext.Data}">
+            <Chart:C1FlexPie.DataLabel>
+                <Chart:PieDataLabel Content="{}{y}"></Chart:PieDataLabel>
+            </Chart:C1FlexPie.DataLabel>
+        </Chart:C1FlexPie>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="stackPanel.Orientation" Value="Vertical" />
+                        <Setter Target="cbInnerRadius.Style" Value="{StaticResource leftComboBoxStyle}" />
+                        <Setter Target="cbStartAngle.Style" Value="{StaticResource leftComboBoxStyle}" />
+                        <Setter Target="cbLabels.Style" Value="{StaticResource leftComboBoxStyle}" />
+                        <Setter Target="cbOffset.Style" Value="{StaticResource rightComboBoxStyle}" />
+                        <Setter Target="cbPalette.Style" Value="{StaticResource rightComboBoxStyle}" />
+                        <Setter Target="cbLabelBorder.Style" Value="{StaticResource rightComboBoxStyle}" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

@@ -1,0 +1,123 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.SalesAgents"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="LabelText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="0 5 0 0"/>
+        </Style>
+        <Style x:Key="DataImage" TargetType="Image">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="120"/>
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.Transitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.Transitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Right" Margin="10,6,15,6" Width="38" Height="38">
+            <Ellipse Fill="#FF2C383D" Stroke="Black" StrokeThickness="0" Height="20" Margin="9,-1,9,0" VerticalAlignment="Top"/>
+            <Path Fill="#FF2C383D" Stretch="Fill" Stroke="Black" StrokeThickness="0" Margin="2,18.083,2,-1.031" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z" UseLayoutRounding="False"/>
+            <Ellipse Fill="White" Stroke="Black" StrokeThickness="0" Height="16" Margin="11,1,11,0" VerticalAlignment="Top"/>
+            <Ellipse Stroke="Black" Fill="#FFE6C29F" StrokeThickness="0" Height="12" Margin="12,3,12,0" VerticalAlignment="Top" Width="12"/>
+            <Path Fill="White" Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="17" Margin="3.4,0,3.4,1" VerticalAlignment="Bottom" UseLayoutRounding="False" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z"/>
+            <Path Stretch="Fill" Fill="#FF4775A9" Stroke="Black" StrokeThickness="0" Height="12.75" Margin="5,0,4.973,3.208" VerticalAlignment="Bottom" UseLayoutRounding="False" Data="M32,18.5 C32,18.5 0,18.5 0,18.5 C0,8.282732 -5.2903476,0 16,0 C37.388386,0 32,8.282732 32,18.5 z"/>
+            <Path Fill="White" Stretch="Fill" Stroke="Black" StrokeThickness="0" Height="15.884" VerticalAlignment="Bottom" UseLayoutRounding="False" Data="M16.702024,21.451406 L14.94964,22.675219 L16.690578,25.907257 C16.690578,25.907257 12.926277,29.430058 14.676734,32.92128 C15.315234,34.194744 15.748629,35.272137 16.627508,36.051136 C16.627508,36.051136 19.120314,36.143234 19.120314,36.143234 C19.120314,36.143234 20.003286,35.099487 21.053705,32.837067 C22.670065,29.355713 19.188257,25.906961 19.188257,25.906961 L21.253296,22.716232 L19.47146,21.402668 z" Margin="14.194,0,14.312,2.062"/>
+            <Path Stretch="Fill" Fill="#FF5B9200" Stroke="Black" StrokeThickness="0" Height="14.7" Margin="16.053,0,15.988,3.208" VerticalAlignment="Bottom" UseLayoutRounding="False" Data="M19.21393,21.432089 L17.099844,22.882702 L18.840807,25.908079 C18.840807,25.908079 16.768415,28.353247 16.31225,29.347891 C15.939325,30.161036 15.910511,31.697802 16.60247,33.036366 C17.223873,34.238441 17.846062,35.02515 18.053305,35.149479 C18.260548,35.273804 19.918484,35.273815 20.04283,35.14949 C20.167175,35.025166 20.788828,34.113895 21.368925,32.912033 C21.955721,31.696293 22.363707,30.674082 21.576241,29.099228 C20.788774,27.524374 19.379684,25.908079 19.379684,25.908079 L21.369005,22.882702 z"/>
+        </Grid>
+        <TextBlock Margin="15,0,1,0" Text="{Binding ClearStyleTabControl_SalesAgents_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="NoWrap"  FontSize="28" FontWeight="SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <c1:C1WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="20" HorizontalAlignment="Center" MaxWidth="650">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle HorizontalAlignment="Stretch" Fill="#11000000" VerticalAlignment="Stretch" Grid.ColumnSpan="3" x:Name="background"/>
+                <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Name1_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" Foreground="#FF507494"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Email1_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Number1_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Everet_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                </StackPanel>
+                <Image Source="../Assets/people/girl1.png" Stretch="Fill" Style="{StaticResource DataImage}" Margin="10"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card2" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stroke="#FF000000" StrokeThickness="0" Grid.ColumnSpan="3" Fill="#11000000"/>
+                <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Name2_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" Foreground="#FF507494"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Email2_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}"  Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Number2_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Seatle_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                </StackPanel>
+                <Image Source="../Assets/people/guy1.png" Stretch="Fill" Style="{StaticResource DataImage}" Margin="10"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card3" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stroke="#FF000000" StrokeThickness="0" Grid.ColumnSpan="3" Fill="#11000000"/>
+                <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Name3_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" Foreground="#FF507494"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Email3_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Number3_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Everet_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                </StackPanel>
+                <Image Source="../Assets/people/girl2.png" Stretch="Fill" Style="{StaticResource DataImage}" Margin="10"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card4" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="#11000000" Grid.ColumnSpan="3"/>
+                <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Name4_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" Foreground="#FF507494"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Email4_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Number4_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_NewportHills_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                </StackPanel>
+                <Image Source="../Assets/people/guy2.png" Stretch="Fill" Style="{StaticResource DataImage}" Margin="10"/>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card5" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stroke="#FF000000" StrokeThickness="0" Fill="#11000000" Grid.ColumnSpan="3"/>
+                <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Name5_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" Foreground="#FF507494"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Email5_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Number5_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                    <TextBlock Text="{Binding ClearStyleTabControl_SalesAgents_Snohomish_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource LabelText}"/>
+                </StackPanel>
+                <Image Source="../Assets/people/guy3.png" Stretch="Fill" Style="{StaticResource DataImage}" Margin="10"/>
+            </Grid>
+        </c1:C1WrapPanel>
+    </Grid>
+</Page>

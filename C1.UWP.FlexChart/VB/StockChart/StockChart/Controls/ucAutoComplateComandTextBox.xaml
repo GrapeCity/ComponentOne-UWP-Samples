@@ -1,0 +1,45 @@
+﻿<UserControl
+    x:Class="StockChart.ucAutoComplateComandTextBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StockChart"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="userContorl"
+    d:DesignHeight="36"
+    d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <AutoSuggestBox x:Name="txtSymbol" PlaceholderText="{Binding ElementName=userContorl, Path=Placeholder}"
+                        Text="{Binding ElementName=userContorl, Path=Text,Mode=TwoWay}" 
+                        TextChanged="txtSymbol_TextChanged"
+                   
+                        Style="{StaticResource AutoSuggestBoxStyle}" >
+            <AutoSuggestBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Foreground="White" FontSize="12" />
+                </DataTemplate>
+            </AutoSuggestBox.ItemTemplate>
+        </AutoSuggestBox>
+
+        <Button x:Name="btnLoad" Grid.Column="2" Width="40" Style="{StaticResource BlueButton}" Content="{Binding ElementName=userContorl, Path=ButtonContent}"
+                Command="{Binding ElementName=userContorl, Path= Command, Mode=TwoWay}" CommandParameter="{Binding ElementName=txtSymbol, Path=Text, Mode=TwoWay}" 
+                />
+
+    </Grid>
+</UserControl>

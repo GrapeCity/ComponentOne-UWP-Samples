@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DistributionData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Factories>
+    <Factory>
+      <Name>Hazel Kirk Factory</Name>
+      <Latitude>40.174787869083865</Latitude>
+      <Longitude>-79.95781764925637</Longitude>
+      <Capacity>73</Capacity>
+    </Factory>
+    <Factory>
+      <Name>Von Ormy Factory</Name>
+      <Latitude>29.315704948857874</Latitude>
+      <Longitude>-98.622773852297684</Longitude>
+      <Capacity>30</Capacity>
+    </Factory>
+    <Factory>
+      <Name>Hai-ch'ien-ts'o Factory</Name>
+      <Latitude>23.73419836230989</Latitude>
+      <Longitude>120.38897842789238</Longitude>
+      <Capacity>2</Capacity>
+    </Factory>
+    <Factory>
+      <Name>Nagtala Factory</Name>
+      <Latitude>22.456743436351488</Latitude>
+      <Longitude>88.394218710702489</Longitude>
+      <Capacity>91</Capacity>
+    </Factory>
+    <Factory>
+      <Name>Donghe Factory</Name>
+      <Latitude>40.576731689535464</Latitude>
+      <Longitude>110.01686019708168</Longitude>
+      <Capacity>94</Capacity>
+    </Factory>
+  </Factories>
+  <Offices>
+    <Office>
+      <Name>Battery Park City Office</Name>
+      <Latitude>40.702721412011073</Latitude>
+      <Longitude>-74.010523512670261</Longitude>
+      <Stores>48</Stores>
+      <Manager>Carey Fredericks</Manager>
+    </Office>
+    <Office>
+      <Name>Avalon Village Office</Name>
+      <Latitude>33.801699299333521</Latitude>
+      <Longitude>-118.27377222374885</Longitude>
+      <Stores>36</Stores>
+      <Manager>Rachel Jennings</Manager>    
+    </Office>
+    <Office>
+      <Name>Denver Office</Name>
+      <Latitude>39.745032819014433</Latitude>
+      <Longitude>-104.99067543580149</Longitude>
+      <Stores>22</Stores>
+      <Manager>James Marshal</Manager>    
+    </Office>
+    <Office>
+      <Name>London Office</Name>
+      <Latitude>51.4931608603362</Latitude>
+      <Longitude>-0.23210537731097822</Longitude>
+      <Stores>29</Stores>
+      <Manager>Emily Parsons</Manager>    
+    </Office>
+    <Office>
+      <Name>Napoli Office</Name>
+      <Latitude>40.839836313739795</Latitude>
+      <Longitude>14.252559165688874</Longitude>
+      <Stores>23</Stores>
+      <Manager>Mario Kostner</Manager>    
+    </Office>
+    <Office>
+      <Name>Woodstock Office</Name>
+      <Latitude>-33.924011573784504</Latitude>
+      <Longitude>18.439092119811992</Longitude>
+      <Stores>22</Stores>
+      <Manager>William Hunt</Manager>    
+    </Office>
+    <Office>
+      <Name>Bangalore Office</Name>
+      <Latitude>12.960259739648739</Latitude>
+      <Longitude>77.59416526348808</Longitude>
+      <Stores>21</Stores>
+      <Manager>Zeeshan Namadevan</Manager>    
+    </Office>
+    <Office>
+      <Name>Tsim Sha Tsui Office</Name>
+      <Latitude>22.300081748583846</Latitude>
+      <Longitude>114.17243692425654</Longitude>
+      <Stores>16</Stores>
+      <Manager>Huang Hai</Manager>    
+    </Office>
+    <Office>
+      <Name>Seoul Office</Name>
+      <Latitude>37.565132059475928</Latitude>
+      <Longitude>126.99440383658488</Longitude>
+      <Stores>19</Stores>
+      <Manager>Kim Jun Min</Manager>    
+    </Office>
+    <Office>
+      <Name>Sidney Office</Name>
+      <Latitude>-33.862803915767458</Latitude>
+      <Longitude>151.20708624907354</Longitude>
+      <Stores>20</Stores>
+      <Manager>Nicolas Payne</Manager>    
+    </Office>
+    <Office>
+      <Name>Porto Alegre Office</Name>
+      <Latitude>-30.037852417715904</Latitude>
+      <Longitude>-51.1999405219253</Longitude>
+      <Stores>16</Stores>
+      <Manager>Hugo Silva</Manager>    
+    </Office>
+    <Office>
+      <Name>Montevideo Office</Name>
+      <Latitude>-34.905781369808373</Latitude>
+      <Longitude>-56.19903919892171</Longitude>
+      <Stores>8</Stores>
+      <Manager>Xavi Hernandez</Manager>
+    </Office>
+  </Offices>
+</DistributionData>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7BC37AA-4172-40EC-A2CE-8BC20F68E477}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GaugeSamples</RootNamespace>
+    <AssemblyName>GaugeSamplesLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+    <PRIResource Include="Strings\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAnimationPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\Customized\Automobile.xaml.cs">
+      <DependentUpon>Automobile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Customized\Clock.xaml.cs">
+      <DependentUpon>Clock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Customized\Rule.xaml.cs">
+      <DependentUpon>Rule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Customized\Speedometer.xaml.cs">
+      <DependentUpon>Speedometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Customized\SpeedometerTopLeft.xaml.cs">
+      <DependentUpon>SpeedometerTopLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Customized\SpeedometerTopRight.xaml.cs">
+      <DependentUpon>SpeedometerTopRight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Customized\Thermometer.xaml.cs">
+      <DependentUpon>Thermometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\Knob.xaml.cs">
+      <DependentUpon>Knob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\Parts\Clouds.xaml.cs">
+      <DependentUpon>Clouds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\Parts\Rain.xaml.cs">
+      <DependentUpon>Rain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\Parts\Storm.xaml.cs">
+      <DependentUpon>Storm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\Parts\Sun.xaml.cs">
+      <DependentUpon>Sun.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\Parts\SunAndClouds.xaml.cs">
+      <DependentUpon>SunAndClouds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Knobs\RegionKnob.xaml.cs">
+      <DependentUpon>RegionKnob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Linears\LinearGauge.xaml.cs">
+      <DependentUpon>LinearGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Linears\RulerGauge.xaml.cs">
+      <DependentUpon>RulerGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Radials\RadialGauge.xaml.cs">
+      <DependentUpon>RadialGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Radials\SpeedometerGauge.xaml.cs">
+      <DependentUpon>SpeedometerGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Radials\VolumeGauge.xaml.cs">
+      <DependentUpon>VolumeGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Samples\Customized\Automobile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Customized\Clock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Customized\Rule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Customized\Speedometer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Customized\SpeedometerTopLeft.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Customized\SpeedometerTopRight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Customized\Thermometer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\Knob.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\Parts\Clouds.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\Parts\Rain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\Parts\Storm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\Parts\Sun.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\Parts\SunAndClouds.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Knobs\RegionKnob.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Linears\LinearGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Linears\RulerGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Radials\RadialGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Radials\SpeedometerGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Radials\VolumeGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.Gauge, Version=10.0">
+      <Name>C1.UWP.Gauge</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\GaugeSamplesLib.rd.xml" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

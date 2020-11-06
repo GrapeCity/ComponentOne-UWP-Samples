@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="PdfDocumentSourceSamples.ExportPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PdfDocumentSourceSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ContentDialog Grid.Row="0" Grid.RowSpan="7"
+            x:Name="passwordDialog"
+            PrimaryButtonText="{Binding PasswordOpenLabel, Source={StaticResource PdfDocumentSourceSamplesLocalization}}"
+            SecondaryButtonText="{Binding PasswordCancelLabel, Source={StaticResource PdfDocumentSourceSamplesLocalization}}"
+            MaxWidth="{Binding ActualWidth, ElementName=layoutRoot}"
+            >
+            <StackPanel Padding="10, 0">
+                <TextBlock
+                    FontSize="24"
+                    Text="{Binding PasswordTitleLabel, Source={StaticResource PdfDocumentSourceSamplesLocalization}}"
+                    TextWrapping="Wrap"
+                    Padding="0, 20, 0, 10"
+                    />
+                <TextBlock
+                    x:Name="fileNameBlock"
+                    TextWrapping="Wrap"
+                    Padding="0, 0, 0, 20"
+                    />
+                <PasswordBox
+                    x:Name="passwordBox"
+                    PasswordRevealMode="Hidden"
+                    />
+                <CheckBox
+                    x:Name="revealModeCheckBox"
+                    IsChecked="False" 
+                    Content="{Binding ShowPasswordCheck, Source={StaticResource PdfDocumentSourceSamplesLocalization}}"
+                    Checked="CheckBox_Changed"
+                    Unchecked="CheckBox_Changed"
+                    />
+            </StackPanel>
+
+        </ContentDialog>
+
+        <TextBlock x:Name="lblFile" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding lblFile_Text, Source={StaticResource PdfDocumentSourceSamplesLocalization}}" VerticalAlignment="Center"  Margin="10, 10, 10, 10"/>
+        <Grid x:Name="gFile" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10, 10, 10, 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Name="tbFile" HorizontalAlignment="Stretch" Margin="0,0,5,0" IsReadOnly="True"/>
+            <Button Grid.Column="1" Name="btnFile" Content="..." Click="btnFile_Click"/>
+        </Grid>
+        <CheckBox x:Name="cbxUseSystemRendering" Grid.Row="2" Grid.Column="0" Content="{Binding cbxUseSystemRendering_Text, Source={StaticResource PdfDocumentSourceSamplesLocalization}}" Margin="10, 10, 10, 10" Click="cbxUseSystemRendering_Click"/>
+
+        <Grid x:Name="gExportProvider" Grid.Row="3" Grid.Column="0" Margin="10, 10, 10, 10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="lblExportProvider" Grid.Row="0" Grid.Column="0" Text="{Binding lblExportProvider_Text, Source={StaticResource PdfDocumentSourceSamplesLocalization}}" VerticalAlignment="Center"  Margin="10, 10, 10, 10"/>
+            <ComboBox x:Name="cbExportProvider" Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Stretch" />
+            <CheckBox x:Name="cbxUseZipForMultipleFiles" Grid.Row="1" Grid.Column="1" Content="{Binding cbxUseZipForMultipleFiles_Text, Source={StaticResource PdfDocumentSourceSamplesLocalization}}" Margin="10, 10, 10, 10"/>
+        </Grid>
+
+        <Button x:Name="btnExport" Grid.Row="5" Grid.Column="0" Content="{Binding btnExport_Text, Source={StaticResource PdfDocumentSourceSamplesLocalization}}" Click="btnExport_Click" HorizontalAlignment="Right"/>
+    </Grid>
+</Page>

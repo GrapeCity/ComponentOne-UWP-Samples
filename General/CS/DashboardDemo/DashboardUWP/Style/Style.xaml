@@ -1,0 +1,169 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:chart="using:C1.Xaml.Chart"
+    xmlns:grid="using:C1.Xaml.FlexGrid"    
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:local="using:DashboardUWP"
+    xmlns:model="using:DashboardModel">
+    <SolidColorBrush x:Key="DividerLineColor" Color="#dedede"/>
+    <model:UnitConverter x:Key="UnitConverter"/>
+    <model:BarColorConverter x:Key="BarColorConverter"/>
+    <model:BadValueConverter x:Key="BadValueConverter"/>
+    <model:GoodValueConverter x:Key="GoodValueConverter"/>
+    
+    <DataTemplate x:Key="ProductTemplate">
+        <Grid Width="280" Height="140" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Width="260" Height="130"  Stretch="Uniform" Source="{Binding ImageSource}"/>
+            <TextBlock Text="{Binding Label}" FontSize="12" FontFamily="Segoe UI" TextAlignment="Center" Grid.Row="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MobileProductTemplate">
+        <Grid Margin="-10" Width="220" Height="110" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Width="200" Height="100"  Stretch="Uniform" Source="{Binding ImageSource}"/>
+            <TextBlock Text="{Binding Label}" FontSize="10" FontFamily="Segoe UI" TextAlignment="Center" Grid.Row="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AnalysisTemplate">
+        <Grid Margin="-10">
+            <TextBlock Text="{Binding Name}" FontSize="12" FontFamily="Segoe UI" />
+        </Grid>
+    </DataTemplate>    
+    
+    <Style x:Key="AnalysisViewStyle" TargetType="ListBox">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="ItemTemplate" Value="{ThemeResource AnalysisTemplate}"/>
+        <Setter Property="MaxHeight" Value="80"/>
+        <Setter Property="SelectionMode" Value="Multiple"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+    </Style>
+    
+    <Style x:Key="ProductsViewStyle" TargetType="ListBox">
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="ItemTemplate" Value="{ThemeResource ProductTemplate}"/>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <controls:WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+    </Style>
+
+    <Style x:Key="RootGrid" TargetType="Grid">
+        <Setter Property="Margin" Value="20,20,20,10"/>
+        <Setter Property="Background" Value="#f7f7f7"/>
+    </Style>
+
+    <Style x:Key="TileBorder" TargetType="Border">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="{StaticResource DividerLineColor}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="Tilte" TargetType="TextBlock">
+        <Setter Property="Margin" Value="5,0,5,5"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="MobileTilte" TargetType="TextBlock">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    
+    <Style x:Key="TilePanelTitleText" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16 "/>
+        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+    </Style>
+
+    <Style x:Key="TilePanelTitleChart" TargetType="chart:C1FlexChart">
+        <Setter Property="HeaderAlignment" Value="Left"/>
+        <Setter Property="HeaderStyle">
+            <Setter.Value>
+                <chart:ChartStyle FontSize="16" FontFamily="Segoe UI Semibold" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TaskFlexGridStyle" TargetType="grid:C1FlexGrid">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+    </Style>
+    
+    <Style x:Key="MobileTaskFlexGridStyle" TargetType="grid:C1FlexGrid">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+    </Style>
+
+    <Style x:Key="MobileProductsViewStyle" TargetType="ListBox">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="ItemTemplate" Value="{ThemeResource MobileProductTemplate}"/>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <controls:WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+    </Style>
+
+    <Style x:Key="MobilePiovtHeaderStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#333333"/>
+    </Style>
+
+    <DataTemplate x:Key="MobileAnalysisTemplate">
+        <Grid Margin="-10">
+            <TextBlock Text="{Binding Name}" FontSize="8" FontFamily="Segoe UI" />
+        </Grid>
+    </DataTemplate>
+
+    <Style x:Key="MobileAnalysisViewStyle" TargetType="ListBox">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="ItemTemplate" Value="{ThemeResource MobileAnalysisTemplate}"/>
+        <Setter Property="SelectionMode" Value="Multiple"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+    </Style>
+
+</ResourceDictionary>

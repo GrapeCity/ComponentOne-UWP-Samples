@@ -1,0 +1,621 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LightViews"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:c1calendar="using:C1.Xaml.Calendar"
+    xmlns:c1sched="using:C1.Xaml.Schedule"
+>
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Default">
+            <SolidColorBrush x:Key="TodayBackgroundThemeBrush" Color="#FF006FD0" />
+            <SolidColorBrush x:Key="SelectedDayBackgroundThemeBrush" Color="#66006FD0"/>
+            <SolidColorBrush x:Key="CurrentTimeThemeBrush" Color="#FF757575" />
+            <SolidColorBrush x:Key="TodayForegroundThemeBrush" Color="White"/>
+            <SolidColorBrush x:Key="GridLinesBrush" Color="#FFDFDFDF"/>
+            <SolidColorBrush x:Key="HotlightThemeBrush" Color="#FF1888D8" />
+            <SolidColorBrush x:Key="AppointmentBorderThemeBrush" Color="#FF24AAD8" />
+            <SolidColorBrush x:Key="C1SchedulerBackgroundBrush" Color="#FF000000" />
+            <SolidColorBrush x:Key="AlternatingBackgroundBrush" Color="#FF191919" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Light">
+            <SolidColorBrush x:Key="TodayBackgroundThemeBrush" Color="#FF006FD0" />
+            <SolidColorBrush x:Key="SelectedDayBackgroundThemeBrush" Color="#66006FD0"/>
+            <SolidColorBrush x:Key="CurrentTimeThemeBrush" Color="#FF757575" />
+            <SolidColorBrush x:Key="TodayForegroundThemeBrush" Color="White"/>
+            <SolidColorBrush x:Key="GridLinesBrush" Color="#FFEAEAEA"/>
+            <SolidColorBrush x:Key="HotlightThemeBrush" Color="#FF1888D8" />
+            <SolidColorBrush x:Key="AppointmentBorderThemeBrush" Color="#FF24AAD8" />
+            <SolidColorBrush x:Key="C1SchedulerBackgroundBrush" Color="White" />
+            <SolidColorBrush x:Key="AlternatingBackgroundBrush" Color="#FFFCFCFC" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrast">
+            <SolidColorBrush x:Key="TodayBackgroundThemeBrush" Color="#FF008000"/>
+            <SolidColorBrush x:Key="SelectedDayBackgroundThemeBrush" Color="#66006FD0"/>
+            <SolidColorBrush x:Key="CurrentTimeThemeBrush" Color="#FF008000" />
+            <SolidColorBrush x:Key="TodayForegroundThemeBrush" Color="White"/>
+            <SolidColorBrush x:Key="GridLinesBrush" Color="#FFFFFF00"/>
+            <SolidColorBrush x:Key="HotlightThemeBrush" Color="#FF00A000" />
+            <SolidColorBrush x:Key="AppointmentBorderThemeBrush" Color="#FFFFFF00" />
+            <SolidColorBrush x:Key="C1SchedulerBackgroundBrush" Color="#FF000000" />
+            <SolidColorBrush x:Key="AlternatingBackgroundBrush" Color="#FF191919" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrastBlack">
+            <SolidColorBrush x:Key="TodayBackgroundThemeBrush" Color="#FF1AEBFF"/>
+            <SolidColorBrush x:Key="SelectedDayBackgroundThemeBrush" Color="#66006FD0"/>
+            <SolidColorBrush x:Key="CurrentTimeThemeBrush" Color="#FF1AEBFF" />
+            <SolidColorBrush x:Key="TodayForegroundThemeBrush" Color="Black"/>
+            <SolidColorBrush x:Key="GridLinesBrush" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="HotlightThemeBrush" Color="#FF000000" />
+            <SolidColorBrush x:Key="AppointmentBorderThemeBrush" Color="#FFFFFFFF" />
+            <SolidColorBrush x:Key="C1SchedulerBackgroundBrush" Color="#FF000000" />
+            <SolidColorBrush x:Key="AlternatingBackgroundBrush" Color="#FF191919" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrastWhite">
+            <SolidColorBrush x:Key="TodayBackgroundThemeBrush" Color="#FF37006E"/>
+            <SolidColorBrush x:Key="SelectedDayBackgroundThemeBrush" Color="#66006FD0"/>
+            <SolidColorBrush x:Key="CurrentTimeThemeBrush" Color="#FF37006E" />
+            <SolidColorBrush x:Key="TodayForegroundThemeBrush" Color="White"/>
+            <SolidColorBrush x:Key="GridLinesBrush" Color="#FF000000"/>
+            <SolidColorBrush x:Key="HotlightThemeBrush" Color="#FF000000" />
+            <SolidColorBrush x:Key="AppointmentBorderThemeBrush" Color="#FF000000" />
+            <SolidColorBrush x:Key="C1SchedulerBackgroundBrush" Color="#FFFFFFFF" />
+            <SolidColorBrush x:Key="AlternatingBackgroundBrush" Color="#FFFCFCFC" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+    <SolidColorBrush x:Key="HighlightThemeBrush" Color="#FF24AAD8" />
+
+    <Style TargetType="ListBox" x:Key="looklessListBox">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBox">
+                    <ItemsPresenter />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <c1calendar:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <c1sched:VisualIntervalToStringConverter x:Key="VisualIntervalToStringConverter"/>
+    <c1sched:DateTimeToStringConverter x:Key="DateTimeToStringConverter"/>
+
+    <Style TargetType="c1sched:C1Scheduler" x:Key="BaseViewStyle" >
+        <Setter Property="TabNavigation" Value="Once" />
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
+        <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
+        <Setter Property="Background" Value="{ThemeResource C1SchedulerBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{ThemeResource ApplicationForegroundThemeBrush}" />
+        <Setter Property="AlternatingBackground" Value="{ThemeResource AlternatingBackgroundBrush}"/>
+        <Setter Property="ControlBackground" Value="{ThemeResource C1SchedulerBackgroundBrush}"/>
+        <Setter Property="ControlForeground" Value="{ThemeResource ApplicationSecondaryForegroundThemeBrush}" />
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="SelectedBackground" Value="{ThemeResource SelectedDayBackgroundThemeBrush}"/>
+        <Setter Property="AppointmentForeground" Value="{ThemeResource HotlightThemeBrush}"/>
+        <Setter Property="TodayBackground" Value="{ThemeResource TodayBackgroundThemeBrush}"/>
+        <Setter Property="CurrentTimeBrush" Value="{ThemeResource CurrentTimeThemeBrush}"/>
+        <Setter Property="GridLinesBrush" Value="{ThemeResource GridLinesBrush}"/>
+    </Style>
+
+    <!-- determines the template used for the single time interval of a time ruler in a Day view -->
+    <DataTemplate x:Key="C1Scheduler_TimeRuler_Template">
+        <Grid IsHitTestVisible="False">
+            <c1sched:TimeRulerHelper Interval="{Binding}" x:Name="helper"/>
+            <Border BorderThickness="0,1,0,0" BorderBrush="{Binding Path=Scheduler.GridLinesBrush}" MinHeight="37"
+                    Visibility="{Binding IsZeroMinute, ElementName=helper, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <TextBlock FontSize="16" Foreground="{Binding Path=Scheduler.ControlForeground}" HorizontalAlignment="Right" Padding="3">
+                    <Run Text="{Binding Hours, ElementName=helper}"/>
+                    <Run Text="{Binding Minutes, ElementName=helper}" Typography.Variants="Superscript"/>
+                </TextBlock>
+            </Border>
+        </Grid>
+    </DataTemplate>
+
+    <!-- determines the style used for displaying day header in a Day view -->
+    <c1sched:DayIntervalStyleSelector x:Key="DayHeaderStyleSelector">
+        <c1sched:DayIntervalStyleSelector.Resources>
+            <ResourceDictionary>
+                <Style x:Key="C1Scheduler_Day_Style" TargetType="ListBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border BorderBrush="{Binding Path=Scheduler.GridLinesBrush}" IsHitTestVisible="False" BorderThickness="0,0,1,1">
+                                    <TextBlock Text="{Binding Converter={StaticResource VisualIntervalToStringConverter}, ConverterParameter=DayViewDayHeaderFormat}" Margin="8,6,0,6"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <Style x:Key="C1Scheduler_Today_Style" TargetType="ListBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border BorderBrush="{Binding Path=Scheduler.GridLinesBrush}" IsHitTestVisible="False" BorderThickness="0,0,1,1" Background="{Binding Path=Scheduler.TodayBackground}" >
+                                    <TextBlock Foreground="{StaticResource TodayForegroundThemeBrush}" Text="{Binding Converter={StaticResource VisualIntervalToStringConverter}, ConverterParameter=DayViewDayHeaderFormat}" Margin="8,6,0,6"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ResourceDictionary>
+        </c1sched:DayIntervalStyleSelector.Resources>
+    </c1sched:DayIntervalStyleSelector>
+
+    <Style x:Key="AllDayArea_Style" TargetType="c1sched:VisualIntervalPresenter">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                    <Grid BorderThickness="0,0,1,0" BorderBrush="{Binding Path=Scheduler.GridLinesBrush}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Unselected"/>
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="SelectedUnfocused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="SelectedPointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="SelectedPressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Rectangle x:Name="rct" Fill="Transparent" c1sched:CoverElementsPane.Orientation="Horizontal" c1sched:CoverElementsPane.PaneName="allDayPane" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- determines the style used for displaying time slots in a Day view -->
+    <c1sched:TimeSlotStyleSelector x:Key="TimeSlotStyleSelector">
+        <c1sched:TimeSlotStyleSelector.Resources>
+            <ResourceDictionary>
+                <Style x:Key="C1Scheduler_WorkSlot_Style" TargetType="c1sched:VisualIntervalPresenter">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="c1sched:VisualIntervalPresenter">
+                                <Grid Background="{TemplateBinding Background}" BorderBrush="{Binding Scheduler.GridLinesBrush}" BorderThickness="0,1,1,0">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="SelectionStates">
+                                            <VisualState x:Name="Unselected"/>
+                                            <VisualState x:Name="Selected">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedUnfocused">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedPointerOver">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedPressed">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Fill">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{Binding Scheduler.SelectedBackground}" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Rectangle x:Name="rct" Fill="Transparent" MinHeight="36"
+                                        c1sched:CoverElementsPane.Orientation="Vertical" c1sched:CoverElementsPane.PaneName="appPane"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <Style x:Key="C1Scheduler_FreeSlot_Style" TargetType="c1sched:VisualIntervalPresenter" BasedOn="{StaticResource C1Scheduler_WorkSlot_Style}">
+                    <Setter Property="Background" Value="{ThemeResource AlternatingBackgroundBrush}"/>
+                </Style>
+            </ResourceDictionary>
+        </c1sched:TimeSlotStyleSelector.Resources>
+    </c1sched:TimeSlotStyleSelector>
+
+    <!-- Style that represents base One Day View -->
+    <Style x:Key="OneDayStyle" TargetType="c1sched:C1Scheduler" BasedOn="{StaticResource BaseViewStyle}">
+        <Setter Property="VisualIntervalScale" Value="00:30:00" />
+        <Setter Property="ShowWorkTimeOnly" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1sched:C1Scheduler">
+                    <Grid BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!-- nested setters should present in the visual tree, in other case bindings might not work for them -->
+                        <ItemsControl ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=NestedSetters}" IsHitTestVisible="False" />
+                        <c1sched:C1SchedulerNavigator Background="{TemplateBinding ControlBackground}" Grid.Row="0" Grid.ColumnSpan="2" Foreground="{TemplateBinding ControlForeground}"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="57" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Background="{TemplateBinding ControlBackground}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" IsHitTestVisible="False" BorderThickness="0,0,1,0" 
+                                        BorderBrush="{TemplateBinding GridLinesBrush}" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="" Margin="8,6,0,7"/>
+                                </Border>
+                                <Border Grid.Row="1" IsHitTestVisible="False" Height="{Binding AllDayAreaHeight, RelativeSource={RelativeSource TemplatedParent}}"
+                                        BorderThickness="0,0,1,1" BorderBrush="{TemplateBinding GridLinesBrush}"/>
+                                <!-- time ruler -->
+                                <ScrollViewer Grid.Row="2" Padding="0" HorizontalScrollMode="Disabled" MaxHeight="5000"
+                                              VerticalScrollBarVisibility="Hidden" ZoomMode="Disabled">
+                                    <c1sched:TimeRuler BorderBrush="{TemplateBinding GridLinesBrush}" 
+                                              ItemTemplate="{StaticResource C1Scheduler_TimeRuler_Template}">
+                                        <c1sched:TimeRuler.CurrentTimeTemplate>
+                                            <DataTemplate>
+                                                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="2" Margin="8,0,0,0" Fill="{Binding CurrentTimeBrush}"/>
+                                            </DataTemplate>
+                                        </c1sched:TimeRuler.CurrentTimeTemplate>
+                                    </c1sched:TimeRuler>
+                                </ScrollViewer>
+                            </Grid>
+            <!--                <ItemsControl x:Name="PART_FlipView" Grid.Column="1">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>-->
+                                        <!-- DataContext is the C1SchedulerViewModel object-->
+                            <Grid Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <!-- day headers -->
+                                            <ListBox Grid.Row="0" Foreground="{Binding Path=Scheduler.Foreground}"
+                                                 Style="{StaticResource looklessListBox}" ItemContainerStyleSelector="{StaticResource DayHeaderStyleSelector}"
+											     ItemsSource="{Binding VisibleGroupItems[0].VisualIntervalGroups}">
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <c1:C1UniformGrid Rows="1"/>
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                            </ListBox>
+                                            <!-- AllDay area grid (should scroll vertically) -->
+                                            <ScrollViewer Grid.Row="1" Height="{Binding Path=Scheduler.AllDayAreaHeight}" 
+                                                      BorderThickness="0,0,0,1" BorderBrush="{Binding Path=Scheduler.GridLinesBrush}" Padding="0"
+									                  HorizontalScrollMode="Disabled" VerticalScrollMode="Auto" ZoomMode="Disabled">
+                                                <Grid ManipulationMode="All">
+                                                    <c1sched:VisualIntervalGroupsPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                                            ItemContainerStyle="{StaticResource AllDayArea_Style}" ItemsSource="{Binding VisibleGroupItems[0].VisualIntervalGroups}">
+                                                        <c1sched:VisualIntervalGroupsPresenter.ItemsPanel>
+                                                            <ItemsPanelTemplate>
+                                                                <c1:C1UniformGrid Rows="1" />
+                                                            </ItemsPanelTemplate>
+                                                        </c1sched:VisualIntervalGroupsPresenter.ItemsPanel>
+                                                    </c1sched:VisualIntervalGroupsPresenter>
+                                                    <c1sched:AppointmentsCoverPane x:Name="allDayPane" c1sched:AppointmentsCoverPane.AppointmentFilter="Event"
+											             IsDragDropDisabled="{Binding Path=Scheduler.IsDragDropDisabled}" ExtendOnOverflow="True" CoverElementsMargin="10"/>
+                                                </Grid>
+                                            </ScrollViewer>
+                                            <!-- TimeSlots grid (should scroll vertically) -->
+                                            <ScrollViewer x:Name="scrollViewer" Grid.Row="2" BorderThickness="0" Padding="0" MaxHeight="5000" 
+                                                      HorizontalScrollMode="Disabled" VerticalScrollMode="Auto" ZoomMode="Disabled">
+                                                <Grid ManipulationMode="All">
+                                                    <c1sched:C1SchedulerPresenter ItemContainerStyleSelector="{StaticResource TimeSlotStyleSelector}" />
+                                                    <c1sched:AppointmentsCoverPane x:Name="appPane" SizingType="Proportional"
+	                						                c1sched:AppointmentsCoverPane.AppointmentFilter="Appointment"
+											                IsDragDropDisabled="{Binding Path=Scheduler.IsDragDropDisabled}" CoverElementsMargin="10">
+                                                        <c1sched:AppointmentsCoverPane.IntervalAppointmentTemplate>
+                                                            <DataTemplate>
+                                                                <c1sched:IntervalAppointmentPresenter TextWrapping="Wrap"
+                                                                     Foreground="{Binding Interval.Scheduler.AppointmentForeground}"
+														             IsReadOnly="{Binding Interval.Scheduler.IsInPlaceEditingDisabled}"
+														             IntervalAppointment="{Binding}" />
+                                                            </DataTemplate>
+                                                        </c1sched:AppointmentsCoverPane.IntervalAppointmentTemplate>
+                                                    </c1sched:AppointmentsCoverPane>
+                                                </Grid>
+                                            </ScrollViewer>
+                                        </Grid>
+    <!--                                </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <c1calendar:C1LoopPanel/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </ItemsControl>-->
+                        </Grid>
+                        <Rectangle Opacity="0.6" Stretch="Fill" RadiusX="2" RadiusY="2" Grid.Row="1"
+                                   Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Invert}"
+                                   StrokeThickness="1" Stroke="{ThemeResource ButtonDisabledBorderThemeBrush}"
+                                   Fill="{ThemeResource ButtonDisabledBackgroundThemeBrush}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualIntervalGroupDescriptions">
+            <Setter.Value>
+                <c1sched:IntervalGroupDescriptionCollection>
+                    <c1sched:VisualIntervalGroupDescription PropertyName="StartTime.Date" />
+                </c1sched:IntervalGroupDescriptionCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualIntervalGroupStyles">
+            <Setter.Value>
+                <c1sched:IntervalGroupStyleCollection>
+                    <GroupStyle>
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <Rectangle Visibility="Collapsed"/>
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                        <GroupStyle.Panel>
+                            <ItemsPanelTemplate>
+                                <c1:C1UniformGrid Columns="1" />
+                            </ItemsPanelTemplate>
+                        </GroupStyle.Panel>
+                    </GroupStyle>
+                </c1sched:IntervalGroupStyleCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualIntervalPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <c1:C1UniformGrid Rows="1" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualTimeSpan" Value="1" />
+    </Style>
+
+    <!-- determines the style of the month grid header (week day names) -->
+    <Style x:Key="C1Scheduler_MonthHeader_Style" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Border BorderThickness="0,0,1,0" IsHitTestVisible="False" BorderBrush="{Binding Path=Scheduler.GridLinesBrush}" >
+                        <ContentPresenter Margin="8,6,0,6" Content="{TemplateBinding Content}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Alternate month day background (used in a month view) -->
+    <c1sched:AlternateMonthBrushConverter x:Key="AlternateMonthBrushConverter" AlternateMonthBrush="Transparent"/>
+    <c1sched:MonthToStringConverter x:Key="MonthToStringConverter"/>
+
+    <!-- Determines the style used for displaying overflow jumper in a Month View when not all 
+       appointment elements fit into available day space. -->
+    <Style x:Key="C1Scheduler_OverflowJumper_Style" TargetType="Button">
+        <Setter Property="VerticalContentAlignment" Value="Top"/>
+        <Setter Property="Padding" Value="4,0,4,4"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontFamily" Value="{ThemeResource SymbolThemeFontFamily}"/>
+    </Style>
+    <!-- determines the style used for displaying single day in a Month view -->
+    <c1sched:DayIntervalStyleSelector x:Key="MonthDayStyleSelector">
+        <c1sched:DayIntervalStyleSelector.Resources>
+            <ResourceDictionary>
+                <Style x:Key="C1Scheduler_Day_Style" TargetType="ListBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Grid BorderThickness="0,0,1,1" BorderBrush="{Binding Path=Scheduler.GridLinesBrush}"
+                                      Background="{Binding Converter={StaticResource AlternateMonthBrushConverter}}" >
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="SelectionStates">
+                                            <VisualState x:Name="Unselected"/>
+                                            <VisualState x:Name="Selected">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Visibility">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedUnfocused">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Visibility">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedPointerOver">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Visibility">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="SelectedPressed">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rct" Storyboard.TargetProperty="Visibility">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Rectangle x:Name="rct" Fill="{Binding Path=Scheduler.SelectedBackground}" IsHitTestVisible="False" Grid.RowSpan="2" 
+								               Visibility="Collapsed" x:DeferLoadStrategy="Lazy"/>
+                                    <TextBlock FontWeight="Semibold" Foreground="{Binding Path=Scheduler.Foreground}" Margin="8,4,4,4" Grid.Row="0">
+                                        <Run Text="{Binding Converter={StaticResource MonthToStringConverter}}"/>
+      								    <Run Text="{Binding Converter={StaticResource VisualIntervalToStringConverter}, ConverterParameter=MonthViewDayHeaderDayFormat}"/>
+                                    </TextBlock>
+                                    <Rectangle x:Name="DayContentBorder" Grid.Row="1" Fill="Transparent" c1sched:CoverElementsPane.Orientation="Horizontal"/>
+                                    <Button x:Name="overflowJumper" Content="&#57361;" Grid.Row="0"
+                                            HorizontalAlignment="Right" Foreground="{Binding Path=Scheduler.Foreground}" 
+                                            c1:CommandExtensions.CommandParameter="OneDayStyle"  
+                                            c1:CommandExtensions.Command="c1sched:C1Scheduler.ChangeStyleCommand" VerticalAlignment="Top" 
+                                            Visibility="{Binding Path=(c1sched:CoverElementsPane.CoverElementsOverflow), ElementName=DayContentBorder, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                                            Style="{StaticResource C1Scheduler_OverflowJumper_Style}"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <Style x:Key="C1Scheduler_Today_Style" TargetType="ListBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Grid Background="{Binding Path=Scheduler.TodayBackground}"  
+                                      BorderThickness="0,0,1,1" BorderBrush="{Binding Path=Scheduler.GridLinesBrush}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Rectangle Fill="{Binding Path=Scheduler.SelectedBackground}" IsHitTestVisible="False" Grid.RowSpan="2" 
+								               Visibility="{Binding IsSelected, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <TextBlock FontWeight="Semibold" Foreground="{StaticResource TodayForegroundThemeBrush}" Margin="8,4,4,4" Grid.Row="0">
+                                        <Run Text="{Binding Converter={StaticResource MonthToStringConverter}}"/>
+      								    <Run Text="{Binding Converter={StaticResource VisualIntervalToStringConverter}, ConverterParameter=MonthViewDayHeaderDayFormat}"/>
+                                    </TextBlock>
+                                    <Rectangle x:Name="DayContentBorder" Grid.Row="1" Fill="Transparent"  
+                                               c1sched:CoverElementsPane.Orientation="Horizontal"/>
+                                    <Button x:Name="overflowJumper" Content="&#57361;" Grid.Row="0"
+                                            HorizontalAlignment="Right" Foreground="{Binding Path=Scheduler.Foreground}" 
+                                            c1:CommandExtensions.CommandParameter="OneDayStyle" 
+                                            c1:CommandExtensions.Command="c1sched:C1Scheduler.ChangeStyleCommand" VerticalAlignment="Top" 
+                                            Visibility="{Binding Path=(c1sched:CoverElementsPane.CoverElementsOverflow), ElementName=DayContentBorder, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                                            Style="{StaticResource C1Scheduler_OverflowJumper_Style}"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ResourceDictionary>
+        </c1sched:DayIntervalStyleSelector.Resources>
+    </c1sched:DayIntervalStyleSelector>
+
+    <!-- Style that represents the base Month View -->
+    <Style x:Key="MonthStyle" TargetType="c1sched:C1Scheduler" BasedOn="{StaticResource BaseViewStyle}">
+        <Setter Property="VisualTimeSpan" Value="42" />
+        <Setter Property="VisualIntervalScale" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="c1sched:C1Scheduler">
+                    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!-- nested setters should present in the visual tree, in other case bindings might not work for them -->
+                        <ItemsControl ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=NestedSetters}" IsHitTestVisible="False" />
+                        <c1sched:C1SchedulerNavigator Background="{TemplateBinding ControlBackground}" Grid.Row="0" Foreground="{TemplateBinding ControlForeground}"/>
+                        <ItemsControl x:Name="PART_FlipView" Grid.Row="1">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <!-- DataContext is the C1SchedulerViewModel object-->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <c1:C1UniformGrid Name="weekHeadersGrid" Grid.Row="0" Rows="1" Columns="7" Background="{Binding Path=Scheduler.ControlBackground}">
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[0], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[1], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[2], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[3], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[4], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[5], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                            <ContentControl Style="{StaticResource C1Scheduler_MonthHeader_Style}" Foreground="{Binding Path=Scheduler.ControlForeground}"
+												    Content="{Binding Path=VisibleGroupItems[0].VisualIntervals[6], Converter={StaticResource VisualIntervalToStringConverter},
+													    ConverterParameter=MonthViewHeaderFormat}"/>
+                                        </c1:C1UniformGrid>
+                                        <Rectangle Height="1" HorizontalAlignment="Stretch" Grid.Row="0" VerticalAlignment="Bottom" Fill="{Binding Path=Scheduler.GridLinesBrush}"/>
+                                        <c1sched:C1SchedulerPresenter Grid.Row="1" Background="{Binding Path=Scheduler.Background}" ItemContainerStyleSelector="{StaticResource MonthDayStyleSelector}"/>
+                                        <c1sched:AppointmentsCoverPane VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                                                Grid.Row="1" c1sched:AppointmentsCoverPane.KeepTimesAtDrop="True"
+									            IsDragDropDisabled="{Binding Path=Scheduler.IsDragDropDisabled}" CoverElementsMargin="4" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <c1calendar:C1LoopPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                        <Rectangle Grid.Row="1" Opacity="0.6" Stretch="Fill" RadiusX="2" RadiusY="2"
+                                       Visibility="{Binding IsEnabled, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Invert}"
+                                       StrokeThickness="1" Stroke="{ThemeResource ButtonDisabledBorderThemeBrush}"
+                                       Fill="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VisualIntervalPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <c1:C1UniformGrid Columns="7" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="WeekStyle" TargetType="c1sched:C1Scheduler" BasedOn="{StaticResource OneDayStyle}">
+        <Setter Property="VisualTimeSpan" Value="7" />
+        <Setter Property="VisualIntervalScale" Value="00:30:00" />
+    </Style>
+
+    <Style x:Key="WorkingWeekStyle" TargetType="c1sched:C1Scheduler" BasedOn="{StaticResource OneDayStyle}">
+        <Setter Property="VisualTimeSpan" Value="7" />
+        <Setter Property="VisualIntervalScale" Value="00:30:00" />
+    </Style>
+
+</ResourceDictionary>

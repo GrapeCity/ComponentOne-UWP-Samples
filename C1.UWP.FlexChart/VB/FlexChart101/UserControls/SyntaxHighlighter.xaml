@@ -1,0 +1,12 @@
+﻿<UserControl
+    x:Class="FlexChart101.SyntaxHighlighter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChart101"
+    xmlns:c1rtb="using:C1.Xaml.RichTextBox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <c1rtb:C1RichTextBox x:Name="c1RichTextBox1" PointerExited="c1RichTextBox1_PointerExited" ClipboardMode="PlainText" TextWrapping="NoWrap" IsReadOnly="True" FontFamily="Courier New" FontSize="14"/>
+
+</UserControl>

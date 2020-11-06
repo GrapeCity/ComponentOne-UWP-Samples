@@ -1,0 +1,327 @@
+﻿<Application
+    x:Class="ControlExplorer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:SparklineSamples ="using:SparklineSamples"
+    xmlns:BarCodeSamples ="using:BarCodeSamples"
+    xmlns:BasicLibrarySamples ="using:BasicLibrarySamples"
+    xmlns:CalendarSamples ="using:CalendarSamples"
+    xmlns:ExcelSamples ="using:ExcelSamples"
+    xmlns:ExtendedSamples ="using:ExtendedSamples"
+    xmlns:FinancialChartExplorer="using:FinancialChartExplorer"
+    xmlns:FlexChartExplorer="using:FlexChartExplorer"
+    xmlns:FlexRadarIntro="using:FlexRadarIntro"
+    xmlns:FlexGridSamples ="using:FlexGridSamples"
+    xmlns:GaugeSamples ="using:GaugeSamples"
+    xmlns:BitmapSamples="using:BitmapSamples"
+    xmlns:ImagingSamples ="using:ImagingSamples"
+    xmlns:InputPanelSamples="using:InputPanelSamples"
+    xmlns:ExpressionEditorSamples="using:ExpressionEditorSamples"
+    xmlns:MapsSamples ="using:MapsSamples"
+    xmlns:OrgChartSamples ="using:OrgChartSamples"
+    xmlns:PdfSamples ="using:PdfSamples"
+    xmlns:PdfViewerSamples ="using:PdfViewerSamples"
+    xmlns:RichTextBoxSamples ="using:RichTextBoxSamples"
+    xmlns:ScheduleSamples ="using:ScheduleSamples"
+    xmlns:TileSamples ="using:TileSamples"
+    xmlns:TileViewSamples ="using:TileViewSamples"
+    xmlns:WordSamples ="using:WordSamples"
+    xmlns:ZipSamples="using:ZipSamples"
+    xmlns:FlexReportSamples="using:FlexReportSamples"
+    xmlns:PdfDocumentSourceSamples="using:PdfDocumentSourceSamples"
+    xmlns:SunburstIntro="using:SunburstIntro"
+    xmlns:Common="using:ControlExplorer.Common"
+    xmlns:local="using:ControlExplorer">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FF1D1D1D"/>
+                    <SolidColorBrush x:Key="ControlExplorerBackgroundThemeBrush" Color="#E5000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerMainTitleThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkStripeThemeBrush" Color="#FF2C383D"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightStripeThemeBrush" Color="#727272"/>
+                    <!-- old value #FF0AC2FF -->
+                    <SolidColorBrush x:Key="ControlExplorerDarkForegroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightForegroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerBodyBackgroundThemeBrush" Color="#FF1D1D1D"/>
+                    <SolidColorBrush x:Key="ControlExplorerLeftPanelThemeBrush" Color="Black"/>
+                    <SolidColorBrush x:Key="ControlExplorerSimpleTextForegroundThemeBrush" Color="White"/>
+                    <SolidColorBrush x:Key="ControlExplorerHyperlinkThemeBrush" Color="#555b9e"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconBackgroundThemeBrush" Color="#FF333333"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconThemeBrush" Color="#FFFFFFFF"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="ControlExplorerBackgroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerMainTitleThemeBrush" Color="#FF2C383D"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkStripeThemeBrush" Color="#FF2C383D"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightStripeThemeBrush" Color="#727272"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkForegroundThemeBrush" Color="#FF2C383D"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightForegroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerBodyBackgroundThemeBrush" Color="White"/>
+                    <SolidColorBrush x:Key="ControlExplorerLeftPanelThemeBrush" Color="White"/>
+                    <SolidColorBrush x:Key="ControlExplorerSimpleTextForegroundThemeBrush" Color="#FF2C383D"/>
+                    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="White"/>
+                    <SolidColorBrush x:Key="ControlExplorerHyperlinkThemeBrush" Color="#555b9e"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconBackgroundThemeBrush" Color="#525150"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconThemeBrush" Color="#FFFFFFFF"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <SolidColorBrush x:Key="ControlExplorerBackgroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerMainTitleThemeBrush" Color="#FFFFFF00"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkStripeThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightStripeThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkForegroundThemeBrush" Color="#FFFFFF00"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightForegroundThemeBrush" Color="#FFFFFF00"/>
+                    <SolidColorBrush x:Key="ControlExplorerBodyBackgroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerLeftPanelThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerSimpleTextForegroundThemeBrush" Color="#FFFFFF00"/>
+                    <SolidColorBrush x:Key="ControlExplorerHyperlinkThemeBrush" Color="#FF8080FF"/>
+                    
+                    <SolidColorBrush x:Key="ControlExplorerIconBackgroundThemeBrush" Color="#FF222222"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconThemeBrush" Color="#FFFFFFFF"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrastBlack">
+                    <SolidColorBrush x:Key="ControlExplorerBackgroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerMainTitleThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkStripeThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightStripeThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkForegroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightForegroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerBodyBackgroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerLeftPanelThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerSimpleTextForegroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerHyperlinkThemeBrush" Color="#FFFFFF00"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconBackgroundThemeBrush" Color="#FF222222"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconThemeBrush" Color="#FFFFFFFF"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrastWhite">
+                    <SolidColorBrush x:Key="ControlExplorerBackgroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerMainTitleThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkStripeThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightStripeThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerDarkForegroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerLightForegroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerBodyBackgroundThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerLeftPanelThemeBrush" Color="#FFFFFFFF"/>
+                    <SolidColorBrush x:Key="ControlExplorerSimpleTextForegroundThemeBrush" Color="#FF000000"/>
+                    <SolidColorBrush x:Key="ControlExplorerHyperlinkThemeBrush" Color="#FF00009F"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconBackgroundThemeBrush" Color="#FFF0F0F0"/>
+                    <SolidColorBrush x:Key="ControlExplorerIconThemeBrush" Color="#FF000000"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- 
+                    Styles that define common aspects of the platform look and feel
+                    Required by Visual Studio project and item templates
+                 -->
+                <ResourceDictionary Source="Resources/ControlIcons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Application-specific resources -->
+            <PdfDocumentSourceSamples:Strings x:Key="PdfDocumentSourceSamplesLocalization" />
+            <FlexReportSamples:Strings x:Key="FlexReportSamplesLocalization" />
+            <SparklineSamples:Strings x:Key="SparklineSamplesLocalization" />
+            <BarCodeSamples:Strings x:Key="BarCodeSamplesLocalization" />
+            <BasicLibrarySamples:Strings x:Key="BasicLibrarySamplesLocalization" />
+            <CalendarSamples:Strings x:Key="CalendarSamplesLocalization" />
+            <ExcelSamples:Strings x:Key="ExcelSamplesLocalization" />
+            <ExtendedSamples:Strings x:Key="ExtendedSamplesLocalization" />
+            <FinancialChartExplorer:Strings x:Key="FinancialChartExplorerLocalization" />
+            <FlexChartExplorer:Strings x:Key="FlexChartExplorerLocalization" />
+            <FlexRadarIntro:Strings x:Key="FlexRadarIntroLocalization" />
+            <SunburstIntro:Strings x:Key="SunburstIntroLocalization" />
+            <FlexGridSamples:Strings x:Key="FlexGridSamplesLocalization" />
+            <GaugeSamples:Strings x:Key="GaugeSamplesLocalization" />
+            <BitmapSamples:Strings x:Key="BitmapSamplesLocalization" />
+            <ImagingSamples:Strings x:Key="ImagingSamplesLocalization" />
+            <InputPanelSamples:Strings x:Key="InputPanelSamplesLocalization"/>
+            <ExpressionEditorSamples:Strings x:Key="ExpressionEditorSamplesLocalization" />
+            <MapsSamples:Strings x:Key="MapsSamplesLocalization" />
+            <OrgChartSamples:Strings x:Key="OrgChartSamplesLocalization" />
+            <PdfSamples:Strings x:Key="PdfSamplesLocalization" />
+            <PdfViewerSamples:Strings x:Key="PdfViewerSamplesLocalization" />
+            <RichTextBoxSamples:Strings x:Key="RichTextBoxSamplesLocalization" />
+            <ScheduleSamples:Strings x:Key="ScheduleSamplesLocalization" />
+            <TileSamples:Strings x:Key="TileSamplesLocalization" />
+            <TileViewSamples:Strings x:Key="TileViewSamplesLocalization" />
+            <WordSamples:Strings x:Key="WordSamplesLocalization" />
+            <ZipSamples:Strings x:Key="ZipSamplesLocalization" />
+            <local:Strings x:Key="ControlExplorerLocalization" />
+            <SolidColorBrush x:Key="IconDarkBlueBackground" Color="#FF0577AF"/>
+            <SolidColorBrush x:Key="IconLightBlueBackground" Color="#FF47B1DC"/>
+            <SolidColorBrush x:Key="ControlExplorerHubSectionHeaderThemeBrush" Color="#FFFFFFFF"/>
+            <Common:BooleanToVisibilityConverter x:Key="BTVConverter" />
+            <Common:UriConverter x:Key="UriConverter" />
+            <Style TargetType="HyperlinkButton">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Foreground" Value="{StaticResource ControlExplorerHubSectionHeaderThemeBrush}" />
+                <Setter Property="ContentTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" />
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="SubheaderTextStyle" TargetType="TextBlock" >
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontWeight" Value="Light"/>
+            </Style>
+            <!-- Item templates -->
+            <!-- Grid-appropriate 250 pixel square item template as seen in the GroupedItemsPage and ItemsPage -->
+            <DataTemplate x:Key="Standard250x250ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="250" Height="250">
+                    <Border Background="{StaticResource ListViewItemSelectedBackgroundThemeBrush}">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="50"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}" Height="80">
+                        <TextBlock Text="{Binding Name}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" VerticalAlignment="Bottom" FontSize="20" Margin="15"/>
+
+                        <!--<TextBlock Text="{Binding AssemblyName}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>-->
+                    </Border>
+                </Grid>
+
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard165x165ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="147" Height="147">
+                    <Border Background="{ThemeResource ControlExplorerIconBackgroundThemeBrush}">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 40"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Height="34">
+                        <TextBlock Text="{Binding Name}" Foreground="{ThemeResource ControlExplorerSimpleTextForegroundThemeBrush}" FontFamily="Segoe UI" FontSize="18" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard120x120ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="100" Height="100">
+                    <Border Background="{ThemeResource ControlExplorerIconBackgroundThemeBrush}">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 40"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Height="34">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe UI" FontSize="14" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard50x50ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="80" Height="80">
+                    <Border Background="{ThemeResource ControlExplorerIconBackgroundThemeBrush}">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 40"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Height="34">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe UI" FontSize="12" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard125x125ItemTemplate">
+                <Border Width="100" Height="100" Margin="0 0 1 1" Background="{ThemeResource ControlExplorerIconBackgroundThemeBrush}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 0"/>
+                        <TextBlock Foreground="{ThemeResource ControlExplorerSimpleTextForegroundThemeBrush}" TextWrapping="Wrap" Margin="-20 0 -20 5" Text="{Binding Name}" HorizontalAlignment="Center" FontWeight="SemiLight" FontSize="14" Grid.Row="1"/>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard100x100ItemTemplate">
+                <Border Width="92" Height="92" Background="{ThemeResource ControlExplorerIconBackgroundThemeBrush}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 0"/>
+                        <TextBlock Foreground="{ThemeResource ControlExplorerSimpleTextForegroundThemeBrush}" Style="{ThemeResource CaptionTextBlockStyle}"
+                                   TextWrapping="Wrap" Margin="0,0,0,5" Text="{Binding Name}" HorizontalAlignment="Center" Grid.Row="1"/>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+
+            <!-- List-appropriate 130 pixel high item template as seen in the SplitPage -->
+            <DataTemplate x:Key="Standard130ItemTemplate">
+                <Grid Margin="6">
+                    <StackPanel VerticalAlignment="Top" Margin="10,5,10,5">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource SubheaderTextStyle}" VerticalAlignment="Center" TextWrapping="NoWrap"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard80ItemTemplate">
+                <TextBlock Text="{Binding Name}" FontSize="14" MaxHeight="40"/>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard80WithIconItemTemplate">
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <ContentControl ContentTemplate="{Binding Icon}"/>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource ItemTextStyle}" MaxHeight="40"/>
+                        <TextBlock Text="{Binding Description}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <Style TargetType="GridView" x:Key="wideLayoutGridView">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="40,40,40,44" />
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+                <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Auto"/>
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+                <Setter Property="ScrollViewer.VerticalScrollMode" Value="Auto"/>
+                <Setter Property="ItemTemplate" Value="{StaticResource Standard120x120ItemTemplate}" />
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid Orientation="Vertical" MaximumRowsOrColumns="3" />
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ItemContainerStyle">
+                    <Setter.Value>
+                        <Style TargetType="GridViewItem">
+                            <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                            <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="TabNavigation" Value="Local"/>
+                            <Setter Property="IsHoldingEnabled" Value="True"/>
+                            <Setter Property="Margin" Value="0 0 15 15" />
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="GridView" x:Key="narrowLayoutGridView">
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+                <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled"/>
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+                <Setter Property="ScrollViewer.VerticalScrollMode" Value="Auto"/>
+                <Setter Property="Margin" Value="2 0 2 0" />
+                <Setter Property="ItemTemplate" Value="{StaticResource Standard125x125ItemTemplate}" />
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3"/>
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ItemContainerStyle">
+                    <Setter.Value>
+                        <Style TargetType="GridViewItem">
+                            <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                            <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="TabNavigation" Value="Local"/>
+                            <Setter Property="IsHoldingEnabled" Value="True"/>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>FinancialChartExplorer</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="ArmsCandleVolumeDescription" xml:space="preserve">
+    <value>Created by Richard Arms, Arms CandleVolume charts are a combination of EquiVolume and CandleVolume charts.</value>
+  </data>
+  <data name="ArmsCandleVolumeName" xml:space="preserve">
+    <value>Arms CandleVolume</value>
+  </data>
+  <data name="ArmsCandleVolumeTitle" xml:space="preserve">
+    <value>Arms CandleVolume</value>
+  </data>
+  <data name="CandleVolumeDescription" xml:space="preserve">
+    <value>CandleVolume charts are identical to standard Candlestick charts, except that the width of each bar is determined by a fifth value, volume.</value>
+  </data>
+  <data name="CandleVolumeName" xml:space="preserve">
+    <value>CandleVolume</value>
+  </data>
+  <data name="CandleVolumeTitle" xml:space="preserve">
+    <value>CandleVolume</value>
+  </data>
+  <data name="ColumnVolumeDescription" xml:space="preserve">
+    <value>ColumnVolume charts are similar to Column charts, except that they accept a second value, volume, which dictates the width of each bar.</value>
+  </data>
+  <data name="ColumnVolumeName" xml:space="preserve">
+    <value>ColumnVolume</value>
+  </data>
+  <data name="ColumnVolumeTitle" xml:space="preserve">
+    <value>ColumnVolume</value>
+  </data>
+  <data name="EquiVolumeDescription" xml:space="preserve">
+    <value>EquiVolume charts are similar to Candlestick charts, but they only show the high and low values. In addition, the width of each bar is determined by a fifth value, volume.</value>
+  </data>
+  <data name="EquiVolumeName" xml:space="preserve">
+    <value>EquiVolume</value>
+  </data>
+  <data name="EquiVolumeTitle" xml:space="preserve">
+    <value>EquiVolume</value>
+  </data>
+  <data name="HeikinAshiDescription" xml:space="preserve">
+    <value>Heikin-Ashi charts are a variation of Japanese candlestick charts that were designed to remove noise from candlesticks and behave much like a moving average. These charts can be used to identify trends, potential reversal points, and other technical analysis patterns.</value>
+  </data>
+  <data name="HeikinAshiName" xml:space="preserve">
+    <value>Heikin-Ashi</value>
+  </data>
+  <data name="HeikinAshiTitle" xml:space="preserve">
+    <value>Heikin-Ashi</value>
+  </data>
+  <data name="IndicatorsDescription" xml:space="preserve">
+    <value>A technical indicator is a set of derived data that is calculated by applying one or more formulas to the original set of data. Technical indicators are generally used to forecast the asset's market direction and generally plotted separately from the original data since the Y-axis scales differ.</value>
+  </data>
+  <data name="IndicatorsName" xml:space="preserve">
+    <value>Indicators</value>
+  </data>
+  <data name="IndicatorsTitle" xml:space="preserve">
+    <value>Indicators</value>
+  </data>
+  <data name="KagiDescription" xml:space="preserve">
+    <value>A Kagi chart displays supply and demand trends using a sequence of linked vertical lines. The thickness and direction of the lines vary depending on the price movement. If closing prices go in the direction of the previous Kagi line, then that Kagi line is extended. However, if the closing price reverses by the preset reversal amount, a new Kagi line is charted in the next column in the opposite direction. Thin lines indicate that the price breaks the previous low (supply) while thick lines indicate that the price breaks the previous high (demand).</value>
+  </data>
+  <data name="KagiName" xml:space="preserve">
+    <value>Kagi</value>
+  </data>
+  <data name="KagiTitle" xml:space="preserve">
+    <value>Kagi</value>
+  </data>
+  <data name="LineBreakDescription" xml:space="preserve">
+    <value>A Line Break or Three Line Break chart uses vertical boxes or lines to illustrate the price changes of an asset or market. Movements are depicted with box colors and styles; movements that continue the trend of the previous box are colored similarly while movements that trend oppositely are indicated with a different color and/or style. The opposite trend is only drawn if its value exceeds the extreme value of the previous n number of boxes or lines, which is determined by the newLineBreaks option.</value>
+  </data>
+  <data name="LineBreakName" xml:space="preserve">
+    <value>Line Break</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Line Break</value>
+  </data>
+  <data name="MovingAveragesDescription" xml:space="preserve">
+    <value>Moving average trend lines are used to analyze data by creating a series of averages of the original data set.</value>
+  </data>
+  <data name="MovingAveragesName" xml:space="preserve">
+    <value>Moving Average</value>
+  </data>
+  <data name="MovingAveragesTitle" xml:space="preserve">
+    <value>Moving Average</value>
+  </data>
+  <data name="RangeSelectorDescription" xml:space="preserve">
+    <value>The RangeSelector allows end users to adjust the FinancialChart's visible range of data at runtime. The example below demonstrates the typical use case for the RangeSelector and how to apply a custom style.</value>
+  </data>
+  <data name="RangeSelectorName" xml:space="preserve">
+    <value>Range Selector</value>
+  </data>
+  <data name="RangeSelectorTitle" xml:space="preserve">
+    <value>Range Selector</value>
+  </data>
+  <data name="RenkoDescription" xml:space="preserve">
+    <value>The Renko chart uses bricks of uniform size to chart the price movement. When a price moves to a greater or lesser value than the preset boxSize option required to draw a new brick, a new brick is drawn in the succeeding column. The change in box color and direction signifies a trend reversal.</value>
+  </data>
+  <data name="RenkoName" xml:space="preserve">
+    <value>Renko</value>
+  </data>
+  <data name="RenkoTitle" xml:space="preserve">
+    <value>Renko</value>
+  </data>
+  <data name="TrendLinesDescription" xml:space="preserve">
+    <value>Trend lines are used to visualize trends in data and to help analyze the problems of prediction.</value>
+  </data>
+  <data name="TrendLinesName" xml:space="preserve">
+    <value>Trend Lines</value>
+  </data>
+  <data name="TrendLinesTitle" xml:space="preserve">
+    <value>Trend Lines</value>
+  </data>
+  <data name="BoxSizeCaption" xml:space="preserve">
+    <value>Box Size</value>
+  </data>
+  <data name="DataFieldsCaption" xml:space="preserve">
+    <value>Data Fields</value>
+  </data>
+  <data name="LineBreakCaption" xml:space="preserve">
+    <value>Number of Lines in Break</value>
+  </data>
+  <data name="RangeModeCaptioin" xml:space="preserve">
+    <value>Range Mode</value>
+  </data>
+  <data name="ReversalAmountCaption" xml:space="preserve">
+    <value>Reversal Amount</value>
+  </data>
+  <data name="Symbol" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="FitTypeCaption" xml:space="preserve">
+    <value>Fit Type</value>
+  </data>
+  <data name="MovingAverageTypeCaption" xml:space="preserve">
+    <value>Moving Average Type</value>
+  </data>
+  <data name="OrderCaption" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="PeriodCaption" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="IndicatorsTypeCaption" xml:space="preserve">
+    <value>Indicator Type</value>
+  </data>
+  <data name="DPeriodCaption" xml:space="preserve">
+    <value>D Period</value>
+  </data>
+  <data name="FastPeriodCaption" xml:space="preserve">
+    <value>Fast Period</value>
+  </data>
+  <data name="IndicatorType" xml:space="preserve">
+    <value>Average True Range,Relative Strength Index,Commodity Channel Index,Williams %R,MACD,Stochastic</value>
+  </data>
+  <data name="KPeriodCaption" xml:space="preserve">
+    <value>K Period</value>
+  </data>
+  <data name="IndicatorsSettings" xml:space="preserve">
+    <value>Indicators Settings</value>
+  </data>
+  <data name="SlowPeriodCaption" xml:space="preserve">
+    <value>Slow Period</value>
+  </data>
+  <data name="SmoothingPeriodCaption" xml:space="preserve">
+    <value>Smoothing Period</value>
+  </data>
+  <data name="OverlaysDescription" xml:space="preserve">
+    <value>Overlays, like technical indicators, are a set of derived data that is calculated by applying one or more formulas to the original set of data. Overlays are generally used to forecast an asset's market direction and generally plotted with the original data set since the the Y-axis scales are the same.</value>
+  </data>
+  <data name="OverlaysName" xml:space="preserve">
+    <value>Overlays</value>
+  </data>
+  <data name="OverlaysTitle" xml:space="preserve">
+    <value>Overlays</value>
+  </data>
+  <data name="OverlaysSettings" xml:space="preserve">
+    <value>Overlays Settings</value>
+  </data>
+  <data name="MultiplierCaptin" xml:space="preserve">
+    <value>Multiplier</value>
+  </data>
+  <data name="OverlayCaption" xml:space="preserve">
+    <value>Overlay</value>
+  </data>
+  <data name="SizeCaption" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="TypeCaption" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="OverlaysTypes" xml:space="preserve">
+    <value>Bollinger Bands,Envelopes</value>
+  </data>
+  <data name="FibonacciToolDescription" xml:space="preserve">
+    <value>Fibonacci tool is used for trend analysis in financial charts. With the help of range selector, you can choose data range for calculation.</value>
+  </data>
+  <data name="FibonacciToolName" xml:space="preserve">
+    <value>Fibonacci Tool</value>
+  </data>
+  <data name="FibonacciToolTitle" xml:space="preserve">
+    <value>Fibonacci Tool</value>
+  </data>
+  <data name="EndXCaption" xml:space="preserve">
+    <value>EndX</value>
+  </data>
+  <data name="EndYCaption" xml:space="preserve">
+    <value>EndY</value>
+  </data>
+  <data name="FibonacciTypeCaption" xml:space="preserve">
+    <value>Type: </value>
+  </data>
+  <data name="FibonacciTypes" xml:space="preserve">
+    <value>Arcs,Fans,Retracements,Time Zones</value>
+  </data>
+  <data name="PositionCaption" xml:space="preserve">
+    <value>Position: </value>
+  </data>
+  <data name="Positions" xml:space="preserve">
+    <value>Left,Center,Right</value>
+  </data>
+  <data name="RangeSelectorCaption" xml:space="preserve">
+    <value>Range selector</value>
+  </data>
+  <data name="StartXCaption" xml:space="preserve">
+    <value>StartX</value>
+  </data>
+  <data name="StartYCaption" xml:space="preserve">
+    <value>StartY</value>
+  </data>
+  <data name="TimeZonesPositions" xml:space="preserve">
+    <value>None,Left,Center,Right</value>
+  </data>
+  <data name="UptrendCaption" xml:space="preserve">
+    <value>Uptrend: </value>
+  </data>
+  <data name="VerticalPositions" xml:space="preserve">
+    <value>None,Top,Center,Bottom</value>
+  </data>
+  <data name="FibonacciSettings" xml:space="preserve">
+    <value>Fibonacci Settings</value>
+  </data>
+  <data name="AlignmentCaption" xml:space="preserve">
+    <value>Content Alignment:</value>
+  </data>
+  <data name="EventAnnotationsDescription" xml:space="preserve">
+    <value>Event annotations are used to mark important events that can be attached to a specific data point on the FinancialChart. Hovering over the event annotation will reveal the full details of the event.</value>
+  </data>
+  <data name="EventAnnotationsName" xml:space="preserve">
+    <value>Event Annotations</value>
+  </data>
+  <data name="EventAnnotationsTitle" xml:space="preserve">
+    <value>Event Annotations</value>
+  </data>
+  <data name="InteractionCaption" xml:space="preserve">
+    <value>Interaction: </value>
+  </data>
+  <data name="MarkerLinesCaption" xml:space="preserve">
+    <value>Marker Lines: </value>
+  </data>
+  <data name="MarkersDescription" xml:space="preserve">
+    <value>Markers display a text area on the FinancialChart that displays the data values based on the mouse cursor's position on the chart. Markers also support optional vertical and horizontal lines to enable a cross-hair effect.</value>
+  </data>
+  <data name="MarkersName" xml:space="preserve">
+    <value>Markers</value>
+  </data>
+  <data name="MarkersSettings" xml:space="preserve">
+    <value>Markers Settings</value>
+  </data>
+  <data name="MarkersTitle" xml:space="preserve">
+    <value>Markers</value>
+  </data>
+  <data name="SnappingCaptioin" xml:space="preserve">
+    <value>Snapping</value>
+  </data>
+</root>

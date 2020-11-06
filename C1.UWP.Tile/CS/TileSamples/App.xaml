@@ -1,0 +1,87 @@
+﻿<Application
+    x:Class="TileSamples.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TileSamples"
+    xmlns:localData="using:TileSamples.Data">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0BA;</x:String>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <x:String x:Key="BackButtonGlyph">&#xE0A6;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0C4;</x:String>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            
+            <!-- Application-specific resources -->
+            <local:Strings x:Key="TileSamplesLocalization" />
+            
+            <!-- Page layout roots typically use entrance animations and a theme-appropriate background color -->
+
+            <Style x:Key="LayoutRootStyle" TargetType="Panel">
+                <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+                <Setter Property="ChildrenTransitions">
+                    <Setter.Value>
+                        <TransitionCollection>
+                            <EntranceThemeTransition/>
+                        </TransitionCollection>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--***************** CONTROL ICONS *****************-->
+
+            <SolidColorBrush x:Key="IconBrush" Color="White"/>
+
+            <SolidColorBrush x:Key="IconGrayBackground" Color="#FF777777"/>
+
+            <Style x:Key="IconName" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource IconBrush}"/>
+                <!-- <Setter Property="FontSize" Value="12"/>-->
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Margin" Value="-5,0,-5,1"/>
+            </Style>
+
+            <DataTemplate x:Key="IconC1Gray">
+                <Grid Background="{StaticResource IconGrayBackground}" Height="60" Width="60">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding}" Style="{StaticResource IconName}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard250x250ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="150" Height="150">
+                    <Border Background="#FF2C383D">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill"/>
+                    </Border>
+                    <Border Height="50" VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe WP" FontSize="18" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard80ItemTemplate">
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+                        <Image Source="{Binding Image}" Stretch="UniformToFill"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Title}" Style="{ThemeResource BodyTextBlockStyle}" MaxHeight="40"/>
+                        <TextBlock Text="{Binding Description}" Style="{ThemeResource CaptionTextBlockStyle}" TextWrapping="WrapWholeWords"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

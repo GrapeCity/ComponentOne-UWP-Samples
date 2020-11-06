@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="PdfSamples.TextFlowPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PdfSamples"
+    xmlns:c1pdfviewer="using:C1.Xaml.PdfViewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="c1pdfviewer:C1PdfViewer">
+            <Setter Property="Background" Value="Gray" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1pdfviewer:C1PdfViewer x:Name="c1PdfViewer1" Grid.Row="1"/>
+        <ProgressRing x:Name="progressRing" />
+        <Button x:Name="btnSave" Content="{Binding Source={StaticResource PdfSamplesLocalization}, Path=SavePDFBT_Content}" Click="btnSave_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 0 10" Height="40" Width="106"/>
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="c1PdfViewer1.ViewMode" Value="Fitted" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

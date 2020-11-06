@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="InputSamples.CheckList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InputSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:map="using:C1.Xaml.Maps"
+    xmlns:input="using:C1.Xaml.Input"
+    mc:Ignorable="d" Loaded="OnLoaded">
+    <Page.Resources>
+        <local:VisibleConverter x:Key="VisibleConverter"/>
+        <local:SymbolIconConverter x:Key="SymbolIconConverter"/>
+        <DataTemplate x:Name="FactoryTemplate" x:Key="FactoryTemplate">
+            <Grid Width="60" Height="60" map:C1MapCanvas.Pinpoint="30, 30" map:C1MapCanvas.LongLat="{Binding Position}">
+                <Image Source="../Assets/factory.png" />
+                <Grid Background="Transparent" ToolTipService.ToolTip="{Binding Name}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Name="OfficeTemplate" x:Key="OfficeTemplate">
+            <Grid Width="60" Height="60" map:C1MapCanvas.Pinpoint="30, 30" map:C1MapCanvas.LongLat="{Binding Position}">
+                <Image Source="../Assets/office.png" />
+                <Grid Background="Transparent" ToolTipService.ToolTip="{Binding ToolTip}" />
+                <Border HorizontalAlignment="Right" VerticalAlignment="Top" Background="#F6AAC9" CornerRadius="12" Margin="0, -10, 0, 0" Width="25" Height="25" BorderBrush="#F07E6E" BorderThickness="1">
+                    <TextBlock Text="{Binding Stores}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <SplitView x:Name="RootView" CompactPaneLength="60" DisplayMode="CompactOverlay" IsPaneOpen="True" >
+        <SplitView.Pane>
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button Margin="5" Background="Transparent" Command="{x:Bind ToggleSwitchCommand}" CommandParameter="{Binding ElementName=RootView}">
+                    <SymbolIcon Symbol="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource SymbolIconConverter}}"/>
+                </Button>
+                <Pivot Grid.Row="1" Visibility="{Binding ElementName=RootView,Path=IsPaneOpen,Converter={StaticResource VisibleConverter}}">
+                    <PivotItem x:Uid="MobileFactoriesDistribution" Header="Factories Distribution">
+                        <input:C1CheckList x:Name="FactorySelector" SelectedBackground="Transparent" SelectionChanged="OnFactorySelectionChanged" SelectAllCaption="Show All Factories" UnSelectAllCaption="Hide All Factories" Margin="5" ShowSelectAll="True" DisplayMemberPath="Name" ItemsSource="{x:Bind Factories}" />
+                    </PivotItem>
+                    <PivotItem x:Uid="MobileOfficesDistribution" Header="Offices Distribution">
+                        <input:C1CheckList x:Name="OfficeSelector" SelectedBackground="Transparent" SelectionChanged="OnOfficeSelectionChanged" SelectAllCaption="Show All Offices" UnSelectAllCaption="Hide All Offices" Margin="5" ShowSelectAll="True" DisplayMemberPath="Name" ItemsSource="{x:Bind Offices}" />
+                    </PivotItem>
+                </Pivot>
+            </Grid>
+        </SplitView.Pane>
+        <map:C1Maps x:Name="DistributionMap" Margin="5" Zoom="2" Center="-85, 50">
+            <map:C1Maps.Source>
+                <map:VirtualEarthHybridSource/>
+            </map:C1Maps.Source>
+            <map:C1Maps.Layers>
+                <map:C1MapItemsLayer ItemsSource="{x:Bind FactoryItems}" ItemTemplate="{StaticResource FactoryTemplate}"/>
+                <map:C1MapItemsLayer ItemsSource="{x:Bind OfficeItems}" ItemTemplate="{StaticResource OfficeTemplate}"/>
+            </map:C1Maps.Layers>
+        </map:C1Maps>
+    </SplitView>
+</Page>

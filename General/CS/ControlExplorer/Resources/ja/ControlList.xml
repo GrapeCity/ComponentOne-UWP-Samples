@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Controls>
+	<Group name="データ管理" isExpanded="true">
+		<!-- CollectionView -->
+		<Control name="CollectionView" iconName="CollectionView" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature type="BasicLibrarySamples.View.CollectionViewConditions" name="ソート、フィルタリング、グループ化">
+				<Description>C1CollectionView は ICollectionView インタフースを実装し、ネイティブの CollectionViewSource/ICollectionView 実装には存在しない、ライブソート、フィルタリング、およびグループ化などの機能を任意のリストコントロールに提供します。</Description>
+			</Feature>
+			<Feature type="BasicLibrarySamples.View.BindingToC1CollectionView" name="グループ化の設定">
+				<Description>このサンプルは、グループモードで C1CollectionView と共に動作するように ListBox および GridView コントロールを設定する方法を示しています。</Description>
+			</Feature>
+			<Feature name="FlexGrid" type="FlexGridSamples.CollectionView" source="/C1.Xaml.FlexGrid/CS/FlexGridSamples/FlexGridSamples.zip">
+				<Description>C1FlexGrid に組み込まれた C1CollectionView サポートを示します。 列ヘッダーを１回または２回タップすると、その列がソートされます。</Description>
+			</Feature>
+		</Control>
+		<!-- FlexGrid -->
+		<Control name="FlexGrid" iconName="FlexGrid" enabled="true" isTop="true" isNew="true" assembly="C1.Xaml.FlexGrid" source="/C1.Xaml.FlexGrid/CS/FlexGridSamples/FlexGridSamples.zip">
+			<Feature type="FlexGridSamples.FlexGridDemo" name="基本動作">
+				<Description>FlexGrid&#174; は、必要な柔軟性と拡張性を備えた強力な組み込み機能を組み合わせた、フル機能の高速グリッドコントロールです。 並べ替え、グループ化、セルの書式設定、セルのマージ、集計などを提供します。</Description>
+			</Feature>
+			<Feature name="フィルタリング">
+				<SubFeatures>
+					<SubFeature name="グループ化フィルタリング" type="FlexGridSamples.CollectionView">
+						<Description>FlexGrid は、C1CollectionView を介したライブソート、フィルタリング、およびグループ化をサポートしています。これらの機能の一部は、ネイティブの CollectionViewSource/ICollectionView 実装にはありません。グループ集計もサポートされているため、グループ化された行に合計とカウントを表示できます。列ヘッダーを１回または２回タップして、その列を並べ替えます。</Description>
+					</SubFeature>
+					<SubFeature name="フルテキストフィルター" type="FlexGridSamples.FullTextFilter" >
+						<Description>このデモでは、すべての列のデータをフィルタリングおよび強調表示する方法を示します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="編集" type="FlexGridSamples.Editing" supportThemes="false">
+				<Description>C1FlexGrid は、Excel 形式の編集をサポートしています。セルに値を入力し、Enter キーまたは矢印キーを使用して次のセルに移動します。または、F2 キーを押してフルエディットモードに入り、矢印キーによってエディター内をナビゲートします。オートコンプリートと値マッピングされた列も組み込まれており、単に ColumnValueConverter を作成し、それを ValueConverter プロパティの列に割り当てるだけです。トランザクションによる編集もサポートされています。ここで使用する Customer クラスは IEditableObject を実装しているため、新しい行に移動する前にEscキーを押して変更を元に戻すことができます（注：グレー色の列は読み取り専用です）。 この機能は、マウスとキーボードでのみサポートされています。</Description>
+			</Feature>
+			<Feature name="ライブ更新" type="FlexGridSamples.Financial">
+				<Description>カスタムセルコンテンツを作成し、ライブアップデートを表示します。 このデモでは、シミュレートされたライブデータのストック指向の例を示します。</Description>
+			</Feature>
+			<Feature name="メディアライブラリ" type="FlexGridSamples.MediaLibrary">
+				<Description>このデモでは、セルのカスタマイズに使用される C1FlexGrid の CellFactory インタフェースを紹介します。画像に続けてアーティスト、アルバム、曲、折りたたみ/展開アイコン、評価を表示するカスタムセルを使用します。ICellFactory インターフェイスを継承し、セルを表すために使用される FrameworkElement オブジェクトを提供することで、簡単にカスタムセルを作成できます。</Description>
+			</Feature>
+			<Feature name="複数行ヘッダ" type="FlexGridSamples.Unbound">
+				<Description>IEnumerable データソースで作業することに加えて、C1FlexGrid はセル値がグリッド自体に格納され、使い慣れたインデックス表記法を使用してアクセスされる非連結モードもサポートしています。このデモでは、マージされた複数セルの行と列のヘッダーを設定する方法も示しています。</Description>
+			</Feature>
+			<Feature name="Excel スタイル" type="FlexGridSamples.ExcelStyleMerge">
+				<Description>このデモでは、Excel スタイルのセルマージとセル分割を実行できることを示します。マージまたは分割するセルの範囲を選択してください。</Description>
+			</Feature>
+			<Feature name="印刷" type="FlexGridSamples.Printing">
+				<Description>C1FlexGrid は、GetPageImages メソッドによる印刷をサポートしているため、ユーザーは PrintManager を簡単に設定できます。</Description>
+			</Feature>
+			<Feature name="スパークライン" type="SparklineSamplesLib.FlexGridIntegration">
+				<Description>C1SparkLine コントロールを C1FlexGrid コントロールのセルテンプレートとして使用して、完全なデータグリッド体験を実現します。</Description>
+			</Feature>
+		</Control>
+		<!-- ListBox -->
+		<Control name="ListBox" iconName="ListBox" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature type="ListBoxSample" name="基本動作">
+				<Description>C1ListBox コントロールは、水平方向のサポート、無効な選択、およびプレビューデータのテンプレートを含む高性能のリストボックスです。</Description>
+			</Feature>
+			<!--  <Feature name="TileListBox" iconName="TileListBox" type="TileListBoxSample">
+      <Description>The C1TileListBox control is a high performance list box that can arrange its items in both rows and columns to create tile displays. Both ComponentOne ListBox controls support incremental loading so you can infinitely load more items on demand as the user scrolls to the end of the list.</Description>
+    </Feature>-->
+		</Control>
+	</Group>
+	<Group name="データ視覚化" isExpanded="true">
+		<!--FinancialChart-->
+		<Control name="FinancialChart" iconName="FinancialChart" enabled="true" assembly="C1.Xaml.FinancialChart">
+			<Feature name="チャートタイプ">
+				<SubFeatures>
+					<SubFeature type="FinancialChartExplorer.HeikinAshi" name="平均足">
+						<Description>平均足チャートは日本のローソク足チャートのバリエーションで、ローソク足チャートからノイズを取り除き、移動平均によく似た動作をするように設計されています。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.LineBreak" name="新値足">
+						<Description>新値足チャートまたは新値三本足チャートは、垂直のボックスまたはラインを使用して、資産や市場の価格変動を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.Renko" name="錬行足">
+						<Description>練行足チャートは、一様なサイズのブロックを使用して株価の動きをグラフ化します。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.Kagi" name="カギ足">
+						<Description>カギ足チャートは、一連の垂直線を連結して、需要と供給のトレンドを示します。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.ColumnVolume" name="カラムボリューム">
+						<Description>カラムボリュームチャートは、縦棒グラフに似ていますが、2番目の値「出来高」を受け取る点が異なり、この出来高によって各棒の幅が決まります。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.EquiVolume" name="エクイボリューム">
+						<Description>エクイボリュームチャートは、ローソク足チャートに似ていますが、エクイボリュームでは高値と安値だけが示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.CandleVolume" name="ローソクボリューム">
+						<Description>ローソクボリュームチャートは、各棒の幅が5番目の値「出来高」によって決定されること以外は、標準的なローソク足チャートと同じです。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.ArmsCandleVolume" name="アームズローソクボリューム">
+						<Description>Richard Armsによって作成されたアームズローソクボリュームチャートは、エクイボリュームチャートとローソクボリュームチャートを組み合わせたチャートです。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="インタラクション">
+				<SubFeatures>
+					<SubFeature type="FinancialChartExplorer.Markers" name="マーカー">
+						<Description>マーカーは、チャート上のマウスカーソルの位置に基づいてデータ値を表示するFinancialChart上のテキスト領域を表示します。 マーカーは、十字線効果を有効にするためのオプションの垂直線と水平線もサポートしています。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.RangeSelector" name="範囲セレクタ">
+						<Description>このサンプルでは範囲セレクターの一般的なユースケースとカスタムスタイルの適用方法を紹介しています。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="解析">
+				<SubFeatures>
+					<SubFeature type="FinancialChartExplorer.TrendLines" name="傾向線">
+						<Description>傾向線は、データの傾向を視覚化し、予測の問題点を分析するために使用されます。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.MovingAverages" name="移動平均">
+						<Description>移動平均傾向線は、元のデータセットから一連の平均値を求めることでデータを分析するために使用されます。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.Overlays" name="オーバーレイ">
+						<Description>テクニカルインジケータと同様に、オーバーレイは、元のデータセットに1つ以上の数式を適用することによって計算される派生データのセットです。 オーバーレイは一般に、資産のマーケット方向を予測するために使用され、Y軸のスケールが同じであるため元のデータセットで一般的にプロットされます。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.Indicators" name="インジケーター">
+						<Description>テクニカルインジケータは、元のデータセットに１つ以上の数式を適用して計算することにより派生したデータのセットです。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.EventAnnotations" name="イベントアノテーション">
+						<Description>イベントアノテーションは、FinancialChart の特定のデータポイントにアタッチできる重要なイベントをマークするために使用されます。 イベントのアノテーションにカーソルを合わせると、イベントの詳細が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FinancialChartExplorer.FibonacciTool" name="フィボナッチツール">
+						<Description>フィボナッチツールは、金融チャートの傾向分析に使用されます。 レンジセレクタの助けを借りて、計算のためのデータ範囲を選択することができます。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<!--FlexChart-->
+		<Control name="FlexChart" iconName="FlexChart" isNew="true" enabled="true" assembly="C1.Xaml.FlexChart">
+			<Feature name="Flex Chart">
+				<SubFeatures>
+					<SubFeature type="FlexChartExplorer.Introduction" name="イントロダクション">
+						<Description>このビューは、FlexChart の基本機能を示しています。 グラフをデータソースにバインドし、グラフの種類、系列の積み重ね、および回転を選択することができます。</Description>
+					</SubFeature>
+					<SubFeature type="AnimationDemo.View.FlexChartAnimation" name="アニメーション">
+						<Description>FlexChart には、新規データの読み込み、更新、および追加のための高度なアニメーションオプションが付属しています。</Description>
+					</SubFeature>
+					<SubFeature type="AnimationDemo.View.CustomAnimation" isNew="true" name="カスタムアニメーション">
+						<Description>このビューでは、AnimationTransform イベントでチャートアニメーションをカスタマイズする方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Binding" name="バインディング">
+						<Description>このビューでは、FlexChart を使用して、単一のデータ配列から２組の値を表示する方法を示します。これは、FlexChart の最も一般的な使用シナリオです。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.SeriesBinding" name="系列のバインディング">
+						<Description>このビューでは、FlexChart を使用して複数のデータソースのデータを系列ごとに表示する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.HeaderAndFooter" name="ヘッダ &amp; フッタ">
+						<Description>このビューは、ヘッダーとフッターをチャートに追加する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Selection" name="選択">
+						<Description>このビューは、FlexChart の選択機能を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Labels" name="ラベル">
+						<Description>このビューでは、FlexChart の DataLabel プロパティを使用して各データポイントにラベルを追加する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.HitTest" name="ヒットテスト">
+						<Description>このビューは、FlexChart の HitTest メソッドの使用方法を示します。HitTest メソッドはポイントをとり、最も近いチャート要素を返します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Zoom" name="ズーム">
+						<Description>このビューは、FlexChart コントロールのカスタムズームを実装する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Bubble" name="バブルチャート">
+						<Description>このビューは、FlexChart コントロールを使用してバブルチャートを作成する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Financial" name="金融チャート">
+						<Description>このビューでは、FlexChart コントロールを使用して金融チャートを作成する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Axes" name="軸">
+						<Description>このビューには、２つの Y 軸を持つ FlexChart が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.PlotAreas" name="複数のプロット領域">
+						<Description>このビューには、いくつかのプロット領域があるFlexChartが表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.AxisBinding" name="軸のバインディング">
+						<Description>このビューには、FlexChartの軸バインディング機能が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.ImageExport" name="画像のエクスポート">
+						<Description>FlexChart を画像として保存します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Zones" name="ゾーン">
+						<Description>このビューでは、生徒の成績の散布図を作成し、ゾーンを使用して各成績範囲を強調表示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.TrendLine" name="傾向線">
+						<Description>このビューには、FlexChart の TrendLine が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.Waterfall" name="ウォーターフォール">
+						<Description>このビューには、FlexChart の ウォーターフォール系列が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.BoxWhisker" name="箱ひげ">
+						<Description>箱ひげのデータ系列は通常、異なる数値データセット間の分布を比較するために使用されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.ErrorBar" name="エラーバー">
+						<Description>エラーバーは、エラーと標準偏差のマージンを一目で確認するのに役立ちます。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="Flex Pie" isExpanded="true">
+				<SubFeatures>
+					<SubFeature type="FlexChartExplorer.PieIntroduction" name="基本動作">
+						<Description>このビューには、FlexPie の基本機能が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="AnimationDemo.View.FlexPieAnimation" name="アニメーション">
+						<Description>FlexPie には、新規データの読み込み、更新、および追加のための高度なアニメーションオプションが付属しています。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.PieSelection" name="選択">
+						<Description>このビューには、FlexPie の選択機能が表示されます。</Description>
+					</SubFeature>
+					<SubFeature type="FlexChartExplorer.MultiPie" name="複数の円グラフ" isNew="true" >
+						<Description>複数のコンマ区切りフィールドがバインディングで指定されている場合、複数の円グラフを描画します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="Sunburst">
+				<SubFeatures>
+					<SubFeature type="SunburstIntro.GettingStarted" name="外観">
+						<Description>このビューには、Sunburst の基本的な外観を示します。</Description>
+					</SubFeature>
+					<SubFeature type="SunburstIntro.BasicFeatures" name="基本機能">
+						<Description>このビューは Sunburst の基本機能を示します。</Description>
+					</SubFeature>
+					<SubFeature type="SunburstIntro.LegendTitles" name="凡例 &amp; タイトル">
+						<Description>このビューでは、Sunburst の LegendPosition、Header、および Footer の各プロパティを変更できます。</Description>
+					</SubFeature>
+					<SubFeature type="SunburstIntro.Selection" name="選択">
+						<Description>このビューは、Sunburst の選択機能を示します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="Flex Radar">
+				<SubFeatures>
+					<SubFeature type="FlexRadarIntro.RadarChart" name="レーダーチャート">
+						<Description>デモでは、FlexRadar コントロールでレーダーチャートを作成する方法を示します。</Description>
+					</SubFeature>
+					<SubFeature type="FlexRadarIntro.PolarChart" name="ポーラチャート">
+						<Description>FlexRadar コントロールは、x-値が度単位の角度で指定される数値のときにポーラチャートを出力します。</Description>
+					</SubFeature>
+				</SubFeatures>
+			</Feature>
+			<Feature name="TreeMap" type="FlexChartExplorer.TreeMap" >
+				<Description>C1TreeMap コントロールは、階層データをネストされた矩形のセットとして表示します。ノードの矩形は、Binding プロパティで指定されたデータ項目のプロパティの値に比例する領域を持ちます。BindingName プロパティは、矩形ラベルで示されるデータ項目のプロパティを指定します。</Description>
+			</Feature>
+		</Control>
+		<!-- Gauges -->
+		<Control name="Gauges" iconName="Gauges" assembly="C1.Xaml.Gauge" source="/C1.Xaml.Gauge/CS/GaugeSamples/GaugeSamples.zip">
+			<Feature name="放射状ゲージ" type="GaugeSamples.RadialGauge">
+				<Description>ゲージには、いくつかのタイプの放射状ゲージが付属しています。一般的な放射状ゲージには、ダイヤルとスピードメーターがあります。</Description>
+				<SubFeatures>
+					<SubFeature name="RadialGauge" type="GaugeSamples.RadialGauge"/>
+					<SubFeature name="Speedometer" type="GaugeSamples.SpeedometerGauge"/>
+					<SubFeature name="VolumeGauge" type="GaugeSamples.VolumeGauge"/>
+				</SubFeatures>
+			</Feature>
+			<Feature name="線形ゲージ" type="GaugeSamples.LinearGauge" iconName="LinearGauges">
+				<Description>ゲージには、すぐに使用できるいくつかのタイプの線形ゲージが含まれています。一般的な線形ゲージには、ルーラーと温度計があります。</Description>
+				<SubFeatures>
+					<SubFeature name="LinearGauge" type="GaugeSamples.LinearGauge"/>
+					<SubFeature name="RulerGauge" type="GaugeSamples.RulerGauge"/>
+				</SubFeatures>
+			</Feature>
+			<Feature name="つまみ" type="GaugeSamples.Knob" iconName="Knobs">
+				<Description>The C1Knob control allows users to drag the pointer to a value. Also included is the unique C1RegionKnob with customizable regions. Knob gauges offer an alternative to text-based editors or sliders.</Description>
+				<SubFeatures>
+					<SubFeature name="Knob" type="GaugeSamples.Knob"/>
+					<SubFeature name="RegionKnob" type="GaugeSamples.RegionKnob"/>
+				</SubFeatures>
+			</Feature>
+			<Feature name="高度なカスタマイズ" type="GaugeSamples.Linears">
+				<Description>ゲージ全体を完全にカスタマイズすることができます。温度計を作成し、自動車のダッシュボードなどを模倣します。</Description>
+				<SubFeatures>
+					<SubFeature name="温度計" type="GaugeSamples.Thermometer"/>
+					<SubFeature name="定規" type="GaugeSamples.Rule"/>
+					<SubFeature name="時計" type="GaugeSamples.Clock"/>
+					<SubFeature name="自動車メーター" type="GaugeSamples.Automobile"/>
+				</SubFeatures>
+			</Feature>
+		</Control>
+		<!-- Maps -->
+		<Control name="Maps" iconName="Maps" assembly="C1.Xaml.Maps" source="/C1.Xaml.Maps/CS/MapsSamples/MapsSamples.zip">
+			<Feature type="MapsSamples.DemoMaps" name="基本動作">
+				<Description>C1Maps を使用して、画面と地理座標のスムーズなズーム、パン、マッピングを行います。複数のソースからのオンラインマップを表示し、オフラインで動作する KML ファイルをインポートします。独自のカスタム要素をマップにバインドすることもできます。</Description>
+			</Feature>
+			<Feature name="マーカー" type="MapsSamples.Marks">
+				<Description>このデモでは、ランダムな地理座標でシンプルな UI マーカーを示します。右クリックすると新しいマーカーを追加できます。マーカーをドラッグして移動することもできます。</Description>
+			</Feature>
+			<Feature name="KML レイヤー" type="MapsSamples.MapChart">
+				<Description>このデモでは、KMZ ファイル（ZIP 形式の KML）から C1VectorLayer にロードされた国のポリゴンに基づいてマップチャートを作成する方法を示します。また、オンラインのタイルソースを使用せずに C1Maps を使用できることも示しています。</Description>
+			</Feature>
+			<Feature name="地震" type="MapsSamples.EarthQuake">
+				<Description>このデモでは地図上に様々なベクトルデータを表示して地震データを表示します。</Description>
+			</Feature>
+			<Feature name="緯度線と子午線" type="MapsSamples.Grid">
+				<Description>ベクターレイヤーでは、緯度線と子午線をマップに追加できます。タイルソースの上にベクターレイヤーを使用して、ジオメトリ/シェイプ/ポリゴン/パスを地理座標で描画できます。</Description>
+			</Feature>
+			<Feature name="都市" type="MapsSamples.Cities">
+				<Description>ベクターレイヤーを使用して、このマップに世界の大都市（人口別）を示します。</Description>
+			</Feature>
+			<Feature name="GeoRSS リーダー" type="MapsSamples.Flicker">
+				<Description>このデモでは、GeoRSS リーダーからの画像を表示します。</Description>
+			</Feature>
+			<Feature name="カスタムタイル" type="MapsSamples.CustomTileSource">
+				<Description>このデモでは、Open Street Maps を使用してカスタムタイルソースを示しています。カスタムズームボタンも表示されます。</Description>
+			</Feature>
+		</Control>
+		<!-- OrgChart -->
+		<Control name="OrgChart" iconName="OrgChart" assembly="C1.Xaml.OrgChart" source="/C1.Xaml.OrgChart/CS/CS.zip">
+			<Feature type="OrgChartSamples.MainSample" name="基本動作">
+				<Description>C1OrgChart コントロールにて関係性を示す階層図を作成します。</Description>
+			</Feature>
+			<Feature name="テンプレートの選択" type="OrgChartSamples.TemplateSample">
+				<Description>DataTemplateSelector を使用して、特定のデータ項目の機能に基づいて異なるテンプレートを選択します。</Description>
+			</Feature>
+			<Feature name="階層" type="OrgChartSamples.HierarchicalSample">
+				<Description>HierarchialDataTemplate を使用して、特定のノードに対して異なる外観を作成します。</Description>
+			</Feature>
+			<Feature name="展開と折りたたみ" type="OrgChartSamples.CollapseExpand">
+				<Description>折りたたみ可能なノードを作成する C1OrgChart のプロパティへの要素のバインディングを示します。</Description>
+			</Feature>
+		</Control>
+		<!-- Sparkline -->
+		<Control name="Sparkline" iconName="Sparkline" assembly="C1.Xaml.Sparkline" source="/C1.Xaml.Sparkline/CS/CS.zip">
+			<Feature type="SparklineSamplesLib.MainSample" name="基本動作">
+				<Description>Microsoft Excel をベースにした C1SparkLine コントロールは、３種類のスパークラインをサポートしています。</Description>
+			</Feature>
+			<Feature name="カスタマイズ" type="SparklineSamplesLib.AppearanceSample">
+				<Description>このデモでは、スパークラインの外観をカスタマイズするために設定できるさまざまなプロパティを示します。</Description>
+			</Feature>
+			<Feature name="データバインディング" type="SparklineSamplesLib.RegionSales" supportThemes="false">
+				<Description>このデモでは、データバインドされた ListBox 内のスパークラインを示します。</Description>
+			</Feature>
+			<Feature name="FlexGrid" type="FlexGridSamples.Financial">
+				<Description>フルのデータグリッドエクスペリエンスをもたらす C1FlexGrid コントロールのセルテンプレートとして C1SparkLine コントロールを使用します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="入力＆編集">
+		<!-- ColorPicker -->
+		<Control name="ColorPicker" iconName="ColorPicker" assembly="C1.Xaml.Extended" source="/C1.Xaml.Extended/CS/ExtendedSamples/ExtendedSamples.zip">
+			<Feature type="ExtendedSamples.C1ColorPickerDemo" name="基本動作">
+				<Description>専門的にデザインされたパレットから色を選択するか、透明性のサポートを含む独自のカスタムカラーを作成します。</Description>
+			</Feature>
+		</Control>
+		<!-- DateTime Editors -->
+		<Control name="DateTimeEditors" iconName="DateTimeEditors" assembly="C1.Xaml">
+			<Feature name="DatePicker" type="C1.Xaml.DateTimeEditors.C1DatePicker" assemblyName="C1.Xaml.DateTimeEditors" packageUri="C1.Xaml.DateTimeEditors.zip">
+				<Description>C1DatePicker を使用すると、ユーザーは DateTime 値を入力するか、ドロップダウンカレンダーから日付を選択できます。</Description>
+			</Feature>
+			<Feature name="TimeEditor" type="C1.Xaml.DateTimeEditors.C1TimeEditor" assemblyName="C1.Xaml.DateTimeEditors" packageUri="C1.Xaml.DateTimeEditors.zip">
+				<Description>C1TimeEditor を使用すると、ユーザーは TimeSpan の値を入力できます（UP/DOWNキーを使用して値を増減できます）。</Description>
+			</Feature>
+			<Feature name="DateTimePicker" type="C1.Xaml.DateTimeEditors.C1DateTimePicker" assemblyName="C1.Xaml.DateTimeEditors" packageUri="C1.Xaml.DateTimeEditors.zip">
+				<Description>C1DateTimePicker は C1DatePicker と C1TimeEditorを組み合わせてユーザーが日付と時刻の両方を選択できるようにします。</Description>
+			</Feature>
+			<Feature name="DateTimeSelector" type="C1.Xaml.C1DateTimeSelector" assemblyName="C1.Xaml" packageUri="C1.Xaml.zip">
+				<Description>C1DateTimeSelector は、日付入力、時刻入力、またはその両方を同時に処理できます。</Description>
+			</Feature>
+			<Feature name="TimeSelector" type="C1.Xaml.C1TimeSelector" assemblyName="C1.Xaml" packageUri="C1.Xaml.zip">
+				<Description>C1TimeSelector コントロールは、時間値のシンプルなセレクタを提供します。</Description>
+			</Feature>
+			<Feature name="DateSelector" type="C1.Xaml.C1DateSelector" assemblyName="C1.Xaml" packageUri="C1.Xaml.zip">
+				<Description>C1DateSelector コントロールは、日付値のシンプルなセレクタを提供します。</Description>
+			</Feature>
+		</Control>
+		<!-- DropDown -->
+		<Control name="DropDown" iconName="DropDown" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature type="BasicLibrarySamples.View.DropDownDemo" name="基本動作">
+				<Description>あらゆるもののドロップダウンを作成できます。C1DropDown コントロールを使用して、ドロップダウンで任意の UI 要素を簡単にホストできます。</Description>
+			</Feature>
+			<Feature name="オートコンプリート" type="BasicLibrarySamples.View.AutoCompleteDropDown">
+				<Description>このデモでは、C1DropDown コントロールを使用して自動補完テキストボックスを作成する方法を示します。</Description>
+			</Feature>
+			<Feature name="階層" type="BasicLibrarySamples.View.HierarchicalDropDown">
+				<Description>C1DropDown の内部に C1TreeView コントロールを配置して、階層的なドロップダウンコンボボックスを作成します。</Description>
+			</Feature>
+		</Control>
+		<!-- Input -->
+		<Control name="Input" iconName="Input" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature name="MultiSelect" type="InputSamples.MultiSelect">
+				<Description>MultiSelect コントロールを使用すると、ドロップダウンチェックリストまたはタグの編集リストから複数のオブジェクトを選択できます。DropDown と Header の両方をカスタマイズすることができ、データは単純な文字列からカスタムオブジェクトまであらゆる範囲が利用できます。</Description>
+			</Feature>
+			<Feature name="CheckList" type="InputSamples.CheckList">
+				<Description>CheckList コントロールを使用して、チェックボックスを使用してリストから複数の項目を選択できます。このコントロールは、データバインディングと UI カスタマイズのオプションをサポートしています。</Description>
+			</Feature>
+			<Feature name="TagEditor" type="InputSamples.TagEditor">
+				<Description>TagEditor コントロールを使用して、タグの追加や削除によってタグのコレクションを編集できます。セパレータ付きのテキストまたはボタン状の UI 要素としてタグを表すことができます。</Description>
+			</Feature>
+			<Feature name="MaskedTextBox" type="MaskedTextBoxSamples.MainPage">
+				<Description>C1MaskedTextBox コントロールを使用すると、ユーザーは特定のマスクに適合するテキストを入力できます。</Description>
+			</Feature>
+			<Feature name="NumericBox" type="NumericBoxSamples.MainPage">
+				<Description>C1NumericBox コントロールを使用すると、ユーザーは書式設定された数値を入力できます（UP/DOWNボタンを使用して値を増減できます）。</Description>
+			</Feature>
+			<Feature name="RangeSlider" type="RangeSlider">
+				<Description>RangeSlider コントロールです。つまみをドラッグして、上限値あるいは下限値を変更します。つまみの間の領域をドラッグして範囲全体を変更します。</Description>
+			</Feature>
+		</Control>
+		<!--InputPanel-->
+		<Control name="InputPanel" iconName="InputPanel" assembly="C1.Xaml.InputPanel" source="/C1.Xaml.InputPanel/CS/InputPanelSamples/InputPanelSamplesLib.zip">
+			<Feature name="基本動作" type="InputPanelSamples.BindToInputPanel">
+				<Description>C1InputPanel コントロールを使用して、最小限のコーディングでデータ入力アプリケーションを作成しますす。</Description>
+			</Feature>
+			<Feature name="カスタムテンプレート" type="InputPanelSamples.CustomTemplate">
+				<Description>このサンプルは、C1InputPanelでカスタムItemsTemplateを使用する方法を示します。</Description>
+			</Feature>
+			<Feature name="C1FlexGrid 統合" type="InputPanelSamples.IntegrationC1FlexGrid">
+				<Description>このサンプルは、C1InputPanelを使用してC1FlexGridコントロールの行の詳細を表示および編集する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<!-- RichTextBox -->
+		<Control name="RichTextBox" iconName="RichTextBox" isTop="true" isNew="true" assembly="C1.Xaml.RichTextBox" source="/C1.Xaml.RichTextBox/CS/RichTextBoxSamples/RichTextBoxSamples.zip">
+			<Feature type="RichTextBoxSamples.DemoRichTextBox" name="基本動作" isNew="true" supportThemes="false">
+				<Description>C1RichTextBox コントロールを使用して、書式設定されたテキストを HTML ドキュメントとして表示および編集します。複数のフォント、装飾、サイズ、色、ハイパーリンクなどを含むテキストを編集して書式設定します。 このコントロールを使用して、Web から HTML コンテンツを表示するか、リッチテキストエディタとして使用します。 このデモでは、ほとんどの基本機能のための完全でカスタマイズ可能なアプリケーションバーを示しています。</Description>
+			</Feature>
+			<Feature name="書式" type="RichTextBoxSamples.RichTextBoxFormatting" supportThemes="false">
+				<Description>このデモでは、C1RichTextBox コントロールでサポートされているほとんどの書式設定機能を示します。</Description>
+			</Feature>
+			<Feature name="スペルチェック" supportThemes="false" type="RichTextBoxSamples.AsYouTypeSpellCheck">
+				<Description>C1RichTextBoxは、任意の言語をサポートするカスタム辞書によるスペルチェックをサポートしています。</Description>
+			</Feature>
+			<Feature name="インポート &amp; エクスポート" type="RichTextBoxSamples.DemoRtfFilter" supportThemes="false">
+				<Description>HTML および RTF コンテンツを C1RichTextBox に直接インポートまたはエクスポートします。</Description>
+			</Feature>
+			<Feature name="印刷" type="RichTextBoxSamples.Printing" supportThemes="false">
+				<Description>このデモでは、ドキュメントをページビューで表示し、Windows 印刷 API を使用して印刷する方法を示します。</Description>
+			</Feature>
+			<Feature name="構文のハイライト" type="RichTextBoxSamples.SyntaxHighlight" supportThemes="false">
+				<Description>このデモでは、StyleOverrides を使用して構文ハイライトエディタを実装する方法を示します。</Description>
+			</Feature>
+			<Feature name="マルチランゲージ" type="RichTextBoxSamples.MultiLanguageSpellCheck" supportThemes="false">
+				<Description>C1SpellChecker を使用して多言語スペルチェックを行う方法を示します。このデモでは、意図的に間違いを含む英文に対して、指定された言語によるスペルチェックを行います。言語によりヒットする位置および修正候補が異なる点に注目してください。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="レポート＆ドキュメント">
+		<!-- Excel -->
+		<Control name="Excel" iconName="Excel" assembly="C1.Xaml.Excel" source="/C1.Xaml.Excel/CS/ExcelSamples/ExcelSamples.zip">
+			<Feature type="ExcelSamples.DemoPage" name="基本動作">
+				<Description>このサンプルは、UWP プラットフォーム上で C1XLBook コンポーネントを使用し、Excel（xlsx）ファイルを作成、オープン、および保存する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<!--FlexReport-->
+		<Control name="FlexReport" iconName="FlexReport" assembly="C1.Xaml.FlexReport">
+			<Feature type="FlexReportSamples.ViewerPage" name="FlexViewer">
+				<Description>FlexViewer は、FlexReport または PDF を表示し、テキスト検索、エクスポート、または印刷などのさまざまな操作を実行するための豊富な UI を提供する統合コントロールです。レポートまたは PDF ドキュメントを選択して、ドロップダウンリストからビューアに読み込むことができます。</Description>
+			</Feature>
+			<Feature type="FlexReportSamples.ViewerPanePage" name="FlexViewerPane">
+				<Description>FlexViewerPane は、FlexReport を表示できる基本コントロールで、UI のプログラムによる制御を提供します。 ドロップダウンリストからビューアにロードするレポートを選択できます。</Description>
+			</Feature>
+			<Feature type="FlexReportSamples.ExportPage" name="エクスポート">
+				<Description>FlexReport は、組み込みのエクスポートフィルタを使用して、さまざまな形式で出力を生成できます。リストからレポートを選択し、エクスポートフィルタを選択し、[エクスポート]をクリックして生成されたレポートを一時的なアプリケーションデータストアに保存するか、[エクスポート先]をクリックして出力場所を選択します。</Description>
+			</Feature>
+			<Feature type="FlexReportSamples.PrintPage" name="印刷">
+				<Description>組み込みの FlexCommonTasks_UWP.flxr からレポートを選択するか、デバイス上の .flxr レポート定義ファイルを参照してください。 [印刷...]ボタンをクリックすると、標準の UWP 印刷プレビュー UI を使用して選択したレポートを生成して印刷します。</Description>
+			</Feature>
+		</Control>
+		<!--FlexViewer-->
+		<Control name="FlexViewer" iconName="FlexViewer" isTop="true" assembly="C1.Xaml.FlexViewer">
+			<Feature type="PdfDocumentSourceSamples.PdfViewPage" name="Pdf Viewer">
+				<Description>C1FlexViewer と C1PdfDocumentSource を使用して、簡単な PDF ビューアを作成する方法を示します。</Description>
+			</Feature>
+			<Feature type="FlexReportSamples.ViewerPage" name="FlexViewer">
+				<Description>FlexViewer は、FlexReport または PDF を表示し、テキスト検索、エクスポート、または印刷などのさまざまな操作を実行するためのリッチな UI を提供する統合コントロールです。レポートまたは PDF ドキュメントを選択して、ドロップダウンリストからビューアに読み込むことができます。</Description>
+			</Feature>
+			<Feature type="FlexReportSamples.ViewerPanePage" name="FlexViewerPane">
+				<Description>FlexViewerPane は、FlexReport を表示できる基本コントロールで、UI のプログラムによるコントロールを提供します。ドロップダウンリストからビューアにロードするレポートを選択できます。</Description>
+			</Feature>
+		</Control>
+		<!--PdfDocumentSource-->
+		<Control name="PdfSource" iconName="PdfDocumentSource" assembly="C1.Xaml.Document">
+			<Feature type="PdfDocumentSourceSamples.PdfViewPage" name="ビューワ">
+				<Description>C1FlexViewer と C1PdfDocumentSource を使用して、簡単な PDF ビューアを作成する方法を示します。</Description>
+			</Feature>
+			<Feature type="PdfDocumentSourceSamples.ExportPage" name="エクスポート">
+				<Description>C1PdfDocumentSource をビューアなしで使用して、コードからドキュメントをエクスポートする方法を示します。</Description>
+			</Feature>
+			<Feature type="PdfDocumentSourceSamples.PrintPage" name="印刷">
+				<Description>C1PdfDocumentSource をビューアなしで使用して、コードからドキュメントを印刷する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<!-- PDF -->
+		<Control name="PDF" iconName="PDF" assembly="C1.Xaml.Pdf">
+			<Feature type="PdfSamples.BasicTextPage" name="基本的なテキストページ">
+				<Description>ComponentOne PDF ライブラリを使用して、コード上から動的に PDF を作成します。 このデモでは、テキストの位置および配置方法を示します。</Description>
+			</Feature>
+			<Feature name="引用" type="PdfSamples.QuotesPage">
+				<Description>このデモでは、www.quoteland.com から引用した文書を作成します。DrawString、MeasureString、NewPage を表示します。</Description>
+			</Feature>
+			<Feature name="目次" type="PdfSamples.TOCPage">
+				<Description>このデモでは、目次を含むドキュメントを作成します。</Description>
+			</Feature>
+			<Feature name="テキストフロー" type="PdfSamples.TextFlowPage">
+				<Description>このデモでは、列およびページ内でテキストをフローさせる方法を示します。</Description>
+			</Feature>
+			<Feature name="用紙サイズ" type="PdfSamples.PaperSizesPage">
+				<Description>このデモでは、複数の用紙サイズおよび向きを含む文書を作成します。</Description>
+			</Feature>
+			<Feature name="画像" type="PdfSamples.ImagesPage">
+				<Description>このデモでは、いくつかの画像を含むドキュメントを作成します。 画像の整列と拡大の方法を示します。</Description>
+			</Feature>
+			<Feature name="グラフィックス" type="PdfSamples.GraphicsPage">
+				<Description>このデモでは、グラフィックを使用して長方形、線、楕円などを描画する方法を示します。</Description>
+			</Feature>
+			<Feature name="UI のエクスポート" type="PdfSamples.RenderUIPage">
+				<Description>このデモでは、ビジュアルツリーを PDF ドキュメントにエクスポートします。 [更新]ボタンをクリックすると PDF を再生成します。</Description>
+			</Feature>
+		</Control>
+		<!-- Word -->
+		<Control name="Word" iconName="Word" assembly="C1.Xaml.Word" source="/C1.Xaml.Word/CS/WordSamples/WordSamples.zip">
+			<Feature type="WordSamples.TextFlowPage" name="基本動作">
+				<Description>C1Word ライブラリは、RTF、テキスト、および OpenXml 形式でリッチな RTF コンテンツを生成します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="ユーティリティ">
+		<!-- BarCode -->
+		<Control name="BarCode" iconName="BarCode" assembly="C1.Xaml.BarCode" source="/C1.Xaml.BarCode/CS/BarCodeSamples/BarCodeSamples.zip">
+			<Feature type="BarCodeSamples.DemoBarCode" name="基本動作">
+				<Description>C1BarCode コントロールは、異なるタイプのバーコードと QR コードを生成します。</Description>
+			</Feature>
+			<Feature type="BarCodeSamples.NewBarcodes" name="新しいバーコードタイプ">
+				<Description>2018 年に追加された新しいバーコードおよび QR コードの種類を確認できます。</Description>
+			</Feature>
+		</Control>
+		<!-- ExpressionEditor -->
+		<Control name="Expressions" iconName="ExpressionEditor" assembly="C1.Xaml.ExpressionEditor" source="/C1.Xaml/CS/ExpressionEditorSamples/ExpressionEditorSamples.zip">
+			<Feature name="列の計算" type="ExpressionEditorSamples.ColumnCalculation">
+				<Description>ExpressionEditor を使用して FlexGrid 内で列の計算を実行する方法を示します。</Description>
+			</Feature>
+			<Feature name="フィルタ" type="ExpressionEditorSamples.SupportFilter">
+				<Description>ExpressionEditor を使用し てFlexGrid 内のデータをフィルタリングする方法を示します。</Description>
+			</Feature>
+			<Feature name="グループ化" type="ExpressionEditorSamples.SupportGrouping">
+				<Description>ExpressionEditor を使用して FlexGrid 内でデータをグループ化する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<!-- Imaging -->
+		<Control name="Imaging" iconName="Imaging" assembly="C1.Xaml.Imaging" source="/C1.Xaml.Imaging/CS/ImageSamples/ImageSamples.zip">
+			<Feature name="アニメーション GIF" type="ImageSamples.DemoGifImage" supportThemes="false">
+				<Description>C1Image は、GIF およびアニメーション GIF ファイルをレンダリングする拡張 Image コントロールです。</Description>
+			</Feature>
+			<Feature name="Crop" type="ImageSamples.Crop" supportThemes="false">
+				<Description>C1Bitmap を使用してイメージをトリミングする方法を示します。クリックおよびドラッグして、エクスポートする画像のセクションを選択します。</Description>
+			</Feature>
+			<Feature name="FaceWarp" type="ImageSamples.FaceWarp" supportThemes="false">
+				<Description>C1Bitmapを使用したプログラムによる画像のインポート、編集、およびエクスポートを示します。クリックおよびドラッグして、イメージ歪ませることができます。</Description>
+			</Feature>
+		</Control>
+		<!-- Zip -->
+		<Control name="Zip" iconName="Zip" assembly="C1.Xaml.Zip" source="/C1.Xaml.Zip/CS/ZipSamples/ZipSamples.zip">
+			<Feature type="ZipSamples.DemoZip" name="基本動作">
+				<Description>標準的な ZIP ファイルを作成、オープン、および編集する方法を示します。 ZIP ファイルのエントリを一覧表示し、ファイルとフォルダを追加、削除、展開、または表示することができます。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="スケジューリング">
+		<!-- Calendar -->
+		<Control name="Calendar" iconName="Calendar" assembly="C1.Xaml.Calendar" source="/C1.Xaml.Calendar/CS/CalendarSamples/CalendarSamples.zip">
+			<Feature type="CalendarSample.DefaultView" name="基本動作">
+				<Description>C1Calendar コントロールは、複数選択と太字の日付を持つカスタマイズ可能な月間カレンダーを表します。 履歴ヘッダーをタップして、年月日モードに切り替えると、過去の日付にすばやく移動できます。</Description>
+			</Feature>
+			<Feature type="CalendarSample.BoldedDayTemplate" name="太字の日付">
+				<Description>C1Calendar コントロールを使用すると、太字の日付を表すカスタム DataTemplates を設定できます。すべての太字の日付の外観を変更するには、C1Calendar.BoldedDaySlotTemplate プロパティを使用します。</Description>
+			</Feature>
+			<Feature type="CalendarSample.DaySlotTemplateSelector" name="カスタム日付">
+				<Description>暦日をカスタマイズするには、DataTemplate セレクタを使用します。週末、今日の日付、祝日、またはその他の日付に異なる外観を表示します。</Description>
+			</Feature>
+			<Feature type="CalendarSample.CustomData" name="カスタムデータ">
+				<Description>カレンダーをカスタムデータにバインドし、毎日のイベントリストを表示します。このデモでは、ダブルクリックして新しいイベントを作成し（同じ日に複数のイベントを作成することもできます）、Delete キーを押してイベントを削除します。</Description>
+			</Feature>
+		</Control>
+		<!-- Scheduler -->
+		<Control name="Scheduler" iconName="Scheduler" assembly="C1.Xaml.Schedule" source="/C1.Xaml.Schedule/CS/ScheduleSamples/ScheduleSamples.zip">
+			<Feature type="ScheduleSamples.Samples.DefaultView" supportThemes="false" name="既定のビュー">
+				<Description>C1Scheduler を使用して独自のスケジューリングアプリケーションを構築します。MicrosoftOutlook® や Windows 8 Calendar アプリケーションと同様に、リマインダー、ラベル、利用可能なステータスを持つ、１回限り、終日、または定期的な予定をスケジュールします。このデモでは、ダブルクリック/タップして新しい予定を追加できます。</Description>
+			</Feature>
+			<Feature type="ScheduleSamples.Samples.BusinessObjectsBinding" supportThemes="false" name="オブジェクトのバインディング">
+				<Description>このデモでは、C1Scheduler コントロールにカスタムビジネスオブジェクトのコレクションをバインドする方法を示します。上部の AppBar を開いてビューを切り替えます。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="ナビゲーション＆レイアウト">
+		<!-- Bitmap -->
+		<Control name="Bitmap" iconName="Bitmap" assembly="C1.Xaml.Bitmap" source="/C1.Xaml.Bitmap/CS/BitmapSamples/BitmapSamples.zip">
+			<Feature name="画像のトリミング" type="BitmapSamples.Crop" supportThemes="false">
+				<Description>C1Bitmap を使用して画像をトリミングする方法を示します。</Description>
+			</Feature>
+			<Feature name="画像の歪み" type="BitmapSamples.FaceWarp" supportThemes="false">
+				<Description>C1Bitmap を使用して画像を動的に編集する方法を示します。</Description>
+			</Feature>
+		</Control>
+		<!-- Book -->
+		<Control name="Book" iconName="Book" assembly="C1.Xaml.Extended" source="/C1.Xaml.Extended/CS/ExtendedSamples/ExtendedSamples.zip">
+			<Feature type="ExtendedSamples.C1BookDemo" name="基本動作">
+				<Description>C1Book コントロールは、雑誌のページのように項目を視覚化するインタラクティブでユニークな方法を提供します。</Description>
+			</Feature>
+			<Feature name="ページスパン" type="ExtendedSamples.C1BookPageSpan">
+				<Description>C1Book では、表紙ページおよび両ページをまたぐスパンコンテンツを追加することができます。ドラッグするとページをめくります。</Description>
+			</Feature>
+		</Control>
+		<!-- Layout Panels -->
+		<Control name="Layout" iconName="Layout" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature name="WrapPanel" type="WrapPanelSample" supportThemes="false">
+				<Description>C1WrapPanel コントロールを使用してコンテンツを縦方向または横方向にラップするフロータイプのレイアウトを作成します。</Description>
+			</Feature>
+			<Feature name="DockPanel" type="DockPanelSample" supportThemes="false">
+				<Description>C1DockPanel コントロールを使用して、ページの端に沿ってコンテンツをドッキングします。</Description>
+			</Feature>
+			<Feature name="UniformGrid" type="UniformGridSample" supportThemes="false">
+				<Description>C1UniformGrid コントロールを使用して、列と行を含むグリッド内のコンテンツをきれいに表示します。</Description>
+			</Feature>
+			<Feature name="RadialPanel" type="RadialPanelSample" supportThemes="false">
+				<Description>コンテンツを放射状に表示します。</Description>
+			</Feature>
+			<Feature name="GridSplitter" type="GridSplitterSample">
+				<Description>グリッドスプリッターを使用して、グリッドの行と列の間のスペースを再配分します。</Description>
+			</Feature>
+		</Control>
+		<!-- Menu -->
+		<Control name="Menu" iconName="Menu" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature type="MenuSample" name="基本動作" supportThemes="false">
+				<Description>メニュー構造内の項目の階層リストを表示します。</Description>
+			</Feature>
+			<Feature name="垂直メニュー" type="VerticalMenu" supportThemes="false">
+				<Description>垂直メニューを表示します。</Description>
+			</Feature>
+			<Feature name="コンテキストメニュー" type="ContextMenu" supportThemes="false">
+				<Description>コンテキストメニューを表示します。</Description>
+			</Feature>
+			<Feature name="放射状メニュー" type="RadialMenu" supportThemes="false">
+				<Description>放射状のメニューを表示します。</Description>
+			</Feature>
+		</Control>
+		<!-- TabControl -->
+		<Control name="TabControl" iconName="TabControl" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature type="EntranceTab" name="基本動作" supportThemes="false">
+				<Description>スペースを節約するレイアウト用の ItemsControl である C1TabControl を使用して、複数ページのコンテンツを表示します。</Description>
+			</Feature>
+			<Feature type="ClearStyleTabControl" name="タブの配置">
+				<Description>コントロールの端に沿ってタブを整列させ、異なるレイアウトを作成します。</Description>
+			</Feature>
+			<Feature name="ピンおよび閉じるボタン" type="TabControlSample">
+				<Description>C1TabControlは、４つの組み込みタブ形状、オーバーフロースクロール、配置オプション、タブ選択メニューをサポートしています。このデモでは、閉じるボタンとピンボタンが付いたクラシックなタブコントロールを示しています。</Description>
+			</Feature>
+		</Control>
+		<!-- Tiles -->
+		<Control name="Tiles" iconName="Tiles" assembly="C1.Xaml.Tile" source="/C1.Xaml.Tile/CS/TileSamples/TileSamples.zip">
+			<Description>Create tiled displays and navigation hubs with ComponentOne Tiles.</Description>
+			<Feature type="TileSamples.Samples.C1TileListBoxSample" name="基本動作">
+				<Description>異なる C1Tile コントロールを使用すると、コンテンツをさまざまな方法でアニメートできます。</Description>
+			</Feature>
+			<Feature type="TileSamples.Samples.GridViewSample" name="GridView">
+				<Description>C1Tile は、任意の ItemsControl で使用できます。開始画面タイルのようにタイルをドラッグアンドドロップします。</Description>
+			</Feature>
+			<Feature type="TileSamples.Samples.ListBoxSample" name="Flickr フォト" supportThemes="false">
+				<Description>このデモでは、C1Tile コントロールでカスタムデリゲートコマンドを使用します。タイルをクリックすると画像が表示されます。</Description>
+			</Feature>
+			<Feature type="TileSamples.Samples.ContentSourceSample" name="更新可能なタイル">
+				<Description>任意の IEnumerable ContentSource コレクションからタイルコンテンツを更新します。</Description>
+			</Feature>
+		</Control>
+		<!-- TileView -->
+		<Control name="TileView" iconName="TileView" assembly="C1.Xaml.TileView" source="/C1.Xaml.TileView/CS/TileViewSamples/TileViewSamples.zip">
+			<Feature type="TileDashboard.MainPage" name="ダッシュボード">
+				<Description>タイルヘッダーをダブルタップするだけで、データをインタラクティブに参照できます。C1TileView コントロールを使用すると、タイルを拡大/縮小して多めにあるいは少なめに情報を表示できます。このコントロールは、ダッシュボード、詳細ビュー、フォトギャラリーなどに最適です。</Description>
+			</Feature>
+			<Feature type="TileDashboard.MainPage2" name="カスタムスタイル">
+				<Description>このデモでは、タイルヘッダーの外観をカスタマイズします。</Description>
+			</Feature>
+			<Feature type="TileViewVirtualization.MainPage" name="仮想化">
+				<Description>C1TileView UI 仮想化のサポートにより、何百ものアイテムが即座に読み込まれます。最大化または最小化するには、タップヘッダーをダブルタップまたはクリックします。</Description>
+			</Feature>
+		</Control>
+		<!-- TreeView -->
+		<Control name="TreeView" iconName="TreeView" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+			<Feature type="TreeViewSample" name="基本動作">
+				<Description>展開または折りたたみできるノード内のアイテムの階層リストを表示します。</Description>
+			</Feature>
+			<Feature name="編集可能なノード" type="TreeViewSamples.Edit">
+				<Description>C1TreeView のノードに編集サポートを追加します。ノードを選択して F2 キーを押すか、タッチモードでノードを押し続けることで編集できます。</Description>
+			</Feature>
+			<Feature name="チェックボックスノード" type="TreeViewSamples.CheckBox">
+				<Description>C1TreeView のノードにチェックボックスを表示します。</Description>
+			</Feature>
+			<Feature name="ドラッグ &amp; ドロップ" type="TreeViewSamples.DragDrop">
+				<Description>ドラッグアンドドロップ操作の組み込みサポートを示します。</Description>
+			</Feature>
+			<Feature name="階層" type="TreeViewSamples.HierarchicalTemplate" supportThemes="false">
+				<Description>階層型データテンプレートのサポートにより、データ項目に基づいて C1Treeview ノードの外観を簡単にカスタマイズできます。</Description>
+			</Feature>
+		</Control>
+	</Group>
+	<Group name="Legacy Controls">
+		<!-- PdfViewer -->
+		<Control name="PdfViewer" iconName="PdfViewer" assembly="C1.Xaml.PdfViewer" source="/C1.Xaml.PdfViewer/CS/PdfViewerSamples/PdfViewerSamples.zip">
+			<Feature type="PdfViewerSamples.PdfViewerDemoPage" name="基本動作">
+				<Description>PdfViewer for WinRT から移植された C1PdfViewer コントロールを使用して、PDF ドキュメントを表示します。 C1PdfViewer コントロールは、タッチデバイスのスムーズなスクロールとズームをサポートします。また、最新の Windows PDF レンダリング API をサポートしています。この API は、アプリケーションに PDF を表示する最も信頼性の高い方法です。 ※UWP アプリケーションでは、C1PdfViewer の代わりに FlexViewer の利用をお勧めします。</Description>
+			</Feature>
+			<Feature name="大きいファイル" type="PdfViewerSamples.LargeFile">
+				<Description>１行のコードのみで、大規模なファイルを非同期で Web からロードできます。</Description>
+			</Feature>
+			<Feature name="印刷" type="PdfViewerSamples.Printing">
+				<Description>このデモでは、C1PdfViewer コントロールから印刷する方法を示します。 [印刷]ボタンをクリックして印刷を呼び出します。</Description>
+			</Feature>
+		</Control>
+	</Group>
+</Controls>

@@ -1,0 +1,168 @@
+﻿<Page
+    x:Class="ScheduleSamples.SaveLocalData"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ScheduleSamples"
+    xmlns:c1="using:C1.Xaml.Schedule"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="false" ClosedDisplayMode="Minimal" RequestedTheme="Dark" >
+            <AppBarButton x:Name="TodayButton" Icon="GoToToday" Label="{Binding Today_Label, Source={StaticResource ScheduleSamplesLocalization}}" Click="Today_Click" Visibility="Collapsed"/>
+            <AppBarButton Icon="Add" Label="{Binding New_Label, Source={StaticResource ScheduleSamplesLocalization}}" Click="Add_Click"/>
+            <AppBarButton x:Name="ViewButton" Icon="Switch" Label="{Binding View_Label, Source={StaticResource ScheduleSamplesLocalization}}" Click="View_Click" Visibility="Collapsed"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <c1:C1Scheduler x:Name="sched1" Grid.Row="1"/>
+            <StackPanel x:Name="toolsPanel" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="1">
+            <StackPanel.Resources>
+                <Style TargetType="Button" x:Key="btnStyle">
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="FontSize" Value="{ThemeResource ComboBoxArrowThemeFontSize}"/>
+                    <Setter Property="Opacity" Value="0.85"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="{ThemeResource ButtonForegroundThemeBrush}"/>
+                    <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderThemeBrush}"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Height" Value="46"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="PointerOver">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPointerOverBackgroundThemeBrush}"/>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedBackgroundThemeBrush}"/>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
+                                                <Storyboard>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBorderThemeBrush}"/>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledForegroundThemeBrush}"/>
+                                                    </ObjectAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="FocusStates">
+                                            <VisualState x:Name="Focused">
+                                                <Storyboard>
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+                                                    <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Unfocused"/>
+                                            <VisualState x:Name="PointerFocused"/>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="3">
+                                        <ContentPresenter x:Name="ContentPresenter" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Border>
+                                    <Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                                    <Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Button Click="DayClick" Style="{StaticResource btnStyle}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xe161;" 
+                                       FontFamily="Segoe UI Symbol" FontSize="24"
+                                       VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Day_Text, Source={StaticResource ScheduleSamplesLocalization}}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Click="WorkWeekClick" Style="{StaticResource btnStyle}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xe162;" 
+                                       FontFamily="Segoe UI Symbol" FontSize="24"
+                                       VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding WorkWeek_Text, Source={StaticResource ScheduleSamplesLocalization}}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Click="WeekClick" Style="{StaticResource btnStyle}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xe162;" 
+                                       FontFamily="Segoe UI Symbol" FontSize="24"
+                                       VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Week_Text, Source={StaticResource ScheduleSamplesLocalization}}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Click="MonthClick" Style="{StaticResource btnStyle}">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xe163;" 
+                                       FontFamily="Segoe UI Symbol" FontSize="24"
+                                       VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Month_Text, Source={StaticResource ScheduleSamplesLocalization}}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="960" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="MiddleLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="toolsPanel.(Grid.Row)" Value="0" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="toolsPanel.Visibility" Value="Collapsed" />
+                        <Setter Target="TodayButton.Visibility" Value="Visible" />
+                        <Setter Target="ViewButton.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

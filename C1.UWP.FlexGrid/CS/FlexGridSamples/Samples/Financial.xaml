@@ -1,0 +1,109 @@
+﻿<Page x:Class="FlexGridSamples.Financial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:FlexGridSamples"
+             xmlns:c1="using:C1.Xaml.FlexGrid">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" >
+            <CheckBox x:Name="_chkOwnerDrawFinancial" Content="{Binding CustomCells_Content, Source={StaticResource FlexGridSamplesLocalization}}" IsChecked="True" Margin="0 0 10 0" VerticalAlignment="Center" Click="_chkOwnerDrawFinancial_Click"/>
+            <CheckBox x:Name="_chkAutoUpdate" Content="{Binding AutoUpdate_Content, Source={StaticResource FlexGridSamplesLocalization}}" IsChecked="True" Margin="0 0 10 0" VerticalAlignment="Center" Click="_chkAutoUpdate_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 20" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock x:Name="_txtUpdateInterval" Text="{Binding UpdateInterval_Text, Source={StaticResource FlexGridSamplesLocalization}}" Margin="0 0 5 0" FontSize="16" VerticalAlignment="Center"/>
+            <ComboBox x:Name="_cmbUpdateInterval" SelectedIndex="2" Width="100" VerticalAlignment="Center" SelectionChanged="_cmbUpdateInterval_SelectionChanged">
+                <ComboBoxItem Content="{Binding Interval1_Content, Source={StaticResource FlexGridSamplesLocalization}}"/>
+                <ComboBoxItem Content="{Binding Interval2_Content, Source={StaticResource FlexGridSamplesLocalization}}"/>
+                <ComboBoxItem Content="{Binding Interval3_Content, Source={StaticResource FlexGridSamplesLocalization}}"/>
+            </ComboBox>
+            <TextBlock x:Name="_txtBatchSize" Text="{Binding BatchSize_Text, Source={StaticResource FlexGridSamplesLocalization}}" Margin="20 0 5 0" VerticalAlignment="Center" FontSize="16"/>
+            <ComboBox x:Name="_cmbBatchSize" SelectedIndex="1" Width="100" Padding="5 5 0 5" VerticalAlignment="Center" SelectionChanged="_cmbBatchSize_SelectionChanged">
+                <ComboBoxItem Content="500"/>
+                <ComboBoxItem Content="100"/>
+                <ComboBoxItem Content="10"/>
+                <ComboBoxItem Content="1"/>
+            </ComboBox>
+            <TextBlock Text="{Binding AllowFreezing, Source={StaticResource FlexGridSamplesLocalization}}" Margin="20 0 5 0" VerticalAlignment="Center" FontSize="16" />
+            <ComboBox x:Name="_cmbAllowFreezing" SelectedIndex="3" Width="100" Padding="5 5 0 5" VerticalAlignment="Center" SelectionChanged="_cmbAllowFreezing_SelectionChanged" >
+                <ComboBoxItem Content="{Binding AllowFreezing_None, Source={StaticResource FlexGridSamplesLocalization}}" />
+                <ComboBoxItem Content="{Binding AllowFreezing_Rows, Source={StaticResource FlexGridSamplesLocalization}}" />
+                <ComboBoxItem Content="{Binding AllowFreezing_Columns, Source={StaticResource FlexGridSamplesLocalization}}" />
+                <ComboBoxItem Content="{Binding AllowFreezing_Both, Source={StaticResource FlexGridSamplesLocalization}}" />
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBlock x:Name="_txtFinancial" Text="{Binding FinancialInfo_Text, Source={StaticResource FlexGridSamplesLocalization}}" VerticalAlignment="Center"/>
+            <TextBlock x:Name="_txtCompanies" Text="{Binding Companies_Text, Source={StaticResource FlexGridSamplesLocalization}}" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <local:SearchBox x:Name="_srchCompanies" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="1"/>
+        <c1:C1FlexGrid x:Name="_flexFinancial"
+                       Grid.Row="3" FrozenColumns="1"
+                       MinColumnWidth="10" 
+                       MaxColumnWidth="300"
+                       AutoGenerateColumns="False"
+                       BorderThickness="1"
+                       CellContentChanging="_flexFinancial_CellContentChanging" Grid.ColumnSpan="2">
+            <c1:C1FlexGrid.Columns>
+                <c1:Column x:Name="SymbolColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialSymbol" Header="Symbol" Binding="{Binding Symbol}" Width="100"/>
+                <c1:Column x:Name="NameColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialNameCol" Header="Name" Binding="{Binding Name}" Width="250"/>
+                <c1:Column x:Name="BidColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialBid" Header="Bid" Binding="{Binding Bid}" Width="150" Format="n2"/>
+                <c1:Column x:Name="AskColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialAsk" Header="Ask"  Binding="{Binding Ask}" Width="150" Format="n2"/>
+                <c1:Column x:Name="LastSaleColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialLastSale" Header="LastSale" Binding="{Binding LastSale}" Width="150" Format="n2"/>
+                <c1:Column x:Name="BidSizeColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialBidSize" Header="BidSize" Binding="{Binding BidSize}" Width="100" Format="n0"/>
+                <c1:Column x:Name="AskSizeColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialAskSize" Header="AskSize"  Binding="{Binding AskSize}" Width="100" Format="n0"/>
+                <c1:Column x:Name="LastSizeColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialLastSize" Header="LastSize"  Binding="{Binding LastSize}" Width="100" Format="n0"/>
+                <c1:Column x:Name="VolumeColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialVolume" Header="Volume" Binding="{Binding Volume}" Width="100" Format="n0"/>
+                <c1:Column x:Name="QuoteTimeColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialQuoteTime" Header="QuoteTime"  Binding="{Binding QuoteTime}" Width="100" Format="hh:mm:ss"/>
+                <c1:Column x:Name="TradeTimeColumn" x:Uid="/FlexGridSamplesLib/Resources/FinancialTradeTime" Header="TradeTime"  Binding="{Binding TradeTime}" Width="100" Format="hh:mm:ss"/>
+            </c1:C1FlexGrid.Columns>
+        </c1:C1FlexGrid>
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="_chkOwnerDrawFinancial.FontSize" Value="10" />
+                        <Setter Target="_chkOwnerDrawFinancial.Margin" Value="0 0 5 0" />
+                        <Setter Target="_chkAutoUpdate.FontSize" Value="10" />
+                        <Setter Target="_chkAutoUpdate.Margin" Value="0 0 5 0" />
+                        <Setter Target="_txtUpdateInterval.FontSize" Value="10" />
+                        <Setter Target="_cmbUpdateInterval.FontSize" Value="10" />
+                        <Setter Target="_cmbUpdateInterval.Width" Value="80" />
+                        <Setter Target="_txtBatchSize.FontSize" Value="10" />
+                        <Setter Target="_cmbBatchSize.FontSize" Value="10" />
+                        <Setter Target="_cmbBatchSize.Width" Value="80" />
+                        <Setter Target="_txtHeadersVisibility.FontSize" Value="10" />
+                        <Setter Target="_cmbHeadersVisibility.FontSize" Value="10" />
+                        <Setter Target="_cmbHeadersVisibility.Width" Value="60" />
+                        <Setter Target="_txtFinancial.FontSize" Value="10" />
+                        <Setter Target="_txtCompanies.FontSize" Value="10" />
+                        <Setter Target="_flexFinancial.FontSize" Value="10" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="SparklineSamples.RegionSales"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SparklineSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:sp="using:C1.Xaml.Sparkline"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" SizeChanged="Page_SizeChanged">
+    <Grid x:Name="Root" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="TextWrapping" Value="WrapWholeWords" />
+            </Style>
+            <Style TargetType="sp:C1Sparkline">
+                <Setter Property="Width" Value="75" />
+                <Setter Property="Height" Value="50" />
+            </Style>
+            <DataTemplate x:Key="smallListBox">
+                <Grid Background="#EFEFEF">
+                    <RelativePanel>
+                        <TextBlock x:Name="state" FontSize="10" Width="25" Text="{Binding State}" Foreground="#444444" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Global User Interface"/>
+                        <TextBlock x:Name="totalSalesFormatted" FontSize="10" Width="45" RelativePanel.RightOf="state" Text="{Binding TotalSalesFormatted}"  Foreground="#444444" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Global User Interface"/>
+                        <sp:C1Sparkline x:Name="sparkline1"  Width="75" RelativePanel.RightOf="totalSalesFormatted" Data="{Binding Data}"  Height="50" FontFamily="Global User Interface"  ShowMarkers="True" MarkersColor="DarkBlue"/>
+                        <sp:C1Sparkline x:Name="sparkline2"  Width="75" RelativePanel.RightOf="sparkline1" Data="{Binding Data}" SparklineType="Winloss"   Height="40"  FontFamily="Global User Interface" SeriesColor="DarkGreen" NegativeColor="DarkRed" ShowNegative="True"/>
+                        <sp:C1Sparkline x:Name="sparkline3"  Width="75" RelativePanel.RightOf="sparkline2" Data="{Binding Data}" SparklineType="Column"  Height="50" FontFamily="Global User Interface"  ShowHigh="True" ShowLow="True" LowMarkerColor="DarkRed" HighMarkerColor="DarkGreen"/>
+                    </RelativePanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="largeListBox">
+                <Grid Background="#EFEFEF">
+                    <RelativePanel>
+                        <TextBlock x:Name="state" FontSize="16" Width="60" Text="{Binding State}" Foreground="#444444" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Global User Interface"/>
+                        <TextBlock x:Name="totalSalesFormatted" FontSize="16" Width="100" RelativePanel.RightOf="state" Text="{Binding TotalSalesFormatted}"  Foreground="#444444" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Global User Interface"/>
+                        <sp:C1Sparkline x:Name="sparkline1"  Width="200" RelativePanel.RightOf="totalSalesFormatted" Data="{Binding Data}" Height="50" FontFamily="Global User Interface" ShowMarkers="True" MarkersColor="#FF8C8C8C" SeriesColor="#FF88BDE6"/>
+                        <sp:C1Sparkline x:Name="sparkline2"  Width="200" RelativePanel.RightOf="sparkline1" Data="{Binding Data}" SparklineType="Winloss" Height="40"  FontFamily="Global User Interface" SeriesColor="#FF88BDE6" NegativeColor="#FFF07E6E" ShowNegative="True"/>
+                        <sp:C1Sparkline x:Name="sparkline3"  Width="200" RelativePanel.RightOf="sparkline2" Data="{Binding Data}" SparklineType="Column" Height="50" FontFamily="Global User Interface"  ShowHigh="True" ShowLow="True" LowMarkerColor="#FFF07E6E" HighMarkerColor="#FF90CD97"/>
+                    </RelativePanel>
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <ScrollViewer x:Name="ScrollViewer">
+            <Grid Width="800" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Background="Gray">
+                    <RelativePanel>
+                        <TextBlock x:Name="region" Width="25" Text="{Binding RegionTB_Text, Source={StaticResource SparklineSamplesLocalization}}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="totalSale" Width="45" RelativePanel.RightOf="region" Text="{Binding TotalSaleTB_Text, Source={StaticResource SparklineSamplesLocalization}}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="salesTrend" Width="75" RelativePanel.RightOf="totalSale" Text="{Binding SalesTrendTB_Text, Source={StaticResource SparklineSamplesLocalization}}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="winLoss" Width="75" RelativePanel.RightOf="salesTrend" Text="{Binding WinLossTB_Text, Source={StaticResource SparklineSamplesLocalization}}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="profitTrend" Width="75" RelativePanel.RightOf="winLoss" Text="{Binding ProfitTrendTB_Text, Source={StaticResource SparklineSamplesLocalization}}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </RelativePanel>
+                </Grid>
+                <ItemsControl x:Name="RegionSalesListBox" Grid.Row="1" ItemsSource="{Binding Sales}"  ItemTemplate="{StaticResource smallListBox}"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

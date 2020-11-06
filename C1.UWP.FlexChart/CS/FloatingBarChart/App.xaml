@@ -1,0 +1,84 @@
+﻿<Application
+    x:Class="FloatingBarChart.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:FloatingBarChart">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0BA;</x:String>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0C4;</x:String>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <!-- Application-specific resources -->
+            <local:Strings x:Key="FloatingBarChartLocalization" />
+            <!--***************** CONTROL ICONS *****************-->
+            <SolidColorBrush x:Key="IconBrush" Color="White"/>
+
+            <SolidColorBrush x:Key="IconGrayBackground" Color="#FF777777"/>
+            <!-- Page layout roots typically use entrance animations and a theme-appropriate background color -->
+
+            <Style x:Key="LayoutRootStyle" TargetType="Panel">
+                <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+                <Setter Property="ChildrenTransitions">
+                    <Setter.Value>
+                        <TransitionCollection>
+                            <EntranceThemeTransition/>
+                        </TransitionCollection>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="IconName" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource IconBrush}"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Margin" Value="-5,0,-5,1"/>
+            </Style>
+
+            <DataTemplate x:Key="IconC1Gray">
+                <Grid Background="{StaticResource IconGrayBackground}" Height="60" Width="60">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding}" Style="{StaticResource IconName}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard250x250ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="150" Height="150">
+                    <Border Background="#FF2C383D">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 40"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Height="34">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe WP" FontSize="17" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard80ItemTemplate">
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Title}" Style="{ThemeResource BodyTextBlockStyle}" MaxHeight="40"/>
+                        <TextBlock Text="{Binding Description}" Style="{ThemeResource CaptionTextBlockStyle}" TextWrapping="WrapWholeWords"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Name="IconC1FloatingBar" >
+                <Path Data="M112.978,24.5 L145.778,24.5 L145.778,71.5 L112.978,71.5 z M25.511,22.7445 L58.311,22.7445 L58.311,80.7445 L25.511,80.7445 z M69.244,9.2445 L102.044,9.2445 L102.044,89.2445 L69.244,89.2445 z M7.28889,0 C11.3144,0 14.5778,3.26335 14.5778,7.28889 L14.5778,149.422 L156.711,149.422 C160.737,149.422 164,152.686 164,156.711 C164,160.737 160.737,164 156.711,164 L7.28889,164 C7.03729,164 6.78867,163.987 6.54364,163.962 C6.29861,163.937 6.05717,163.9 5.81992,163.852 C5.58268,163.803 5.34963,163.743 5.1214,163.672 C4.89316,163.601 4.66973,163.519 4.45172,163.427 C4.23372,163.335 4.02113,163.232 3.81457,163.12 C3.60801,163.008 3.40749,162.886 3.2136,162.755 C3.01972,162.624 2.83247,162.484 2.65248,162.336 C2.47249,162.187 2.29975,162.03 2.13487,161.865 C1.96999,161.7 1.81297,161.528 1.66443,161.348 C1.51589,161.168 1.37581,160.98 1.24483,160.786 C1.11384,160.593 0.991936,160.392 0.87973,160.185 C0.767525,159.979 0.665009,159.766 0.5728,159.548 C0.480591,159.33 0.398682,159.107 0.327698,158.879 C0.256706,158.65 0.196632,158.417 0.148087,158.18 C0.099533,157.943 0.062515,157.701 0.037636,157.456 C0.012749,157.211 0,156.963 0,156.711 L0,7.28889 C0,3.26335 3.26335,0 7.28889,0 z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+            <DataTemplate x:Name="IconC1Gantt" >
+                <Path Data="M103.79,101.027 L150.79,101.027 L150.79,133.827 L103.79,133.827 z M50.0899,57.8559 L130.09,57.8559 L130.09,90.6559 L50.0899,90.6559 z M25.1926,14.9273 L83.1926,14.9273 L83.1926,47.7282 L25.1926,47.7282 z M7.28889,0 C11.3144,0 14.5778,3.263 14.5778,7.289 L14.5778,149.422 L156.711,149.422 C160.737,149.422 164,152.686 164,156.711 C164,160.737 160.737,164 156.711,164 L7.28889,164 C7.03729,164 6.78867,163.987 6.54364,163.962 C6.29861,163.937 6.05717,163.9 5.81992,163.852 C5.58268,163.803 5.34963,163.743 5.1214,163.672 C4.89316,163.601 4.66973,163.519 4.45172,163.427 C4.23372,163.335 4.02113,163.232 3.81457,163.12 C3.60801,163.008 3.40749,162.886 3.2136,162.755 C3.01972,162.624 2.83247,162.484 2.65248,162.336 C2.47249,162.187 2.29975,162.03 2.13487,161.865 C1.96999,161.7 1.81297,161.528 1.66443,161.348 C1.51589,161.168 1.37581,160.98 1.24483,160.786 C1.11384,160.593 0.991936,160.392 0.87973,160.185 C0.767525,159.979 0.665009,159.766 0.5728,159.548 C0.480591,159.33 0.398682,159.107 0.327698,158.879 C0.256706,158.65 0.196632,158.417 0.148087,158.18 C0.099533,157.943 0.062515,157.701 0.037636,157.456 C0.012749,157.211 0,156.963 0,156.711 L0,7.289 C0,3.263 3.26335,0 7.28889,0 z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

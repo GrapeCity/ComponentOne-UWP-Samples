@@ -1,0 +1,59 @@
+﻿<Page x:Class="SunburstIntro.Selection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Chart="using:C1.Xaml.Chart"
+      xmlns:Xaml="using:C1.Xaml"
+      xmlns:local="using:SunburstIntro"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Page.DataContext>
+        <local:SunburstViewModel />
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:StringToEnumConverter x:Key="StringToEnumConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <StackPanel.Resources>
+                <Style TargetType="ComboBox">
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="Width" Value="250" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="ItemTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Inlines>
+                                        <Run Text="{Binding Source={StaticResource SunburstIntroLocalization}, Path=SelectedItemPosition}"/>
+                                        <Run Text="{Binding}" />
+                                    </TextBlock.Inlines>
+                                </TextBlock>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="{Binding Source={StaticResource SunburstIntroLocalization}, Path=SelectedItemOffset}" VerticalAlignment="Center"/>
+            <Xaml:C1NumericBox Width="160" Height="25" Margin="5 0 50 0" Minimum="0" Maximum="0.5" Increment="0.1" Format="f1" Value="{Binding ElementName=sunburst, Path=SelectedItemOffset, Mode=TwoWay}"/>
+        </StackPanel>
+        <Chart:C1Sunburst x:Name="sunburst" FontSize="10" ItemsSource="{Binding FlatData}" SelectedItemPosition="{Binding SelectedItemPosition, Converter={StaticResource StringToEnumConverter}}" Binding="Value" BindingName="Year,Quarter,Month" ToolTipContent="{}{name}&#x000A;{y}" SelectionMode="Point" LegendPosition="Bottom" Grid.Row="1">
+            <Chart:C1Sunburst.SelectionStyle>
+                <Chart:ChartStyle Stroke="Red" StrokeDashArray="4 2" />
+            </Chart:C1Sunburst.SelectionStyle>
+            <Chart:C1Sunburst.DataLabel>
+                <Chart:PieDataLabel Position="Center" Content="{}{name}" />
+            </Chart:C1Sunburst.DataLabel>
+        </Chart:C1Sunburst>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar>
+            <ComboBox ItemsSource="{Binding Positions}" SelectedValue="{Binding SelectedItemPosition, Mode=TwoWay}" Width="100"/>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

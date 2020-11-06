@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="RichTextBoxSamples.DemoRichTextBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RichTextBoxSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:c1RTB="using:C1.Xaml.RichTextBox"
+    mc:Ignorable="d" RequestedTheme="Light">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="ContentControl" x:Name="iconStyle">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ContentControl">
+                            <Grid Height="22" Width="22" Margin="-5">
+                                <Path Data="{TemplateBinding Content}" Fill="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}" Stretch="Uniform"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="5 0"
+                       VerticalAlignment="Center" FontSize="16"
+                       Text="{Binding LineNumber, Source={StaticResource RichTextBoxSamplesLocalization}}" />
+            <ComboBox x:Name="cmbLineNumberMode" SelectionChanged="cmbLineNumberMode_SelectionChanged" SelectedIndex="1"
+                      Width="160" Margin="5 0">
+                <ComboBoxItem Content="{Binding LineNumberMode_None, Source={StaticResource RichTextBoxSamplesLocalization}}"></ComboBoxItem>
+                <ComboBoxItem Content="{Binding LineNumberMode_Continuous, Source={StaticResource RichTextBoxSamplesLocalization}}"></ComboBoxItem>
+                <ComboBoxItem Content="{Binding LineNumberMode_RestartEachPage, Source={StaticResource RichTextBoxSamplesLocalization}}"></ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <c1RTB:C1RichTextBoxMenu x:Name="rtbMenu" RichTextBox="{Binding ElementName=rtb}"/>
+        <c1RTB:C1RichTextBox x:Name="rtb" Grid.Row="1" LineNumberMode="Continuous"
+                             BorderThickness="2" BorderBrush="DarkGray" RequestNavigate="rtb_RequestNavigate" />
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="rtbMenu.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+
+</Page>

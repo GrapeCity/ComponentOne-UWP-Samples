@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3C27176-EFA1-4029-9220-B9064F3DA2B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlexGridSamples</RootNamespace>
+    <AssemblyName>FlexGridSamplesLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+    <PRIResource Include="Strings\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CellFactory\FinancialCellFactory.cs" />
+    <Compile Include="CellFactory\FullTextFilterCellFactory.cs" />
+    <Compile Include="CellFactory\MusicCellFactory.cs" />
+    <Compile Include="CellFactory\RatingCell.cs" />
+    <Compile Include="CellFactory\TemplateCell.cs" />
+    <Compile Include="Common\Util.cs" />
+    <Compile Include="Data\CountryInitialConverter.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\FinancialData.cs" />
+    <Compile Include="Data\NorthwindData.cs" />
+    <Compile Include="Data\Product.cs" />
+    <Compile Include="Data\Song.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\CollectionView.xaml.cs">
+      <DependentUpon>CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\CustomColumns.xaml.cs">
+      <DependentUpon>CustomColumns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DragDropRows.xaml.cs">
+      <DependentUpon>DragDropRows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Editing.xaml.cs">
+      <DependentUpon>Editing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ExcelStyleMerge.xaml.cs">
+      <DependentUpon>ExcelStyleMerge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ExcelStyleMergeManager.cs" />
+    <Compile Include="Samples\Financial.xaml.cs">
+      <DependentUpon>Financial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\FlexGridDemo.xaml.cs">
+      <DependentUpon>FlexGridDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\FullTextFilter.cs">
+      <DependentUpon>FullTextFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\IncrementalLoadingBase.cs" />
+    <Compile Include="Samples\RowDetails.xaml.cs">
+      <DependentUpon>RowDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MediaLibrary.xaml.cs">
+      <DependentUpon>MediaLibrary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Printing.xaml.cs">
+      <DependentUpon>Printing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\RatingControl.xaml.cs">
+      <DependentUpon>RatingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\StockTicker.cs" />
+    <Compile Include="Samples\Unbound.xaml.cs">
+      <DependentUpon>Unbound.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.cs" />
+    <Compile Include="Util\LabelEx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\CustomTemplatesDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\CollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\CustomColumns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DragDropRows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Editing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ExcelStyleMerge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Financial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\FlexGridDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\FullTextFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\RowDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\MediaLibrary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Printing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\RatingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SearchBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Unbound.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.Calendar, Version=10.0">
+      <Name>C1.UWP.Calendar</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.DateTimeEditors, Version=10.0">
+      <Name>C1.UWP.DateTimeEditors</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexGrid, Version=10.0">
+      <Name>C1.UWP.FlexGrid</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.InputPanel, Version=10.0">
+      <Name>C1.UWP.InputPanel</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Sparkline, Version=10.0">
+      <Name>C1.UWP.Sparkline</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\clear.png" />
+    <Content Include="Assets\search.png" />
+    <Content Include="Properties\FlexGridSamplesLib.rd.xml" />
+    <Content Include="Resources\Northwind.xml" />
+    <Content Include="Resources\songs.xml" />
+    <Content Include="Resources\StockSymbols.txt" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

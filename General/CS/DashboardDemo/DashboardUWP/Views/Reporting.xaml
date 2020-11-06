@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="DashboardUWP.Reporting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DashboardUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Style/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="#f7f7f7">
+        <Grid Style="{ThemeResource RootGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Uid="ReportsPageTitle" Style="{ThemeResource Tilte}"/>
+            <Pivot Grid.Row="1" Background="White">
+                <PivotItem x:Uid="RegionWiseSales">
+                    <local:RegionWiseSales Margin="20"/>
+                </PivotItem>
+                <PivotItem x:Uid="CurrentOpportunities">
+                    <local:CurrentOpportunities Margin="20"/>
+                </PivotItem>
+                <PivotItem x:Uid="SalesVsProfit">
+                    <local:ProfitAndSales Margin="20"/>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

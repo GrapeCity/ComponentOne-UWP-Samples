@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{ACFE1C1D-93CA-4628-BEE9-CDAE6D18AC61}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <RootNamespace>FlexReportExplorer</RootNamespace>
+    <AssemblyName>C1FlexReportExplorer</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>FlexReportExplorer_TemporaryKey.pfx</PackageCertificateKeyFile>
+</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>C1FlexReportExplorer.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>C1FlexReportExplorer.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>C1FlexReportExplorer.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>C1FlexReportExplorer.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>C1FlexReportExplorer.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>C1FlexReportExplorer.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Reports\Controls\FlexChart.flxr" />
+    <Content Include="Assets\Reports\Controls\FlexChartGrouping.flxr" />
+    <Content Include="Assets\Reports\Controls\FlexChartNavigation.flxr" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.vb">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogView.xaml.vb">
+      <DependentUpon>CatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Category.vb" />
+    <Compile Include="Data\CustomStyleSelector.vb" />
+    <Compile Include="Data\CustomTemplateSelector.vb" />
+    <Compile Include="MainPage.xaml.vb">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Strings\Strings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="FlexReportExplorer_TemporaryKey.pfx" />
+    <EmbeddedResource Include="Resources\C1NWind.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Reports\Controls\Images\FlexChart.emf" />
+    <Content Include="Assets\Reports\Controls\Images\FlexChartGrouping.emf" />
+    <Content Include="Assets\Reports\Controls\Images\FlexChartNavigation.emf" />
+    <Content Include="readme.txt" />
+    <Content Include="My Project\Default.rd.xml" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Separator.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.png" />
+    <PRIResource Include="Strings\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="CatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ReportsCatalog.xml" />
+    <Content Include="Assets\Reports\MenuIcons\Controls.png" />
+    <Content Include="Assets\Reports\MenuIcons\CustomFields.png" />
+    <Content Include="Assets\Reports\MenuIcons\DataBinding.png" />
+    <Content Include="Assets\Reports\MenuIcons\DataCalculations.png" />
+    <Content Include="Assets\Reports\MenuIcons\DataManipulation.png" />
+    <Content Include="Assets\Reports\MenuIcons\EnterpriseReports.png" />
+    <Content Include="Assets\Reports\MenuIcons\FinancialReports.png" />
+    <Content Include="Assets\Reports\MenuIcons\Formatting.png" />
+    <Content Include="Assets\Reports\MenuIcons\Layout.png" />
+    <Content Include="Assets\Reports\MenuIcons\MedicalReports.png" />
+    <Content Include="Assets\Reports\MenuIcons\MiscReports.png" />
+    <Content Include="Assets\Reports\MenuIcons\TelecomReports.png" />
+    <Content Include="Assets\Reports\Controls\BarcodeProductLabels.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\BarcodeProductLabels.Emf" />
+    <Content Include="Assets\Reports\Controls\BarcodeShippingLabels.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\BarcodeShippingLabels.Emf" />
+    <Content Include="Assets\Reports\Controls\ComplexExpressions.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\ComplexExpressions.emf" />
+    <Content Include="Assets\Reports\Controls\BoundImages.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\BoundImages.Emf" />
+    <Content Include="Assets\Reports\Controls\CheckBox.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\CheckBox.Emf" />
+    <Content Include="Assets\Reports\Controls\PageHeadersInSubreports.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\PageHeadersInSubreports.Emf" />
+    <Content Include="Assets\Reports\Controls\ParagraphField.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\ParagraphField.Emf" />
+    <Content Include="Assets\Reports\Controls\Shapes.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\Shapes.Emf" />
+    <Content Include="Assets\Reports\Controls\UnboundImages.flxr" />
+    <Content Include="Assets\Reports\Controls\Images\UnboundImages.Emf" />
+    <Content Include="Assets\Reports\CustomFields\CustomFields.flxr" />
+    <Content Include="Assets\Reports\CustomFields\Images\CustomFields.Emf" />
+    <Content Include="Assets\Reports\DataBinding\Nwind.flxr" />
+    <Content Include="Assets\Reports\DataBinding\Images\NWind.Emf" />
+    <Content Include="Assets\Reports\DataCalculations\Aggregates.flxr" />
+    <Content Include="Assets\Reports\DataCalculations\Images\Aggregates.Emf" />
+    <Content Include="Assets\Reports\DataCalculations\RunningSums.flxr" />
+    <Content Include="Assets\Reports\DataCalculations\Images\RunningSums.Emf" />
+    <Content Include="Assets\Reports\DataManipulation\Sorting.flxr" />
+    <Content Include="Assets\Reports\DataManipulation\Images\Sorting.Emf" />
+    <Content Include="Assets\Reports\EnterpriseReports\EmployeeExpReport.flxr" />
+    <Content Include="Assets\Reports\EnterpriseReports\Images\EmployeeExpReport.Emf" />
+    <Content Include="Assets\Reports\EnterpriseReports\MarketingProjectPlan.flxr" />
+    <Content Include="Assets\Reports\EnterpriseReports\Images\MarketingProjectPlan.Emf" />
+    <Content Include="Assets\Reports\EnterpriseReports\MonthlyProjectExpenseTracking.flxr" />
+    <Content Include="Assets\Reports\EnterpriseReports\Images\MonthlyProjectExpenseTracking.Emf" />
+    <Content Include="Assets\Reports\EnterpriseReports\OrganizationChart.flxr" />
+    <Content Include="Assets\Reports\EnterpriseReports\Images\OrganizationChart.Emf" />
+    <Content Include="Assets\Reports\FinancialReports\BalanceSheet.flxr" />
+    <Content Include="Assets\Reports\FinancialReports\Images\BalanceSheet.Emf" />
+    <Content Include="Assets\Reports\Formatting\AlternateBackground.flxr" />
+    <Content Include="Assets\Reports\Formatting\Images\AlternateBackground.Emf" />
+    <Content Include="Assets\Reports\Formatting\ConditionalFormatting.flxr" />
+    <Content Include="Assets\Reports\Formatting\Images\ConditionalFormatting.Emf" />
+    <Content Include="Assets\Reports\Formatting\Watermark.flxr" />
+    <Content Include="Assets\Reports\Formatting\Images\Watermark.Emf" />
+    <Content Include="Assets\Reports\Layout\ContinuedHeaders.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\ContinuedHeaders.Emf" />
+    <Content Include="Assets\Reports\Layout\CustomPaperSize.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\CustomPaperSize.Emf" />
+    <Content Include="Assets\Reports\Layout\DynamicPH.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\DynamicPH.Emf" />
+    <Content Include="Assets\Reports\Layout\ForcePageBreaks.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\ForcePageBreaks.Emf" />
+    <Content Include="Assets\Reports\Layout\Gutter.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\Gutter.Emf" />
+    <Content Include="Assets\Reports\Layout\Layout.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\Layout.Emf" />
+    <Content Include="Assets\Reports\Layout\SubSections.flxr" />
+    <Content Include="Assets\Reports\Layout\Images\SubSections.Emf" />
+    <Content Include="Assets\Reports\MedicalReports\BloodTestReport.flxr" />
+    <Content Include="Assets\Reports\MedicalReports\Images\BloodTestReport.Emf" />
+    <Content Include="Assets\Reports\MedicalReports\FoodAllergyTest.flxr" />
+    <Content Include="Assets\Reports\MedicalReports\Images\FoodAllergyTest.emf" />
+    <Content Include="Assets\Reports\TelecomReports\TelephoneBillReport.flxr" />
+    <Content Include="Assets\Reports\TelecomReports\Images\TelephoneBillReport.Emf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Collections.ObjectModel" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Runtime.CompilerServices" />
+    <Import Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Windows.ApplicationModel" />
+    <Import Include="Windows.ApplicationModel.Activation" />
+    <Import Include="Windows.Foundation" />
+    <Import Include="Windows.Foundation.Collections" />
+    <Import Include="Windows.Graphics.Display" />
+    <Import Include="Windows.UI.ViewManagement" />
+    <Import Include="Windows.UI.Xaml" />
+    <Import Include="Windows.UI.Xaml.Controls" />
+    <Import Include="Windows.UI.Xaml.Controls.Primitives" />
+    <Import Include="Windows.UI.Xaml.Data" />
+    <Import Include="Windows.UI.Xaml.Input" />
+    <Import Include="Windows.UI.Xaml.Media" />
+    <Import Include="Windows.UI.Xaml.Media.Imaging" />
+    <Import Include="Windows.UI.Xaml.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.BarCode, Version=10.0">
+      <Name>C1.UWP.BarCode</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Bitmap, Version=10.0">
+      <Name>C1.UWP.Bitmap</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Document, Version=10.0">
+      <Name>C1.UWP.Document</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.DX, Version=10.0">
+      <Name>C1.UWP.DX</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Excel, Version=10.0">
+      <Name>C1.UWP.Excel</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart, Version=10.0">
+      <Name>C1.UWP.FlexChart</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexReport, Version=10.0">
+      <Name>C1.UWP.FlexReport</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexViewer, Version=10.0">
+      <Name>C1.UWP.FlexViewer</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Imaging, Version=10.0">
+      <Name>C1.UWP.Imaging</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Pdf, Version=10.0">
+      <Name>C1.UWP.Pdf</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Word, Version=10.0">
+      <Name>C1.UWP.Word</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Zip, Version=10.0">
+      <Name>C1.UWP.Zip</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+    <ProjectReference Include="..\FlexReport.SQLite\FlexReport.SQLite.vbproj">
+      <Project>{49c319c4-ba42-4af8-a2fc-beb4b58aefc4}</Project>
+      <Name>FlexReport.SQLite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

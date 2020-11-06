@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51C29E31-576B-46B8-ACBB-1334111C776D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataManipulation</RootNamespace>
+    <AssemblyName>DataManipulationLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <PRIResource Include="Strings\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AggregateExtensions.cs" />
+    <Compile Include="Business\Aggregate\AggregateFilter.cs" />
+    <Compile Include="Business\Filterbase.cs" />
+    <Compile Include="Business\FunctionSeries\FunctionSeries.cs" />
+    <Compile Include="Business\Sorting\SortingFilter.cs" />
+    <Compile Include="Business\TopN\TopNFilter.cs" />
+    <Compile Include="LibCommon\AggregateType.cs" />
+    <Compile Include="LibCommon\Boolean2StackingConverter.cs" />
+    <Compile Include="LibCommon\SortType.cs" />
+    <Compile Include="Model\AggregateItem.cs" />
+    <Compile Include="Model\SampleItem.cs" />
+    <Compile Include="Model\SortingItem.cs" />
+    <Compile Include="Model\TopNDataItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings\Strings.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="ViewModel\AggregateViewModel.cs" />
+    <Compile Include="ViewModel\SortingViewModel.cs" />
+    <Compile Include="ViewModel\TopNViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\AggregateView.xaml.cs">
+      <DependentUpon>AggregateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SortingView.xaml.cs">
+      <DependentUpon>SortingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ParametricFunctionSeriesView.xaml.cs">
+      <DependentUpon>ParametricFunctionSeriesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\YFunctionSeriesView.xaml.cs">
+      <DependentUpon>YFunctionSeriesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TopNView.xaml.cs">
+      <DependentUpon>TopNView.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\DataManipulationLib2015.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\arrowDOWN.png" />
+    <Content Include="Assets\arrowUP.png" />
+    <Content Include="Assets\flag.png" />
+    <Content Include="Assets\Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\AggregateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SortingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ParametricFunctionSeriesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\YFunctionSeriesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TopNView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.17134.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.DX, Version=10.0">
+      <Name>C1.UWP.DX</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart, Version=10.0">
+      <Name>C1.UWP.FlexChart</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

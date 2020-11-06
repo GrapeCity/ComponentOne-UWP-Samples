@@ -1,0 +1,164 @@
+﻿<Page
+    x:Class="ZipSamples.DemoZip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:flexGrid="using:C1.Xaml.FlexGrid"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FF1D1D1D"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FFF2F2F2"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <Style x:Key="bigButton" TargetType="Button" >
+                <Setter Property="Width" Value="124" />
+                <Setter Property="FontSize"  Value="16" />
+                <Setter Property="Margin" Value="10,0,0,0" />
+                <Setter Property="Padding" Value="2" />
+            </Style>
+            <Style x:Key="smallButton" TargetType="Button" >
+                <Setter Property="Width" Value="100" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Margin" Value="4,0,0,0" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid x:Name="_mainpage">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <RelativePanel Grid.Row="0">
+                <RelativePanel Name="_compressPanel" >
+                    <TextBlock Name="_compress" Text="{Binding Compress_Text,Source={StaticResource ZipSamplesLocalization}}" FontSize="16" Width="100"/>
+                    <Button Name="_btnPickSingleFolder" Content="{Binding PickSingleFolder_Content,Source={StaticResource ZipSamplesLocalization}}" Click="_btnPickFolder_Click"/>
+                    <Button Name="_btnPickFiles" Content="{Binding PickFiles_Content,Source={StaticResource ZipSamplesLocalization}}" RelativePanel.RightOf="_btnPickSingleFolder" RelativePanel.AlignTopWith="_btnPickSingleFolder" Click="_btnPickFiles_Click"/>
+                    <Button Name="_btnCompress" Content="{Binding CompressButton_Content,Source={StaticResource ZipSamplesLocalization}}" RelativePanel.RightOf="_btnPickFiles" RelativePanel.AlignTopWith="_btnPickSingleFolder" Click="_btnCompress_Click" IsEnabled="False"/>
+                </RelativePanel>
+
+                <RelativePanel Name="_extractPanel"  >
+                    <TextBlock Name="_extract" Text="{Binding Extract_Text,Source={StaticResource ZipSamplesLocalization}}" FontSize="16" Width="100"/>
+                    <Button Name="_btnOpen" Content="{Binding Open_Content,Source={StaticResource ZipSamplesLocalization}}" Click="_btnOpen_Click" />
+                    <Button Name="_btnExtract" Content="{Binding ExtractButton_Content,Source={StaticResource ZipSamplesLocalization}}" RelativePanel.RightOf="_btnOpen" RelativePanel.AlignTopWith="_btnOpen" Click="_btnExtract_Click" IsEnabled="False"/>
+                </RelativePanel>
+
+                <RelativePanel Name="_actionPanel" >
+                    <Button Name="_btnRemove" Content="{Binding Remove_Content,Source={StaticResource ZipSamplesLocalization}}" Click="_btnRemove_Click" IsEnabled="False" />
+                    <Button Name="_btnView" Content="{Binding View_Content,Source={StaticResource ZipSamplesLocalization}}" Click="_btnView_Click" IsEnabled="False"/>
+                    <Button Name="_btnClear" Content="{Binding Clear_Content,Source={StaticResource ZipSamplesLocalization}}" Click="_btnClear_Click" />
+                </RelativePanel>
+            </RelativePanel>
+            <ProgressBar x:Name="progressBar" Grid.Row="1" Width="400" Canvas.ZIndex="10" HorizontalAlignment="Center" VerticalAlignment="Center" IsIndeterminate="True" Visibility="Collapsed" Background="Black"/>
+            <flexGrid:C1FlexGrid BorderBrush="Gray" BorderThickness="1" Margin="4"
+                            x:Name="_flex" Grid.Row="2"
+                            SelectionMode="Row"
+                            HeadersVisibility="Column"
+                            AllowResizing="Columns"
+                            HeaderGridLinesBrush="Transparent"
+                            AutoGenerateColumns="False" >
+                <flexGrid:C1FlexGrid.Columns>
+                    <flexGrid:Column Binding="{Binding FileName}" Header="Name" x:Uid="/ZipSamplesLib/Resources/Name" />
+                    <flexGrid:Column Binding="{Binding Date}" Header="Date" x:Uid="/ZipSamplesLib/Resources/Date" Format="d" />
+                    <flexGrid:Column Binding="{Binding SizeUncompressedLong}" Header="Size" x:Uid="/ZipSamplesLib/Resources/Size" Format="n0" />
+                    <flexGrid:Column Binding="{Binding SizeCompressedLong}" Header="Compressed" x:Uid="/ZipSamplesLib/Resources/Compressed" Format="n0" />
+                    <flexGrid:Column Binding="{Binding CompressionRatio}" Header="Ratio" x:Uid="/ZipSamplesLib/Resources/Ratio" Format="p0" />
+                    <flexGrid:Column Binding="{Binding CRC32}" Header="Crc" x:Uid="/ZipSamplesLib/Resources/CRC" Format="x0" />
+                    <flexGrid:Column Binding="{Binding Attributes}" Header="Attributes" x:Uid="/ZipSamplesLib/Resources/Attributes" />
+                </flexGrid:C1FlexGrid.Columns>
+            </flexGrid:C1FlexGrid>
+        </Grid>
+        <RelativePanel Name="_preview" Visibility="Collapsed">
+            <TextBlock Name="_text" Text="{Binding Preview_Text,Source={StaticResource ZipSamplesLocalization}}" FontSize="28" Margin="0 0 40 0"/>
+            <Button  Name="_btnClosePreview" Content="{Binding Close_Content,Source={StaticResource ZipSamplesLocalization}}" Click="_btnClosePreview_Click_1" RelativePanel.RightOf="_text" Margin="30,0,40,0" Width="100"/>
+            <TextBox Name="_tbContent" IsReadOnly="True" AcceptsReturn="True" FontFamily="Courier New" Background="White" RelativePanel.Below="_btnClosePreview" Margin="10"/>
+        </RelativePanel>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowSizeStates">
+                <!-- First set of VisualStates are simple responsive states based on window size. AdaptiveTrigger is a built-in trigger that XAML knows to automatically trigger based on window size -->
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <!-- Trigger below indicates that this VisualState is to be applied when the current window width is >= 481 effective pixels -->
+                        <AdaptiveTrigger MinWindowWidth="481" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!-- Simplified Setter statements are used to move elements around to optimize for more available space -->
+                        <Setter Target="_btnPickSingleFolder.(RelativePanel.RightOf)" Value="_compress" />
+                        <Setter Target="_btnPickSingleFolder.Style" Value="{StaticResource bigButton}" />
+                        <Setter Target="_btnPickFiles.(RelativePanel.RightOf)" Value="_btnPickSingleFolder" />
+                        <Setter Target="_btnPickFiles.Style" Value="{StaticResource bigButton}" />
+                        <Setter Target="_btnCompress.(RelativePanel.RightOf)" Value="_btnPickFiles" />
+                        <Setter Target="_btnCompress.Style" Value="{StaticResource bigButton}" />
+
+                        <Setter Target="_extractPanel.(RelativePanel.Below)" Value="_compressPanel" />
+                        <Setter Target="_extractPanel.Margin" Value="0,10,0,0" />
+                        <Setter Target="_btnOpen.(RelativePanel.RightOf)" Value="_extract" />
+                        <Setter Target="_btnOpen.Style" Value="{StaticResource bigButton}" />
+                        <Setter Target="_btnExtract.Style" Value="{StaticResource bigButton}" />
+
+                        <Setter Target="_actionPanel.(RelativePanel.Below)" Value="_extractPanel" />
+                        <Setter Target="_actionPanel.Margin" Value="100,10,0,0" />
+                        <Setter Target="_btnRemove.Style" Value="{StaticResource bigButton}" />
+                        <Setter Target="_btnView.(RelativePanel.RightOf)" Value="_btnRemove" />
+                        <Setter Target="_btnView.Style" Value="{StaticResource bigButton}" />
+                        <Setter Target="_btnClear.(RelativePanel.RightOf)" Value="_btnView" />
+                        <Setter Target="_btnClear.Style" Value="{StaticResource bigButton}" />
+
+                        <Setter Target="_flex.FontSize" Value="16" />
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <!-- Trigger below indicates that this VisualState is to be applied when current window width is >=0 and <481 effective pixels -->
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!-- Simplified Setter statements are used to move elements around to optimize for lesser available space -->
+                        <Setter Target="_compress.FontSize" Value="12" />
+                        <Setter Target="_extract.FontSize" Value="12" />
+                        <Setter Target="_btnPickSingleFolder.(RelativePanel.Below)" Value="_compress" />
+                        <Setter Target="_btnPickSingleFolder.Style" Value="{StaticResource smallButton}" />
+                        <Setter Target="_btnPickFiles.(RelativePanel.RightOf)" Value="_btnPickSingleFolder" />
+                        <Setter Target="_btnPickFiles.Style" Value="{StaticResource smallButton}" />
+                        <Setter Target="_btnCompress.(RelativePanel.RightOf)" Value="_btnPickFiles" />
+                        <Setter Target="_btnCompress.Style" Value="{StaticResource smallButton}" />
+
+                        <Setter Target="_extractPanel.(RelativePanel.Below)" Value="_compressPanel" />
+                        <Setter Target="_extractPanel.Margin" Value="0,10,0,0" />
+                        <Setter Target="_btnOpen.(RelativePanel.Below)" Value="_extract" />
+                        <Setter Target="_btnOpen.Style" Value="{StaticResource smallButton}" />
+                        <Setter Target="_btnExtract.Style" Value="{StaticResource smallButton}" />
+
+                        <Setter Target="_actionPanel.(RelativePanel.Below)" Value="_extractPanel" />
+                        <Setter Target="_actionPanel.Margin" Value="0,10,0,0" />
+                        <Setter Target="_btnRemove.Style" Value="{StaticResource smallButton}" />
+                        <Setter Target="_btnView.(RelativePanel.RightOf)" Value="_btnRemove" />
+                        <Setter Target="_btnView.Style" Value="{StaticResource smallButton}" />
+                        <Setter Target="_btnClear.(RelativePanel.RightOf)" Value="_btnView" />
+                        <Setter Target="_btnClear.Style" Value="{StaticResource smallButton}" />
+                        
+                        <Setter Target="_flex.FontSize" Value="10" />
+
+                        <Setter Target="_btnClosePreview.Margin" Value="0,0,5,0" />
+                        <Setter Target="_btnClosePreview.Width" Value="80" />
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

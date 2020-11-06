@@ -1,0 +1,35 @@
+﻿<Page x:Class="AnnotationExplorer.Callouts"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="using:AnnotationExplorer"
+      xmlns:Chart="using:C1.Xaml.Chart"
+      xmlns:Annotation="using:C1.Xaml.Chart.Annotation"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <local:AnnotationViewModel />
+        </Grid.DataContext>
+        <Chart:C1FlexChart x:Name="flexChart" ChartType="LineSymbols" ToolTipContent="{}{y}" ItemsSource="{Binding SimpleData}">
+            <Chart:Series SeriesName="Trend" Binding="Y" BindingX="X"/>
+            <Chart:C1FlexChart.Layers>
+                <Annotation:AnnotationLayer>
+                    <Annotation:AnnotationLayer.Annotations>
+                        <Annotation:Polygon x:Name="arrowCallout" Content="Low" SeriesIndex="0" PointIndex="1" Attachment="DataIndex">
+                            <Annotation:Polygon.Style>
+                                <Chart:ChartStyle Fill="#C800FF00" Stroke="Green"/>
+                            </Annotation:Polygon.Style>
+                        </Annotation:Polygon>
+                        <Annotation:Polygon x:Name="lineCallout" Content="High"  SeriesIndex="0" PointIndex="4" Attachment="DataIndex">
+                            <Annotation:Polygon.Style>
+                                <Chart:ChartStyle Fill="#C8FF0000" Stroke="Red" />
+                            </Annotation:Polygon.Style>
+                        </Annotation:Polygon>
+                    </Annotation:AnnotationLayer.Annotations>
+                </Annotation:AnnotationLayer>
+            </Chart:C1FlexChart.Layers>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

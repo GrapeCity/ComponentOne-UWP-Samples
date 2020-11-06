@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="InputPanelSamples.IntegrationC1FlexGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InputPanelSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:FlexGrid="using:C1.Xaml.FlexGrid"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Frame x:Name="frame">
+            <FlexGrid:C1FlexGrid x:Name="FlexGrid" MaxColumnWidth="64" FontSize="10"></FlexGrid:C1FlexGrid>
+        </Frame>
+    </Grid>
+    <Page.BottomAppBar>        
+        <AppBar HorizontalContentAlignment="Center">
+            <AppBarButton x:Name="ViewDetail" Margin="40 0 0 0" Command="{Binding ViewDetailCommand}">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#57604;" FontSize="20" FontFamily="Segoe UI Symbol"></FontIcon>
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

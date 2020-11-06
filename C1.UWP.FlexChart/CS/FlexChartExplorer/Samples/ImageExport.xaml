@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="FlexChartExplorer.ImageExport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10 0">
+            <Button Content="{Binding New_Content, Source={StaticResource FlexChartExplorerLocalization}}" Width="100" Click="Button_Click"></Button>
+            <Button Content="{Binding Save_Content, Source={StaticResource FlexChartExplorerLocalization}}" Width="100" Margin="20 0" Click="Button_Click_1"></Button>
+        </StackPanel>
+        <Chart:C1FlexChart x:Name="flexChart" Grid.Row="1" ChartType="Scatter" BindingX="XVals" Binding="YVals">
+            <Chart:C1FlexChart.Series>
+                <Chart:Series x:Name="series" SymbolSize="15" />
+            </Chart:C1FlexChart.Series>
+        </Chart:C1FlexChart>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="series.SymbolSize" Value="8" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

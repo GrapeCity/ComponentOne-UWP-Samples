@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B999BF46-60A2-4E40-BA61-4C83BB17AE6E}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockAnalysis</RootNamespace>
+    <AssemblyName>StockAnalysis</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>StockAnalysis_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Data\aapl.csv" />
+    <Content Include="Assets\Data\amzn.csv" />
+    <Content Include="Assets\Data\csco.csv" />
+    <Content Include="Assets\Data\dvmt.csv" />
+    <Content Include="Assets\Data\ebay.csv" />
+    <Content Include="Assets\Data\goog.csv" />
+    <Content Include="Assets\Data\intc.csv" />
+    <Content Include="Assets\Data\msft.csv" />
+    <Content Include="Assets\Data\orcl.csv" />
+    <Content Include="Assets\Data\vod.csv" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Command\AnnotationSettingCommand .cs" />
+    <Compile Include="Command\CloseDropdownCommand.cs" />
+    <Compile Include="Command\SettingCommand.cs" />
+    <Compile Include="Converter\Angle2UpDownConverter.cs" />
+    <Compile Include="Converter\Boolean2BooleanNullableConverter.cs" />
+    <Compile Include="Converter\Boolean2SelectedBrushConverter.cs" />
+    <Compile Include="Converter\Boolean2UpDownBrushConverter.cs" />
+    <Compile Include="Converter\Boolean2VisibilityConverter.cs" />
+    <Compile Include="Converter\BrushTransparencyConverter.cs" />
+    <Compile Include="Converter\Color2BrushConverter.cs" />
+    <Compile Include="Converter\Name2LogoConverter.cs" />
+    <Compile Include="Converter\NewAnnotationType2SettingButtonVisibilityConverter.cs" />
+    <Compile Include="Converter\NewAnnotationType2VisibilityConverter.cs" />
+    <Compile Include="Converter\Nullable2DoubleConverter.cs" />
+    <Compile Include="Converter\Object2DoubleConverter.cs" />
+    <Compile Include="Converter\Object2UintConverter.cs" />
+    <Compile Include="Converter\OpacitySelectedConverter.cs" />
+    <Compile Include="Converter\OverlayTypes2SeriesVisibilityConverter.cs" />
+    <Compile Include="Converter\SelectedListBoxItem2ColorConverter.cs" />
+    <Compile Include="Converter\SeriesVisibility2BooleanConverter.cs" />
+    <Compile Include="Converter\SolidColorBrush2ColorConverter.cs" />
+    <Compile Include="Converter\SolidColorBrushBrightnessConverter.cs" />
+    <Compile Include="Converter\StringFormatConverter.cs" />
+    <Compile Include="Converter\ToUpperValueConverter.cs" />
+    <Compile Include="EditableAnnotitions\AnnotationEditor.xaml.cs">
+      <DependentUpon>AnnotationEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditableAnnotitions\EditableAnnotationLayer.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Object\Threshold.cs" />
+    <Compile Include="Partial\AnnotationSettings.xaml.cs">
+      <DependentUpon>AnnotationSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\CustomControls\ContentSchema.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\ADX.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\ADXCalculator.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\ADXSeries.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\MassIndex.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\MassIndexCalculator.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\MassIndexSeries.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\PivotPoint.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\PivotPointCalculator.cs" />
+    <Compile Include="Partial\CustomControls\CustomIndicator\PivotPointSeries.cs" />
+    <Compile Include="Partial\CustomControls\DropdownControl.cs" />
+    <Compile Include="Partial\CustomControls\DropdownMenu.cs" />
+    <Compile Include="Partial\CustomControls\FlatButton.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\ATRSeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\CCISeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\IIndicator.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\IndicatorSeriesBase.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\MacdSeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\RSISeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\StochasticSeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\ThresholdSeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\VolumeSeries.cs" />
+    <Compile Include="Partial\CustomControls\IndicatorSeries\WilliamsRSeries.cs" />
+    <Compile Include="Partial\CustomControls\MyBasicColorPickerPart.cs" />
+    <Compile Include="Partial\CustomControls\MyColorPicker.cs" />
+    <Compile Include="Partial\CustomControls\MyComboBox.cs" />
+    <Compile Include="Partial\CustomControls\NavList.cs" />
+    <Compile Include="Partial\CustomControls\SettableCheckBox.cs" />
+    <Compile Include="Partial\CustomControls\SettableRadioButton.cs" />
+    <Compile Include="Partial\CustomControls\SettingList.cs" />
+    <Compile Include="Partial\CustomControls\SettingListItem.cs" />
+    <Compile Include="Partial\CustomControls\SimpleButton.cs" />
+    <Compile Include="Partial\CustomControls\Title.cs" />
+    <Compile Include="Partial\Layouts\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\SettingsDialog.xaml.cs">
+      <DependentUpon>SettingsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\Annotations.xaml.cs">
+      <DependentUpon>Annotations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\AnnotationSettings.xaml.cs">
+      <DependentUpon>AnnotationSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\AnnotationShapeSettings.xaml.cs">
+      <DependentUpon>AnnotationShapeSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\AnnotationTextSettings.xaml.cs">
+      <DependentUpon>AnnotationTextSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\Charts.xaml.cs">
+      <DependentUpon>Charts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\CustomIndicator.xaml.cs">
+      <DependentUpon>CustomIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\Display.xaml.cs">
+      <DependentUpon>Display.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\Indicators.xaml.cs">
+      <DependentUpon>Indicators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\IntegratedChart.xaml.cs">
+      <DependentUpon>IntegratedChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\IntegratedChartExtends.cs" />
+    <Compile Include="Partial\UserControls\KRChart.xaml.cs">
+      <DependentUpon>KRChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\Overlays.xaml.cs">
+      <DependentUpon>Overlays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\UserControls\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String\Message.cs" />
+    <Compile Include="Utilities\ColorEx.cs" />
+    <Compile Include="Utilities\Helper.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="StockAnalysis_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Resources\C1.ico" />
+    <Content Include="Resources\C1.png" />
+    <Content Include="Resources\Circle.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\Ellipse.png" />
+    <Content Include="Resources\Line.png" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\None.png" />
+    <Content Include="Resources\Rectangle.png" />
+    <Content Include="Resources\Square.png" />
+    <Content Include="Resources\Text.png" />
+    <Content Include="Resources\TransparentBase.png" />
+    <Content Include="Resources\Triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="EditableAnnotitions\AnnotationEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\AnnotationSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\Layouts\Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\SettingsDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\Annotations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\AnnotationSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\AnnotationShapeSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\AnnotationTextSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\Charts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\CustomIndicator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\Display.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\Indicators.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\IntegratedChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\KRChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\Overlays.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Partial\UserControls\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.DX, Version=10.0">
+      <Name>C1.UWP.DX</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Extended, Version=10.0">
+      <Name>C1.UWP.Extended</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart.Finance, Version=10.0">
+      <Name>C1.UWP.FlexChart.Finance</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart, Version=10.0">
+      <Name>C1.UWP.FlexChart</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+    <ProjectReference Include="..\StockAnalysis.Data\StockAnalysis.Data.csproj">
+      <Project>{3e1fdcc6-27f2-4800-9ba6-bab8c8481a78}</Project>
+      <Name>StockAnalysis.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockAnalysis.Object\StockAnalysis.Object.csproj">
+      <Project>{3912ef46-5743-4e0e-9d31-ae03039223aa}</Project>
+      <Name>StockAnalysis.Object</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>PdfSamples (the samples below create documents and show in C1PdfViewer control)</value>
+  </data>
+  <data name="Bezier" xml:space="preserve">
+    <value>Simple Bezier</value>
+  </data>
+  <data name="BuildRandomSentenceString1" xml:space="preserve">
+    <value>Artists|Movie stars|Musicians|Politicians|Computer programmers|Modern thinkers|Gardeners|Experts|Some people|Hockey players</value>
+  </data>
+  <data name="BuildRandomSentenceString2" xml:space="preserve">
+    <value>know|seem to think about|care about|often discuss|dream about|hate|love|despise|respect|long for|pay attention to|embrace</value>
+  </data>
+  <data name="BuildRandomSentenceString3" xml:space="preserve">
+    <value>the movies|chicken soup|tea|many things|sushi|my car|deep thoughs|tasteless jokes|vaporware|cell phones|hot dogs|ballgames</value>
+  </data>
+  <data name="BuildRandomSentenceString4" xml:space="preserve">
+    <value>incessantly|too much|easily|without reason|rapidly|sadly|randomly|vigorously|more than usual|with enthusiasm|shamelessly|on Tuesdays</value>
+  </data>
+  <data name="BuildRandomTitleString1" xml:space="preserve">
+    <value>Learning|Explaining|Mastering|Forgetting|Examining|Understanding|Applying|Using|Destroying</value>
+  </data>
+  <data name="BuildRandomTitleString2" xml:space="preserve">
+    <value>Music|Tennis|Golf|Zen|Diving|Modern Art|Gardening|Architecture|Mathematics|Investments|.NET|Java</value>
+  </data>
+  <data name="BuildRandomTitleString3" xml:space="preserve">
+    <value>Quickly|Painlessly|The Hard Way|Slowly|Painfully|With Panache</value>
+  </data>
+  <data name="CheckBoxCB_Content" xml:space="preserve">
+    <value>CheckBox</value>
+  </data>
+  <data name="ComboBoxItem1_Content" xml:space="preserve">
+    <value>Item 1</value>
+  </data>
+  <data name="ComboBoxItem2_Content" xml:space="preserve">
+    <value>Item 2</value>
+  </data>
+  <data name="DocumentAuthor" xml:space="preserve">
+    <value>ComponentOne</value>
+  </data>
+  <data name="DocumentBasicText" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmood tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam, quis nostrud excecitation ullmanco laboris. nisi ut alquip ex ea commodo consequat.</value>
+  </data>
+  <data name="DocumentBasicText2" xml:space="preserve">
+    <value>..........draw with angle = {0}.</value>
+  </data>
+  <data name="Documentfooter" xml:space="preserve">
+    <value>C1.UWP.Pdf: {0}, page {1} of {2}</value>
+  </data>
+  <data name="DocumentGraphicsText" xml:space="preserve">
+    <value>Various sample of PDF Graphics. Lines, pies, rectangles and others figures.</value>
+  </data>
+  <data name="DocumentSubject" xml:space="preserve">
+    <value>C1.UWP.Pdf demo</value>
+  </data>
+  <data name="FileTypeChoicesTip" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="GraphicsDocumentTitle" xml:space="preserve">
+    <value>Graphics</value>
+  </data>
+  <data name="HyperlinkButton_Content" xml:space="preserve">
+    <value>HyperlinkButton</value>
+  </data>
+  <data name="ImagesDocumentTitle" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="ListBoxItem1_Content" xml:space="preserve">
+    <value>ListBoxItem 1</value>
+  </data>
+  <data name="ListBoxItem2_Content" xml:space="preserve">
+    <value>ListBoxItem 2</value>
+  </data>
+  <data name="ListBoxItem3_Content" xml:space="preserve">
+    <value>ListBoxItem 3</value>
+  </data>
+  <data name="MessageDialogTitle" xml:space="preserve">
+    <value>PdfSamples</value>
+  </data>
+  <data name="PaperSizesDocumentTitle" xml:space="preserve">
+    <value>Paper Sizes</value>
+  </data>
+  <data name="PdfSamplesBasicTextDescription" xml:space="preserve">
+    <value>Shows how to position and align text.</value>
+  </data>
+  <data name="PdfSamplesBasicTextName" xml:space="preserve">
+    <value>Basic Text</value>
+  </data>
+  <data name="PdfSamplesBasicTextTitle" xml:space="preserve">
+    <value>Basic Text</value>
+  </data>
+  <data name="PdfSamplesExportUIDescription" xml:space="preserve">
+    <value>This demo exports alive visual tree into Pdf document. Clik Refresh button to re-generate PDF.</value>
+  </data>
+  <data name="PdfSamplesExportUIName" xml:space="preserve">
+    <value>Export UI</value>
+  </data>
+  <data name="PdfSamplesExportUITitle" xml:space="preserve">
+    <value>Export UI Elements</value>
+  </data>
+  <data name="PdfSamplesGraphicsDescription" xml:space="preserve">
+    <value>Shows how to use graphics primitives to draw rectangles, lines, ellipses, etc.</value>
+  </data>
+  <data name="PdfSamplesGraphicsName" xml:space="preserve">
+    <value>Graphics</value>
+  </data>
+  <data name="PdfSamplesGraphicsTitle" xml:space="preserve">
+    <value>Graphics</value>
+  </data>
+  <data name="PdfSamplesImagesDescription" xml:space="preserve">
+    <value>Creates a document with some images. Shows how to align and scale images.</value>
+  </data>
+  <data name="PdfSamplesImagesName" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="PdfSamplesImagesTitle" xml:space="preserve">
+    <value>Align and Scale Images</value>
+  </data>
+  <data name="PdfSamplesPaperSizesDescription" xml:space="preserve">
+    <value>Creates a document containing multiple paper sizes and orientations.</value>
+  </data>
+  <data name="PdfSamplesPaperSizesName" xml:space="preserve">
+    <value>Paper Sizes</value>
+  </data>
+  <data name="PdfSamplesPaperSizesTitle" xml:space="preserve">
+    <value>Paper Sizes</value>
+  </data>
+  <data name="PdfSamplesQuotesDescription" xml:space="preserve">
+    <value>Creates a document with quotations from www.quoteland.com. Shows DrawString, MeasureString, NewPage.</value>
+  </data>
+  <data name="PdfSamplesQuotesName" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="PdfSamplesQuotesTitle" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="PdfSamplesTableOfContentsDescription" xml:space="preserve">
+    <value>Creates a document with a Table of Contents. Shows how to move pages within the document.</value>
+  </data>
+  <data name="PdfSamplesTableOfContentsName" xml:space="preserve">
+    <value>Table of Contents</value>
+  </data>
+  <data name="PdfSamplesTableOfContentsTitle" xml:space="preserve">
+    <value>Table of Contents</value>
+  </data>
+  <data name="PdfSamplesTextFlowDescription" xml:space="preserve">
+    <value>Shows how to flow text into columns and pages.</value>
+  </data>
+  <data name="PdfSamplesTextFlowName" xml:space="preserve">
+    <value>Text Flow</value>
+  </data>
+  <data name="PdfSamplesTextFlowTitle" xml:space="preserve">
+    <value>Text Flow</value>
+  </data>
+  <data name="PoundSign" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="QuotesDocumentTitle" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="RadioButtonRB_Content" xml:space="preserve">
+    <value>RadioButton</value>
+  </data>
+  <data name="RenderBT_Content" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RenderUIDocumentTitle" xml:space="preserve">
+    <value>Render UI</value>
+  </data>
+  <data name="ResourceNotFound" xml:space="preserve">
+    <value>Resource not found...</value>
+  </data>
+  <data name="RichTextBlock_Text" xml:space="preserve">
+    <value>RichTextBlock</value>
+  </data>
+  <data name="RunText1_Text" xml:space="preserve">
+    <value>consectetur adipiscing elit. Sed ac mi ipsum.</value>
+  </data>
+  <data name="RunText2_Text" xml:space="preserve">
+    <value>Phasellus</value>
+  </data>
+  <data name="RunText3_Text" xml:space="preserve">
+    <value>vel malesuada mauris. Donec pharetra, enim sit amet mattis tincidunt, felis nisi semper lectus, vel porta diam nisi in augue.</value>
+  </data>
+  <data name="SaveLocationTip" xml:space="preserve">
+    <value>Pdf Document saved to</value>
+  </data>
+  <data name="SavePDFBT_Content" xml:space="preserve">
+    <value>Save PDF</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="StringFormatTwoArg" xml:space="preserve">
+    <value>PaperKind: [{0}];
+Landscape: [{1}];
+Font: [Tahoma 18pt]</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="TableOfContentsDocumentTitle" xml:space="preserve">
+    <value>Table of Contents</value>
+  </data>
+  <data name="TextBlockTB1_Text" xml:space="preserve">
+    <value>Sample UI for export:</value>
+  </data>
+  <data name="TextBlockTB2_Text" xml:space="preserve">
+    <value>Preview:</value>
+  </data>
+  <data name="TextBoxTB_Text" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="TextFlowDocumentTitle" xml:space="preserve">
+    <value>Text Flow</value>
+  </data>
+  <data name="ToggleSwitch_Header" xml:space="preserve">
+    <value>ToggleSwitch</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+</root>

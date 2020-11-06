@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="MapsSamples.DemoMaps"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MapsSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml.Maps"
+    xmlns:input="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">     
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="{Binding MapSource_Text, Source={StaticResource MapsSamplesLocalization}}" VerticalAlignment="Center" Margin="5"/>
+            <ComboBox x:Name="comboSources" Width="180" SelectionChanged="comboSources_SelectionChanged" Margin="5"/>
+            <TextBlock Text="{Binding Angle_Text, Source={StaticResource MapsSamplesLocalization}}" VerticalAlignment="Center" Margin="5"/>
+            <input:C1NumericBox x:Name="angle" Increment="30" Margin="5" />
+        </StackPanel>
+        <Border Grid.Row="1">
+            <Grid>
+                <c1:C1Maps x:Name="maps" Zoom="3" RenderTransformOrigin="0.5,0.5" Angle="{Binding Path=Value, ElementName=angle}">
+                    <c1:C1Maps.Layers>
+                        <c1:C1MapItemsLayer>
+                            <Grid x:Name="item" Tapped="item_Tapped" c1:C1MapCanvas.LatLong="-79.9247, 40.4587" c1:C1MapCanvas.Pinpoint="12, 12">
+                                <Ellipse Width="24" Height="24" Fill="White" Stroke="#F6AAC9" StrokeThickness="2"/>
+                                <TextBlock Text="{Binding C1Label_Text, Source={StaticResource MapsSamplesLocalization}}" FontSize="14" Foreground="#F6AAC9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <FlyoutBase.AttachedFlyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="{Binding ComponentOne_Text, Source={StaticResource MapsSamplesLocalization}}" />
+                                    </MenuFlyout>
+                                </FlyoutBase.AttachedFlyout>
+                            </Grid>
+                        </c1:C1MapItemsLayer>
+                    </c1:C1Maps.Layers>
+                </c1:C1Maps>
+                <local:MapTool Maps="{Binding ElementName=maps}"  x:Name="mapTool"></local:MapTool>
+            </Grid>
+        </Border>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="mapTool.Visibility" Value="Collapsed"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

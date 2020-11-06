@@ -1,0 +1,75 @@
+﻿<UserControl
+    x:Class="StockAnalysis.Partial.Layouts.Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StockAnalysis.Partial.Layouts"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:usercontrols="using:StockAnalysis.Partial.UserControls"
+  xmlns:cc="using:StockAnalysis.Partial.CustomControls"  
+  mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="800" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+  <Grid Background="{StaticResource PaperWhite900}">    
+    <Grid.RowDefinitions>
+      <RowDefinition Height="50" />
+      <RowDefinition Height="1" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <cc:Title x:Name="title" Background="{StaticResource PaperWhite900}" IconSource="/Resources/logo.png" >
+      <TextBlock Margin="8, 0, 0, 0" FontSize="16" FontWeight="SemiBold">
+                <Run Foreground="{StaticResource LogoYellow}" Text="STOCK " />
+                <Run Foreground="{StaticResource LogoBlue}" Text="ANALYSIS"/>
+      </TextBlock>
+    </cc:Title>
+    <cc:ContentSchema x:Name="content" Grid.Row="2">
+      <cc:ContentSchema.Nav>
+        <cc:NavList x:Name="navList" Background="{StaticResource PaperWhite1000}" ItemsSource="{Binding Model.Quotes}"
+                            SelectedValue="{Binding Model.CurrectQuote, Mode=TwoWay}" SelectionChanged="navList_SelectionChanged" >
+          
+          <cc:NavList.ItemContainerStyle>
+            <Style TargetType="ListBoxItem">
+              <Setter Property="Template">
+                <Setter.Value>
+                  <ControlTemplate TargetType="ListBoxItem">
+                                        <Border x:Name="border" Margin="0" Padding="15,16,10,16" BorderBrush="{StaticResource PaperWhite800}" BorderThickness="0,0,0,1" Background="{Binding IsSelected, Converter={StaticResource Boolean2SelectedBrushConverter}, RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                      <ContentPresenter x:Name="content" FontWeight="Bold" Content="{Binding}"/>
+                    </Border>                   
+                  </ControlTemplate>                 
+                </Setter.Value>
+              </Setter>            
+            </Style>
+          </cc:NavList.ItemContainerStyle>
+          <cc:NavList.ItemTemplate>
+            <DataTemplate>
+              <Grid x:Name="grid">                
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="45" />
+                  <ColumnDefinition Width="26" />
+                  <ColumnDefinition Width="45" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="name" Grid.Column="0" Text="{Binding Name}" Foreground="{Binding Updown, Converter={StaticResource Boolean2UpDownBrushConverter}}" FontWeight="SemiBold" FontSize="11"/>
+                <TextBlock x:Name="rate" Grid.Column="1" HorizontalAlignment="Right" Text="{Binding Rate, ConverterParameter=\{0:P2\}, Converter={StaticResource StringFormatConverter}}" Foreground="{Binding Updown, Converter={StaticResource Boolean2UpDownBrushConverter}}" FontWeight="SemiBold" FontSize="11"/>
+                <Path x:Name="updown" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="11.314" Height="5.657" Data="F1 M 5.657,0.000 L 11.314,5.657 L 0.000,5.657 L 5.657,0.000 Z" Fill="{Binding Updown, Converter={StaticResource Boolean2UpDownBrushConverter}}">
+                  <Path.RenderTransform>
+                    <RotateTransform Angle="{Binding Updown, Converter={StaticResource Angle2UpDownConverter}}" CenterX="6" CenterY="3" />
+                  </Path.RenderTransform>
+                </Path>
+                <TextBlock x:Name="price" Grid.Column="3" HorizontalAlignment="Right" Text="{Binding Price, ConverterParameter=\{0:###.##\}, Converter={StaticResource StringFormatConverter}}" Foreground="{Binding Updown, Converter={StaticResource Boolean2UpDownBrushConverter}}" FontWeight="SemiBold" FontSize="11"/>             
+              </Grid>
+            </DataTemplate>
+          </cc:NavList.ItemTemplate>
+        </cc:NavList>
+      </cc:ContentSchema.Nav>
+      <cc:ContentSchema.Settings>
+        <usercontrols:Settings x:Name="settings"/>
+      </cc:ContentSchema.Settings>
+      <cc:ContentSchema.AnnotitionsSettings>
+        <usercontrols:AnnotationSettings x:Name="annotitionSettings" />
+      </cc:ContentSchema.AnnotitionsSettings>
+      <cc:ContentSchema.Chart>
+                <usercontrols:Charts x:Name="charts"/>
+            </cc:ContentSchema.Chart>     
+    </cc:ContentSchema>    
+  </Grid>
+</UserControl>
