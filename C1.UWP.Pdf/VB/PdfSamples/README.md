@@ -1,5 +1,5 @@
 ## Pdf Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Pdf\VB\PdfSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Pdf/VB/PdfSamples)
 ____
 #### Show cases the main features of the C1.UWP.Pdf library.
 ____

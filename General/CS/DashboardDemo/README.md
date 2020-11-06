@@ -1,5 +1,5 @@
 ## Dashboard Demo
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\General\CS\DashboardDemo)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/General/CS/DashboardDemo)
 ____
 #### A multiple screen dashboard app that display data.
 ____

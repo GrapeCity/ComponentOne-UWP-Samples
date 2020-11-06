@@ -1,5 +1,5 @@
 ## C1CalendarDataDemo
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Calendar\CS\CalendarData)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Calendar/CS/CalendarData)
 ____
 #### Shows interactive calendar with ability to create.
 ____

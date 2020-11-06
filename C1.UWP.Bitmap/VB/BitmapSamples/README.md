@@ -1,5 +1,5 @@
 ## C1Bitmap Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Bitmap\VB\BitmapSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Bitmap/VB/BitmapSamples)
 ____
 #### Shows how to use classes provided by the C1.UWP.Bitmap assembly.
 ____

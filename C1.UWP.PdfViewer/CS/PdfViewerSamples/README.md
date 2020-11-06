@@ -1,5 +1,5 @@
 ## PdfViewer Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.PdfViewer\CS\PdfViewerSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.PdfViewer/CS/PdfViewerSamples)
 ____
 #### This one sample includes all samples for the C1PdfViewer control.
 ____

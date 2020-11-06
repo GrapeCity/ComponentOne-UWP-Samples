@@ -1,5 +1,5 @@
 ## Direct2DEffects
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Bitmap\VB\Direct2DEffects)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Bitmap/VB/Direct2DEffects)
 ____
 #### Demonstrates applying Direct2D effects to the image in C1Bitmap
 ____

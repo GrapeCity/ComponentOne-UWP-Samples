@@ -1,5 +1,5 @@
 ## Control Explorer
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\General\CS\ControlExplorer)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/General/CS/ControlExplorer)
 ____
 #### Shows all UWP controls and lets users see them in action.
 ____

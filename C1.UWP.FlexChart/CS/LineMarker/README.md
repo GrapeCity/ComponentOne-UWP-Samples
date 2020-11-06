@@ -1,5 +1,5 @@
 ## LineMarkerSample
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\CS\LineMarker)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/CS/LineMarker)
 ____
 #### Shows features of LineMarker.
 ____

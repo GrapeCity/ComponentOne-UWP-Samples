@@ -1,5 +1,5 @@
 ## Input Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Input\CS\InputSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Input/CS/InputSamples)
 ____
 #### Shows main samples of the C1Input control.
 ____

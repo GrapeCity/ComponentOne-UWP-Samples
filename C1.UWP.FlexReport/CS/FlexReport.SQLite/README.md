@@ -1,5 +1,5 @@
 ## FlexReport.SQLite
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexReport\CS\FlexReport.SQLite)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexReport/CS/FlexReport.SQLite)
 ____
 #### Implements SQLite data provider for use with FlexReport for UWP (C# version).
 ____

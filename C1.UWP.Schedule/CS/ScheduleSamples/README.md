@@ -1,5 +1,5 @@
 ## ScheduleSamples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Schedule\CS\ScheduleSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Schedule/CS/ScheduleSamples)
 ____
 #### Shows the key features of the C1Scheduler control.
 ____

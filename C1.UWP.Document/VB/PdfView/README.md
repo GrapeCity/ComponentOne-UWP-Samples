@@ -1,5 +1,5 @@
 ## PdfView
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Document\VB\PdfView)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Document/VB/PdfView)
 ____
 #### Demonstrates using of C1PdfDocumentSource with C1FlexViewer to view Pdf documents
 ____

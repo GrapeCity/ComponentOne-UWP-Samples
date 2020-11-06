@@ -1,5 +1,5 @@
 ## DateTimeSelector_UIATest
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Automation\CS\DateTimeSelector_UIATest)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Automation/CS/DateTimeSelector_UIATest)
 ____
 #### Demonstrates how to unit test C1DateTimeSelector control with C1.UWP.Automation.dll
 ____
