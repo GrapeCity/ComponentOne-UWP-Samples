@@ -1,5 +1,5 @@
 ## Animation Demo
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\CS\AnimationDemo)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/CS/AnimationDemo)
 ____
 #### Shows advanced animation options.
 ____

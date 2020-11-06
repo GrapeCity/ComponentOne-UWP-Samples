@@ -1,5 +1,5 @@
 ## The Common directory contains classes and XAML styles that simplify application development.
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\VB\FlexChart101\Common)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/FlexChart101/Common)
 ____
 #### These are not merely convenient, but are required by most Visual Studio project and item templates.
 ____

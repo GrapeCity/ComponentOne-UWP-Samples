@@ -1,5 +1,5 @@
 ## SunburstIntro
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\CS\SunburstIntro)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/CS/SunburstIntro)
 ____
 #### Shows how to get started with Sunburst chart control.
 ____

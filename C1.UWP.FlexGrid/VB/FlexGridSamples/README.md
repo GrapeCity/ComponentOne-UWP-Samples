@@ -1,5 +1,5 @@
 ## FlexGrid Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexGrid\VB\FlexGridSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexGrid/VB/FlexGridSamples)
 ____
 #### Shows the main features in the C1FlexGrid control.
 ____

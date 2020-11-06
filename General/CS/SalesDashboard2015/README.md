@@ -1,5 +1,5 @@
 ## SalesDashboard
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\General\CS\SalesDashboard2015)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/General/CS/SalesDashboard2015)
 ____
 #### Implements a sales dashboard.
 ____

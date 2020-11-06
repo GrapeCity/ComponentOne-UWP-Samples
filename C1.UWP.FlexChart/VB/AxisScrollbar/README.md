@@ -1,5 +1,5 @@
 ## AxisScrollbar
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\VB\AxisScrollbar)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/AxisScrollbar)
 ____
 #### Shows features of AxisScrollbar
 ____

@@ -1,5 +1,5 @@
 ## Tile Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Tile\VB\TileSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Tile/VB/TileSamples)
 ____
 #### Shows samples of using tile controls from the C1.UWP.Tile assembly.
 ____

@@ -1,5 +1,5 @@
 ## FlexReportExplorer
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexReport\CS\FlexReportExplorer)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexReport/CS/FlexReportExplorer)
 ____
 #### Explore the reporting features offered by FlexReport in UWP Applications. 
 ____

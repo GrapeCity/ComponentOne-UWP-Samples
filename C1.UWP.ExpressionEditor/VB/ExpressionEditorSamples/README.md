@@ -1,5 +1,5 @@
 ## ExpressionEditor Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.ExpressionEditor\VB\ExpressionEditorSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.ExpressionEditor/VB/ExpressionEditorSamples)
 ____
 #### Shows main samples of the C1ExpressionEditor control.
 ____

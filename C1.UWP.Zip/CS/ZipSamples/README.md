@@ -1,5 +1,5 @@
 ## ZipFileDemo
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Zip\CS\ZipSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Zip/CS/ZipSamples)
 ____
 #### Implement a simple Zip utility.
 ____

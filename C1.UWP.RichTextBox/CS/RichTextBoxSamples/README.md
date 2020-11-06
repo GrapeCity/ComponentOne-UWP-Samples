@@ -1,5 +1,5 @@
 ## RichTextBox Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.RichTextBox\CS\RichTextBoxSamples)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.RichTextBox/CS/RichTextBoxSamples)
 ____
 #### Shows main samples of the C1RichTextBox control.
 ____

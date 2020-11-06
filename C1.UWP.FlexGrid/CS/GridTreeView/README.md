@@ -1,5 +1,5 @@
 ## GridTreeView
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexGrid\CS\GridTreeView)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexGrid/CS/GridTreeView)
 ____
 #### Shows how you can use the C1FlexGrid to implement a bound hierarchical C1TreeView.
 ____

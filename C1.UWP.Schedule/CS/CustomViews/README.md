@@ -1,5 +1,5 @@
 ## CustomViews
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.Schedule\CS\CustomViews)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Schedule/CS/CustomViews)
 ____
 #### Demonstrates using of adjusted MonthView styles in the C1Scheduler control.
 ____

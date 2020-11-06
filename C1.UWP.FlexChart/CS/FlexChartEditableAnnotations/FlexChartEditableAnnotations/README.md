@@ -1,5 +1,5 @@
 ## FlexChartEditableAnnotations
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\CS\FlexChartEditableAnnotations\FlexChartEditableAnnotations)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/CS/FlexChartEditableAnnotations/FlexChartEditableAnnotations)
 ____
 #### This sample shows how to add and edit annotations in [b]FlexChart[/b].
 ____

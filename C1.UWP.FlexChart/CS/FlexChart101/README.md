@@ -1,5 +1,5 @@
 ## FlexChart101
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\CS\FlexChart101)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/CS/FlexChart101)
 ____
 #### Shows the main features of FlexChart.
 ____

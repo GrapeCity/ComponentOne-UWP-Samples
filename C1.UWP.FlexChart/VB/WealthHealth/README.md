@@ -1,5 +1,5 @@
 ## WealthHealth
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/\C1.UWP.FlexChart\VB\WealthHealth)
+#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/WealthHealth)
 ____
 #### Shows the evolution of income, life expectancy, and population in 178 countries over a period of 210 years.
 ____
