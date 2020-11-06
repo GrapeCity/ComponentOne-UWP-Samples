@@ -1,0 +1,63 @@
+﻿<Page x:Class="FinancialChartExplorer.MovingAverages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="using:FinancialChartExplorer"
+      xmlns:Chart="using:C1.Xaml.Chart.Finance"
+      xmlns:c1="using:C1.Xaml"
+      mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="EmConverter" />
+            <Style TargetType="TextBlock">
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Chart:C1FinancialChart x:Name="financialChart" BindingX="Date" Binding="Close" ChartType="Line" ItemsSource="{Binding Data}">
+            <Chart:FinancialSeries />
+            <Chart:MovingAverage x:Name="ma" />
+        </Chart:C1FinancialChart>
+        <StackPanel x:Name="optionsPanel" Orientation="Horizontal" Margin="10" Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="tbMovingAverageType" Text="{Binding Path=MovingAverageTypeCaption, Source={StaticResource FinancialChartExplorerLocalization}}" Margin="10 0"/>
+                <ComboBox x:Name="cbMovingAverageType" ItemsSource="{Binding MovingAverageType}" SelectedValue="{Binding ElementName=ma, Path=Type, Converter={StaticResource EmConverter}, Mode=TwoWay}" Width="130" />
+            </StackPanel>
+            <StackPanel x:Name="spPeriod" Orientation="Horizontal">
+                <TextBlock x:Name="tbPeriod" Text="{Binding Path=PeriodCaption, Source={StaticResource FinancialChartExplorerLocalization}}" Margin="30 0 10 0"/>
+                <c1:C1NumericBox x:Name="cbPeriod" Value="{Binding ElementName=ma, Path=Period, Mode=TwoWay}" Minimum="1" Maximum="100" Width="200"/>
+            </StackPanel>
+        </StackPanel>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="financialChart.FontSize" Value="12"/>
+                        <Setter Target="optionsPanel.Orientation" Value="Vertical" />
+                        <Setter Target="tbMovingAverageType.FontSize" Value="12" />
+                        <Setter Target="tbPeriod.FontSize" Value="12" />
+                        <Setter Target="tbPeriod.Margin" Value="10 0" />
+                        <Setter Target="cbPeriod.FontSize" Value="12" />
+                        <Setter Target="cbMovingAverageType.FontSize" Value="12" />
+                        <Setter Target="cbMovingAverageType.Width" Value="160" />
+                        <Setter Target="cbPeriod.Width" Value="160" />
+                        <Setter Target="spPeriod.Margin" Value="82 0 0 0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="420" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

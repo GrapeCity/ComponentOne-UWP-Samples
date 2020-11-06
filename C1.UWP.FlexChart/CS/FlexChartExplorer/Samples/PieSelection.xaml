@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="FlexChartExplorer.PieSelection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChartExplorer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <DataTemplate x:Key="cbItemPositionTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding SelectedItemPosition_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbItemOffsetTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding SelectedItemOffset_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" x:Name="panel">
+            <ComboBox x:Name="cbItemPosition"
+                      ItemsSource="{Binding DataContext.Positions}"
+                      ItemTemplate="{StaticResource cbItemPositionTemplate}"
+                      Margin="5"
+                      Width="250"
+                      SelectedValue="{Binding ElementName=pieChart, Path=SelectedItemPosition, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=Position}">
+            </ComboBox>
+            <ComboBox x:Name="cbItemOffset"
+                      Width="210"
+                      Margin="5"
+                      ItemsSource="{Binding DataContext.Offsets}"
+                      ItemTemplate="{StaticResource cbItemOffsetTemplate}"
+                      SelectedValue="{Binding ElementName=pieChart, Path=SelectedItemOffset, Mode=TwoWay}">
+            </ComboBox>
+        </StackPanel>
+        <Chart:C1FlexPie x:Name="pieChart" Binding="April" Grid.Row="1" BindingName="Fruit" ItemsSource="{Binding DataContext.Data}" SelectionMode="Point">
+            <Chart:C1FlexPie.DataLabel>
+                <Chart:PieDataLabel Content="{}{y}"></Chart:PieDataLabel>
+            </Chart:C1FlexPie.DataLabel>
+            <Chart:C1FlexPie.SelectionStyle>
+                <Chart:ChartStyle Stroke="Red"></Chart:ChartStyle>
+            </Chart:C1FlexPie.SelectionStyle>
+        </Chart:C1FlexPie>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pieChart.LegendPosition" Value="Bottom" />
+                        <Setter Target="panel.Orientation" Value="Vertical" />
+                        <Setter Target="cbItemOffset.Width" Value="250" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

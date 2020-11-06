@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="FlexChartExplorer.TreeMap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    xmlns:local="using:FlexChartExplorer"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    x:Name="page"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <Style TargetType="ComboBox">
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <DataTemplate x:Key="cbChartTypeTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Charttype_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbPaletteTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Palette_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbMaxDepthTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding MaxDepth_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbMaxWidthTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding LegendMaxWidth_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding Name}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+
+            <ComboBox Width="210" x:Name="cbChartType" 
+                      ItemsSource="{Binding DataContext.ChartTypes}" 
+                      ItemTemplate="{StaticResource cbChartTypeTemplate}"
+                      SelectedValue="{Binding ElementName=treeMap, Path=ChartType, ConverterParameter=TreeMapType, Mode=TwoWay, Converter={StaticResource enumConverter}}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbPalette" 
+                      ItemsSource="{Binding DataContext.Palettes}" 
+                      ItemTemplate="{StaticResource cbPaletteTemplate}"
+                      SelectedValue="{Binding ElementName=treeMap, Path=Palette, ConverterParameter=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbMaxDepth" 
+                      ItemsSource="{Binding DataContext.MaxDepths}" 
+                      ItemTemplate="{StaticResource cbMaxDepthTemplate}"
+                      SelectedValue="{Binding ElementName=treeMap, Path=MaxDepth, ConverterParameter=TextWrapping, Mode=TwoWay}">
+            </ComboBox>
+            <CheckBox Width="200" Margin="10" x:Name="cbLabels" Content="{Binding Labels_Text, Source={StaticResource FlexChartExplorerLocalization}}"
+                      IsChecked="True" Checked="cbLabels_Checked" Unchecked="cbLabels_Checked">
+            </CheckBox>
+        </StackPanel>
+
+        <Chart:C1TreeMap x:Name="treeMap" Grid.Row="1" Binding="sales" BindingName="type" MaxDepth="2" ChildItemsPath="items"
+                         ItemsSource="{Binding DataContext.Data}">
+            <Chart:C1TreeMap.DataLabel>
+                <Chart:DataLabel Content="{}{type}" Position="Center">
+                    <Chart:DataLabel.Style>
+                        <Chart:ChartStyle FontSize="10" />
+                    </Chart:DataLabel.Style>
+                </Chart:DataLabel>
+            </Chart:C1TreeMap.DataLabel>
+        </Chart:C1TreeMap>
+
+    </Grid>
+</Page>

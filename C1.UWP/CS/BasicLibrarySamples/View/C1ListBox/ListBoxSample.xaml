@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.ListBoxSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+    <Grid>
+        <StackPanel x:Name="loading" VerticalAlignment="Center">
+            <TextBlock Text="{Binding ListBoxSample_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextAlignment="Center"/>
+            <c1:C1ProgressBar IsIndeterminate="True" IndeterminateForeground="#FF2C383D" Height="4"/>
+        </StackPanel>
+        <Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding ListBoxSample_Button_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" Visibility="Collapsed" Click="Retry_Click" />
+        <c1:C1ListBox x:Name="listBox" 
+                      Background="Transparent"
+                      Foreground="White"
+                      SelectedBackground="#FF0AC2FF"
+                      Visibility="Collapsed"
+                      ItemWidth="300"
+                      ItemHeight="240"
+                      Orientation="Horizontal"
+                      ZoomMode="Enabled"
+                      ViewportGap="0"
+                      ViewportPreviewGap="0"
+                      RefreshWhileScrolling="False"
+                      ItemTapped="listBox_ItemTapped"
+                      HorizontalContentAlignment="Stretch"
+                      VerticalContentAlignment="Stretch">
+            <c1:C1ListBox.PreviewItemTemplate>
+                <DataTemplate>
+                    <Grid Background="LightSkyBlue">
+                        <Image Source="{Binding Thumbnail}" Stretch="UniformToFill"/>
+                    </Grid>
+                </DataTemplate>
+            </c1:C1ListBox.PreviewItemTemplate>
+            <c1:C1ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="LightSkyBlue">
+                        <Image Source="{Binding Content}" Stretch="UniformToFill"/>
+                        <TextBlock Text="{Binding Title}" Margin="4 0 0 4" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </DataTemplate>
+            </c1:C1ListBox.ItemTemplate>
+        </c1:C1ListBox>
+    </Grid>
+</Page>

@@ -1,0 +1,64 @@
+﻿<Page x:Class="FlexRadarIntro.RadarChart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Chart="using:C1.Xaml.Chart"
+      xmlns:Xaml="using:C1.Xaml"
+      xmlns:local="using:FlexRadarIntro"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <Style TargetType="RepeatButton">
+                <Setter Property="MinWidth" Value="20" />
+                <Setter Property="Width" Value="20" />
+            </Style>
+        </Grid.Resources>
+        <Grid.DataContext>
+            <local:FlexRadarViewModel />
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel.Resources>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Margin" Value="5 0" />
+                    <Setter Property="Width" Value="85" />
+                    <Setter Property="FontSize" Value="10" />
+                </Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="FontSize" Value="10" />
+                </Style>
+            </StackPanel.Resources>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="cbChartType" Header="{Binding Source={StaticResource FlexRadarIntroLocalization}, Path=ChartType}" ItemsSource="{Binding ChartTypes}" SelectedValue="{Binding ElementName=radarChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource enumConverter}}" />
+                <ComboBox x:Name="cbStacking" Header="{Binding Source={StaticResource FlexRadarIntroLocalization}, Path=Stacking}" ItemsSource="{Binding Stackings}" SelectedValue="{Binding ElementName=radarChart, Path=Stacking, Mode=TwoWay, Converter={StaticResource enumConverter}}" />
+                <ComboBox x:Name="cbPalette" Header="{Binding Source={StaticResource FlexRadarIntroLocalization}, Path=Palette}" ItemsSource="{Binding Palettes}" SelectedValue="{Binding ElementName=radarChart, Path=Palette, Mode=TwoWay, Converter={StaticResource enumConverter}}" />
+            </StackPanel>
+            <TextBlock Text="{Binding Source={StaticResource FlexRadarIntroLocalization}, Path=StartAngle}" Margin="5" />
+            <StackPanel Orientation="Horizontal">
+                <Xaml:C1NumericBox x:Name="nbStartingAngle" Minimum="0" Maximum="360" Increment="15" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Width="200" Margin="5 0 0 0" Value="{Binding ElementName=radarChart, Path=StartAngle, Mode=TwoWay}" FontSize="10">
+                    <Xaml:C1NumericBox.RenderTransform>
+                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                    </Xaml:C1NumericBox.RenderTransform>
+                </Xaml:C1NumericBox>
+                <CheckBox Content="{Binding Source={StaticResource FlexRadarIntroLocalization}, Path=Reversed}" Margin="-20 0" FontSize="10" VerticalContentAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding ElementName=radarChart, Path=Reversed, Mode=TwoWay}" />
+            </StackPanel>
+        </StackPanel>
+        <Chart:C1FlexRadar x:Name="radarChart" LegendPosition="Bottom" Grid.Row="1" Binding="Value" BindingX="Name" ItemsSource="{Binding Points1}">
+            <Chart:Series SeriesName="s1" />
+            <Chart:Series SeriesName="s2" ItemsSource="{Binding Points2}" />
+            <Chart:C1FlexRadar.AxisY>
+                <Chart:Axis AxisLine="True" MajorTickMarks="Cross" Min="0" MajorGrid="True" />
+            </Chart:C1FlexRadar.AxisY>
+            <Chart:C1FlexRadar.DataLabel>
+                <Chart:DataLabel Content="{}{Value}" />
+            </Chart:C1FlexRadar.DataLabel>
+        </Chart:C1FlexRadar>
+    </Grid>
+</Page>

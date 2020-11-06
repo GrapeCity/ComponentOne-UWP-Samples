@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.DragDrop"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:C1="using:C1.Xaml"
+    xmlns:src="using:BasicLibrarySamples"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="TextIconStyle">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Segoe UI Symbol" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="Foreground" Value="{ThemeResource AppBarItemForegroundThemeBrush}" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="5 -2"/>
+        </Style>
+        <src:DragDropCustomTemplateSelector x:Key="CustomTemplateSelector">
+            <src:DragDropCustomTemplateSelector.Resources>
+                <ResourceDictionary>
+                    <C1:C1HierarchicalDataTemplate x:Key="DepartmentTemplate" ItemsSource="{Binding Employees}">
+                        <C1:C1HierarchicalDataTemplate.Template>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="" Style="{StaticResource TextIconStyle}" />
+                                    <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="4 0 4 0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </C1:C1HierarchicalDataTemplate.Template>
+                    </C1:C1HierarchicalDataTemplate>
+                    <DataTemplate x:Key="MaleEmployeeTemplate">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="" Style="{StaticResource TextIconStyle}" />
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="4 0 4 0" />
+                        </StackPanel>
+                    </DataTemplate>
+                    <DataTemplate x:Key="FemaleEmployeeTemplate">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="" Style="{StaticResource TextIconStyle}" />
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="4 0 4 0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </src:DragDropCustomTemplateSelector.Resources>
+        </src:DragDropCustomTemplateSelector>
+
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Margin="0 0 0 10" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Text="{Binding DragDropTreeView_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Margin="0 0 5 0" VerticalAlignment="Center"/>
+                <RadioButton x:Name="Move" Content="{Binding DragDropTreeView_RadioButton_1_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" IsChecked="True" GroupName="DragDropEffect" Checked="OnButtonChecked" Grid.Column="1" Margin="0,0,5,0" />
+                <RadioButton x:Name="Copy" Content="{Binding DragDropTreeView_RadioButton_2_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" GroupName="DragDropEffect" Checked="OnButtonChecked" Grid.Row="1" Grid.Column="2" Margin="0" />
+            </StackPanel>
+        </Border>
+        <C1:C1TreeView x:Name="SampleTreeView" Grid.Row="1" Grid.ColumnSpan="2" ItemTemplateSelector="{StaticResource CustomTemplateSelector}" Padding="10" />
+    </Grid>
+</Page>

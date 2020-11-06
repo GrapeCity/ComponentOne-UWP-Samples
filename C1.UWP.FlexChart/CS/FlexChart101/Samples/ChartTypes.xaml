@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="FlexChart101.ChartTypes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChart101"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <local:ChartTypeConverter ChartTypes="{Binding DataContext.Types}" x:Key="chartTypeConverter" />
+            <Style TargetType="ComboBox">
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <DataTemplate x:Key="cbChartTypeTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding TxtCharttype, Source={StaticResource FlexChart101Localization}}"/>
+                        <Run Text="{Binding Value}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbStackedTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding TxtStacking, Source={StaticResource FlexChart101Localization}}"/>
+                        <Run Text="{Binding}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="cbsPanel" Orientation="Horizontal">
+            <ComboBox Width="210" Margin="5" x:Name="cbChartType" 
+                      ItemsSource="{Binding DataContext.Types}" 
+                      ItemTemplate="{StaticResource cbChartTypeTemplate}"
+                      SelectedIndex="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource chartTypeConverter}}">
+            </ComboBox>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox Width="210" Margin="5" x:Name="cbStacked" 
+                      ItemsSource="{Binding DataContext.Stackings}" 
+                      ItemTemplate="{StaticResource cbStackedTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=Stacking, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=Stacking}">
+                </ComboBox>
+                <CheckBox x:Name="cbRotate" Content="{Binding CbRotate, Source={StaticResource FlexChart101Localization}}"
+                      IsChecked="{Binding ElementName=flexChart, Path=Rotated, Mode=TwoWay}">
+                </CheckBox>
+            </StackPanel>
+        </StackPanel>
+        <Chart:C1FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Fruit" Grid.Row="1">
+            <Chart:Series SeriesName="March" Binding="March"/>
+            <Chart:Series SeriesName="April" Binding="April"/>
+            <Chart:Series SeriesName="May" Binding="May"/>
+        </Chart:C1FlexChart>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="flexChart.LegendPosition" Value="Bottom" />
+                        <Setter Target="cbsPanel.Orientation" Value="Vertical" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

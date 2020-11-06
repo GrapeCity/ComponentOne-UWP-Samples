@@ -1,0 +1,93 @@
+﻿<Application
+    x:Class="InputSamples.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InputSamples">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0BA;</x:String>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <x:String x:Key="BackButtonGlyph">&#xE0A6;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0C4;</x:String>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <!-- Application-specific resources -->
+            <local:Strings x:Key="InputSamplesLocalization" />
+
+            <!--***************** CONTROL ICONS *****************-->
+
+            <SolidColorBrush x:Key="IconBrush" Color="White"/>
+
+            <SolidColorBrush x:Key="IconGrayBackground" Color="#FF777777"/>
+            <!-- Page layout roots typically use entrance animations and a theme-appropriate background color -->
+
+            <Style x:Key="LayoutRootStyle" TargetType="Panel">
+                <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+                <Setter Property="ChildrenTransitions">
+                    <Setter.Value>
+                        <TransitionCollection>
+                            <EntranceThemeTransition/>
+                        </TransitionCollection>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="IconName" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource IconBrush}"/>
+                <!-- <Setter Property="FontSize" Value="12"/>-->
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Margin" Value="-5,0,-5,1"/>
+            </Style>
+
+            <DataTemplate x:Key="IconC1Gray">
+                <Grid Background="{StaticResource IconGrayBackground}" Height="60" Width="60">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding}" Style="{StaticResource IconName}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard250x250ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="150" Height="150">
+                    <Border Background="#FF2C383D">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 40"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Height="34">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe WP" FontSize="17" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard80ItemTemplate">
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Title}" Style="{ThemeResource BodyTextBlockStyle}" MaxHeight="40"/>
+                        <TextBlock Text="{Binding Description}" Style="{ThemeResource CaptionTextBlockStyle}" TextWrapping="WrapWholeWords"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Name="IconC1MultiSelect">
+                <Path Data="M81.834,58.25h25v4h-25V58.25z M117,19H33c-2.761,0-5,2.239-5,5v18.25c0,2.761,2.239,5,5,5h20.126v60.604	c0,2.763,2.238,5,5,5h54.998c2.762,0,5-2.237,5-5V47.112C120.342,46.6,122,44.623,122,42.25V24C122,21.239,119.762,19,117,19z	 M90.084,23.048L115,23.042c1.657,0,3,1.343,3,3v14.167c0,1.657-1.343,3-3,3l-24.916,0.006V23.048z M32.021,40.229V26.063	c0-1.657,1.343-3,3-3l51.063-0.014v20.167L35.021,43.23C33.364,43.229,32.021,41.886,32.021,40.229z M111.124,108.813l-50.978,0.021	c-1.657,0-3-1.344-3-3V47.25h56.978v58.563C114.124,107.469,112.779,108.813,111.124,108.813z M104.168,38.75l6.999-9.333h-14	L104.168,38.75z M73.795,54.167h-7.592c-1.217,0-2.204,0.986-2.204,2.204v7.592c0,1.217,0.986,2.204,2.204,2.204h7.592	c1.218,0,2.205-0.986,2.205-2.204v-7.592C76,55.153,75.013,54.167,73.795,54.167z M73,62.38c0,0.435-0.352,0.787-0.787,0.787h-4.427	c-0.435,0-0.786-0.353-0.786-0.787v-4.427c0-0.434,0.352-0.786,0.786-0.786h4.427c0.436,0,0.787,0.353,0.787,0.786V62.38z	 M81.834,76.375h25v4h-25V76.375z M73.795,72.292h-7.592c-1.217,0-2.204,0.986-2.204,2.204v7.592c0,1.217,0.986,2.203,2.204,2.203	h7.592c1.218,0,2.205-0.986,2.205-2.203v-7.592C76,73.278,75.013,72.292,73.795,72.292z M73,80.505c0,0.435-0.352,0.787-0.787,0.787	h-4.427c-0.435,0-0.786-0.353-0.786-0.787v-4.427c0-0.434,0.352-0.786,0.786-0.786h4.427c0.436,0,0.787,0.353,0.787,0.786V80.505z	 M81.834,94.5h25v4h-25V94.5z M73.795,90.417h-7.592c-1.217,0-2.204,0.985-2.204,2.204v7.592c0,1.217,0.986,2.203,2.204,2.203h7.592	c1.218,0,2.205-0.986,2.205-2.203v-7.592C76,91.402,75.013,90.417,73.795,90.417z M73,98.63c0,0.435-0.352,0.787-0.787,0.787h-4.427	c-0.435,0-0.786-0.353-0.786-0.787v-4.427c0-0.434,0.352-0.786,0.786-0.786h4.427c0.436,0,0.787,0.353,0.787,0.786V98.63z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+            <DataTemplate x:Name="IconC1CheckList">
+                <Path Data="M61.584,38.75h42.75v4h-42.75V38.75z M55.75,36.871v7.592c0,1.219-0.986,2.204-2.205,2.204h-7.592	c-1.219,0-2.204-0.987-2.204-2.204v-7.592c0-1.219,0.987-2.204,2.204-2.204h7.592C54.764,34.667,55.75,35.652,55.75,36.871z	 M52.75,38.453c0-0.433-0.351-0.786-0.787-0.786h-4.427c-0.434,0-0.786,0.352-0.786,0.786v4.427c0,0.434,0.351,0.787,0.786,0.787	h4.427c0.435,0,0.787-0.352,0.787-0.787V38.453z M61.584,60.875h42.75v-4h-42.75V60.875z M55.75,54.996v7.592	c0,1.217-0.986,2.203-2.205,2.203h-7.592c-1.219,0-2.204-0.986-2.204-2.203v-7.592c0-1.219,0.987-2.204,2.204-2.204h7.592	C54.764,52.792,55.75,53.777,55.75,54.996z M52.75,56.578c0-0.433-0.351-0.786-0.787-0.786h-4.427c-0.434,0-0.786,0.352-0.786,0.786	v4.427c0,0.434,0.351,0.787,0.786,0.787h4.427c0.435,0,0.787-0.352,0.787-0.787V56.578z M61.584,79h42.75v-4h-42.75V79z	 M55.75,73.121v7.592c0,1.217-0.986,2.203-2.205,2.203h-7.592c-1.219,0-2.204-0.986-2.204-2.203v-7.592	c0-1.219,0.987-2.204,2.204-2.204h7.592C54.764,70.917,55.75,71.902,55.75,73.121z M52.75,74.703c0-0.433-0.351-0.786-0.787-0.786	h-4.427c-0.434,0-0.786,0.352-0.786,0.786v4.427c0,0.435,0.351,0.787,0.786,0.787h4.427c0.435,0,0.787-0.353,0.787-0.787V74.703z	 M122,26.833v78.334c0,4.324-3.508,7.832-7.834,7.832H35.832c-4.324,0-7.832-3.508-7.832-7.832V26.833	C28,22.508,31.508,19,35.832,19h78.334C118.492,19,122,22.507,122,26.833z M114.125,99.635V30.526c0-3.331-0.9-3.652-4.229-3.652	H40.781c-3.326,0-4.906-0.679-4.906,2.652v71.11c0,3.332,0.58,4.488,3.906,4.488h71.115	C114.225,105.124,114.125,102.968,114.125,99.635z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+            <DataTemplate x:Name="IconC1TagEditor">
+                <Path Data="M114.166,19H35.832C31.508,19,28,22.508,28,26.833v78.334c0,4.324,3.508,7.832,7.832,7.832h78.334	c4.326,0,7.834-3.508,7.834-7.832V26.833C122,22.507,118.492,19,114.166,19z M110.896,105.124H39.781	c-3.326,0-3.906-1.156-3.906-4.488v-71.11c0-3.331,1.58-2.652,4.906-2.652h69.115c3.328,0,4.229,0.321,4.229,3.652v69.109	C114.125,102.968,114.225,105.124,110.896,105.124z M104.75,35.25H91.012c-1.525,0-2.762,1.237-2.762,2.762v13.809	c0,1.525,1.236,2.762,2.762,2.762h13.738c1.523,0,2.762-1.237,2.762-2.762V38.012C107.512,36.487,106.273,35.25,104.75,35.25z	 M102.634,48.358l-1.312,1.311l-3.441-3.442l-3.441,3.442l-1.312-1.311l3.44-3.442l-3.44-3.442l1.312-1.311l3.441,3.442l3.441-3.442	l1.312,1.311l-3.44,3.442L102.634,48.358z M53.973,43.557h-1.658l-0.269,2.791h1.639L53.973,43.557z M44.762,54.583h33.142	c1.525,0,2.763-1.237,2.763-2.762V38.012c-0.001-1.525-1.237-2.762-2.763-2.762H44.762c-1.525,0-2.762,1.237-2.762,2.762v13.809	C42,53.346,43.237,54.583,44.762,54.583z M66.497,41.474l1.312-1.311l3.441,3.442l3.441-3.442l1.312,1.311l-3.441,3.442l3.441,3.442	l-1.312,1.311l-3.441-3.442l-3.441,3.442l-1.312-1.311l3.441-3.442L66.497,41.474z M48.265,46.348h1.765l0.27-2.791h-1.512v-1.944	h1.764l0.307-2.898h2.017l-0.324,2.898h1.675l0.306-2.898h2.053l-0.306,2.898h1.314v1.944h-0.002h-1.549l-0.288,2.791h1.314v1.963	H55.52l-0.288,2.809H53.18l0.271-2.809h-1.656l-0.288,2.809H49.49l0.288-2.809h-1.513V46.348z M52.046,72.242h1.639l0.288-2.791	h-1.658L52.046,72.242z M66.697,72.242h1.639l0.288-2.791h-1.657L66.697,72.242z M95.5,61.144H44.762	c-1.525,0-2.762,1.237-2.762,2.762v13.81c0,1.525,1.237,2.763,2.762,2.763H95.5c1.523,0,2.762-1.235,2.762-2.763v-13.81	C98.262,62.38,97.023,61.144,95.5,61.144z M57.594,69.451h-0.002h-1.549l-0.288,2.791h1.314v1.963H55.52l-0.288,2.809H53.18	l0.271-2.809h-1.656l-0.288,2.809H49.49l0.288-2.809h-1.513v-1.963h1.765l0.27-2.791h-1.512v-1.944h1.764l0.307-2.899h2.017	l-0.324,2.899h1.675l0.306-2.899h2.053l-0.306,2.899h1.314V69.451z M72.243,69.451L72.243,69.451h-1.549l-0.288,2.791h1.314v1.963	h-1.549l-0.288,2.809H67.83l0.271-2.809h-1.656l-0.288,2.809H64.14l0.288-2.809h-1.513v-1.963h1.765l0.27-2.791h-1.512v-1.944h1.764	l0.307-2.899h2.017l-0.324,2.899h1.675l0.306-2.899h2.053l-0.306,2.899h1.313V69.451L72.243,69.451z M92.503,74.252l-1.312,1.313	l-3.441-3.441l-3.441,3.441l-1.312-1.313l3.44-3.442l-3.44-3.442l1.312-1.311l3.441,3.442l3.441-3.442l1.312,1.311l-3.44,3.442	L92.503,74.252z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,52 @@
+﻿<Page x:Class="FlexGridSamples.RowDetails"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:FlexGridSamples"
+      xmlns:c1="using:C1.Xaml"
+      xmlns:flex="using:C1.Xaml.FlexGrid"
+      xmlns:inputPanel="using:C1.Xaml.InputPanel">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <flex:C1FlexGrid x:Name="_flex" >
+            <flex:C1FlexGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <inputPanel:C1InputPanel CurrentItem="{Binding}" HorizontalAlignment="Left" >
+                        <inputPanel:C1InputPanel.ItemsPanelTemplate>
+                            <ItemsPanelTemplate>
+                                <c1:C1UniformGrid Columns="2"/>
+                            </ItemsPanelTemplate>
+                        </inputPanel:C1InputPanel.ItemsPanelTemplate>
+                    </inputPanel:C1InputPanel>
+                </DataTemplate>
+            </flex:C1FlexGrid.RowDetailsTemplate>
+        </flex:C1FlexGrid>
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="_flex.RowDetailsTemplate" >
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <inputPanel:C1InputPanel CurrentItem="{Binding}" HorizontalAlignment="Left" />
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

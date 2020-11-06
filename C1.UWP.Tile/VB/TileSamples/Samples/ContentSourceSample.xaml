@@ -1,0 +1,114 @@
+﻿<Page
+    x:Name="pageRoot" Loaded="OnLoaded"
+    x:Class="TileSamples.ContentSourceSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:c1tile="using:C1.Xaml.Tile"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <Style TargetType="c1tile:C1SlideTile">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="HeaderPadding" Value="5"/>
+            <Setter Property="HeaderBackground" Value="#88000000"/>
+            <Setter Property="HeaderForeground" Value="White"/>
+            <Setter Property="HeaderFontSize" Value="20"/>
+            <Setter Property="HorizontalHeaderAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Height" Value="240"/>
+            <Setter Property="Width" Value="240"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="c1tile:C1TileService.PointerDownAnimation" Value="True"/>
+            <Setter Property="ContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Margin="0"/>
+                            <Border Background="#88FFFFFF" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding Author}" Foreground="Black" FontSize="12" FontWeight="Bold" VerticalAlignment="Top" Margin="10 4"/>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18"
+                Content="{Binding Source={StaticResource TileSamplesLocalization}, Path=Retry_Content}" Grid.Row="0" Click="OnLoaded" Visibility="Collapsed"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" x:Name="sv" Grid.Row="1" Visibility="Collapsed">
+            <c1:C1WrapPanel x:Name="tilePanel">
+                <c1tile:C1SlideTile x:Name="nature" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Nature_Header}" />
+                <c1tile:C1SlideTile x:Name="people" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=People_Header}" />
+                <c1tile:C1SlideTile x:Name="travel" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Travel_Header}" />
+                <c1tile:C1SlideTile x:Name="night" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Night_Header}" />
+                <c1tile:C1SlideTile x:Name="traffic" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Traffic_Header}" />
+                <c1tile:C1SlideTile x:Name="arch" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Arch_Header}" />
+                <c1tile:C1SlideTile x:Name="animals" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Animals_Header}" />
+                <c1tile:C1SlideTile x:Name="cars" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Cars_Header}" />
+                <c1tile:C1SlideTile x:Name="family" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Family_Header}" />
+                <c1tile:C1SlideTile x:Name="summer" Header="{Binding Source={StaticResource TileSamplesLocalization}, Path=Summer_Header}" />
+            </c1:C1WrapPanel>
+        </ScrollViewer>
+        <Grid x:Name="loading" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding Source={StaticResource TileSamplesLocalization}, Path=FlickrData_Text}" FontSize="20" TextAlignment="Center"/>
+                <c1:C1ProgressBar IsIndeterminate="True" IndeterminateForeground="#FF2C383D" Height="4"/>
+            </StackPanel>
+        </Grid>
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="travel.Width" Value="484"/>
+                        <Setter Target="arch.Width" Value="484"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="nature.Width" Value="150"/>
+                        <Setter Target="people.Width" Value="150"/>
+                        <Setter Target="travel.Width" Value="304"/>
+                        <Setter Target="arch.Width" Value="304"/>
+                        <Setter Target="night.Width" Value="150"/>
+                        <Setter Target="traffic.Width" Value="150"/>
+                        <Setter Target="animals.Width" Value="150"/>
+                        <Setter Target="cars.Width" Value="150"/>
+                        <Setter Target="family.Width" Value="150"/>
+                        <Setter Target="summer.Width" Value="150"/>
+                        <Setter Target="nature.Height" Value="150"/>
+                        <Setter Target="people.Height" Value="150"/>
+                        <Setter Target="travel.Height" Value="150"/>
+                        <Setter Target="arch.Height" Value="150"/>
+                        <Setter Target="night.Height" Value="150"/>
+                        <Setter Target="traffic.Height" Value="150"/>
+                        <Setter Target="animals.Height" Value="150"/>
+                        <Setter Target="cars.Height" Value="150"/>
+                        <Setter Target="family.Height" Value="150"/>
+                        <Setter Target="summer.Height" Value="150"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

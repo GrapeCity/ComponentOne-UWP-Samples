@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="SalesDashboard2015.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SalesDashboard2015"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:SalesDashboard2015.DataModel"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+    <Page.Resources>
+        <data:SampleDataSource x:Key="dataSource"/>
+    </Page.Resources>
+    <Page.DataContext>
+        <Binding Source="{StaticResource dataSource}"/>
+    </Page.DataContext>
+    <Grid>
+        <Image x:Name="bgImage" Source="Assets/wood_bg.png" Stretch="Fill">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="transform" Angle="0" />
+            </Image.RenderTransform>
+        </Image>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="80 0 0 0">
+                <TextBlock x:Name="pageTitle" Text="{Binding AppName_Text,Source={StaticResource SalesDashboardLocalization}}" IsHitTestVisible="False" Style="{StaticResource PageHeaderTextStyle}" />
+            </Grid>
+            <FlipView Grid.Row="1">
+                <FlipViewItem>
+                    <Grid x:Name="FristFrame" Margin="80 0 40 46">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <local:QuarterlySales Margin="0" Padding="5" />
+                        <local:TotalSales Grid.Row="1" Margin="0 20 0 0" Padding="5"/>
+                        <local:SalesByType x:Name="salesByType" Grid.Column="1" Grid.RowSpan="2" Margin="20 0 0 0" Padding="5"/>
+                    </Grid>
+                </FlipViewItem>
+                <FlipViewItem>
+                    <Grid x:Name="LastFrame" Margin="80 0 40 46">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <local:SalesByRegion Margin="0" Padding="5" />
+                        <local:SalesByPartner Grid.Row="1" Margin="0 20 0 0" Padding="5"/>
+                        <local:SalesByCategory x:Name="salesByCategory" Grid.Column="1" Grid.RowSpan="2" Margin="20 0 0 0" Padding="5"/>
+                    </Grid>
+                </FlipViewItem>
+            </FlipView>
+        </Grid>
+    </Grid>
+</Page>

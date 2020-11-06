@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexChartEditableAnnotations", "FlexChartEditableAnnotations\FlexChartEditableAnnotations.csproj", "{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|ARM = GCRelease|ARM
+		GCRelease|x64 = GCRelease|x64
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|Any CPU.Build.0 = Debug|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|ARM.ActiveCfg = Debug|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|ARM.Build.0 = Debug|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|ARM.Deploy.0 = Debug|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|x64.ActiveCfg = Debug|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|x64.Build.0 = Debug|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|x64.Deploy.0 = Debug|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|x86.ActiveCfg = Debug|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|x86.Build.0 = Debug|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Debug|x86.Deploy.0 = Debug|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|Any CPU.ActiveCfg = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|Any CPU.Build.0 = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|Any CPU.Deploy.0 = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|ARM.ActiveCfg = Release|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|ARM.Build.0 = Release|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|ARM.Deploy.0 = Release|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|x64.ActiveCfg = Release|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|x64.Build.0 = Release|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|x64.Deploy.0 = Release|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|x86.ActiveCfg = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|x86.Build.0 = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.GCRelease|x86.Deploy.0 = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|Any CPU.ActiveCfg = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|ARM.ActiveCfg = Release|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|ARM.Build.0 = Release|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|ARM.Deploy.0 = Release|ARM
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|x64.ActiveCfg = Release|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|x64.Build.0 = Release|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|x64.Deploy.0 = Release|x64
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|x86.ActiveCfg = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|x86.Build.0 = Release|x86
+		{8111538A-D4EE-4E66-80A1-9AC4A8EEB96B}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23DF4112-1036-41F3-9A13-878207F0CEE1}
+	EndGlobalSection
+EndGlobal

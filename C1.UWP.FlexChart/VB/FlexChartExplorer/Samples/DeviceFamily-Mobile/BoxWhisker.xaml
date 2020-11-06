@@ -1,0 +1,62 @@
+﻿<Page x:Class="FlexChartExplorer.BoxWhisker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="using:FlexChartExplorer"
+             xmlns:Chart="using:C1.Xaml.Chart"
+             DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+             Loaded="Page_Loaded"
+             mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <DataTemplate x:Key="cboQuartileCalculationTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding QuartileCalculation_Text, Source={StaticResource FlexChartExplorerLocalization}}"/>
+                        <Run Text="{Binding}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0">
+            <ComboBox ItemsSource="{Binding DataContext.Calculations}"
+                  Margin="5"
+                  FontSize="12"
+                  HorizontalAlignment="Stretch"
+                  x:Name="cboQuartileCalculation"    
+                  ItemTemplate="{StaticResource cboQuartileCalculationTemplate}"
+                  SelectionChanged="cboQuartileCalculation_SelectionChanged">
+            </ComboBox>
+        </StackPanel>
+        <CheckBox Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanLine" Content="{Binding Source={StaticResource FlexChartExplorerLocalization},Path=ShowMeanLine}" Unchecked="CheckedChanged" Checked="CheckedChanged"></CheckBox>
+        <CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowMeanMarks" IsChecked="True" Content="{Binding Source={StaticResource FlexChartExplorerLocalization},Path=ShowMeanMarks}" Unchecked="CheckedChanged" Checked="CheckedChanged"></CheckBox>
+        <CheckBox Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowOutliers" IsChecked="True" Content="{Binding Source={StaticResource FlexChartExplorerLocalization},Path=ShowMeanMarks}" Unchecked="CheckedChanged" Checked="CheckedChanged"></CheckBox>
+        <CheckBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="5,0,0,0" x:Name="cbShowInnerPoints" Content="{Binding Source={StaticResource FlexChartExplorerLocalization},Path=ShowInnerPoints}" Unchecked="CheckedChanged" Checked="CheckedChanged"></CheckBox>
+        <CheckBox Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Margin="5,0,0,0" IsChecked="{Binding ElementName=flexChart,Path=Rotated,Mode=TwoWay}" Content="{Binding Source={StaticResource FlexChartExplorerLocalization},Path=Rotate_Content}"></CheckBox>
+        <Chart:C1FlexChart BindingX="ClassName" ItemsSource="{Binding DataContext.Data}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" x:Name="flexChart" ToolTipContent="{}{seriesName} - {name}&#x000A;Min: {Min}&#x000A;First Quartile: {FirstQuartile}&#x000A;Mean: {Mean}&#x000A;Median: {Median}&#x000A;Third Quartile: {ThirdQuartile}&#x000A;Max: {Max}">
+            <Chart:BoxWhisker Binding="SchoolA" 
+                              SeriesName="SchoolA"
+                              QuartileCalculation="{Binding DataContext.Calculation}"
+                              x:Name="boxWhiskerA" />
+            <Chart:BoxWhisker Binding="SchoolB" 
+                              SeriesName="SchoolB" 
+                              x:Name="boxWhiskerB"/>
+            <Chart:BoxWhisker Binding="SchoolC" 
+                              SeriesName="SchoolC" 
+                              x:Name="boxWhiskerC"/>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

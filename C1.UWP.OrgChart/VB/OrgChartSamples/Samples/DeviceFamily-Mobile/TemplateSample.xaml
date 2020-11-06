@@ -1,0 +1,89 @@
+﻿<Page x:Class="OrgChartSamples.TemplateSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="using:OrgChartSamples"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:orgchart="using:C1.Xaml.OrgChart"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+
+    <Page.Resources>
+        <!--  TemplateSelector: picks _tplDirector or _tlpOther  -->
+        <local:PersonTemplateSelector x:Key="_personTplSelector">
+            <local:PersonTemplateSelector.DirectorTemplate>
+                <!-- data template for Directors -->
+                <DataTemplate>
+                    <Border Background="#bfa554" Padding="10" Width="180" Height="100" ToolTipService.ToolTip="{Binding Notes}" RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <CompositeTransform SkewX="-10"/>
+                        </Border.RenderTransform>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Width="12" Height="12" Fill="#88bde6" Margin="4" />
+                                <TextBlock Text="{Binding Name}" FontWeight="SemiLight" FontSize="20" Foreground="Black" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding Position}" FontWeight="Light" Foreground="Black" FontSize="12" HorizontalAlignment="Right" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </local:PersonTemplateSelector.DirectorTemplate>
+            <local:PersonTemplateSelector.ManagerTemplate>
+                <!-- data template for managers -->
+                <DataTemplate>
+                    <Border Background="#fbb258" Padding="10" Width="180" Height="100" CornerRadius="0 20 0 0" ToolTipService.ToolTip="{Binding Notes}">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding Name}" FontWeight="SemiLight" FontSize="20" Foreground="Black"/>
+                            <TextBlock Text="{Binding Position}" FontWeight="Light" FontSize="12" HorizontalAlignment="Right" Foreground="Black" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </local:PersonTemplateSelector.ManagerTemplate>
+            <local:PersonTemplateSelector.DesignerTemplate>
+                <!-- data template for designers -->
+                <DataTemplate>
+                    <Border Background="#90cd97" Width="180" Height="100" CornerRadius="14" Padding="12" ToolTipService.ToolTip="{Binding Notes}">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Name}" FontWeight="SemiLight" FontSize="18" Foreground="Black" />
+                            <TextBlock Text="{Binding Position}" FontSize="12" FontStyle="Italic" HorizontalAlignment="Right" Foreground="Black" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </local:PersonTemplateSelector.DesignerTemplate>
+            <local:PersonTemplateSelector.OtherTemplate>
+                <!-- data template for everyone else -->
+                <DataTemplate>
+                    <Border Background="#f6aac9"  Width="180" Height="180" CornerRadius="90" Padding="5" ToolTipService.ToolTip="{Binding Notes}">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding Name}" FontWeight="SemiLight" FontFamily="Segoe WP" FontSize="18" Foreground="Black" />
+                            <TextBlock Text="{Binding Position}" FontWeight="Light" FontFamily="Segoe WP" FontSize="12" FontStyle="Italic" HorizontalAlignment="Right" Foreground="Black" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </local:PersonTemplateSelector.OtherTemplate>
+        </local:PersonTemplateSelector>
+
+    </Page.Resources>
+
+    <Grid>
+
+        <!--  org chart  -->
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      Padding="0"
+                      VerticalScrollBarVisibility="Auto">
+            <orgchart:C1OrgChart x:Name="c1OrgChart1"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 ChildSpacing="15, 15"
+                                 ConnectorStroke="{ThemeResource ApplicationForegroundThemeBrush}"
+                                 ConnectorThickness="2"
+                                 ItemTemplateSelector="{StaticResource _personTplSelector}"
+                                 Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                <orgchart:C1OrgChart.RenderTransform>
+                    <ScaleTransform ScaleX="0.6" ScaleY="0.6"/>
+                </orgchart:C1OrgChart.RenderTransform>
+            </orgchart:C1OrgChart>
+        </ScrollViewer>
+    </Grid>
+</Page>

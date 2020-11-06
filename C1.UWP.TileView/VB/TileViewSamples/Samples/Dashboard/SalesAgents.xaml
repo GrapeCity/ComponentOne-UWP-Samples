@@ -1,0 +1,115 @@
+﻿<UserControl
+    x:Class="TileViewSamples.SalesAgents"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" >
+
+    <UserControl.Resources>
+        <Style x:Key="LabelText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="0 5 0 0"/>
+        </Style>
+        <Style x:Key="DataImage" TargetType="Image">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="120"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" ManipulationMode="None">
+        <GridView>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid MaximumRowsOrColumns="2" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridViewItem Background="#11000000">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=SariyaName_Text}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" />
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=SariyaEmail_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=SariyaTel_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=SariyaCity_Text}" Style="{StaticResource LabelText}"/>
+                    </StackPanel>
+                    <Image Source="ms-appx:///TileViewSamplesLib/Assets/people/girl1.png" Stretch="Uniform"  Style="{StaticResource DataImage}" Margin="10"/>
+                </Grid>
+            </GridViewItem>
+            <GridViewItem Background="#11000000">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card2" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=RusselName_Text}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" />
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=RusselEmail_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=RusselTel_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=RusselCity_Text}" Style="{StaticResource LabelText}"/>
+                    </StackPanel>
+                    <Image Source="ms-appx:///TileViewSamplesLib/Assets/people/guy1.png" Stretch="Uniform" Style="{StaticResource DataImage}" Margin="10"/>
+                </Grid>
+            </GridViewItem>
+            <GridViewItem Background="#11000000">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card3" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=AnnName_Text}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" />
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=AnnEmail_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=AnnTel_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=AnnCity_Text}" Style="{StaticResource LabelText}"/>
+                    </StackPanel>
+                    <Image Source="ms-appx:///TileViewSamplesLib/Assets/people/girl2.png" Stretch="Uniform" Style="{StaticResource DataImage}" Margin="10"/>
+                </Grid>
+            </GridViewItem>
+            <GridViewItem Background="#11000000">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card4" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=ScottName_Text}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" />
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=ScottEmail_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=ScottTel_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=ScottCity_Text}" Style="{StaticResource LabelText}"/>
+                    </StackPanel>
+                    <Image Source="ms-appx:///TileViewSamplesLib/Assets/people/guy2.png" Stretch="Uniform" Style="{StaticResource DataImage}" Margin="10"/>
+                </Grid>
+            </GridViewItem>
+            <GridViewItem Background="#11000000">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card5" IsHitTestVisible="False" Height="140" Width="300" Margin="0,10,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="2" Margin="0,15,15,0">
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=FredName_Text}" TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight" VerticalAlignment="Top" />
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=FredEmail_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=FredTel_Text}" Style="{StaticResource LabelText}"/>
+                        <TextBlock Text="{Binding Source={StaticResource TileViewSamplesLocalization}, Path=FredCity_Text}" Style="{StaticResource LabelText}"/>
+                    </StackPanel>
+                    <Image Source="ms-appx:///TileViewSamplesLib/Assets/people/guy3.png" Stretch="Uniform" Style="{StaticResource DataImage}" Margin="10"/>
+                </Grid>
+            </GridViewItem>
+        </GridView>
+    </Grid>
+</UserControl>

@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="MapsSamples.CustomTileSource"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MapsSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml.Maps"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        <c1:C1Maps x:Name="OSMSource" Zoom="2" />
+        <HyperlinkButton x:Name="hyperlinkButton" NavigateUri="http://www.openstreetmap.org/copyright" Content="{Binding OpenStreetMapLink_Content, Source={StaticResource MapsSamplesLocalization}}" Background="#7FFFFFFF" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Background="DarkGray">
+            <AppBarButton x:Name="btnZoomIn" Icon="Add" Click="btnZoomIn_Click"/>
+            <AppBarButton x:Name="btnZoomOut" Icon="Remove" Click="btnZoomOut_Click"/>
+        </StackPanel>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="hyperlinkButton.FontSize" Value="12"></Setter>
+                        <Setter Target="btnZoomIn.Visibility" Value="Collapsed"></Setter>
+                        <Setter Target="btnZoomOut.Visibility" Value="Collapsed"></Setter>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540"></AdaptiveTrigger>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>BitmapSamples</value>
+  </data>
+  <data name="CropDescription" xml:space="preserve">
+    <value>Shows how to use C1Bitmap to crop an image.</value>
+  </data>
+  <data name="CropName" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="CropTitle" xml:space="preserve">
+    <value>Crop Image</value>
+  </data>
+  <data name="EmptySelectionMessage" xml:space="preserve">
+    <value>Can't export, selection is empty</value>
+  </data>
+  <data name="Export_Content" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportSelection_Content" xml:space="preserve">
+    <value>Export Selection</value>
+  </data>
+  <data name="FaceWarpDescription" xml:space="preserve">
+    <value>Shows how to use C1Bitmap and vertex shader to distort an image.</value>
+  </data>
+  <data name="FaceWarpName" xml:space="preserve">
+    <value>FaceWarp</value>
+  </data>
+  <data name="FaceWarpTitle" xml:space="preserve">
+    <value>Warp Image</value>
+  </data>
+  <data name="GifImageDescription" xml:space="preserve">
+    <value>Shows how to display an animated gif using BitmapImage (to animate gif files the project must target 10.0.14393.0 or later SDK version).</value>
+  </data>
+  <data name="GifImageName" xml:space="preserve">
+    <value>GifImage</value>
+  </data>
+  <data name="GifImageTitle" xml:space="preserve">
+    <value>Animated Image</value>
+  </data>
+  <data name="GifImagePlay" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="GifImageStop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="GifImageZoomIn" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="GifImageZoomOut" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="ImageFormatNotSupportedException" xml:space="preserve">
+    <value>Image format not supported, error: \n</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="Load_Content" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="LoadImage_Content" xml:space="preserve">
+    <value>Load Image</value>
+  </data>
+  <data name="MenuCropToSelection" xml:space="preserve">
+    <value>Crop to Selection</value>
+  </data>
+  <data name="MenuRotateCCW" xml:space="preserve">
+    <value>Rotate Counterclockwise</value>
+  </data>
+  <data name="MenuRotateCW" xml:space="preserve">
+    <value>Rotate Clockwise</value>
+  </data>
+  <data name="MenuFlipHorizontal" xml:space="preserve">
+    <value>Flip Horizontal</value>
+  </data>
+  <data name="MenuFlipVertical" xml:space="preserve">
+    <value>Flip Vertical</value>
+  </data>
+  <data name="MenuScaleIn" xml:space="preserve">
+    <value>Scale to 160%</value>
+  </data>
+  <data name="MenuScaleOut" xml:space="preserve">
+    <value>Scale to 62.5%</value>
+  </data>
+  <data name="Restart_Content" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="TransformButtonText" xml:space="preserve">
+    <value>Transform</value>
+  </data>
+  <data name="TransformDescription" xml:space="preserve">
+    <value>Allows various transformations of the bitmap image, such as cropping, scaling, rotation, and flipping.</value>
+  </data>
+  <data name="TransformName" xml:space="preserve">
+    <value>Transform</value>
+  </data>
+  <data name="TransformTitle" xml:space="preserve">
+    <value>Transform Image</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+</root>

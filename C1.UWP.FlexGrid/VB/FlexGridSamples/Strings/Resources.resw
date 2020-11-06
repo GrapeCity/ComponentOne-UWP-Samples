@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActualSize" xml:space="preserve">
+    <value>Actual Size</value>
+  </data>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>FlexGridSamples</value>
+  </data>
+  <data name="AutoUpdate_Content" xml:space="preserve">
+    <value>Auto Update</value>
+  </data>
+  <data name="BatchSize_Text" xml:space="preserve">
+    <value>Batch Size:</value>
+  </data>
+  <data name="CellInfo" xml:space="preserve">
+    <value>cell [{0},{1}]</value>
+  </data>
+  <data name="CellMergingDescription" xml:space="preserve">
+    <value>Merge adjacent cells by mouse/touch.</value>
+  </data>
+  <data name="CellMergingName" xml:space="preserve">
+    <value>Cell Merging</value>
+  </data>
+  <data name="CellMergingTitle" xml:space="preserve">
+    <value>Cell Merging</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>({0:0.0}%)</value>
+  </data>
+  <data name="CollectionViewDescription" xml:space="preserve">
+    <value>FlexGrid supports C1CollectionView to provide live sorting, filtering and grouping, the features absent in the native CollectionViewSource/ICollectionView implementation. Tap a column header once or twice to sort that column.</value>
+  </data>
+  <data name="CollectionViewName" xml:space="preserve">
+    <value>CollectionView</value>
+  </data>
+  <data name="CollectionViewTitle" xml:space="preserve">
+    <value>Sort, Filter, Group</value>
+  </data>
+  <data name="Color_Content" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Red|Green|Blue|White|Yellow|Orange|Black|Gray</value>
+  </data>
+  <data name="Companies_Text" xml:space="preserve">
+    <value>Companies</value>
+  </data>
+  <data name="CompaniesInfo" xml:space="preserve">
+    <value>{0:n0} companies.</value>
+  </data>
+  <data name="CountryList" xml:space="preserve">
+    <value>China|India|United States|Indonesia|Brazil|Pakistan|Bangladesh|Nigeria|Russia|Japan|Mexico|Philippines|Vietnam|Germany|Ethiopia|Egypt|Iran|Turkey|Congo|France|Thailand|United Kingdom|Italy|Myanmar</value>
+  </data>
+  <data name="CustomCells_Content" xml:space="preserve">
+    <value>Custom Cells</value>
+  </data>
+  <data name="CustomColumnsDescription" xml:space="preserve">
+    <value>The sample shows how you can combine custom columns with regular bound columns. All custom columns are implemented in XAML using the Column.CellTemplate property.</value>
+  </data>
+  <data name="CustomColumnsName" xml:space="preserve">
+    <value>CustomColumns</value>
+  </data>
+  <data name="CustomColumnsTitle" xml:space="preserve">
+    <value>Custom Columns</value>
+  </data>
+  <data name="CustomDuration.Header" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="CustomName.Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CustomRating.Header" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="CustomSize.Header" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="CVColor.Header" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="CVCost.Header" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="CVDiscontinued.Header" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+  <data name="CVLine.Header" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="CVPrice.Header" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="CVRating.Header" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="CVVolume.Header" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="CVWeight.Header" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="DragDropDescription" xml:space="preserve">
+    <value>The sample shows drag-drop rows and columns when FlexGrid is in unbound mode.Press and hold a row header/column header until it becomes selected. Then drag the row header/column header to the desired location.</value>
+  </data>
+  <data name="DragDropName" xml:space="preserve">
+    <value>Drag&amp;Drop</value>
+  </data>
+  <data name="DragDropTitle" xml:space="preserve">
+    <value>Drag-drop Rows and Columns</value>
+  </data>
+  <data name="Duration.Header" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="EditingDescription" xml:space="preserve">
+    <value>The C1FlexGrid control supports Excel-style editing. Just type values into cells and use the enter or arrow keys to move to the next one. Or press F2 and enter full-edit mode, where arrow keys navigate within the editor. Auto-complete and value-mapped columns are also built-in: simply create a ColumnValueConverter and assign it to the columns ValueConverter property and you're done. Transactioned edits are supported too. The Customer class used here implements IEditableObject, so you can undo changes by pressing the Escape key before you move to a new row. (Note: the gray columns are read-only). Note this feature is only supported by mouse and keyboard.</value>
+  </data>
+  <data name="EditingName" xml:space="preserve">
+    <value>Editing</value>
+  </data>
+  <data name="EditingTag" xml:space="preserve">
+    <value>The C1FlexGrid supports Excel-style editing. Just type values into cells and use the enter or arrow keys to move to the next one. Or press F2 and enter full-edit mode, where arrow keys navigate within the editor. Auto-complete and value-mapped columns are also built-in: simply create a ColumnValueConverter and assign it to the columns ValueConverter property and you're done. Transactioned edits are supported too. The Customer class used here implements IEditableObject, so you can undo changes by pressing the Escape key before you move to a new row. (Note: the gray columns are read-only).</value>
+  </data>
+  <data name="EditingTitle" xml:space="preserve">
+    <value>Editing</value>
+  </data>
+  <data name="FileNotFoundException" xml:space="preserve">
+    <value>Can't find 'songs.xml' resource.</value>
+  </data>
+  <data name="FilterOn_Text" xml:space="preserve">
+    <value>Filter on</value>
+  </data>
+  <data name="FinancialAsk.Header" xml:space="preserve">
+    <value>Ask</value>
+  </data>
+  <data name="FinancialAskSize.Header" xml:space="preserve">
+    <value>AskSize</value>
+  </data>
+  <data name="FinancialBid.Header" xml:space="preserve">
+    <value>Bid</value>
+  </data>
+  <data name="FinancialBidSize.Header" xml:space="preserve">
+    <value>BidSize</value>
+  </data>
+  <data name="FinancialDescription" xml:space="preserve">
+    <value>C1FlexGrid is a DataGrid control with a lightweight, flexible object model. C1FlexGrid offers many unique features such as unbound mode, sorting, filtering, flexible cell merging, and multi-cell row and column headers.</value>
+  </data>
+  <data name="FinancialInfo_Text" xml:space="preserve">
+    <value>Financial Info: </value>
+  </data>
+  <data name="FinancialLastSale.Header" xml:space="preserve">
+    <value>LastSale</value>
+  </data>
+  <data name="FinancialLastSize.Header" xml:space="preserve">
+    <value>LastSize</value>
+  </data>
+  <data name="FinancialName" xml:space="preserve">
+    <value>Financial</value>
+  </data>
+  <data name="FinancialNameCol.Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FinancialQuoteTime.Header" xml:space="preserve">
+    <value>QuoteTime</value>
+  </data>
+  <data name="FinancialSymbol.Header" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="FinancialTitle" xml:space="preserve">
+    <value>See it in action</value>
+  </data>
+  <data name="FinancialTradeTime.Header" xml:space="preserve">
+    <value>TradeTime</value>
+  </data>
+  <data name="FinancialVolume.Header" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="FirstNames" xml:space="preserve">
+    <value>Andy|Ben|Charlie|Dan|Ed|Fred|Gil|Herb|Jack|Karl|Larry|Mark|Noah|Oprah|Paul|Quince|Rich|Steve|Ted|Ulrich|Vic|Xavier|Zeb</value>
+  </data>
+  <data name="GroupOn_Text" xml:space="preserve">
+    <value>Group on:</value>
+  </data>
+  <data name="HalfInch" xml:space="preserve">
+    <value>0.5 inch</value>
+  </data>
+  <data name="HdrInfo" xml:space="preserve">
+    <value>hdr {0},{1}</value>
+  </data>
+  <data name="HeadersVisibility_Text" xml:space="preserve">
+    <value>Headers Visibility:</value>
+  </data>
+  <data name="HHMMSS" xml:space="preserve">
+    <value>{0:00}:{1:00}:{2:00}</value>
+  </data>
+  <data name="Interval1_Content" xml:space="preserve">
+    <value>10 sec</value>
+  </data>
+  <data name="Interval2_Content" xml:space="preserve">
+    <value>1 sec</value>
+  </data>
+  <data name="Interval3_Content" xml:space="preserve">
+    <value>500 ms</value>
+  </data>
+  <data name="LastNames" xml:space="preserve">
+    <value>Ambers|Bishop|Cole|Danson|Evers|Frommer|Griswold|Heath|Jammers|Krause|Lehman|Myers|Neiman|Orsted|Paulson|Quaid|Richards|Stevens|Trask|Ulam</value>
+  </data>
+  <data name="LevelInfo" xml:space="preserve">
+    <value>level {0}</value>
+  </data>
+  <data name="Line_Content" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Lines" xml:space="preserve">
+    <value>Computers|Washers|Stoves</value>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="Media_Text" xml:space="preserve">
+    <value>Media Library: </value>
+  </data>
+  <data name="MediaDuration.Header" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="MediaLibraryDescription" xml:space="preserve">
+    <value>This demo show cases CellFactory interface used for customizing cells. We use custom cells to display images next to the artists, albums, songs, collapse/expand icons, and ratings. We can easily create custom cells by inheriting the ICellFactory interface and providing the FrameworkElement objects used to represent the cells.</value>
+  </data>
+  <data name="MediaLibraryName" xml:space="preserve">
+    <value>Media Library</value>
+  </data>
+  <data name="MediaLibraryTitle" xml:space="preserve">
+    <value>Custom Cells</value>
+  </data>
+  <data name="MediaName.Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MediaRating.Header" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="MediaSize.Header" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="MergeCells_Content" xml:space="preserve">
+    <value>Merge Selected Cells</value>
+  </data>
+  <data name="MMSS" xml:space="preserve">
+    <value>{0:00}:{1:00}</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="OneInch" xml:space="preserve">
+    <value>1 inch</value>
+  </data>
+  <data name="PageWidth" xml:space="preserve">
+    <value>Page Width</value>
+  </data>
+  <data name="PrintColor.Header" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="PrintCost.Header" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="PrintDiscontinued.Header" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+  <data name="PrintException" xml:space="preserve">
+    <value>Failed to print.</value>
+  </data>
+  <data name="Printing_Content" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintingDescription" xml:space="preserve">
+    <value>Directly output your FlexGrid UI to any printer. The C1FlexGrid control provides the Print() method with parametters to allows you printing the control with several options.</value>
+  </data>
+  <data name="PrintingName" xml:space="preserve">
+    <value>Printing</value>
+  </data>
+  <data name="PrintingTitle" xml:space="preserve">
+    <value>Printing</value>
+  </data>
+  <data name="PrintLine.Header" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="PrintName.Header" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PrintPrice.Header" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PrintRating.Header" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="PrintVolume.Header" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="PrintWeight.Header" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="QuarterInfo" xml:space="preserve">
+    <value>Q {0}</value>
+  </data>
+  <data name="Rating_Content" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="RetrievingData_Text" xml:space="preserve">
+    <value>Retrieving data from YouTube...</value>
+  </data>
+  <data name="Retry_Content" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="SamplePDF" xml:space="preserve">
+    <value>SamplePDF</value>
+  </data>
+  <data name="Search_Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SinglePage" xml:space="preserve">
+    <value>Single Page</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>{0:n2} MB</value>
+  </data>
+  <data name="SongInfo" xml:space="preserve">
+    <value>{0:n0} Artists; {1:n0} Albums; {2:n0} Songs; {3:n0} MB of storage; {4:n2} days of music.</value>
+  </data>
+  <data name="Songs_Text" xml:space="preserve">
+    <value>Songs</value>
+  </data>
+  <data name="SplitCells_Content" xml:space="preserve">
+    <value>Split Selected Cells</value>
+  </data>
+  <data name="Title.Header" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="UnboundDescription" xml:space="preserve">
+    <value>In addition to working with IEnumerable data sources, the C1FlexGrid also supports an unbound mode, where cell values are stored in the grid itself and are accessed using familiar indexing notation. This demo also shows how you can set up merged multi-cell row and column headers.</value>
+  </data>
+  <data name="UnboundName" xml:space="preserve">
+    <value>Unbound</value>
+  </data>
+  <data name="UnboundTag" xml:space="preserve">
+    <value>In addition to working with IEnumerable data sources, the C1FlexGrid also supports an unbound mode, where cell values are stored in the grid itself and are accessed using familiar indexing notation. This demo also shows how you can set up merged multi-cell row and column headers.</value>
+  </data>
+  <data name="UnboundTitle" xml:space="preserve">
+    <value>Unbound</value>
+  </data>
+  <data name="UpdateInterval_Text" xml:space="preserve">
+    <value>Update Interval:</value>
+  </data>
+  <data name="Watch_Content" xml:space="preserve">
+    <value>Watch</value>
+  </data>
+  <data name="YouTubeDescription" xml:space="preserve">
+    <value>Diplays a list of YouTube videos which load on demand when the end of the list is reached.</value>
+  </data>
+  <data name="YouTubeName" xml:space="preserve">
+    <value>YouTube</value>
+  </data>
+  <data name="YouTubeTitle" xml:space="preserve">
+    <value>Incremental Loading</value>
+  </data>
+  <data name="ZeroPercent_Text" xml:space="preserve">
+    <value>0.00%</value>
+  </data>
+  <data name="ZeroValue_Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="FiledColor" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="FiledCost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="FiledDiscontinued" xml:space="preserve">
+    <value>Discontinued</value>
+  </data>
+  <data name="FiledLine" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="FiledPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="FiledRating" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="FiledVolume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="FiledWeight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="ItemCount" xml:space="preserve">
+    <value>{0}: ({1} item)</value>
+  </data>
+  <data name="ItemsCount" xml:space="preserve">
+    <value>{0}: ({1} items)</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Alice Mutton|Gumbär Gummibärchen|Chocolade|Inlagd Sill|Louisiana Fiery Hot Pepper|Mishi Kobe Niku|Rössle Sauerkraut|Steeleye Stout|Valkoinen suklaa|Zaanse koeken|Sir Rodney's Scones|Röd Kaviar|Tofu|Ravioli Angelo|Pâté chinois|Nord-Ost Matjeshering|Fløtemysost|Boston Crab Meat|Guaraná Fantástica|Röd Kaviar</value>
+  </data>
+  <data name="ColumnHeaderAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ColumnHeaderCity" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ColumnHeaderCompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="ColumnHeaderContactName" xml:space="preserve">
+    <value>Contact Name</value>
+  </data>
+  <data name="ColumnHeaderContactTitle" xml:space="preserve">
+    <value>Contact Title</value>
+  </data>
+  <data name="ColumnHeaderCountry" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="ColumnHeaderCustomerID" xml:space="preserve">
+    <value>Customer ID</value>
+  </data>
+  <data name="ColumnHeaderFax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="ColumnHeaderPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ColumnHeaderPostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="NorthwindData" xml:space="preserve">
+    <value>Northwind DataBase</value>
+  </data>
+  <data name="MergeCells_Text" xml:space="preserve">
+    <value>Merge Cells</value>
+  </data>
+  <data name="RowDetailsDescription" xml:space="preserve">
+    <value>Shows how to use C1InputPanel to show row details.</value>
+  </data>
+  <data name="RowDetailsName" xml:space="preserve">
+    <value>Row Details</value>
+  </data>
+  <data name="RowDetailsTitle" xml:space="preserve">
+    <value>Row Details</value>
+  </data>
+    <data name="SamplePrint" xml:space="preserve">
+    <value>Printing sample</value>
+  </data>
+</root>

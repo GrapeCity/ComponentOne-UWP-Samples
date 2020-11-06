@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EEF3A8B-578D-438B-8733-1C2E6BA0FF9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BasicLibrarySamples</RootNamespace>
+    <AssemblyName>BasicLibrarySamplesLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings\Strings.cs" />
+    <Compile Include="Utils\DelegateCommand.cs" />
+    <Compile Include="Utils\Helper.cs" />
+    <Compile Include="View\C1DropDown\AutoCompleteDropDown.xaml.cs">
+      <DependentUpon>AutoCompleteDropDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1ListBox\IncrementalLoadingBase.cs" />
+    <Compile Include="View\C1Menu\ContextMenu.xaml.cs">
+      <DependentUpon>ContextMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1Menu\RadialMenu.xaml.cs">
+      <DependentUpon>RadialMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1ProgressIndicator\ProgressIndicatorDemo.xaml.cs">
+      <DependentUpon>ProgressIndicatorDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1TabControl\ClearStyleTabControl.xaml.cs">
+      <DependentUpon>ClearStyleTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1DropDown\DropDownDemo.xaml.cs">
+      <DependentUpon>DropDownDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1DropDown\HierarchicalDropDown.xaml.cs">
+      <DependentUpon>HierarchicalDropDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1TabControl\EntranceTab.xaml.cs">
+      <DependentUpon>EntranceTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DockPanelSample.xaml.cs">
+      <DependentUpon>DockPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GridSplitterSample.xaml.cs">
+      <DependentUpon>GridSplitterSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InputHandling.xaml.cs">
+      <DependentUpon>InputHandling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1Menu\MenuSample.xaml.cs">
+      <DependentUpon>MenuSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RadialPanelSample.xaml.cs">
+      <DependentUpon>RadialPanelSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RangeSlider.xaml.cs">
+      <DependentUpon>RangeSlider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReportSummary.xaml.cs">
+      <DependentUpon>ReportSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SalesAgents.xaml.cs">
+      <DependentUpon>SalesAgents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SalesPerAgents.xaml.cs">
+      <DependentUpon>SalesPerAgents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SalesPerMonth.xaml.cs">
+      <DependentUpon>SalesPerMonth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1TabControl\TabControlSample.xaml.cs">
+      <DependentUpon>TabControlSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1CollectionView\BindingToC1CollectionView.xaml.cs">
+      <DependentUpon>BindingToC1CollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1CollectionView\CollectionViewConditions.xaml.cs">
+      <DependentUpon>CollectionViewConditions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1CollectionView\Data\BaseObject.cs" />
+    <Compile Include="View\C1CollectionView\Data\Customer.cs" />
+    <Compile Include="View\C1CollectionView\Helpers\ChooseItemsControl.xaml.cs">
+      <DependentUpon>ChooseItemsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MaskedTextBoxSample.xaml.cs">
+      <DependentUpon>MaskedTextBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NumericBoxSample.xaml.cs">
+      <DependentUpon>NumericBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1ListBox\ListBoxSample.xaml.cs">
+      <DependentUpon>ListBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView\CheckBox\CheckBox.xaml.cs">
+      <DependentUpon>CheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView\DragDrop\DataLoader.cs" />
+    <Compile Include="View\TreeView\DragDrop\Department.cs" />
+    <Compile Include="View\TreeView\DragDrop\DragDrop.xaml.cs">
+      <DependentUpon>DragDrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView\DragDrop\DragDropCustomTemplateSelector.cs" />
+    <Compile Include="View\TreeView\DragDrop\DropMark.xaml.cs">
+      <DependentUpon>DropMark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView\DragDrop\Employee.cs" />
+    <Compile Include="View\TreeView\Edit\Data.cs" />
+    <Compile Include="View\TreeView\Edit\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView\HierarchicalTemplate\CustomStyleSelector.cs" />
+    <Compile Include="View\TreeView\HierarchicalTemplate\CustomTemplateSelector.cs" />
+    <Compile Include="View\TreeView\HierarchicalTemplate\HierarchicalTemplate.xaml.cs">
+      <DependentUpon>HierarchicalTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView\HierarchicalTemplate\WorldCupData.cs" />
+    <Compile Include="View\TreeView\TreeViewSample.xaml.cs">
+      <DependentUpon>TreeViewSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UniformGridSample.xaml.cs">
+      <DependentUpon>UniformGridSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\C1Menu\VerticalMenu.xaml.cs">
+      <DependentUpon>VerticalMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WrapPanelSample.xaml.cs">
+      <DependentUpon>WrapPanelSample.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\chart\ReportSummary.png" />
+    <Content Include="Assets\chart\SalesPerMonth.png" />
+    <Content Include="Assets\chart\SalesPerSalesAgent.png" />
+    <Content Include="Assets\country\Ball.png" />
+    <Content Include="Assets\people\girl1.png" />
+    <Content Include="Assets\people\girl2.png" />
+    <Content Include="Assets\people\guy1.png" />
+    <Content Include="Assets\people\guy2.png" />
+    <Content Include="Assets\people\guy3.png" />
+    <Content Include="Properties\BasicLibrarySamplesLib.rd.xml" />
+    <Content Include="Assets\company\assistant.png" />
+    <Content Include="Assets\company\director.png" />
+    <Content Include="Assets\company\group.png" />
+    <Content Include="Assets\company\manager.png" />
+    <Content Include="Assets\country\Algeria.png" />
+    <Content Include="Assets\country\Argentina.png" />
+    <Content Include="Assets\country\Australia.png" />
+    <Content Include="Assets\country\Brazil.png" />
+    <Content Include="Assets\country\Cameroon.png" />
+    <Content Include="Assets\country\Chile.png" />
+    <Content Include="Assets\country\Cote Dlvoire.png" />
+    <Content Include="Assets\country\Denmark.png" />
+    <Content Include="Assets\country\England.png" />
+    <Content Include="Assets\country\France.png" />
+    <Content Include="Assets\country\Germany.png" />
+    <Content Include="Assets\country\Ghana.png" />
+    <Content Include="Assets\country\Greece.png" />
+    <Content Include="Assets\country\Honduras.png" />
+    <Content Include="Assets\country\Italy.png" />
+    <Content Include="Assets\country\Japan.png" />
+    <Content Include="Assets\country\Korea North.png" />
+    <Content Include="Assets\country\Korea South.png" />
+    <Content Include="Assets\country\Mexico.png" />
+    <Content Include="Assets\country\Netherlands.png" />
+    <Content Include="Assets\country\NewZealand.png" />
+    <Content Include="Assets\country\Nigeria.png" />
+    <Content Include="Assets\country\Paraguay.png" />
+    <Content Include="Assets\country\Portugal.png" />
+    <Content Include="Assets\country\Serbia.png" />
+    <Content Include="Assets\country\Slovak Republic.png" />
+    <Content Include="Assets\country\Slovenia.png" />
+    <Content Include="Assets\country\South Africa.png" />
+    <Content Include="Assets\country\Spain.png" />
+    <Content Include="Assets\country\Switzerland.png" />
+    <Content Include="Assets\country\United States.png" />
+    <Content Include="Assets\country\Uruguay.png" />
+    <EmbeddedResource Include="Resources\departments.xml" />
+    <EmbeddedResource Include="Resources\employeesDepartment.xml" />
+    <Content Include="Resources\Symbols.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\C1DropDown\AutoCompleteDropDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1DropDown\DeviceFamily-Mobile\AutoCompleteDropDown.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\C1DropDown\DeviceFamily-Mobile\HierarchicalDropDown.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\C1Menu\ContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1Menu\RadialMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\C1Menu\DeviceFamily-Mobile\RadialMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1ProgressIndicator\ProgressIndicatorDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1TabControl\ClearStyleTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1DropDown\DropDownDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1DropDown\HierarchicalDropDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1TabControl\EntranceTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1Menu\DeviceFamily-Mobile\ContextMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\DeviceFamily-Mobile\DockPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DeviceFamily-Mobile\UniformGridSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\GridSplitterSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InputHandling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\C1Menu\MenuSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RadialPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RangeSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReportSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SalesAgents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SalesPerAgents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SalesPerMonth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1TabControl\TabControlSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1CollectionView\BindingToC1CollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1CollectionView\CollectionViewConditions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\C1CollectionView\Helpers\ChooseItemsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\DockPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MaskedTextBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\NumericBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\C1ListBox\ListBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TreeView\CheckBox\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <EmbeddedResource Include="View\TreeView\Data\SampleTeams.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Page Include="View\TreeView\DragDrop\DragDrop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TreeView\DragDrop\DropMark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TreeView\Edit\Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TreeView\HierarchicalTemplate\HierarchicalTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\TreeView\TreeViewSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UniformGridSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\C1Menu\VerticalMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WrapPanelSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights">
+      <Version>2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights.PersistenceChannel">
+      <Version>1.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights.WindowsApps">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>5.1.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

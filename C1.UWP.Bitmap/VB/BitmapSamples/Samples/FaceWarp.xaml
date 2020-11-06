@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="BitmapSamples.FaceWarp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BitmapSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 10">
+            <Button x:Name="button1" Content="{Binding LoadImage_Content, Source={StaticResource BitmapSamplesLocalization}}" Click="LoadImage" Margin="0 0 10 0" Width="140" HorizontalAlignment="Right" />
+            <Button x:Name="button2" Content="{Binding Export_Content, Source={StaticResource BitmapSamplesLocalization}}" Click="ExportImage" Margin="0 0 10 0" Width="140" />
+            <Button x:Name="button3" Content="{Binding Restart_Content, Source={StaticResource BitmapSamplesLocalization}}" Click="Restart" Width="140" HorizontalAlignment="Left" />
+        </StackPanel>
+        <Grid Name="imageGrid" Grid.Row="1" Margin="0 0 0 10" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Stretch="None" Name="image" />
+        </Grid>
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="button1.Width" Value="130" />
+                        <Setter Target="button1.Margin" Value="5 0 5 0" />
+                        <Setter Target="button2.Width" Value="100" />
+                        <Setter Target="button2.Margin" Value="0 0 5 0" />
+                        <Setter Target="button3.Width" Value="100" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

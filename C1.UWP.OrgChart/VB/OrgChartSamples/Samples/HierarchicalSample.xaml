@@ -1,0 +1,59 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:c1="using:C1.Xaml.OrgChart"
+    xmlns:Xaml="using:C1.Xaml"
+    x:Class="OrgChartSamples.HierarchicalSample"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <!-- template for Team objects -->
+        <DataTemplate x:Key="TeamTemplate" >
+            <Border Background="#90cd97" Padding="5" >
+                <TextBlock FontWeight="Light" Foreground="Black" FontStyle="Italic" Text="{Binding Name}" />
+            </Border>
+        </DataTemplate>
+
+        <!-- template for Division objects -->
+        <Xaml:C1HierarchicalDataTemplate  x:Key="DivisionTemplate"  
+            ItemTemplate="{StaticResource TeamTemplate}" ItemsSource="{Binding Teams}">
+            <DataTemplate>
+                <Border Background="#fbb258" >
+                    <TextBlock FontWeight="Light" Foreground="Black" FontSize="18" Text="{Binding Name}"  HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15" />
+                </Border>
+            </DataTemplate>
+        </Xaml:C1HierarchicalDataTemplate >
+        <!-- template for League objects -->
+        <Xaml:C1HierarchicalDataTemplate  x:Key="LeagueTemplate" 
+            ItemTemplate="{StaticResource DivisionTemplate}" ItemsSource="{Binding Divisions}">
+            <DataTemplate>
+                <Border Background="#88bde6" >
+                    <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="24" FontWeight="Light" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="30" />
+                </Border>
+            </DataTemplate>
+        </Xaml:C1HierarchicalDataTemplate >
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- sample title -->
+        <StackPanel Orientation="Horizontal" >
+            <TextBlock Text="{Binding Source={StaticResource OrgChartSamplesLocalization}, Path=HierarchicalDataTemplateOrgChartTB_Text}" Visibility="Collapsed" FontSize="16" VerticalAlignment="Bottom" />
+            <TextBlock x:Name="_tbTotal" VerticalAlignment="Bottom" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Padding="0" >
+            <c1:C1OrgChart 
+                x:Name="_chart" ItemTemplate="{StaticResource LeagueTemplate}" 
+                ConnectorDashArray="1 2" ConnectorStroke="Gray" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </ScrollViewer>
+
+    </Grid>
+</Page>

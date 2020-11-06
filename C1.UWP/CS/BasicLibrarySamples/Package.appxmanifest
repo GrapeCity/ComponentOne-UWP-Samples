@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="be5e8eaf-409b-44de-845a-58f408ab693f" Publisher="CN=Componentone, OU=Development, O=Componentone, L=Pittsburgh, S=Pennsylvania, C=US" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="77ca94ae-3c50-4274-a2a4-2397bddc3902" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>BasicLibrarySamples2015</DisplayName>
+    <PublisherDisplayName>GrapeCity Inc.</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="BasicLibrarySamples2015.App">
+      <uap:VisualElements DisplayName="BasicLibrarySamples2015" Description="BasicLibrarySamples2015" BackgroundColor="#9F2132" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png">
+        <uap:DefaultTile>
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#9F2132" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

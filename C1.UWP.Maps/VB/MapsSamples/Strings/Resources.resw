@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>MapsSamples</value>
+  </data>
+  <data name="C1Label_Text" xml:space="preserve">
+    <value>C1</value>
+  </data>
+  <data name="ComponentOne_Text" xml:space="preserve">
+    <value>ComponentOne</value>
+  </data>
+  <data name="Country_Text" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="EnterPlace_Text" xml:space="preserve">
+    <value>Enter the place or location:</value>
+  </data>
+  <data name="GrossDomainProduct_Text" xml:space="preserve">
+    <value>Gross Domain Product(Purchasing Power Parity)</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="LoadData_Content" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="LoadingData_Text" xml:space="preserve">
+    <value>Loading data...</value>
+  </data>
+  <data name="MapSource_Text" xml:space="preserve">
+    <value>Map Source: </value>
+  </data>
+  <data name="OpenStreetMapLink_Content" xml:space="preserve">
+    <value>© OpenStreetMap contributors</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+  <data name="Uruguay_Text" xml:space="preserve">
+    <value>Uruguay/Montevideo</value>
+  </data>
+  <data name="USUnit_Text" xml:space="preserve">
+    <value>US$ Million</value>
+  </data>
+  <data name="CannotLoadMessage" xml:space="preserve">
+    <value>Can't load data.</value>
+  </data>
+  <data name="ChartDescription" xml:space="preserve">
+    <value>Shows how you can create a map chart based on country polygons loaded from KMZ file (zipped KML) into a C1VectorLayer. It also shows that you can use a C1Maps without any Tile Source.</value>
+  </data>
+  <data name="ChartName" xml:space="preserve">
+    <value>MapChart</value>
+  </data>
+  <data name="ChartTitle" xml:space="preserve">
+    <value>KML/KMZ</value>
+  </data>
+  <data name="CitiesDescription" xml:space="preserve">
+    <value>Using the vector layer, this map shows the largest cities of the world (by population).</value>
+  </data>
+  <data name="CitiesName" xml:space="preserve">
+    <value>Cities</value>
+  </data>
+  <data name="CitiesTitle" xml:space="preserve">
+    <value>Cities Demo</value>
+  </data>
+  <data name="CustomDescription" xml:space="preserve">
+    <value>Shows that you can implement new image sources such as using OpenStreetMap.</value>
+  </data>
+  <data name="CustomName" xml:space="preserve">
+    <value>CustomTileSource</value>
+  </data>
+  <data name="CustomTitle" xml:space="preserve">
+    <value>Custom Source</value>
+  </data>
+  <data name="Degree" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="DemoDescription" xml:space="preserve">
+    <value>Get smooth zooming, panning, and mapping between screen and geographical coordinates with C1Maps. Display information from various sources, including Microsoft Live Maps. You can even superimpose your own custom elements to the maps.</value>
+  </data>
+  <data name="DemoName" xml:space="preserve">
+    <value>DemoMaps</value>
+  </data>
+  <data name="DemoTitle" xml:space="preserve">
+    <value>Basic Demo</value>
+  </data>
+  <data name="EarthQuakeDescription" xml:space="preserve">
+    <value>Shows Earthquake data by adding various vector data on the map.</value>
+  </data>
+  <data name="EarthQuakeName" xml:space="preserve">
+    <value>EarthQuake</value>
+  </data>
+  <data name="EarthQuakeTitle" xml:space="preserve">
+    <value>Earthquakes Demo</value>
+  </data>
+  <data name="East" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="FactoriesDescription" xml:space="preserve">
+    <value>Shows how you can use the VirtualLayer to display elements on C1Maps using data virtualization. Map items are not loaded into memory until brought into view.</value>
+  </data>
+  <data name="FactoriesName" xml:space="preserve">
+    <value>Factories</value>
+  </data>
+  <data name="FactoriesTitle" xml:space="preserve">
+    <value>Virtualization</value>
+  </data>
+  <data name="FlickrDescription" xml:space="preserve">
+    <value>Displays images from a GeoRSS reader using Flickr.</value>
+  </data>
+  <data name="FlickrName" xml:space="preserve">
+    <value>Flickr</value>
+  </data>
+  <data name="FlickrTitle" xml:space="preserve">
+    <value>Flickr Demo</value>
+  </data>
+  <data name="FRMeasurementLargeUnit" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="FRMeasurementUnit" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="GridDescription" xml:space="preserve">
+    <value>The vector layer allows you to add parallels and meridians to the map. You can use the vector layer on top of a Tile Source to draw geometries/shapes/polygons/paths with geo coordinates.</value>
+  </data>
+  <data name="GridName" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="GridTitle" xml:space="preserve">
+    <value>Gridlines</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Loading1" xml:space="preserve">
+    <value>Loading data...</value>
+  </data>
+  <data name="MarksDescription" xml:space="preserve">
+    <value>Shows how you can dynamically add marks to the map control.</value>
+  </data>
+  <data name="MarksName" xml:space="preserve">
+    <value>Marks</value>
+  </data>
+  <data name="MarksTitle" xml:space="preserve">
+    <value>Add Marks</value>
+  </data>
+  <data name="North" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="ShapeDescription" xml:space="preserve">
+    <value>Shows how you can display a map based on polygons loaded from a Shape File (shp).</value>
+  </data>
+  <data name="ShapeName" xml:space="preserve">
+    <value>MapShape</value>
+  </data>
+  <data name="ShapeTitle" xml:space="preserve">
+    <value>Shape Files</value>
+  </data>
+  <data name="South" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Space" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="USA" xml:space="preserve">
+    <value>USA</value>
+  </data>
+  <data name="USMeasurementLargeUnit" xml:space="preserve">
+    <value>mi</value>
+  </data>
+  <data name="USMeasurementUnit" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="West" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="Angle_Text" xml:space="preserve">
+    <value>Angle:</value>
+  </data>
+</root>

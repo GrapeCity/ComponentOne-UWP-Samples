@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="CalendarSamples.DaySlotTemplateSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CalendarSamples"
+    xmlns:c1calendar="using:C1.Xaml.Calendar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="BoldedDay">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!-- show appointments information saved in the DaySlot.DataSource property -->
+                <Border Background="#FF91B035" Grid.Row="0" VerticalAlignment="Top" BorderThickness="4 0 0 0" BorderBrush="#FFBCD472">
+                    <TextBlock Text="{Binding Path=DataSource[0].Value}" Margin="5" TextWrapping="Wrap" Foreground="White" />
+                </Border>
+                <TextBlock Text="{Binding}" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Margin="6,0,0,4"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="UnboldedDay">
+            <TextBlock Text="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="6,22,0,4"/>
+        </DataTemplate>
+        <DataTemplate x:Key="TodayBoldedDay">
+            <Grid BorderBrush="{Binding Path=Calendar.TodayBrush}" BorderThickness="2" CornerRadius="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!-- show appointments information saved in the DaySlot.DataSource property -->
+                <Border Background="#FF91B035" Grid.Row="0" VerticalAlignment="Top" BorderThickness="4 0 0 0" BorderBrush="#FFBCD472" CornerRadius="6">
+                    <TextBlock Text="{Binding Path=DataSource[0].Value}" Margin="5" TextWrapping="Wrap" Foreground="White" />
+                </Border>
+                <TextBlock Text="{Binding}" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Margin="6,0,0,4"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="TodayUnboldedDay">
+            <Border BorderBrush="{Binding Path=Calendar.TodayBrush}" BorderThickness="2" CornerRadius="6">
+                <TextBlock Text="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="6,22,0,4"/>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="Holiday">
+            <!-- show holiday information saved in the DaySlot.Tag property (it's Holiday structure)-->
+            <Grid Background="{Binding Path=Tag.Background}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Border Background="#44FFFFFF" Grid.Row="0" VerticalAlignment="Top" BorderThickness="0,0,0,2">
+                    <TextBlock Text="{Binding Path=Tag.Text}" Margin="2" TextWrapping="NoWrap" FontSize="18" Foreground="{Binding Path=Tag.Foreground}" />
+                </Border>
+                <TextBlock Text="{Binding}" Foreground="{Binding Path=Tag.Foreground}"  Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="SemiBold" Margin="6,0,0,4"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <c1calendar:C1Calendar x:Name="calendar" MaxSelectionCount="21" ShowWeekNumbers="true" WeekendBrush="#FF3BC9DE" TodayBrush="Orange"/>
+    </Grid>
+</Page>

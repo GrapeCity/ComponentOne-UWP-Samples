@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2876FB19-ABF5-43D2-B423-0064008AA2B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RichTextBoxSamples</RootNamespace>
+    <AssemblyName>RichTextBoxSamplesLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+    <EmbeddedResource Include="Resources\C1Spell_en-US.dct" />
+    <PRIResource Include="Strings\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\AppBarDemo.xaml.cs">
+      <DependentUpon>AppBarDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\AsYouTypeSpellCheck.xaml.cs">
+      <DependentUpon>AsYouTypeSpellCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DemoRichTextBox.xaml.cs">
+      <DependentUpon>DemoRichTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\DemoRtfFilter.xaml.cs">
+      <DependentUpon>DemoRtfFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\FindAndReplace.xaml.cs">
+      <DependentUpon>FindAndReplace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\MultiLanguageSpellCheck.xaml.cs">
+      <DependentUpon>MultiLanguageSpellCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Printing.xaml.cs">
+      <DependentUpon>Printing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\RichTextBoxFormatting.xaml.cs">
+      <DependentUpon>RichTextBoxFormatting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\SyntaxHighlight.xaml.cs">
+      <DependentUpon>SyntaxHighlight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Tools\FontColorTool.xaml.cs">
+      <DependentUpon>FontColorTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Tools\InsertHyperlinkTool.xaml.cs">
+      <DependentUpon>InsertHyperlinkTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Tools\InsertImageTool.xaml.cs">
+      <DependentUpon>InsertImageTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\Tools\InsertTableTool.xaml.cs">
+      <DependentUpon>InsertTableTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.DX, Version=10.0">
+      <Name>C1.UWP.DX</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Pdf, Version=10.0">
+      <Name>C1.UWP.Pdf</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox.AppBar, Version=10.0">
+      <Name>C1.UWP.RichTextBox.AppBar</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox.PdfFilter, Version=10.0">
+      <Name>C1.UWP.RichTextBox.PdfFilter</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox.Menu, Version=10.0">
+      <Name>C1.UWP.RichTextBox.Menu</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox, Version=10.0">
+      <Name>C1.UWP.RichTextBox</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.SpellChecker, Version=10.0">
+      <Name>C1.UWP.SpellChecker</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Zip, Version=10.0">
+      <Name>C1.UWP.Zip</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\c1icon.png" />
+    <Content Include="Assets\Flags\Argentina.png" />
+    <Content Include="Assets\Flags\Brazil.png" />
+    <Content Include="Assets\Flags\Canada.png" />
+    <Content Include="Assets\Flags\Denmark.png" />
+    <Content Include="Assets\Flags\France.png" />
+    <Content Include="Assets\Flags\Germany.png" />
+    <Content Include="Assets\Flags\Greece.png" />
+    <Content Include="Assets\Flags\Italy.png" />
+    <Content Include="Assets\Flags\Mexico.png" />
+    <Content Include="Assets\Flags\Netherlands.png" />
+    <Content Include="Assets\Flags\Norway.png" />
+    <Content Include="Assets\Flags\Portugal.png" />
+    <Content Include="Assets\Flags\Russia.png" />
+    <Content Include="Assets\Flags\Spain.png" />
+    <Content Include="Assets\Flags\Sweden.png" />
+    <Content Include="Assets\Flags\Switzerland.png" />
+    <Content Include="Assets\Flags\United_Kingdom.png" />
+    <Content Include="Assets\Flags\United_States.png" />
+    <Content Include="Properties\RichTextBoxSamplesLib.rd.xml" />
+    <EmbeddedResource Include="Resources\dickens.htm" />
+    <EmbeddedResource Include="Resources\simple.htm" />
+    <EmbeddedResource Include="Resources\w3c.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Samples\AppBarDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\AsYouTypeSpellCheck.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DemoRichTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DemoRtfFilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\AppBarDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\DeviceFamily-Mobile\FindAndReplace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Samples\FindAndReplace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\MultiLanguageSpellCheck.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Printing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\RichTextBoxFormatting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\SyntaxHighlight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Tools\FontColorTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Tools\InsertHyperlinkTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Tools\InsertImageTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\Tools\InsertTableTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

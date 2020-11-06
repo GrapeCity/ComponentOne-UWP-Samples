@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="AnimationDemo.View.FlexPieAnimation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AnimationDemo.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:C1="using:C1.Xaml"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="Header" TargetType="ContentControl">
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="4" Text="{TemplateBinding Tag}" VerticalAlignment="Center" TextAlignment="Right" MinWidth="72" />
+                            <ContentPresenter />
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <C1:C1TabControl >
+            <C1:C1TabItem Header="Chart Options" Padding="8">
+                <StackPanel Orientation="Horizontal" >
+                    <ContentControl Style="{StaticResource Header}" Tag="Inner Radius:">
+                        <C1:C1NumericBox Margin="2" Minimum="0" Maximum="1" Format="0.0" Increment="0.1" Value="{Binding ElementName=chart,Path=InnerRadius,Mode=TwoWay}" />
+                    </ContentControl>
+                    <ContentControl Style="{StaticResource Header}" Tag="Offset:">
+                        <C1:C1NumericBox Margin="2" Minimum="0" Maximum="1" Format="0.0" Increment="0.1" Value="{Binding ElementName=chart,Path=Offset,Mode=TwoWay}" />
+                    </ContentControl>
+                    <CheckBox x:Name="cbLabels" Margin="2" Content="Show Labels" VerticalAlignment="Center" Checked="cbLabels_Checked" Unchecked="cbLabels_Checked" />
+                </StackPanel>
+            </C1:C1TabItem>
+
+            <C1:C1TabItem Header="Animation Options" Padding="8">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="2" Text="Settings:" />
+                    <ComboBox Margin="2" x:Name="cbAnimation" VerticalAlignment="Top" Width="80" SelectedItem="{Binding AnimationSettings,ElementName=chart,Mode=TwoWay}" SelectionChanged="cbAnimation_SelectionChanged" />
+
+                    <Border x:Name="pnlLoad" Margin="2" BorderBrush="LightGray" BorderThickness="1">
+                        <StackPanel Margin="4">
+                            <TextBlock Text="Load Animation" FontWeight="Bold" />
+                            <ContentControl Style="{StaticResource Header}" Tag="Duration:">
+                                <C1:C1NumericBox Value="{Binding AnimationLoad.Duration,ElementName=chart,Mode=TwoWay}" Increment="100" />
+                            </ContentControl>
+
+                            <ContentControl Style="{StaticResource Header}" Tag="Attribute:">
+                                <ComboBox SelectedItem="{Binding AnimationLoad.Attributes,ElementName=chart,Mode=TwoWay}" ItemsSource="{Binding DataContext.Attributes}" />
+                            </ContentControl>
+
+                            <ContentControl Style="{StaticResource Header}" Tag="Easing:">
+                                <ComboBox SelectedItem="{Binding AnimationLoad.Easing, ElementName=chart,Mode=TwoWay}" ItemsSource="{Binding DataContext.Easings}" />
+                            </ContentControl>
+
+                            <ContentControl Style="{StaticResource Header}" Tag="Type:">
+                                <ComboBox SelectedItem="{Binding AnimationLoad.Type,ElementName=chart,Mode=TwoWay}"  ItemsSource="{Binding DataContext.Types}" />
+                            </ContentControl>
+                        </StackPanel>
+                    </Border>
+
+                    <Border x:Name="pnlUpdate" Margin="2" BorderBrush="LightGray" BorderThickness="1">
+                        <StackPanel Margin="4">
+                            <TextBlock Text="Update Animation" FontWeight="Bold" />
+
+                            <ContentControl Style="{StaticResource Header}" Tag="Duration:">
+                                <C1:C1NumericBox Value="{Binding AnimationUpdate.Duration,ElementName=chart,Mode=TwoWay}" Increment="100" />
+                            </ContentControl>
+
+                            <ContentControl Style="{StaticResource Header}" Tag="Easing:">
+                                <ComboBox SelectedItem="{Binding AnimationUpdate.Easing, ElementName=chart,Mode=TwoWay}" ItemsSource="{Binding DataContext.Easings}" />
+                            </ContentControl>
+
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </C1:C1TabItem>
+        </C1:C1TabControl>
+
+        <Border Grid.Column="1" Grid.Row="1" >
+            <Chart:C1FlexPie x:Name="chart" Loaded="chart_Loaded" AnimationSettings="All"  Margin="8" />
+        </Border>
+
+        <StackPanel Margin="6" Orientation="Horizontal" Grid.Column="1" Grid.Row="2" >
+            <Button Margin="2" Content="New Data" Click="New_Click" />
+            <Button Margin="2" Content="Update" Click="Update_Click" />
+            <Button Margin="2" Content="+ Item" Click="Add_Click"  />
+            <Button Margin="2" Content="- Item" Click="Remove_Click"  />
+        </StackPanel>
+
+    </Grid>
+</Page>

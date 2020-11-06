@@ -1,0 +1,96 @@
+﻿<Page x:Class="FlexChartEditableAnnotations.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:local="using:FlexChartEditableAnnotations"    
+    xmlns:c1="using:C1.Xaml.Chart"
+    xmlns:c1Separator="using:C1.Xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="layoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Page title -->
+            <StackPanel Margin="5" VerticalAlignment="Center" Orientation="Horizontal">
+                <Grid Margin="5">
+                    <Image x:Name="uwpLogo" Source="/Assets/uwpLogo_64.png" Width="30" Height="30" />
+                </Grid>
+                <TextBlock x:Name="tbTitle" Grid.Row="0" Margin="0,5,0,0" Text="Title" FontFamily="Calibri" FontSize="20" Foreground="#1398e8"></TextBlock>
+            </StackPanel>
+
+            <TextBlock x:Name="txtDescription" Grid.Row="1" Foreground="#666666" FontSize="10" IsHitTestVisible="False" IsDoubleTapEnabled="False" 
+                         IsRightTapEnabled="False" Height="Auto" Width="Auto" FontFamily="SegoeUI"></TextBlock>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40,10,10,5" BorderBrush="Gray" BorderThickness="2" Width="Auto" Padding="2">
+                <local:CustomButton x:Name="cbAbsolute" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/24X24_Absolute.png"></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbDataCoordinate" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/24X24_DataCoordinates.png"></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbRelative" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/24X24_Relative.png"></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <c1Separator:C1Separator BorderBrush="Gray" Foreground="Gray" Background="Gray" Width="6"></c1Separator:C1Separator>
+                <local:CustomButton x:Name="cbText" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Text.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbCircle" HorizontalContentAlignment="Center" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Circle.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbEllipse" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Ellipse.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbRectangle" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Rectangle.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbSquare" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Square.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbLine" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Line.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <local:CustomButton x:Name="cbPolygon" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/Triangle.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+                <c1Separator:C1Separator BorderBrush="Gray" Foreground="Gray" Background="Gray" Width="6"></c1Separator:C1Separator>
+                <local:CustomButton x:Name="cbAllowMove" HorizontalContentAlignment="Center" Margin="5,0,0,0" Click="Button_Click">
+                    <local:CustomButton.Content>
+                        <Image Source="/Resources/AllowMove.png" ></Image>
+                    </local:CustomButton.Content>
+                </local:CustomButton>
+            </StackPanel>
+
+            <c1:C1FlexChart Grid.Row="3" x:Name="flexChart1" HorizontalAlignment="Stretch" 
+                        Margin="5,10,0,10" VerticalAlignment="Stretch" Width="Auto">
+            </c1:C1FlexChart>
+        </Grid>
+    </Grid>
+</Page>

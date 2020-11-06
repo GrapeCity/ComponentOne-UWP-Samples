@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumnPinning", "ColumnPinning.csproj", "{163768B1-4088-4FAD-863B-4592C70C27AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		GCRelease|Any CPU = GCRelease|Any CPU
+		GCRelease|ARM = GCRelease|ARM
+		GCRelease|ARM64 = GCRelease|ARM64
+		GCRelease|x64 = GCRelease|x64
+		GCRelease|x86 = GCRelease|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|Any CPU.Build.0 = Debug|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|ARM.Build.0 = Debug|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|ARM64.Build.0 = Debug|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|x64.ActiveCfg = Debug|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|x64.Build.0 = Debug|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|x64.Deploy.0 = Debug|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|x86.ActiveCfg = Debug|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|x86.Build.0 = Debug|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Debug|x86.Deploy.0 = Debug|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|Any CPU.ActiveCfg = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|Any CPU.Build.0 = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|Any CPU.Deploy.0 = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|ARM.ActiveCfg = Release|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|ARM.Build.0 = Release|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|ARM.Deploy.0 = Release|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|ARM64.ActiveCfg = Release|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|ARM64.Build.0 = Release|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|ARM64.Deploy.0 = Release|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|x64.ActiveCfg = Release|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|x64.Build.0 = Release|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|x64.Deploy.0 = Release|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|x86.ActiveCfg = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|x86.Build.0 = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.GCRelease|x86.Deploy.0 = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|Any CPU.ActiveCfg = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|ARM.ActiveCfg = Release|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|ARM.Build.0 = Release|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|ARM.Deploy.0 = Release|ARM
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|ARM64.ActiveCfg = Release|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|ARM64.Build.0 = Release|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|ARM64.Deploy.0 = Release|ARM64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|x64.ActiveCfg = Release|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|x64.Build.0 = Release|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|x64.Deploy.0 = Release|x64
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|x86.ActiveCfg = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|x86.Build.0 = Release|x86
+		{163768B1-4088-4FAD-863B-4592C70C27AD}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6356E9FC-9AD9-40F0-80B3-91979959ABA1}
+	EndGlobalSection
+EndGlobal

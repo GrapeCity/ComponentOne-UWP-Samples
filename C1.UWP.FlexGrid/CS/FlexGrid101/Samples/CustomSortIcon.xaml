@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="FlexGrid101.CustomSortIcon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml.FlexGrid"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="sortIconType" SelectionChanged="sortIconType_SelectionChanged" Grid.Row="0"/>
+        <c1:C1FlexGrid x:Name="grid" Grid.Row="1" />
+
+    </Grid>
+</Page>

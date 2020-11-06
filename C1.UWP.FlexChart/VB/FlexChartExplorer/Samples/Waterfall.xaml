@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="FlexChartExplorer.Waterfall"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChartExplorer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Margin="10 0 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <CheckBox Content="{Binding Source={StaticResource FlexChartExplorerLocalization}, Path=IsRelativeData}" IsChecked="{Binding ElementName=wf, Path=RelativeData, Mode=TwoWay}"/>
+            <CheckBox Content="{Binding Source={StaticResource FlexChartExplorerLocalization}, Path=ShowConnectorLines}" Grid.Column="1" IsChecked="{Binding ElementName=wf, Path=ConnectorLines, Mode=TwoWay}"/>
+            <CheckBox Content="{Binding Source={StaticResource FlexChartExplorerLocalization}, Path=ShowTotal}" Grid.Column="2" IsChecked="{Binding ElementName=wf, Path=ShowTotal, Mode=TwoWay}"/>
+            <CheckBox Content="{Binding Source={StaticResource FlexChartExplorerLocalization}, Path=ShowIntermediateTotal}" Grid.Column="3" IsChecked="{Binding ElementName=wf, Path=ShowIntermediateTotal, Mode=TwoWay}" />
+        </Grid>
+        <Chart:C1FlexChart Grid.Row="1" ToolTipContent="{}{x}&#x000A;Value: {y}" Binding="Value" BindingX="Name" ItemsSource="{Binding Data}">
+            <Chart:Waterfall x:Name="wf" RelativeData="True" ConnectorLines="True" ShowTotal="True"
+                          ShowIntermediateTotal="True" IntermediateTotalLabels="Q1,Q2,Q3,Q4"
+                          SeriesName="Increase, Decrease, Total">
+                <Chart:Waterfall.StartStyle>
+                    <Chart:ChartStyle Fill="#7dc7ed" />
+                </Chart:Waterfall.StartStyle>
+                <Chart:Waterfall.FallingStyle>
+                    <Chart:ChartStyle Fill="#dd2714" />
+                </Chart:Waterfall.FallingStyle>
+                <Chart:Waterfall.RisingStyle>
+                    <Chart:ChartStyle Fill="#0f9d58" Stroke="#0f9d58" />
+                </Chart:Waterfall.RisingStyle>
+                <Chart:Waterfall.IntermediateTotalStyle>
+                    <Chart:ChartStyle Fill="#7dc7ed" />
+                </Chart:Waterfall.IntermediateTotalStyle>
+                <Chart:Waterfall.TotalStyle>
+                    <Chart:ChartStyle Fill="#7dc7ed" />
+                </Chart:Waterfall.TotalStyle>
+                <Chart:Waterfall.ConnectorLineStyle>
+                    <Chart:ChartStyle Stroke="#333" StrokeDashArray="5,5"/>
+                </Chart:Waterfall.ConnectorLineStyle>
+            </Chart:Waterfall>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

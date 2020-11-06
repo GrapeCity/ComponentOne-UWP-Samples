@@ -1,0 +1,87 @@
+﻿<common:LayoutAwarePage
+    x:Name="pageRoot"
+    x:Class="FlexReportSamples.ItemDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexReportSamples"
+    xmlns:data="using:FlexReportSamples.Data"
+    xmlns:common="using:FlexReportSamples.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Style="{StaticResource LayoutRootStyle}">
+        <Grid.Resources>
+            <DataTemplate x:Key="smallHeader">
+                <StackPanel Margin="20 0 0 0" >
+                    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Title}"/>
+                </StackPanel>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition x:Name="row1" Height="69"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+      
+        <!-- Page title -->
+        <Grid Grid.Row="0" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Margin="4">
+                <Image Width="40" Height="40" Source="/Assets/uwpLogo_64.png" />
+            </Grid>
+            <TextBlock x:Name="pageTitle" Margin="10" Text="{Binding AppName_Text, Source={StaticResource FlexReportSamplesLocalization}}" Style="{ThemeResource TitleTextBlockStyle}" 
+                   Grid.Column="1" IsHitTestVisible="false"/>
+        </Grid>
+      
+        <Border Grid.Row="1" Height="80" x:Name="placeholder"/>
+      
+        <FlipView x:Name="flipView" SelectionChanged="flipView_SelectionChanged"
+                    AutomationProperties.AutomationId="ItemsFlipView" Grid.Row="1" Grid.RowSpan="2"
+                    AutomationProperties.Name="Item Details" 
+                    TabIndex="1" Margin="0" ItemsSource="{Binding AllItems}">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="20 0 0 0" >
+                        <!-- Sample title and description -->
+                        <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="{Binding Title}"/>
+                        <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="{Binding Description}"/>
+                        <!-- don't load sample pages into FlipView item, as FlipView loads some invisible items as well.-->
+                    </StackPanel>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+
+        <!--Show sample content in the frame -->
+        <Frame x:Name="frame" Margin="32,0,32,0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="row1.Height" Value="28" />
+                        <Setter Target="frame.Margin" Value="0" />
+                        <Setter Target="flipView.ItemTemplate" Value="{StaticResource smallHeader}" />
+                        <Setter Target="pageTitle.Style" Value="{ThemeResource SubtitleTextBlockStyle}" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</common:LayoutAwarePage>

@@ -1,0 +1,107 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.CollectionViewConditions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="captionStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,5,5,5"/>
+        </Style>
+        <Style x:Key="dataStyle" TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border BorderThickness="0,1,0,1" BorderBrush="White" >
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Padding="5,5,5,18">
+                <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="Margin" Value="8,0,6,0"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Grid VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding CollectionViewConditions_TB_1_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" HorizontalAlignment="Right"/>
+                    <ComboBox Name="groupComboBox" Grid.Column="1" SelectionChanged="groupComboBox_SelectionChanged_1" Height="30" Width="110" Margin="5"/>
+                    <TextBlock Text="{Binding CollectionViewConditions_TB_2_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Grid.Row="1" HorizontalAlignment="Right"/>
+                    <ComboBox Name="filterComboBox" Grid.Row="1" Grid.Column="1" SelectionChanged="filterComboBox_SelectionChanged_1" Height="30" Width="110" Margin="5"/>
+                    <TextBox Name="filterTextBox" Grid.Row="1" Grid.Column="2" TextChanged="filterTextBox_TextChanged_1" Height="25" Width="110" Margin="5"/>
+                </Grid>
+                <TextBlock Text="{Binding CollectionViewConditions_TB_3_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" TextWrapping="Wrap" Width="75" VerticalAlignment="Center" Margin="16,0,10,0"/>
+                <local:ChooseItemsControl x:Name="chooseSortFields" Width="298" Height="100" SelectedFieldNamesChanged="chooseSortFields_SelectedFieldNamesChanged_1"/>
+            </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- ListBox -->
+            <TextBlock Text="{Binding CollectionViewConditions_TB_4_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="18" Padding="5"/>
+            <ListBox Name="listBox1" Grid.Row="1" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                     ScrollViewer.HorizontalScrollMode="Auto">
+                <ListBox.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <Border MinHeight="20" MinWidth="70" 
+                                        Background="{ThemeResource ListViewItemOverlayBackgroundThemeBrush}" Padding="5">
+                                    <TextBlock Text="{Binding}" Foreground="White" />
+                                </Border>
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListBox.GroupStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                                <CheckBox IsChecked="{Binding Active}" MinWidth="32" IsEnabled="False" />
+                                <TextBlock Text="{Binding ID}" MinWidth="40" Width="40" Style="{StaticResource captionStyle}"/>
+                                <TextBlock Text="{Binding Name}" Style="{StaticResource captionStyle}" Width="70"/>
+                                <TextBlock Text="{Binding Country}" Width="80" Style="{StaticResource captionStyle}"/>
+                                <TextBlock Text="{Binding CollectionViewConditions_Column3_Name_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource captionStyle}"/>
+                                <TextBox Text="{Binding Created}" MinWidth="180" Style="{StaticResource dataStyle}"/>
+                                <TextBlock Text="{Binding CollectionViewConditions_Column4_Name_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource captionStyle}"/>
+                                <TextBox Text="{Binding Sales}" Style="{StaticResource dataStyle}"/>
+                                <TextBlock Text="{Binding CollectionViewConditions_Column5_Name_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Style="{StaticResource captionStyle}"/>
+                                <TextBox Text="{Binding Growth}" MinWidth="90" Style="{StaticResource dataStyle}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+    </Grid>
+</Page>

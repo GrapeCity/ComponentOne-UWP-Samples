@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="GaugeSamples.RegionKnob"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GaugeSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml.Gauge"
+    mc:Ignorable="d"
+   >
+    
+    <Grid>
+        <c1:C1RegionKnob x:Name="knob" Width="400"
+                  BorderBrush="#BEBEBE" BorderThickness="2" Background="#F5F5F5" PointerFill="#FBB258" PointerCapFill="#FBB258"
+                   Maximum="50" Value="0" StartAngle="0" SweepAngle="360"
+                  InteractionMode="ClickOrDrag"
+                  Grid.Row="1">
+            <c1:C1RegionKnob.FaceTemplate>
+                <DataTemplate>
+                    <Grid Margin="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.09*"/>
+                            <ColumnDefinition Width="0.11*"/>
+                            <ColumnDefinition Width="0.14*"/>
+                            <ColumnDefinition Width="0.03*"/>
+                            <ColumnDefinition Width="0.08*"/>
+                            <ColumnDefinition Width="0.05*"/>
+                            <ColumnDefinition Width="0.05*"/>
+                            <ColumnDefinition Width="0.07*"/>
+                            <ColumnDefinition Width="0.03*"/>
+                            <ColumnDefinition Width="0.14*"/>
+                            <ColumnDefinition Width="0.11*"/>
+                            <ColumnDefinition Width="0.09*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.07*"/>
+                            <RowDefinition Height="0.22*"/>
+                            <RowDefinition Height="0.04*"/>
+                            <RowDefinition Height="0.21*"/>
+                            <RowDefinition Height="0.07*"/>
+                            <RowDefinition Height="0.25*"/>
+                            <RowDefinition Height="0.14*"/>
+                        </Grid.RowDefinitions>
+                        <Ellipse Fill="#FF3C3C3C" Grid.ColumnSpan="12" Grid.RowSpan="7" Margin="-16" Opacity="0.9" />
+
+                        <local:Sun Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="2" />
+                        <local:SunAndClouds Grid.Column="9" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                        <local:Clouds Grid.Column="7" Grid.Row="5" Grid.ColumnSpan="3" />
+                        <local:Rain Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="3" />
+                        <local:Storm Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    </Grid>
+                </DataTemplate>
+            </c1:C1RegionKnob.FaceTemplate>
+        </c1:C1RegionKnob>
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <!-- Visual states reflect the Windows Phone Wide window size -->
+                <VisualState x:Name="MiddleLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="480" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="knob.Height" Value="220" />
+                        <Setter Target="knob.Width" Value="220" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="knob.Height" Value="300" />
+                        <Setter Target="knob.Width" Value="300" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

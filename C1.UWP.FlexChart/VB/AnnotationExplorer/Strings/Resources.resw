@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdvancedDescription" xml:space="preserve">
+    <value>The sample below shows how to display annotations easily on a FlexChart to show comments and useful information about data points on the plot area itself.</value>
+  </data>
+  <data name="AdvancedName" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="AdvancedTitle" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="AlibabaContent" xml:space="preserve">
+    <value>Alibaba Group Holding Ltd</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>AnnotationExplorer</value>
+  </data>
+  <data name="ArrowTooltip" xml:space="preserve">
+    <value>Bid: $73.59</value>
+  </data>
+  <data name="BasicDescription" xml:space="preserve">
+    <value>The sample below shows basic usage of AnnotationLayer and various built-in types of Annotations, including: Circle, Ellipse, Image, Line, Polygon, Rectangle, Square and Text.
+You can use attachment property to set different attach types of annotation.</value>
+  </data>
+  <data name="BasicName" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="BasicTitle" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="CircleTooltip" xml:space="preserve">
+    <value>This is a circle annotation
+Radius: 50
+PointIndex: 27
+Attachment: DataIndex</value>
+  </data>
+  <data name="CloseTooltip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="DContent" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="DividendTooltip" xml:space="preserve">
+    <value>Dividend</value>
+  </data>
+  <data name="EContent" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="EllipseTooltip" xml:space="preserve">
+    <value>This is an ellipse annotation
+Location: { x: 0.4, y: 0.45 }
+Attachment: Relative</value>
+  </data>
+  <data name="FacebookContent" xml:space="preserve">
+    <value>Facebook Inc to acquire LiveRail</value>
+  </data>
+  <data name="ImageTooltip" xml:space="preserve">
+    <value>This is an image annotation
+Location: { x: 22, y: 30}
+Attachment: DataCoordinate</value>
+  </data>
+  <data name="InfoTooltip" xml:space="preserve">
+    <value>Low={0}
+Hight={1}
+Open={2}
+Close={3}
+Volume={4}</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="InitializationException1" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="LineTooltip" xml:space="preserve">
+    <value>This is a line annotation
+Points: [(50, 200),(300, 350)]
+Attachment: Absolute</value>
+  </data>
+  <data name="PolygonTooltip" xml:space="preserve">
+    <value>This is a polygon annotation
+Points: [(200, 25),(150, 70),(175, 115),(225, 115),(250, 70)]
+Attachment: Absolute</value>
+  </data>
+  <data name="RectangleTooltip" xml:space="preserve">
+    <value>This is a rectangle annotation
+Location: { x: 37, y: 30}
+Attachment: DataCoordinate</value>
+  </data>
+  <data name="RWContent" xml:space="preserve">
+    <value>Rising wedge</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="SquareTooltip" xml:space="preserve">
+    <value>This is a square annotation
+Length: 80
+PointIndex: 45
+Attachment: DataIndex</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="TextTooltip" xml:space="preserve">
+    <value>This is a text annotation
+Locaton: { x: 0.55, y: 0.15 }
+Attachment: Relative</value>
+  </data>
+  <data name="PhoneImageTooltip" xml:space="preserve">
+    <value>This is an image annotation
+Location: { x: 12, y: 20}
+Attachment: DataCoordinate</value>
+  </data>
+  <data name="PhonePolygonTooltip" xml:space="preserve">
+    <value>This is a polygon annotation
+Points: [(100, 25),(50, 70),(75, 115),(125, 115),(150, 70)]
+Attachment: Absolute</value>
+  </data>
+  <data name="PhoneRectangleTooltip" xml:space="preserve">
+    <value>This is a rectangle annotation
+Location: { x: 37, y: 80}
+Attachment: DataCoordinate</value>
+  </data>
+  <data name="PhoneSquareTooltip" xml:space="preserve">
+    <value>This is a square annotation
+Length: 80
+PointIndex: 40
+Attachment: DataIndex</value>
+  </data>
+  <data name="PhoneTextTooltip" xml:space="preserve">
+    <value>This is a text annotation
+Locaton: { x: 0.4, y: 0.05 }
+Attachment: Relative</value>
+  </data>
+  <data name="CalloutsDescription" xml:space="preserve">
+    <value>The sample below shows how to use Polygon type annotation to display different shapes of callouts.</value>
+  </data>
+  <data name="CalloutsName" xml:space="preserve">
+    <value>Callouts</value>
+  </data>
+  <data name="CalloutsTitle" xml:space="preserve">
+    <value>Callouts</value>
+  </data>
+</root>

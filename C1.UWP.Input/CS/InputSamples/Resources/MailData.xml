@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AddressBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Mails>
+    <Mail>
+      <Name>Veronika Lango</Name>
+      <Address>V7488@yjch.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Artur Yagudin</Name>
+      <Address>masterA@wmail.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Jenny Duhammel</Name>
+      <Address>jenny1976@mm.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Carey Williams</Name>
+      <Address>doctorC@wmail.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Petter Melburg</Name>
+      <Address>1847362746523112@ibuzon.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Oliver Scott</Name>
+      <Address>os19800508@wmail.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Cheng Kai Lin</Name>
+      <Address>kailinW@wmail.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Alexey Barzin</Name>
+      <Address>alexey.B@wmail.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Daniel Nelson</Name>
+      <Address>6859409138800233@ibuzon.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Patrick Smith</Name>
+      <Address>smithNY@mm.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Krill Klimov</Name>
+      <Address>KrillSPB@wmail.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Edwin Clarkson</Name>
+      <Address>iceworkerEd@mm.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Yuchi Gong</Name>
+      <Address>yuchigong@yjch.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Rachel Hunt</Name>
+      <Address>runner8@mm.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Alyssa Newman</Name>
+      <Address>alyssaK@mm.com</Address>
+    </Mail>
+    <Mail>
+      <Name>Liu Yue Wen</Name>
+      <Address>EmilyLiu@yjch.com</Address>
+    </Mail>    
+  </Mails>
+</AddressBook>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="FlexGridSamples.SearchBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid x:Name="LayoutRoot">
+        <Border x:Name="_border" Background="White" BorderBrush="LightGray" BorderThickness="1 1 2 2" Padding="6 0" >
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="_imgSearch" Source="Assets/search.png" Stretch="None" />
+                <TextBox x:Name="_txtSearch" PlaceholderText="{Binding Search_Text, Source={StaticResource FlexGridSamplesLocalization}}" Width="160"  BorderThickness="0" VerticalContentAlignment="Center" TextChanged="_txtSearch_TextChanged" />
+                <Image x:Name="_imgClear" Source="Assets/clear.png" Stretch="None" PointerPressed="_imgClear_PointerPressed"/>
+            </StackPanel>
+        </Border>
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's window size -->
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="540" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="_txtSearch.FontSize" Value="10" />
+                        <Setter Target="_txtSearch.Width" Value="80" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

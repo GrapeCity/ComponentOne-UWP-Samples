@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{33A32CE5-9AF1-4165-8E05-3695C735CC96}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlExplorer</RootNamespace>
+    <AssemblyName>ControlExplorer</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>ControlExplorer2015_TemporaryKey.pfx</PackageCertificateKeyFile>
+<PackageCertificateThumbprint>98FD2B41FF2AE888FC7423308EB18A25A4888AC1</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\en\c1logo.png" />
+    <Content Include="Assets\en\grapecity_150.png" />
+    <Content Include="Assets\en\ico-Home.png" />
+    <Content Include="Assets\en\Logo.png" />
+    <Content Include="Assets\en\logo_Studio_UWP_0215.png" />
+    <Content Include="Assets\en\SmallLogo.png" />
+    <Content Include="Assets\en\SplashScreen.png" />
+    <Content Include="Assets\en\StoreLogo.png" />
+    <Content Include="Assets\en\uwpLogo_64.png" />
+    <Content Include="Assets\ja\c1logo.png" />
+    <Content Include="Assets\ja\grapecity_150.png" />
+    <Content Include="Assets\ja\ico-Home.png" />
+    <Content Include="Assets\ja\Logo.png" />
+    <Content Include="Assets\ja\logo_Studio_UWP_0215.png" />
+    <Content Include="Assets\ja\SmallLogo.png" />
+    <Content Include="Assets\ja\SplashScreen.png" />
+    <Content Include="Assets\ja\StoreLogo.png" />
+    <Content Include="Assets\ja\uwpLogo_64.png" />
+    <Content Include="Assets\ko\c1logo.png" />
+    <Content Include="Assets\ko\grapecity_150.png" />
+    <Content Include="Assets\ko\ico-Home.png" />
+    <Content Include="Assets\ko\Logo.png" />
+    <Content Include="Assets\ko\logo_Studio_UWP_0215.png" />
+    <Content Include="Assets\ko\SmallLogo.png" />
+    <Content Include="Assets\ko\SplashScreen.png" />
+    <Content Include="Assets\ko\StoreLogo.png" />
+    <Content Include="Assets\ko\uwpLogo_64.png" />
+    <Content Include="Resources\en\ControlList.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\ja\ControlList.xml" />
+    <Content Include="Resources\ko\ControlList.xml" />
+    <None Include="project.json" />
+    <PRIResource Include="Strings\ko\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <PRIResource Include="Strings\ja\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <PRIResource Include="Strings\en\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\Converters.cs" />
+    <Compile Include="Common\NavigationHelper.cs" />
+    <Compile Include="Common\NavigationParameter.cs" />
+    <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="ViewModels\PropertyAttribute.cs" />
+    <Compile Include="Views\ControlsPage.xaml.cs">
+      <DependentUpon>ControlsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\SamplesPage.xaml.cs">
+      <DependentUpon>SamplesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.cs" />
+    <Compile Include="Util\PlatformUtils.cs" />
+    <Compile Include="ViewModels\ControlDescription.cs" />
+    <Compile Include="ViewModels\FeatureDescription.cs" />
+    <Compile Include="ViewModels\GroupDescription.cs" />
+    <Compile Include="ViewModels\ISearchable.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="ControlExplorer2015_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Resources\ControlIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\ControlsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DeviceFamily-Mobile\ControlsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DeviceFamily-Mobile\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DeviceFamily-Mobile\SamplesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SamplesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.17134.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.BarCode, Version=10.0">
+      <Name>C1.UWP.BarCode</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Bitmap, Version=10.0">
+      <Name>C1.UWP.Bitmap</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Calendar, Version=10.0">
+      <Name>C1.UWP.Calendar</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.DateTimeEditors, Version=10.0">
+      <Name>C1.UWP.DateTimeEditors</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Document, Version=10.0">
+      <Name>C1.UWP.Document</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.DX, Version=10.0">
+      <Name>C1.UWP.DX</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Excel, Version=10.0">
+      <Name>C1.UWP.Excel</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.ExpressionEditor, Version=10.0">
+      <Name>C1.UWP.ExpressionEditor</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Extended, Version=10.0">
+      <Name>C1.UWP.Extended</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart.Finance, Version=10.0">
+      <Name>C1.UWP.FlexChart.Finance</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexChart, Version=10.0">
+      <Name>C1.UWP.FlexChart</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexGrid, Version=10.0">
+      <Name>C1.UWP.FlexGrid</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexReport, Version=10.0">
+      <Name>C1.UWP.FlexReport</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.FlexViewer, Version=10.0">
+      <Name>C1.UWP.FlexViewer</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Gauge, Version=10.0">
+      <Name>C1.UWP.Gauge</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Imaging, Version=10.0">
+      <Name>C1.UWP.Imaging</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.InputPanel, Version=10.0">
+      <Name>C1.UWP.InputPanel</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Input, Version=10.0">
+      <Name>C1.UWP.Input</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Maps, Version=10.0">
+      <Name>C1.UWP.Maps</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.OrgChart, Version=10.0">
+      <Name>C1.UWP.OrgChart</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.PdfViewer, Version=10.0">
+      <Name>C1.UWP.PdfViewer</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Pdf, Version=10.0">
+      <Name>C1.UWP.Pdf</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox.AppBar, Version=10.0">
+      <Name>C1.UWP.RichTextBox.AppBar</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox.PdfFilter, Version=10.0">
+      <Name>C1.UWP.RichTextBox.PdfFilter</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox.Menu, Version=10.0">
+      <Name>C1.UWP.RichTextBox.Menu</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.RichTextBox, Version=10.0">
+      <Name>C1.UWP.RichTextBox</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Schedule, Version=10.0">
+      <Name>C1.UWP.Schedule</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Sparkline, Version=10.0">
+      <Name>C1.UWP.Sparkline</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.SpellChecker, Version=10.0">
+      <Name>C1.UWP.SpellChecker</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.TileView, Version=10.0">
+      <Name>C1.UWP.TileView</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Tile, Version=10.0">
+      <Name>C1.UWP.Tile</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Word, Version=10.0">
+      <Name>C1.UWP.Word</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP.Zip, Version=10.0">
+      <Name>C1.UWP.Zip</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+    <ProjectReference Include="..\..\..\C1.UWP.BarCode\CS\BarCodeSamples\BarCodeSamplesLib2015.csproj">
+      <Project>{3332dbd4-e4e0-4a17-9ca5-3ba8f3ec6d48}</Project>
+      <Name>BarCodeSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Bitmap\CS\BitmapSamples\BitmapSamplesLib2015.csproj">
+      <Project>{356a7da1-4750-40a7-8de5-e44e896716d1}</Project>
+      <Name>BitmapSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Calendar\CS\CalendarSamples\CalendarSamplesLib2015.csproj">
+      <Project>{503afc42-25a5-4069-8c31-f66fc8f6bc67}</Project>
+      <Name>CalendarSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Document\CS\PdfDocumentSourceSamples\PdfDocumentSourceSamplesLib2015.csproj">
+      <Project>{8ed75750-d5f1-4af0-8977-92b37003e285}</Project>
+      <Name>PdfDocumentSourceSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Excel\CS\ExcelSamples\ExcelSamplesLib2015.csproj">
+      <Project>{8063f863-d73a-46e3-9cf9-f4b3921c06c1}</Project>
+      <Name>ExcelSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.ExpressionEditor\CS\ExpressionEditorSamples\ExpressionEditorSamplesLib2015.csproj">
+      <Project>{dba1c16e-8cff-45f4-8e66-28f0cee5bbc7}</Project>
+      <Name>ExpressionEditorSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Extended\CS\ExtendedSamples\ExtendedSamplesLib2015.csproj">
+      <Project>{b98e4597-2c3e-4c5c-8eb0-52f401bb3a98}</Project>
+      <Name>ExtendedSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexChart\CS\AnimationDemo\AnimationDemoLib.csproj">
+      <Project>{b26360ca-fe15-4bdb-b1ee-656045472fa1}</Project>
+      <Name>AnimationDemoLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexChart\CS\FinancialChartExplorer\FinancialChartExplorerLib2015.csproj">
+      <Project>{c079e0da-614e-4cd6-a514-42b8967db317}</Project>
+      <Name>FinancialChartExplorerLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexChart\CS\FlexChartExplorer\FlexChartExplorerLib2015.csproj">
+      <Project>{a3ee6a45-0c54-481c-b689-786f6036b6cb}</Project>
+      <Name>FlexChartExplorerLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexChart\CS\FlexRadarIntro\FlexRadarIntroLib2015.csproj">
+      <Project>{aeabcf64-51bc-4992-bc1b-bb4542ba84f1}</Project>
+      <Name>FlexRadarIntroLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexChart\CS\SunburstIntro\SunburstIntroLib2015.csproj">
+      <Project>{8d253bae-eec0-49b6-b459-7f9263c1e2e8}</Project>
+      <Name>SunburstIntroLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexGrid\CS\FlexGridSamples\FlexGridSamplesLib2015.csproj">
+      <Project>{f3c27176-efa1-4029-9220-b9064f3da2b3}</Project>
+      <Name>FlexGridSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexReport\CS\FlexReport.SQLite\FlexReport.SQLite.csproj">
+      <Project>{5f1dab53-dc76-4208-8543-239478950dca}</Project>
+      <Name>FlexReport.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.FlexReport\CS\FlexReportSamples\FlexReportSamplesLib2015.csproj">
+      <Project>{c12acf2f-00af-4683-807e-38b3a9f3a2a8}</Project>
+      <Name>FlexReportSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Gauge\CS\GaugeSamples\GaugeSamplesLib2015.csproj">
+      <Project>{a7bc37aa-4172-40ec-a2ce-8bc20f68e477}</Project>
+      <Name>GaugeSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Imaging\CS\ImagingSamples\ImagingSamplesLib2015.csproj">
+      <Project>{abff135f-ea13-44c7-b564-ac64ce3b27cc}</Project>
+      <Name>ImagingSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.InputPanel\CS\InputPanelSamples\InputPanelSamplesLib2015.csproj">
+      <Project>{4c4d3f9b-d6d0-4c83-b0cf-c4c2d1e6fb76}</Project>
+      <Name>InputPanelSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Input\CS\InputSamples\InputSamplesLib2015.csproj">
+      <Project>{ea2c34de-b802-4781-8a70-13ee898f6590}</Project>
+      <Name>InputSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Maps\CS\MapsSamples\MapsSamplesLib2015.csproj">
+      <Project>{1b8cd9e1-33f5-4bfd-8df3-e7fe88c655b4}</Project>
+      <Name>MapsSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.OrgChart\CS\OrgChartSamples\OrgChartSamplesLib2015.csproj">
+      <Project>{3443d67a-cbc7-45f1-b244-341cc8303a8a}</Project>
+      <Name>OrgChartSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.PdfViewer\CS\PdfViewerSamples\PdfViewerSamplesLib2015.csproj">
+      <Project>{c3eb1d64-c961-4db2-aeb0-af5225211001}</Project>
+      <Name>PdfViewerSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Pdf\CS\PdfSamples\PdfSamplesLib2015.csproj">
+      <Project>{7cb9a7c2-1d99-4333-9949-b7425b285b29}</Project>
+      <Name>PdfSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.RichTextBox\CS\RichTextBoxSamples\RichTextBoxSamplesLib2015.csproj">
+      <Project>{2876fb19-abf5-43d2-b423-0064008aa2b1}</Project>
+      <Name>RichTextBoxSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Schedule\CS\ScheduleSamples\ScheduleSamplesLib2015.csproj">
+      <Project>{45a11ad4-c453-4637-ab20-e2ec81b5b5f6}</Project>
+      <Name>ScheduleSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Sparkline\CS\SparklineSamples\SparklineSamplesLib2015.csproj">
+      <Project>{cc0e931d-7edc-4f29-9e55-190d29812b32}</Project>
+      <Name>SparklineSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.TileView\CS\TileViewSamples\TileViewSamplesLib2015.csproj">
+      <Project>{f7fd9107-9bbf-4f0e-be0f-8bf073ed2b71}</Project>
+      <Name>TileViewSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Tile\CS\TileSamples\TileSamplesLib2015.csproj">
+      <Project>{2b459069-9701-4f1f-8526-a03704e4b0cd}</Project>
+      <Name>TileSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Word\CS\WordSamples\WordSamplesLib2015.csproj">
+      <Project>{1e59b7ff-2810-4271-8cb8-0cfab2946b93}</Project>
+      <Name>WordSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP.Zip\CS\ZipSamples\ZipSamplesLib2015.csproj">
+      <Project>{d5bef291-80c2-458d-9f10-7618ce8ec913}</Project>
+      <Name>ZipSamplesLib2015</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\C1.UWP\CS\BasicLibrarySamples\BasicLibrarySamplesLib2015.csproj">
+      <Project>{7eef3a8b-578d-438b-8733-1c2e6ba0ff9d}</Project>
+      <Name>BasicLibrarySamplesLib2015</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

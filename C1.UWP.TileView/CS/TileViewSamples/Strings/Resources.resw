@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AmazonBooksDescription" xml:space="preserve">
+    <value>This demo shows how to use the C1TileView to display amanzon books.</value>
+  </data>
+  <data name="AmazonBooksName" xml:space="preserve">
+    <value>AmazonBooks</value>
+  </data>
+  <data name="AmazonBooksTitle" xml:space="preserve">
+    <value>Amazon Books</value>
+  </data>
+  <data name="AnnCity_Text" xml:space="preserve">
+    <value>Everet</value>
+  </data>
+  <data name="AnnEmail_Text" xml:space="preserve">
+    <value>sann0@adventureworks.com</value>
+  </data>
+  <data name="AnnName_Text" xml:space="preserve">
+    <value>Ann Johnson</value>
+  </data>
+  <data name="AnnTel_Text" xml:space="preserve">
+    <value>778-555-0141</value>
+  </data>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>TileViewSamples</value>
+  </data>
+  <data name="Author_Text" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="CustomLookDescription" xml:space="preserve">
+    <value>This demo shows a custom header appearance.</value>
+  </data>
+  <data name="CustomLookName" xml:space="preserve">
+    <value>CustomLook</value>
+  </data>
+  <data name="CustomLookTitle" xml:space="preserve">
+    <value>Custom Look</value>
+  </data>
+  <data name="DashBoardDescription" xml:space="preserve">
+    <value>This demo shows a custom dashboard appearance.</value>
+  </data>
+  <data name="DashBoardName" xml:space="preserve">
+    <value>DashBoard</value>
+  </data>
+  <data name="DashBoardTitle" xml:space="preserve">
+    <value>Tile DashBoard</value>
+  </data>
+  <data name="FredCity_Text" xml:space="preserve">
+    <value>Snohomish</value>
+  </data>
+  <data name="FredEmail_Text" xml:space="preserve">
+    <value>Fred Northup</value>
+  </data>
+  <data name="FredName_Text" xml:space="preserve">
+    <value>fred0@adventureworks.com</value>
+  </data>
+  <data name="FredTel_Text" xml:space="preserve">
+    <value>818-555-0192</value>
+  </data>
+  <data name="Header_Text" xml:space="preserve">
+    <value>header:</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="ISBN_Text" xml:space="preserve">
+    <value>ISBN:</value>
+  </data>
+  <data name="Price_Text" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="ReportSummary_Text" xml:space="preserve">
+    <value>Report Summary</value>
+  </data>
+  <data name="RusselCity_Text" xml:space="preserve">
+    <value>Seatle</value>
+  </data>
+  <data name="RusselEmail_Text" xml:space="preserve">
+    <value>russel0@adventureworks.com</value>
+  </data>
+  <data name="RusselName_Text" xml:space="preserve">
+    <value>Russel Hunter</value>
+  </data>
+  <data name="RusselTel_Text" xml:space="preserve">
+    <value>786-555-0144</value>
+  </data>
+  <data name="SalesAgents_Text" xml:space="preserve">
+    <value>Sales Agents</value>
+  </data>
+  <data name="SalesPerAgent_Text" xml:space="preserve">
+    <value>Sales Per Agent</value>
+  </data>
+  <data name="SalesPerMonth_Text" xml:space="preserve">
+    <value>Sales Per Month</value>
+  </data>
+  <data name="SariyaCity_Text" xml:space="preserve">
+    <value>Everet</value>
+  </data>
+  <data name="SariyaEmail_Text" xml:space="preserve">
+    <value>sariya0@adventureworks.com</value>
+  </data>
+  <data name="SariyaName_Text" xml:space="preserve">
+    <value>Sariya Harnpadoungsataya</value>
+  </data>
+  <data name="SariyaTel_Text" xml:space="preserve">
+    <value>399-555-0176</value>
+  </data>
+  <data name="ScottCity_Text" xml:space="preserve">
+    <value>Newport Hills</value>
+  </data>
+  <data name="ScottEmail_Text" xml:space="preserve">
+    <value>A. Scott Wright</value>
+  </data>
+  <data name="ScottName_Text" xml:space="preserve">
+    <value>ascott0@adventureworks.com</value>
+  </data>
+  <data name="ScottTel_Text" xml:space="preserve">
+    <value>992-555-0194</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="Title_Text" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+  <data name="VirtualizationDescription" xml:space="preserve">
+    <value>This demo shows how to use virtualization of C1TileView.</value>
+  </data>
+  <data name="VirtualizationName" xml:space="preserve">
+    <value>Virtualization</value>
+  </data>
+  <data name="VirtualizationTitle" xml:space="preserve">
+    <value>Virtualization</value>
+  </data>
+</root>

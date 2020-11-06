@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="InputPanelSamples.InputPanelCurrentItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InputPanelSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1input="using:C1.Xaml.InputPanel"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style TargetType="c1input:C1InputDateTimePicker">
+            <Setter Property="EditMode" Value="Date"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <c1input:C1InputPanel x:Name="InputPanel" HeaderFontSize="14" HeaderFontWeight="Bold" >
+            <c1input:C1InputPanel.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="Integrate C1InputPanel to C1FlexGrid" Margin="6" />
+                    </StackPanel>
+                </DataTemplate>
+            </c1input:C1InputPanel.HeaderTemplate>
+        </c1input:C1InputPanel>
+    </Grid>
+</Page>

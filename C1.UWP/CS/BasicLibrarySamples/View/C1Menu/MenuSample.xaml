@@ -1,0 +1,188 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.MenuSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:C1="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <Page.Resources>
+        <Style TargetType="Image" x:Key="MenuIcon">
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Height" Value="16"/>
+            <Setter Property="Margin" Value="5 0 0 0"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextIconStyle">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Segoe UI Symbol" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <!--<Setter Property="Foreground" Value="{StaticResource AppBarItemForegroundThemeBrush}" />-->
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="5,-1,0,0"/>
+        </Style>
+        <Style TargetType="C1:C1MenuItem">
+            <Setter Property="ItemContainerTransitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <RepositionThemeTransition/>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemContainerTransitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <RepositionThemeTransition/>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <CheckBox x:Name="chkVertical" Content="Vertical" Checked="CheckBox_Checked" />
+        </StackPanel>-->
+        <C1:C1DockPanel Grid.Row="1"  LastChildFill="False">
+            <!-- Visual Studio menu sample -->
+            <C1:C1Menu x:Name="VisualStudioMenu" AutoClose="True" C1:C1DockPanel.Dock="Top" DetectBoundaries="True" MinWidth="200">
+                <C1:C1Menu.ItemContainerTransitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </C1:C1Menu.ItemContainerTransitions>
+                <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" IsCheckable="True" IsChecked="True" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE188;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE12B;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE125;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE132;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE19C;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE12B;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_1_3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <C1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE19C;" Style="{StaticResource TextIconStyle}" />
+                            </C1:C1MenuItem.Icon>
+                        </C1:C1MenuItem>
+                    </C1:C1MenuItem>
+                    <C1:C1Separator />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}">
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE10A;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1Separator />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_5_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE105;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_6_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                    <C1:C1Separator />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_7_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE160;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_8_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#x2399;" Style="{StaticResource TextIconStyle}" FontWeight="ExtraBold" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1Separator />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem1_9_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" />
+                </C1:C1MenuItem>
+                <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE10E;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE10D;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1Separator />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE16B;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE16F;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_5_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" >
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE16D;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem2_6_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click" Width="100">
+                        <C1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE106;" Style="{StaticResource TextIconStyle}" />
+                        </C1:C1MenuItem.Icon>
+                    </C1:C1MenuItem>
+                </C1:C1MenuItem>
+                <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" IsCheckable="True" Click="C1MenuItem_Click" />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" IsCheckable="True" Click="C1MenuItem_Click" />
+                    <C1:C1Separator />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_5_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" GroupName="Exclusives" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_6_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" GroupName="Exclusives" IsCheckable="True" IsChecked="True" Click="C1MenuItem_Click" />
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem3_7_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" GroupName="Exclusives" IsCheckable="True" Click="C1MenuItem_Click" />
+                </C1:C1MenuItem>
+                <C1:C1MenuItem Header="{Binding MenuSample_MenuItem4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem4_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                        <C1:C1MenuItem Header="{Binding MenuSample_MenuItem4_1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                            <C1:C1MenuItem Header="{Binding MenuSample_MenuItem4_1_1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                                <C1:C1MenuItem Header="{Binding MenuSample_MenuItem4_1_1_1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                                    <C1:C1MenuItem Header="{Binding MenuSample_MenuItem4_1_1_1_1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" Click="C1MenuItem_Click">
+                                    </C1:C1MenuItem>
+                                </C1:C1MenuItem>
+                            </C1:C1MenuItem>
+                        </C1:C1MenuItem>
+                    </C1:C1MenuItem>
+                </C1:C1MenuItem>
+            </C1:C1Menu>
+        </C1:C1DockPanel>
+    </Grid>
+</Page> 

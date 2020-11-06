@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="ControlExplorer.ControlsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ControlExplorer"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns:common="using:ControlExplorer.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <!-- Collection of items displayed by this page -->
+            <CollectionViewSource
+                x:Name="itemsViewSource"
+                Source="{Binding Controls}"
+                />
+            <CollectionViewSource
+                x:Name="newControls"
+                Source="{Binding NewControls}" />
+            <CollectionViewSource
+                x:Name="topControls"
+                Source="{Binding TopControls}"
+                />
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ControlExplorerBackgroundThemeBrush}">
+        <Pivot>
+            <PivotItem VerticalContentAlignment="Stretch" Header="{Binding Source={StaticResource ControlExplorerLocalization}, Path=About_Text}">
+                <Border Margin="12 20 12 0" VerticalAlignment="Stretch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Source={StaticResource ControlExplorerLocalization}, Path=LeftPanelTB1_Text}" Foreground="Gray" Style="{ThemeResource SubtitleTextBlockStyle}" />
+                        <TextBlock Text="{Binding Source={StaticResource ControlExplorerLocalization}, Path=LeftPanelTB2_Text}" Grid.Row="1" Style="{ThemeResource TitleTextBlockStyle}" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Source={StaticResource ControlExplorerLocalization}, Path=LeftPanelTB3_Text}" Margin="0 12" Grid.Row="2" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Source={StaticResource ControlExplorerLocalization}, Path=LeftPanelTB4_Text}" Grid.Row="3">
+                            <Hyperlink NavigateUri="{Binding Source={StaticResource ControlExplorerLocalization}, Path=About_Url, Converter={StaticResource UriConverter}}" FontSize="15" Foreground="{ThemeResource ControlExplorerHyperlinkThemeBrush}" FontWeight="Bold"/>
+                        </TextBlock>
+                    </Grid>
+                </Border>
+            </PivotItem>
+            <PivotItem Header="{Binding Source={StaticResource ControlExplorerLocalization}, Path=New_Text}">
+                <GridView Padding="0" RequestedTheme="Dark"
+                    AutomationProperties.AutomationId="ItemsGridView"
+                    AutomationProperties.Name="Items"
+                    ItemTemplate="{StaticResource Standard100x100ItemTemplate}"
+                    ItemsSource="{Binding Source={StaticResource newControls}}"
+                    Style="{StaticResource narrowLayoutGridView}"
+                    SelectionMode="None" Margin="0 20 0 0" IsItemClickEnabled="True"
+                    ItemClick="ItemView_ItemClick" />
+            </PivotItem>
+            <PivotItem x:Name="ControlsHub" Header="{Binding Source={StaticResource ControlExplorerLocalization}, Path=PhoneControlsHub_Header}">
+                <GridView Padding="0" RequestedTheme="Dark"
+                    AutomationProperties.AutomationId="ItemsGridView"
+                    AutomationProperties.Name="Items"
+                    ItemTemplate="{StaticResource Standard100x100ItemTemplate}"
+                    ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
+                    Style="{StaticResource narrowLayoutGridView}"
+                    SelectionMode="None" Margin="0 20 0 0" IsItemClickEnabled="True"
+                    ItemClick="ItemView_ItemClick" />
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

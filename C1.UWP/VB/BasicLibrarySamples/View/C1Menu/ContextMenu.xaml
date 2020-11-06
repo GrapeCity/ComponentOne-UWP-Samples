@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.ContextMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <Page.Resources>
+
+        <Style TargetType="Image" x:Key="MenuIcon">
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Height" Value="16"/>
+            <Setter Property="Margin" Value="5 0 0 0"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextIconStyle">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="Segoe UI Symbol" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <!--<Setter Property="Foreground" Value="{StaticResource AppBarItemForegroundThemeBrush}" />-->
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <!--<Setter Property="Margin" Value="5,0"/>-->
+        </Style>
+     </Page.Resources>
+    <Grid>
+        <Border Background="#f9f9f9"
+                MinHeight="40" BorderBrush="#969696" BorderThickness="1" Padding="5" 
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            
+            <c1:C1ContextMenuService.ContextMenu>
+                <c1:C1ContextMenu x:Name="contextMenu" ItemClick="contextMenu_ItemClick">
+                    <c1:C1ContextMenu.ItemContainerTransitions>
+                        <TransitionCollection>
+                            <EntranceThemeTransition FromVerticalOffset="10" FromHorizontalOffset="0" IsStaggeringEnabled="False"/>
+                        </TransitionCollection>
+                    </c1:C1ContextMenu.ItemContainerTransitions>
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <c1:C1MenuItem.ItemContainerTransitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition FromVerticalOffset="10" FromHorizontalOffset="0" IsStaggeringEnabled="False"/>
+                            </TransitionCollection>
+                        </c1:C1MenuItem.ItemContainerTransitions>
+                        <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem1_1_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                            <c1:C1MenuItem.Icon>
+                                <TextBlock Text="&#xE1DA;" Style="{StaticResource TextIconStyle}" />
+                            </c1:C1MenuItem.Icon>
+                        </c1:C1MenuItem>
+                        <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem1_2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                        <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem1_3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                        <c1:C1Separator />
+                        <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem1_4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                    </c1:C1MenuItem>
+                    <c1:C1Separator />
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem2_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                    <c1:C1Separator />
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem3_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <c1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE16B;" Style="{StaticResource TextIconStyle}" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem4_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <c1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE16F;" Style="{StaticResource TextIconStyle}" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem5_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <c1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE16D;" Style="{StaticResource TextIconStyle}" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem6_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}" >
+                        <c1:C1MenuItem.Icon>
+                            <TextBlock Text="&#xE107;" Style="{StaticResource TextIconStyle}" />
+                        </c1:C1MenuItem.Icon>
+                    </c1:C1MenuItem>
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem7_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                    <c1:C1Separator/>
+                    <c1:C1MenuItem Header="{Binding ContextMenu_MenuItem8_Header_Header,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                </c1:C1ContextMenu>
+            </c1:C1ContextMenuService.ContextMenu>
+            <!-- Note: keyboard events such as pressing Application key only work if visual tree contains some focusable control.
+                 So, if we remove C1ListViewer and only leave TexBlock element, context menu won't be shown on Application key. -->
+            <c1:C1ListViewer HorizontalAlignment="Stretch" VerticalAlignment="Center" ZoomMode="Disabled" >
+                <TextBlock x:Name="listviewerTxt" Text="{Binding ContextMenu_Desktop_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" 
+                           TextWrapping="Wrap" Foreground="Black" FontSize="16" />
+            </c1:C1ListViewer>
+        </Border>
+        <TextBlock x:Name="txt" Foreground="Black" Text="" FontSize="16" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10" />
+    </Grid>
+</Page>

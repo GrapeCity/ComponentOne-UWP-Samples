@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.WrapPanelSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <Page.Resources>
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Margin" Value="0 0 4 4" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+        <Style x:Key="LinkStyle" TargetType="HyperlinkButton">
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="0" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+            <TextBlock Foreground="Black" Text="{Binding WrapPanelSample_TB_Text_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Margin="0 0 5 0" VerticalAlignment="Center" FontSize="16" />
+            <ComboBox x:Name="comboOrientation" Width="200" SelectionChanged="comboOrientation_SelectionChanged">
+                <ComboBoxItem Content="{Binding WrapPanelSample_Horizontal_Content,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+                <ComboBoxItem Content="{Binding WrapPanelSample_Vertical_Content,Source={StaticResource BasicLibrarySamplesLocalization}}"/>
+            </ComboBox>
+        </StackPanel>
+        
+        <ScrollViewer x:Name="scroll" Grid.Row="1">
+            <c1:C1WrapPanel x:Name="panel" Orientation="Horizontal">
+                <Border Style="{StaticResource BorderStyle}" Background="#88bde6">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_1_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="25" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#fbb258">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_2_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#90cd97">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_3_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="20"/>
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#f6aac9">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_4_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#bfa554">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_5_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#88bde6" c1:C1WrapPanel.BreakLine="After">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_6_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#fbb258">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_7_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#90cd97">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_8_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#f6aac9">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_9_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="20"  />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#bfa554" c1:C1WrapPanel.BreakLine="Before">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_10_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#88bde6">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_11_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#fbb258">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_12_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="8" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#90cd97">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_13_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#f6aac9">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_14_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#88bde6">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_15_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="18" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#fbb258" c1:C1WrapPanel.BreakLine="AfterAndBefore">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_16_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#90cd97">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_17_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#f6aac9">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_18_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="6" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#88bde6" >
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_19_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" />
+                </Border>
+                <Border Style="{StaticResource BorderStyle}" Background="#fbb258">
+                    <HyperlinkButton Style="{StaticResource LinkStyle}" Content="{Binding WrapPanelSample_HyperlinkButton_Content_20_Content,Source={StaticResource BasicLibrarySamplesLocalization}}" FontSize="24" />
+                </Border>
+            </c1:C1WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

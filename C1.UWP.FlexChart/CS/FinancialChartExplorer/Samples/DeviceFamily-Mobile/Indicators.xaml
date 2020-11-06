@@ -1,0 +1,129 @@
+﻿<Page x:Class="FinancialChartExplorer.Indicators"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="using:FinancialChartExplorer"
+      xmlns:Finance="using:C1.Xaml.Chart.Finance"
+      xmlns:Chart="using:C1.Xaml.Chart"
+      xmlns:c1="using:C1.Xaml"
+      mc:Ignorable="d" DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+      d:DesignHeight="300" d:DesignWidth="300" >
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="20 0">
+            <Button Content="&#xE700;" Background="{x:Null}" BorderThickness="0" FontSize="25" FontFamily="{ThemeResource SymbolThemeFontFamily}" Click="OnSplitterButtonClick"/>
+            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=IndicatorsSettings}" VerticalAlignment="Center" />
+        </StackPanel>
+        <SplitView x:Name="splitter" DisplayMode="Overlay" Grid.Row="1">
+            <SplitView.Pane>
+                <StackPanel Orientation="Vertical" Margin="0 10">
+                    <StackPanel.Resources>
+                        <Style TargetType="c1:C1NumericBox">
+                            <Setter Property="Width" Value="200"/>
+                            <Setter Property="Height" Value="20"/>
+                            <Setter Property="Minimum" Value="2"/>
+                            <Setter Property="Maximum" Value="86"/>
+                        </Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Margin" Value="10 0"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontSize" Value="10"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="tbIndicatorsType" Margin="28 0 10 0" Text="{Binding Path=IndicatorsTypeCaption, Source={StaticResource FinancialChartExplorerLocalization}}"/>
+                        <ComboBox x:Name="cbIndicatorType" ItemsSource="{Binding IndicatorType}" FontSize="10" Width="200" SelectionChanged="OnIndicatorTypeSelectionChanged" />
+                    </StackPanel>
+                    <StackPanel x:Name="spNormalOptions" Margin="0 5" Orientation="Horizontal" VerticalAlignment="Top">
+                        <TextBlock x:Name="tbPeriod" Text="{Binding Path=PeriodCaption, Source={StaticResource FinancialChartExplorerLocalization}}" Margin="62 0 10 0"/>
+                        <c1:C1NumericBox x:Name="cbPeriod" ValueChanged="OnCbPeriodValueChanged"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" x:Name="spMacdOptions" Margin="0 5" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=FastPeriodCaption}" Margin="42 0 10 0"/>
+                            <c1:C1NumericBox x:Name="cbFastPeriod" Value="12" ValueChanged="OnFastPeriodValueChanged"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=SlowPeriodCaption}" Margin="38 0 10 0"/>
+                            <c1:C1NumericBox x:Name="cbSlowPeriod" Value="26" ValueChanged="OnSlowPeriodValueChanged" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=SmoothingPeriodCaption}"/>
+                            <c1:C1NumericBox x:Name="cbSmoothingPeriod" Value="9" ValueChanged="OnSmoothingPeriodValueChanged"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" x:Name="spStochasticOptions" Margin="0 5" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=KPeriodCaption}" Margin="53 0 10 0"/>
+                            <c1:C1NumericBox x:Name="cbKPeriod" Value="14" ValueChanged="OnKPeriodValueChanged"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=DPeriodCaption}" Margin="52 0 10 0"/>
+                            <c1:C1NumericBox x:Name="cbDPeriod" Value="3" ValueChanged="OnDPeriodValueChanged" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 5">
+                            <TextBlock Text="{Binding Source={StaticResource FinancialChartExplorerLocalization}, Path=SmoothingPeriodCaption}"/>
+                            <c1:C1NumericBox x:Name="cbStochasticSmoothingPeriod" Minimum="1" Value="1" ValueChanged="OnStochasticSmoothingPeriodValueChanged"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid Margin="10 0 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+                    <Finance:C1FinancialChart
+                        x:Name="financialChart"
+                        FontSize="10"
+                        BindingX="Date"
+                        Binding="Close" 
+                        ChartType="Line" 
+                        ItemsSource="{Binding Data}"
+                        LegendPosition="Top"
+                        ToolTipContent="{}{seriesName}&#x000A;Date: {Date}&#x000A;Y: {y:n2}&#x000A;Volume: {Volume:n0}"
+                        Rendered="OnFinancialChartRendered">
+                        <Finance:FinancialSeries SeriesName="BOX" />
+                        <Finance:C1FinancialChart.AxisX>
+                            <Chart:Axis LabelAngle="45"/>
+                        </Finance:C1FinancialChart.AxisX>
+                    </Finance:C1FinancialChart>
+                    <Finance:C1FinancialChart
+                        x:Name="indicatorChart"
+                        FontSize="10"
+                        BindingX="Date"
+                        Binding="High,Low,Close"
+                        LegendPosition="Bottom"
+                        ItemsSource="{Binding Data}"
+                        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        PointerPressed="indicatorChart_PointerPressed"
+                        PointerMoved="indicatorChart_PointerMoved"
+                        Grid.Row="1">
+                        <Finance:ATR x:Name="atr" SeriesName="ATR"/>
+                        <Finance:RSI x:Name="rsi" SeriesName="RSI" Visibility="Hidden"/>
+                        <Finance:CCI x:Name="cci" SeriesName="CCI" Visibility="Hidden"/>
+                        <Finance:WilliamsR x:Name="wi" SeriesName="Williams %R" Visibility="Hidden"/>
+                        <Finance:Macd x:Name="macd" SeriesName="MACD, Signal" Visibility="Hidden">
+                            <Finance:Macd.MacdLineStyle>
+                                <Chart:ChartStyle Stroke="#bfa554" />
+                            </Finance:Macd.MacdLineStyle>
+                            <Finance:Macd.SignalLineStyle>
+                                <Chart:ChartStyle Stroke="#bf8c54" />
+                            </Finance:Macd.SignalLineStyle>
+                        </Finance:Macd>
+                        <Finance:MacdHistogram x:Name="histogram" SeriesName="MACD Histogram" Visibility="Hidden"/>
+                        <Finance:Stochastic x:Name="stochastic" SeriesName="%K,%D" Visibility="Hidden"/>
+                        <Finance:C1FinancialChart.AxisX>
+                            <Chart:Axis LabelAngle="45"/>
+                        </Finance:C1FinancialChart.AxisX>
+                    </Finance:C1FinancialChart>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>

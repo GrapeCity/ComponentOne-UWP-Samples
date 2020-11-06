@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="BarCodeSamples.PhoneBarCodePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BarCodeSamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:C1="using:C1.Xaml.BarCode"
+    xmlns:BarCode="using:C1.BarCode"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.Resources>
+            <local:StringToEnumConverter x:Key="STEConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0 10">
+            <Button x:Uid="SaveImage" Click="OnSaveImageBtnClick"/>
+            <ComboBox x:Name="cbCodeType" Margin="30 0 0 0" Width="120" ItemsSource="{Binding Types}" 
+                      SelectedValue="{Binding CodeType, ElementName=barCode, Mode=TwoWay, Converter={StaticResource STEConverter}}" />
+        </StackPanel>
+        <Border Background="White" Grid.Row="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="5">
+                <C1:C1BarCode CaptionPosition="Below" x:Name="barCode" Text="{Binding}" CodeType="QRCode">
+                    <C1:C1BarCode.QRCodeOptions>
+                        <BarCode:QRCodeOptions ErrorLevel="High"/>
+                    </C1:C1BarCode.QRCodeOptions>
+                </C1:C1BarCode>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

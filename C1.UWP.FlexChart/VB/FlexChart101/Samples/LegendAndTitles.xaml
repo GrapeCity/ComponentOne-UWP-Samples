@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="FlexChart101.LegendAndTitles"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChart101"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Root" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <Chart:ChartStyle x:Key="footerAndHeaderStyle" Fill="DimGray" FontFamily="GenericSansSerif" FontSize="20" />
+            <Chart:ChartStyle x:Key="groupHeaderStyle" Fill="DimGray" FontFamily="GenericSansSerif" FontSize="16" />
+            <Style TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+            <DataTemplate x:Key="cbLegendTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding TxtLegend, Source={StaticResource FlexChart101Localization}}"/>
+                        <Run Text="{Binding}"/>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Margin="0 8 0 0">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Width" Value="80" />
+                    <Setter Property="HorizontalAlignment"  Value="Right" />
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Width" Value="300" />
+                </Style>
+            </StackPanel.Resources>
+            <StackPanel>
+                <TextBlock Text="{Binding TxtHeader, Source={StaticResource FlexChart101Localization}}"/>
+                <TextBox Text="{Binding ElementName=flexChart, Path=Header, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 60 0"/>
+                <TextBlock Text="{Binding TxtFooter, Source={StaticResource FlexChart101Localization}}"/>
+                <TextBox Text="{Binding ElementName=flexChart, Path=Footer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 60 0"/>
+                <TextBlock Text="{Binding TxtLegend, Source={StaticResource FlexChart101Localization}}"/>
+                <ComboBox ItemsSource="{Binding DataContext.Legends}" ItemTemplate="{StaticResource cbLegendTemplate}" Width="150" 
+                          SelectedValue="{Binding ElementName=flexChart, Path=LegendPosition, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=Position}"/>
+            </StackPanel>
+            <StackPanel Margin="0 10">
+                <TextBlock Text="{Binding TxtAxisX, Source={StaticResource FlexChart101Localization}}"/>
+                <TextBox Text="{Binding ElementName=flexChart, Path=AxisX.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 60 0"/>
+                <TextBlock Text="{Binding TxtAxisY, Source={StaticResource FlexChart101Localization}}"/>
+                <TextBox Text="{Binding ElementName=flexChart, Path=AxisY.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Margin="0 0 60 0"/>
+                <CheckBox x:Name="cbGroup" Content="{Binding TxtGroupLegend, Source={StaticResource FlexChart101Localization}}"
+                          Checked="cbGroup_Checked" Unchecked="cbGroup_Checked"  IsChecked="true" Margin="80 0 0 0"/>
+            </StackPanel>
+        </StackPanel>
+        <Chart:C1FlexChart  x:Name="flexChart" BindingX="Country" ItemsSource="{Binding DataContext.Data}" Grid.Row="1"
+                            LegendPosition="Right" LegendGroupHeaderStyle="{StaticResource groupHeaderStyle}"
+                            Header="{Binding Header, Source={StaticResource FlexChart101Localization}}" HeaderStyle="{StaticResource footerAndHeaderStyle}"
+                            Footer="{Binding Footer, Source={StaticResource FlexChart101Localization}}" FooterStyle="{StaticResource footerAndHeaderStyle}">
+            <Chart:Series SeriesName="DomesticSales" Binding="DomesticSales" LegendGroup="Sales" />
+            <Chart:Series SeriesName="DomesticExpenses" Binding="DomesticExpenses" LegendGroup="Expenses"/>
+            <Chart:Series SeriesName="ExportSales" Binding="ExportSales" LegendGroup="Sales" />
+            <Chart:Series SeriesName="ExportExpenses" Binding="ExportExpenses" LegendGroup="Expenses"/>
+            <Chart:C1FlexChart.AxisX>
+                <Chart:Axis x:Uid="/FlexChart101Lib/Resources/AxisXLegend" Title="Country" Position="Bottom" />
+            </Chart:C1FlexChart.AxisX>
+            <Chart:C1FlexChart.AxisY>
+                <Chart:Axis x:Uid="/FlexChart101Lib/Resources/AxisY" Title="Amount" Position="Left" AxisLine="False" MajorGrid="True" />
+            </Chart:C1FlexChart.AxisY>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

@@ -1,0 +1,17 @@
+﻿<Page x:Class="FlexGridSamples.RatingControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="100" Height="20">
+    
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel x:Name="_sp" Orientation="Horizontal" >
+            <Path Data="M0.75,7.75685 L7.75,7.625 L10,0.875 L12.125,7.6113 L19.5,7.75 L13.75,11.875 L16.0998,18.9517 L10,14.25 L4.27532,18.9382 L6.375,12.125 z" Fill="{ThemeResource ApplicationForegroundThemeBrush}" Width="20" Height="20" Stretch="Uniform" UseLayoutRounding="False"/>
+            <Path Data="M0.75,7.75685 L7.75,7.625 L10,0.875 L12.125,7.6113 L19.5,7.75 L13.75,11.875 L16.0998,18.9517 L10,14.25 L4.27532,18.9382 L6.375,12.125 z" Fill="{ThemeResource ApplicationForegroundThemeBrush}" Width="20" Height="20" Stretch="Uniform" UseLayoutRounding="False"/>
+            <Path Data="M0.75,7.75685 L7.75,7.625 L10,0.875 L12.125,7.6113 L19.5,7.75 L13.75,11.875 L16.0998,18.9517 L10,14.25 L4.27532,18.9382 L6.375,12.125 z" Fill="{ThemeResource ApplicationForegroundThemeBrush}" Width="20" Height="20" Stretch="Uniform" UseLayoutRounding="False"/>
+            <Path Data="M0.75,7.75685 L7.75,7.625 L10,0.875 L12.125,7.6113 L19.5,7.75 L13.75,11.875 L16.0998,18.9517 L10,14.25 L4.27532,18.9382 L6.375,12.125 z" Fill="{ThemeResource ApplicationForegroundThemeBrush}" Width="20" Height="20" Stretch="Uniform" UseLayoutRounding="False"/>
+            <Path Data="M0.75,7.75685 L7.75,7.625 L10,0.875 L12.125,7.6113 L19.5,7.75 L13.75,11.875 L16.0998,18.9517 L10,14.25 L4.27532,18.9382 L6.375,12.125 z" Fill="{ThemeResource ApplicationForegroundThemeBrush}" Width="20" Height="20" Stretch="Uniform" UseLayoutRounding="False"/>
+        </StackPanel>
+    </Grid>
+</Page>

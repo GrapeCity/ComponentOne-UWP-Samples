@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="FlexChartExplorer.Selection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:FlexChartExplorer"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <local:ChartTypeConverter ChartTypes="{Binding DataContext.ChartTypes}"  x:Key="chartTypeConverter" />
+            <Style TargetType="ComboBox">
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <DataTemplate x:Key="cbChartTypeTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Charttype_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding Value}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbSelectionModeTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding SelectionMode_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbStackedTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding Stacking_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <ComboBox Width="210" x:Name="cbChartType" 
+                      ItemsSource="{Binding DataContext.ChartTypes}"
+                      ItemTemplate="{StaticResource cbChartTypeTemplate}"
+                      SelectedIndex="{Binding ElementName=flexChart, Path=ChartType, Mode=TwoWay, Converter={StaticResource chartTypeConverter}}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbStacked" 
+                      ItemsSource="{Binding DataContext.Stackings}" 
+                      ItemTemplate="{StaticResource cbStackedTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=Stacking, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=Stacking}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbSelectionMode" 
+                      ItemsSource="{Binding DataContext.SelectionModes}" 
+                      ItemTemplate="{StaticResource cbSelectionModeTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=SelectionMode, Mode=TwoWay, Converter={StaticResource enumConverter}, ConverterParameter=ChartSelectionMode}">
+            </ComboBox>
+        </StackPanel>
+        <Chart:C1FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Fruit" SelectionMode="Series" Grid.Row="1">
+            <Chart:C1FlexChart.Series>
+                <Chart:Series SeriesName="March" Binding="March"></Chart:Series>
+                <Chart:Series SeriesName="April" Binding="April"></Chart:Series>
+                <Chart:Series SeriesName="May" Binding="May"></Chart:Series>
+            </Chart:C1FlexChart.Series>
+            <Chart:C1FlexChart.SelectionStyle>
+                <Chart:ChartStyle Stroke="Red"></Chart:ChartStyle>
+            </Chart:C1FlexChart.SelectionStyle>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

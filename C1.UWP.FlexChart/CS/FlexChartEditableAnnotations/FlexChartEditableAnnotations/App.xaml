@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="FlexChartEditableAnnotations.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlexChartEditableAnnotations"
+    RequestedTheme="Light">
+
+</Application>

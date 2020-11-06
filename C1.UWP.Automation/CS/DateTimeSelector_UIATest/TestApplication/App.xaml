@@ -1,0 +1,15 @@
+﻿<Application
+    x:Class="DateTimeSelector_UIATest.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DateTimeSelector_UIATest"
+    xmlns:localData="using:DateTimeSelector_UIATest.Data"
+    RequestedTheme="Dark">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Application-specific resources -->
+            <local:Strings x:Key="C1DateTimeSelectorTestSampleLocalization" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

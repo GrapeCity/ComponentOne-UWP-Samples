@@ -1,0 +1,108 @@
+﻿<Page x:Class="GridTreeViewSamples.GridTreeViewSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c1="using:C1.Xaml"
+    xmlns:flexgrid="using:C1.Xaml.FlexGrid"
+    >
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="title">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Margin" Value="0 4 0 0" />
+        </Style>
+        <Style TargetType="c1:C1TreeViewItem" x:Key="itemContainerStyle">
+            <Setter Property="IsExpanded" Value="True" />
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot" >
+        <Grid.Resources>
+            <c1:C1HierarchicalDataTemplate x:Key="hierarchicalDataTemplate" ItemsSource="{Binding Children}">
+                <c1:C1HierarchicalDataTemplate.Template>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </c1:C1HierarchicalDataTemplate.Template>
+            </c1:C1HierarchicalDataTemplate>
+            <c1:C1HierarchicalDataTemplate x:Key="topTemplate" ItemsSource="{Binding Children}" ItemTemplate="{StaticResource hierarchicalDataTemplate}">
+                <c1:C1HierarchicalDataTemplate.Template>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </c1:C1HierarchicalDataTemplate.Template>
+            </c1:C1HierarchicalDataTemplate>
+        </Grid.Resources>
+        <Pivot>
+            <Pivot.Title>
+                <StackPanel>
+                    <!-- show time taken to create data -->
+                    <TextBlock x:Name="_txtPerson"  Text="{Binding Ready_Text, Source={StaticResource GridTreeViewSamplesLocalization}}" Grid.ColumnSpan="2" Style="{StaticResource title}" />
+                </StackPanel>
+            </Pivot.Title>
+            <PivotItem Header="{Binding Bound_Header ,Source={StaticResource GridTreeViewSamplesLocalization}}">
+                <Border>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition />
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!-- Bound TreeView -->
+                        <TextBlock x:Name="_txtTree" Text="{Binding Ready_Text, Source={StaticResource GridTreeViewSamplesLocalization}}" Style="{StaticResource title}" />
+                        <c1:C1TreeView x:Name="_tree" Background="#FF5D5D5D" Grid.Row="1" ItemContainerStyle="{StaticResource itemContainerStyle}" ItemTemplate="{StaticResource topTemplate}">
+                            
+                        </c1:C1TreeView>
+                        <!-- Bound C1FlexGrid -->
+                        <TextBlock x:Name="_txtFlex" Text="{Binding Ready_Text, Source={StaticResource GridTreeViewSamplesLocalization}}" Grid.Row="2" Style="{StaticResource title}" />
+                        <flexgrid:C1FlexGrid x:Name="_flex" Grid.Row="3" AutoGenerateColumns="False" ChildItemsPath="Children" >
+                            <flexgrid:C1FlexGrid.Columns>
+                                <flexgrid:Column x:Uid="/GridTreeViewSamplesLib/Resources/Name" Header="Name" Binding="{Binding Name, Mode=TwoWay}" Width="7*" />
+                                <flexgrid:Column x:Uid="/GridTreeViewSamplesLib/Resources/Children" Header="Children" Binding="{Binding Children.Count}" Width="3*" />
+                            </flexgrid:C1FlexGrid.Columns>
+                        </flexgrid:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </PivotItem>
+            <PivotItem Header="{Binding Unbound_Header, Source={StaticResource GridTreeViewSamplesLocalization}}">
+                <Border>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition />
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!-- Unbound TreeView -->
+                        <TextBlock x:Name="_txtTreeUnbound" Text="{Binding Ready_Text, Source={StaticResource GridTreeViewSamplesLocalization}}" Style="{StaticResource title}" />
+                        <c1:C1TreeView x:Name="_treeUnbound" Grid.Row="1" Background="#FF5D5D5D" ItemContainerStyle="{StaticResource itemContainerStyle}">
+                        </c1:C1TreeView>
+                        <!-- Unbound C1FlexGrid -->
+                        <TextBlock x:Name="_txtFlexUnbound" Text="{Binding Ready_Text, Source={StaticResource GridTreeViewSamplesLocalization}}" Grid.Row="2" Style="{StaticResource title}" />
+                        <flexgrid:C1FlexGrid x:Name="_flexUnbound" Grid.Row="3" AutoGenerateColumns="False" >
+                            <flexgrid:C1FlexGrid.Columns>
+                                <flexgrid:Column x:Uid="/GridTreeViewSamplesLib/Resources/Name" Header="Name" Binding="{Binding Name, Mode=TwoWay}" Width="7*"/>
+                                <flexgrid:Column x:Uid="/GridTreeViewSamplesLib/Resources/Children" Header="Children" Binding="{Binding Children.Count}" Width="3*" />
+                            </flexgrid:C1FlexGrid.Columns>
+                        </flexgrid:C1FlexGrid>
+                    </Grid>
+                </Border>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <AppBarButton Content="{Binding AddRoot_Content, Source={StaticResource GridTreeViewSamplesLocalization}}" Click="_btnAddRoot_Click"></AppBarButton>
+                <AppBarButton Content="{Binding AddChild_Content, Source={StaticResource GridTreeViewSamplesLocalization}}" Grid.Column="1" Click="_btnAddChild_Click"></AppBarButton>
+                <AppBarButton Content="{Binding Delete_Content, Source={StaticResource GridTreeViewSamplesLocalization}}" Grid.Column="2" Click="_btnDelete_Click"></AppBarButton>
+                <AppBarButton Content="{Binding Change_Content, Source={StaticResource GridTreeViewSamplesLocalization}}" Grid.Column="3" Click="_btnChange_Click"></AppBarButton>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

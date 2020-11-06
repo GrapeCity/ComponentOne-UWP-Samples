@@ -1,0 +1,88 @@
+﻿<Application
+    x:Class="ExcelSamples.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ExcelSamples">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0BA;</x:String>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <x:String x:Key="BackButtonGlyph">&#xE0A6;</x:String>
+                    <x:String x:Key="BackButtonSnappedGlyph">&#xE0C4;</x:String>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <!-- Application-specific resources -->
+            <local:Strings x:Key="ExcelSamplesLocalization" />
+
+            <!--***************** CONTROL ICONS *****************-->
+
+            <SolidColorBrush x:Key="IconBrush" Color="White"/>
+
+            <SolidColorBrush x:Key="IconGrayBackground" Color="#FF777777"/>
+            <!-- Page layout roots typically use entrance animations and a theme-appropriate background color -->
+
+            <Style x:Key="LayoutRootStyle" TargetType="Panel">
+                <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+                <Setter Property="ChildrenTransitions">
+                    <Setter.Value>
+                        <TransitionCollection>
+                            <EntranceThemeTransition/>
+                        </TransitionCollection>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="IconName" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource IconBrush}"/>
+                <!-- <Setter Property="FontSize" Value="12"/>-->
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="Margin" Value="-5,0,-5,1"/>
+            </Style>
+
+            <DataTemplate x:Key="IconC1Gray">
+                <Grid Background="{StaticResource IconGrayBackground}" Height="60" Width="60">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding}" Style="{StaticResource IconName}"/>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Standard250x250ItemTemplate">
+                <Grid HorizontalAlignment="Left" Width="150" Height="150">
+                    <Border Background="#FF2C383D">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="28 16 28 40"/>
+                    </Border>
+                    <Border VerticalAlignment="Bottom" Height="34">
+                        <TextBlock Text="{Binding Name}" Foreground="White" FontFamily="Segoe WP" FontSize="17" VerticalAlignment="Center" TextAlignment="Center"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="Standard80ItemTemplate">
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+                        <ContentControl ContentTemplate="{Binding Icon}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+                    </Border>
+                    <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Title}" Style="{ThemeResource BodyTextBlockStyle}" MaxHeight="40"/>
+                        <TextBlock Text="{Binding Description}" Style="{ThemeResource CaptionTextBlockStyle}" TextWrapping="WrapWholeWords"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Name="IconC1Excel">
+                <Path Data="M8.3365641,25.862892 L4,31.000999 L9.871994,31.000999 L11.286613,29.324913 z M14.128006,19.000999 L12.73737,20.648672 L15.703749,24.091341 L20,19.000999 z M4,19.000999 L8.1014395,23.778008 L8.104228,23.778008 L12.067577,28.399599 L12.068501,28.398504 L15.161529,32.000999 L21,32.000999 L17.469524,27.889 L17.418739,27.889 L10.643005,19.974998 L10.674728,19.974998 L9.8384733,19.000999 z M13.000002,4.0013466 L13.000002,14.000999 L21,14.000999 C22.656855,14.000999 24,15.344145 24,17.000999 L24,33.000999 C24,34.657852 22.656855,36.000999 21,36.000999 L13.000002,36.000999 L13.000002,41.001034 L39,41.001034 L39,15.50121 L38.99226,15.347886 C38.920563,14.641932 38.359329,14.080701 37.65337,14.009008 L37.500668,14.001297 L31.625359,14.001297 C30.175667,14.001297 29.000462,12.82604 29.000462,11.376287 L29.000462,7.7805686 L29.000006,7.7801132 L29.000006,6.0013328 C29.000006,6.0013318 29.000006,5.6566653 29.000006,5.5013371 C29.000006,4.6729159 28.328432,4.001349 27.500006,4.0013494 C27.331732,4.001349 27.000004,4.001349 27.000004,4.0013494 L26.451506,4.0013494 z M29.917477,0 L29.993444,0.0013806977 L30.000002,0.0013806977 L30.101439,0.0033434478 C31.08386,0.044610362 32.082024,0.4606556 32.863075,1.2416972 L41.750702,10.129247 C42.531746,10.910289 42.947796,11.908445 42.989063,12.89086 L42.99107,13.00127 L43,13.00127 L43,42.001026 C43,43.657864 41.656853,45.000999 40,45.000999 L12,45.000999 C10.343147,45.000999 9,43.657864 9,42.001026 L9,36.000999 L3,36.000999 C1.3431458,36.000999 0,34.657852 0,33.000999 L0,17.000999 C0,15.344145 1.3431458,14.000999 3,14.000999 L9,14.000999 L9,3.0013547 C9,1.344515 10.343147,0.0013804915 12,0.0013806977 L29.871094,0.0013806977 z" Fill="{StaticResource IconBrush}" Stretch="Uniform"/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

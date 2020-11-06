@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="FlexChartExplorer.Legend"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Chart="using:C1.Xaml.Chart"
+    xmlns:local="using:FlexChartExplorer"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    x:Name="page"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <local:EnumConverter x:Key="enumConverter" />
+            <local:MaxWidthConverter x:Key="maxWidthConverter" />
+            <Style TargetType="ComboBox">
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <DataTemplate x:Key="cbPositionTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding LegendPosition_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbOrientationTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding LegendOrientation_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbTextWrappingTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding LegendTextWrapping_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="cbMaxWidthTemplate">
+                <TextBlock>
+                    <TextBlock.Inlines>
+                        <Run Text="{Binding LegendMaxWidth_Text, Source={StaticResource FlexChartExplorerLocalization}}"></Run>
+                        <Run Text="{Binding Name}"></Run>
+                    </TextBlock.Inlines>
+                </TextBlock>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+
+            <ComboBox Width="210" x:Name="cbPosition" 
+                      ItemsSource="{Binding DataContext.LegendPosition}" 
+                      ItemTemplate="{StaticResource cbPositionTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=LegendPosition, ConverterParameter=Position, Mode=TwoWay, Converter={StaticResource enumConverter}}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbOrientation" 
+                      ItemsSource="{Binding DataContext.LegendOrientation}" 
+                      ItemTemplate="{StaticResource cbOrientationTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=LegendOrientation, ConverterParameter=Orientation, Mode=TwoWay, Converter={StaticResource enumConverter}}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbTextWrapping" 
+                      ItemsSource="{Binding DataContext.LegendTextWrapping}" 
+                      ItemTemplate="{StaticResource cbTextWrappingTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=LegendTextWrapping, ConverterParameter=TextWrapping, Mode=TwoWay, Converter={StaticResource enumConverter}}">
+            </ComboBox>
+            <ComboBox Width="200" Margin="10" x:Name="cbMaxWidth" 
+                      ItemsSource="{Binding DataContext.LegendMaxWidth}" 
+                      ItemTemplate="{StaticResource cbMaxWidthTemplate}"
+                      SelectedValue="{Binding ElementName=flexChart, Path=LegendMaxWidth, Mode=TwoWay, Converter={StaticResource maxWidthConverter}}"
+                      >
+            </ComboBox>
+            <CheckBox x:Name="cbCheckBox" Content="Group Legend" Margin="10"
+                      Checked="cbCheckBox_Checked" Unchecked="cbCheckBox_Checked" IsChecked="True" />
+        </StackPanel>
+        <Chart:C1FlexChart x:Name="flexChart" ItemsSource="{Binding DataContext.Data}" BindingX="Fruit" Grid.Row="1">
+            <Chart:C1FlexChart.Series>
+                <Chart:Series SeriesName="Label 1 (The quick Red Fox jumps over the lazy dog)" Binding="March" LegendGroup="Red Fox"/>
+                <Chart:Series SeriesName="Label 2 (The quick Brown Fox jumps over the lazy dog)" Binding="April" LegendGroup="Brown Fox"/>
+                <Chart:Series SeriesName="Label 3 (The quick Grey Fox jumps over the lazy dog)" Binding="May" LegendGroup="Grey Fox"/>
+                <Chart:Series SeriesName="Label 4 (The quick Grey Fox jumps over the lazy dog)" Binding="June" LegendGroup="Grey Fox"/>
+                <Chart:Series SeriesName="Label 5 (The quick Red Fox jumps over the lazy dog)" Binding="July" LegendGroup="Red Fox"/>
+            </Chart:C1FlexChart.Series>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexReportExplorer", "FlexReportExplorer.csproj", "{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexReport.SQLite", "..\FlexReport.SQLite\FlexReport.SQLite.csproj", "{5F1DAB53-DC76-4208-8543-239478950DCA}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|ARM.Build.0 = Debug|ARM
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|x64.ActiveCfg = Debug|x64
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|x64.Build.0 = Debug|x64
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|x64.Deploy.0 = Debug|x64
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|x86.ActiveCfg = Debug|x86
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|x86.Build.0 = Debug|x86
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Debug|x86.Deploy.0 = Debug|x86
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|ARM.ActiveCfg = Release|ARM
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|ARM.Build.0 = Release|ARM
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|ARM.Deploy.0 = Release|ARM
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|x64.ActiveCfg = Release|x64
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|x64.Build.0 = Release|x64
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|x64.Deploy.0 = Release|x64
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|x86.ActiveCfg = Release|x86
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|x86.Build.0 = Release|x86
+		{C72E01D3-5B39-4F14-BFFE-B0CBE3EE54B9}.Release|x86.Deploy.0 = Release|x86
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Debug|x64.Build.0 = Debug|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Debug|x86.Build.0 = Debug|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Release|ARM.Build.0 = Release|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Release|x64.ActiveCfg = Release|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Release|x64.Build.0 = Release|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Release|x86.ActiveCfg = Release|Any CPU
+		{5F1DAB53-DC76-4208-8543-239478950DCA}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2D119B2-FDEE-4028-A101-DDE745BBEE54}
+	EndGlobalSection
+EndGlobal

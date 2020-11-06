@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Controls>
+  <Group name="Data Management" isExpanded="true">
+    <!-- CollectionView -->
+    <Control name="CollectionView"
+             iconName="CollectionView"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature type="BasicLibrarySamples.View.CollectionViewConditions"
+               name="Sort, Filter, Group">
+        <Description>C1CollectionView implements the ICollectionView interface and provides live Sorting, Filtering and Grouping, the features absent in the native CollectionViewSource/ICollectionView implementation, for any list control.</Description>
+      </Feature>
+      <Feature type="BasicLibrarySamples.View.BindingToC1CollectionView"
+               name="Set up grouping">
+        <Description>This sample shows how to setup ListBox and GridView controls to work with C1CollectionView in the group mode.</Description>
+      </Feature>
+      <Feature name="FlexGrid"
+               type="FlexGridSamples.CollectionView"
+               source="/C1.Xaml.FlexGrid/CS/FlexGridSamples/FlexGridSamples.zip">
+        <Description>Shows C1CollectionView support built into C1FlexGrid. Tap a column header once or twice to sort that column.</Description>
+      </Feature>
+    </Control>
+    <!-- FlexGrid -->
+    <Control name="FlexGrid"
+             iconName="FlexGrid"
+             enabled="true"
+             isTop="true"
+             isNew="true"
+             assembly="C1.Xaml.FlexGrid"
+             source="/C1.Xaml.FlexGrid/CS/FlexGridSamples/FlexGridSamples.zip">
+      <Feature type="FlexGridSamples.FlexGridDemo" 
+               name="See it in Action">
+        <Description>FlexGrid&#174; is a fast, full-featured grid control that combines the powerful built-in features you want with the flexibility and extensibility you need. Get sorting, grouping, cell formatting, cell merging, aggregates and more.</Description>
+      </Feature>
+      <Feature name="Filtering">
+        <SubFeatures>
+          <SubFeature name="Grouping Filtering" type="FlexGridSamples.CollectionView">
+            <Description>FlexGrid supports live sorting, filtering and grouping through C1CollectionView. Some of these features are absent in the native CollectionViewSource/ICollectionView implementation. Group aggregates are also supported so you can display sums and counts in grouped rows. Tap a column header once or twice to sort that column.</Description>
+          </SubFeature>
+          <SubFeature name="Full Text Filter" type="FlexGridSamples.FullTextFilter" >
+            <Description>This demo shows how to filters and highlights the data across all columns.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Editing"
+               type="FlexGridSamples.Editing"
+               supportThemes="false">
+        <Description>The C1FlexGrid supports Excel-style editing. Just type values into cells and use the enter or arrow keys to move to the next one. Or press F2 and enter full-edit mode, where arrow keys navigate within the editor. Auto-complete and value-mapped columns are also built-in: simply create a ColumnValueConverter and assign it to the columns ValueConverter property and you're done. Transactioned edits are supported too. The Customer class used here implements IEditableObject, so you can undo changes by pressing the Escape key before you move to a new row. (Note: the gray columns are read-only). Note this feature is only supported by mouse and keyboard.</Description>
+      </Feature>
+      <Feature name="Live Updates" isNew="true"
+               type="FlexGridSamples.Financial">
+        <Description>Create custom cell content and show live updates. This demo shows a stock oriented example of simulated live data.
+Drag the freezing line to change the number of frozen columns or rows.
+        </Description>
+      </Feature>
+      <Feature name="Media Library"
+               type="FlexGridSamples.MediaLibrary">
+        <Description>This demo showcases the C1FlexGrid&#39;s CellFactory interface used for customizing cells. We use custom cells to display images next to the artists, albums, songs, collapse/expand icons, and ratings. We can easily create custom cells by inheriting the ICellFactory interface and providing the FrameworkElement objects used to represent the cells.</Description>
+      </Feature>
+      <Feature name="Multi-Headers"
+               type="FlexGridSamples.Unbound">
+        <Description>In addition to working with IEnumerable data sources, the C1FlexGrid also supports an unbound mode, where cell values are stored in the grid itself and are accessed using familiar indexing notation. This demo also shows how you can set up merged multi-cell row and column headers.</Description>
+      </Feature>
+      <Feature name="Excel-style"
+               type="FlexGridSamples.ExcelStyleMerge">
+        <Description>This demo shows that you can perform Excel-style cell merging and cell splitting. Select a range of cells to merge or split.</Description>
+      </Feature>
+      <Feature name="Printing"
+               type="FlexGridSamples.Printing">
+        <Description>The C1FlexGrid supports printing through GetPageImages method, making it easy for users to configure PrintManager.</Description>
+      </Feature>
+      <Feature name="Sparkline" 
+              type="SparklineSamplesLib.FlexGridIntegration">
+        <Description>Use the C1SparkLine control as a cell template in the C1FlexGrid control for the full datagrid experience.</Description>
+      </Feature>
+    </Control>
+    <!-- ListBox -->
+    <Control name="ListBox"
+             iconName="ListBox"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature type="ListBoxSample"
+               name="See it in Action">
+        <Description>The C1ListBox control is a high performance list box with horizontal orientation support, disabled selection and preview data templating.</Description>
+      </Feature>
+      <!--  <Feature name="TileListBox" iconName="TileListBox" type="TileListBoxSample">
+      <Description>The C1TileListBox control is a high performance list box that can arrange its items in both rows and columns to create tile displays. Both ComponentOne ListBox controls support incremental loading so you can infinitely load more items on demand as the user scrolls to the end of the list.</Description>
+    </Feature>-->
+    </Control>
+  </Group>
+  <Group name="Data Visualization" isExpanded="true">
+    <!--FinancialChart-->
+    <Control name="FinancialChart"
+             iconName="FinancialChart"
+             enabled="true"
+             assembly="C1.Xaml.FinancialChart">
+      <Feature name="Chart Types">
+        <SubFeatures>
+          <SubFeature type="FinancialChartExplorer.HeikinAshi"
+               name="HeikinAshi">
+            <Description>Heikin-Ashi charts are a variation of Japanese candlestick charts that were designed to remove noise from candlesticks and behave much like a moving average.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.LineBreak"
+                   name="Line Break">
+            <Description>A Line Break or Three Line Break chart uses vertical boxes or lines to illustrate the price changes of an asset or market.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.Renko"
+                   name="Renko">
+            <Description>The Renko chart uses bricks of uniform size to chart the price movement.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.Kagi"
+                   name="Kagi">
+            <Description>A Kagi chart displays supply and demand trends using a sequence of linked vertical lines.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.ColumnVolume"
+                   name="ColumnVolume">
+            <Description>ColumnVolume charts are similar to Column charts, except that they accept a second value, volume, which dictates the width of each bar.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.EquiVolume"
+                   name="EquiVolume">
+            <Description>EquiVolume charts are similar to Candlestick charts, but they only show the high and low values.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.CandleVolume"
+                   name="CandleVolume">
+            <Description>CandleVolume charts are identical to standard Candlestick charts, except that the width of each bar is determined by a fifth value, volume.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.ArmsCandleVolume"
+                   name="Arms CandleVolume">
+            <Description>Created by Richard Arms, Arms CandleVolume charts are a combination of EquiVolume and CandleVolume charts.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Interaction">
+        <SubFeatures>
+          <SubFeature type="FinancialChartExplorer.Markers"
+               name="Markers">
+            <Description>Markers display a text area on the FinancialChart that displays the data values based on the mouse cursor's position on the chart. Markers also support optional vertical and horizontal lines to enable a cross-hair effect.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.RangeSelector"
+               name="Range Selector">
+            <Description>The example below demonstrates the typical use case for the RangeSelector and how to apply a custom style.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Analytics">
+        <SubFeatures>
+          <SubFeature type="FinancialChartExplorer.TrendLines"
+               name="Trend Lines">
+            <Description>Trend lines are used to visualize trends in data and to help analyze the problems of prediction.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.MovingAverages"
+                   name="Moving Average">
+            <Description>Moving average trend lines are used to analyze data by creating a series of averages of the original data set.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.Overlays"
+                   name="Overlays">
+            <Description>Overlays, like technical indicators, are a set of derived data that is calculated by applying one or more formulas to the original set of data. Overlays are generally used to forecast an asset's market direction and generally plotted with the original data set since the the Y-axis scales are the same.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.Indicators"
+                   name="Indicators">
+            <Description>A technical indicator is a set of derived data that is calculated by applying one or more formulas to the original set of data.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.EventAnnotations"
+                   name="Event Annotations">
+            <Description>Event annotations are used to mark important events that can be attached to a specific data point on the FinancialChart. Hovering over the event annotation will reveal the full details of the event.</Description>
+          </SubFeature>
+          <SubFeature type="FinancialChartExplorer.FibonacciTool"
+                   name="Fibonacci Tool">
+            <Description>Fibonacci tool is used for trend analysis in financial charts. With the help of range selector, you can choose data range for calculation.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+    </Control>
+    <!--FlexChart-->
+    <Control name="FlexChart"
+             iconName="FlexChart"
+             isNew="true"
+             enabled="true"
+             assembly="C1.Xaml.FlexChart">
+      <Feature name="Flex Chart">
+        <SubFeatures>
+          <SubFeature type="FlexChartExplorer.Introduction"
+               name="Introduction">
+            <Description>This view shows the FlexChart's basic features. It binds the chart to a data source and allows you to select the chart type, series stacking, and rotation.</Description>
+          </SubFeature>
+          <SubFeature type="AnimationDemo.View.FlexChartAnimation" name="Animation">
+            <Description>FlexChart comes with advanced animation options for loading, updating, and adding new data.</Description>
+          </SubFeature>
+          <SubFeature type="AnimationDemo.View.CustomAnimation" name="Custom animation">
+            <Description>This view shows how to customize chart animation with AnimationTransform event.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Binding"
+               name="Binding">
+            <Description>This view shows how you can use the FlexChart to show two sets of values from a single array of data. This is the most common usage scenario for the FlexChart.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.SeriesBinding"
+                   name="Series Binding">
+            <Description>This view shows how you can use the FlexChart to show data from multiple data sources, one per series.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.HeaderAndFooter"
+                   name="Header &amp; Footer">
+            <Description>This view shows how you can add a header and a footer to the chart.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Selection"
+                   name="Selection">
+            <Description>This view demonstrates the FlexChart's selection feature.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Labels"
+                   name="Labels">
+            <Description>This view demonstrates how you can use the FlexChart's dataLabel property to add labels to each data point.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.HitTest"
+                   name="HitTest">
+            <Description>This view demonstrates the use of the FlexChart's hitTest method. The hitTest method takes a point and returns the nearest chart element. </Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Zoom"
+                   name="Zoom">
+            <Description>This view shows how to implement a custom zoom for the FlexChart control.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Bubble"
+                   name="Bubble">
+            <Description>This view shows how to create bubble charts using the FlexChart control.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Financial"
+                   name="Financial Chart">
+            <Description>This view shows how to create financial charts with the FlexChart control.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Axes"
+                   name="Axes">
+            <Description>This view shows the FlexChart with two y-axes.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.PlotAreas"
+                   name="Plot areas">
+            <Description>This view shows the FlexChart with several plot areas.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.AxisBinding"
+                   name="Axis binding">
+            <Description>This view shows the FlexChart's axis binding feature.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.ImageExport"
+                   name="Image Export">
+            <Description>Save FlexChart as image.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Zones"
+                   name="Zones">
+            <Description>The view creates a scatter chart of student grades, highlighting each grade range using zones.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.TrendLine"
+                   name="Trend Line">
+            <Description>This view shows TrendLine in FlexChart.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.Waterfall"
+                 name="Waterfall">
+            <Description>This view shows Waterfall Series in FlexChart.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.BoxWhisker"
+                 name="Box &amp; Whisker">
+            <Description>The Box &amp; Whisker series is normally used to compare distributions between different sets of numerical data.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.ErrorBar"
+                 name="ErrorBar">
+            <Description>The Error bar helps you see margins of error and standard deviations at a glance.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Flex Pie" isExpanded="true">
+        <SubFeatures>
+          <SubFeature type="FlexChartExplorer.PieIntroduction" name="See it in action">
+            <Description>This view shows the FlexPie's basic features.</Description>
+          </SubFeature>
+          <SubFeature type="AnimationDemo.View.FlexPieAnimation" name="Animation">
+            <Description>FlexPie comes with advanced animation options for loading, updating, and adding new data.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.PieSelection" name="Selection">
+            <Description>This view shows the FlexPie's selection feature.</Description>
+          </SubFeature>
+          <SubFeature type="FlexChartExplorer.MultiPie" name="Multiple Pie Charts" isNew="true" >
+            <Description>Draw multiple pie charts when several comma-separated fields are specified in binding.</Description>
+          </SubFeature>
+       </SubFeatures>
+      </Feature>
+      <Feature name="Sunburst">
+        <SubFeatures>
+          <SubFeature type="SunburstIntro.GettingStarted"
+               name="See it in action">
+            <Description>Steps for getting started with Sunburst control.</Description>
+          </SubFeature>
+          <SubFeature type="SunburstIntro.BasicFeatures"
+                   name="Basic Features">
+            <Description>This view shows the Sunburst's basic features.</Description>
+          </SubFeature>
+          <SubFeature type="SunburstIntro.LegendTitles"
+                      name="Legend &amp; Titles">
+            <Description>This view alows you to change the Sunburst's LegendPosition, Header and Footer properties.</Description>
+          </SubFeature>
+          <SubFeature type="SunburstIntro.Selection"
+                   name="Selection">
+            <Description>This view shows the Sunburst's selection feature.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Flex Radar">
+        <SubFeatures>
+          <SubFeature type="FlexRadarIntro.RadarChart"
+             name="Radar Chart">
+            <Description>The demo shows how to create radar chart with FlexRadar control.</Description>
+          </SubFeature>
+          <SubFeature type="FlexRadarIntro.PolarChart"
+                   name="Polar Chart">
+            <Description>The FlexRadar control represents a polar chart when x-values are numbers that specifies angular values in degrees.</Description>
+          </SubFeature>
+        </SubFeatures>
+      </Feature>
+      <Feature name="TreeMap" type="FlexChartExplorer.TreeMap" >
+        <Description>C1TreeMap displays hierarchical data as a set of nested rectangles. A node's rectangle has an area proportional to a value of data item's property which is specified by Binding property. The BindingName property specifies data item's property that is shown in rectangle label.</Description>
+      </Feature>
+    </Control>
+    <!-- Gauges -->
+    <Control name="Gauges"
+             iconName="Gauges"
+             assembly="C1.Xaml.Gauge"
+             source="/C1.Xaml.Gauge/CS/GaugeSamples/GaugeSamples.zip">
+      <Feature name="Radial Gauges"
+               type="GaugeSamples.RadialGauge">
+        <Description>Gauges includes several types of radial gauges are included out-of-the-box. Common radial gauges include dials and speedometers.</Description>
+        <SubFeatures>
+          <SubFeature name="RadialGauge"
+                      type="GaugeSamples.RadialGauge"/>
+          <SubFeature name="Speedometer"
+                      type="GaugeSamples.SpeedometerGauge"/>
+          <SubFeature name="VolumeGauge"
+                      type="GaugeSamples.VolumeGauge"/>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Linear Gauges"
+               type="GaugeSamples.LinearGauge"
+               iconName="LinearGauges">
+        <Description>Gauges includes several types of linear gauges are included out-of-the-box. Common linear gauges include rulers and thermometers.</Description>
+        <SubFeatures>
+          <SubFeature name="LinearGauge"
+                      type="GaugeSamples.LinearGauge"/>
+          <SubFeature name="RulerGauge"
+                      type="GaugeSamples.RulerGauge"/>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Knobs"
+               type="GaugeSamples.Knob"
+               iconName="Knobs">
+        <Description>The C1Knob control allows users to drag the pointer to a value. Also included is the unique C1RegionKnob with customizable regions. Knob gauges offer an alternative to text-based editors or sliders.</Description>
+        <SubFeatures>
+          <SubFeature name="Knob"
+                      type="GaugeSamples.Knob"/>
+          <SubFeature name="RegionKnob"
+                      type="GaugeSamples.RegionKnob"/>
+        </SubFeatures>
+      </Feature>
+      <Feature name="Advanced Customization"
+               type="GaugeSamples.Linears">
+        <Description>You can fully customize the entire gauge. Create thermometers, imitate an automobile dashboard, and more.</Description>
+        <SubFeatures>
+          <SubFeature name="Thermometer"
+                      type="GaugeSamples.Thermometer"/>
+          <SubFeature name="Rule"
+                      type="GaugeSamples.Rule"/>
+          <SubFeature name="Clock"
+                      type="GaugeSamples.Clock"/>
+          <SubFeature name="Automobile"
+                      type="GaugeSamples.Automobile"/>
+        </SubFeatures>
+      </Feature>
+    </Control>
+    <!-- Maps -->
+    <Control name="Maps"
+             iconName="Maps"
+             assembly="C1.Xaml.Maps"
+             source="/C1.Xaml.Maps/CS/MapsSamples/MapsSamples.zip">
+      <Feature type="MapsSamples.DemoMaps"
+               name="See it in Action">
+        <Description>Get smooth zooming, panning, and mapping between screen and geographical coordinates with C1Maps. Display online maps from multiple sources and import KML files that work offline. You can even data bind your own custom elements to the maps.</Description>
+      </Feature>
+      <Feature name="Markers"
+               type="MapsSamples.Marks">
+        <Description>This demo shows simple UI markers at random geographic coordinates. You can add new markers by right-clicking. You can even drag to move the markers.</Description>
+      </Feature>
+      <Feature name="KML Layer"
+               type="MapsSamples.MapChart">
+        <Description>This demo shows how you can create a map chart based on country polygons loaded from KMZ file (zipped KML) into a C1VectorLayer. It also shows that you can use a C1Maps without any online tile source.</Description>
+      </Feature>
+      <Feature name="Earthquakes"
+               type="MapsSamples.EarthQuake">
+        <Description>This demo shows Earthquake data by displaying various vector data on the map.</Description>
+      </Feature>
+      <Feature name="Parallels Meridians"
+               type="MapsSamples.Grid">
+        <Description>The vector layer allows you to add parallels and meridians to the map. You can use the vector layer on top of a Tile Source to draw geometries/shapes/polygons/paths with geo coordinates.</Description>
+      </Feature>
+      <Feature name="Cities"
+               type="MapsSamples.Cities">
+        <Description>Using the vector layer, this map shows the largest cities of the world (by population).</Description>
+      </Feature>
+      <Feature name="GeoRSS Reader"
+               type="MapsSamples.Flicker">
+        <Description>This demo displays images from a GeoRSS reader.</Description>
+      </Feature>
+      <Feature name="Custom Tile"
+               type="MapsSamples.CustomTileSource">
+        <Description>This demo shows a custom tile source using Open Street Maps. It also shows custom zoom buttons.</Description>
+      </Feature>
+    </Control>
+    <!-- OrgChart -->
+    <Control name="OrgChart"
+             iconName="OrgChart"
+             assembly="C1.Xaml.OrgChart"
+             source="/C1.Xaml.OrgChart/CS/CS.zip">
+      <Feature type="OrgChartSamples.MainSample"
+               name="See it in Action">
+        <Description>Create hierarchical diagrams that show relationships with the C1OrgChart control.</Description>
+      </Feature>
+      <Feature name="TemplateSelector"
+               type="OrgChartSamples.TemplateSample">
+        <Description>Select different templates based on features of specific data items using a DataTemplateSelector.</Description>
+      </Feature>
+      <Feature name="Hierarchical"
+               type="OrgChartSamples.HierarchicalSample">
+        <Description>Create a different appearance for certain nodes using a HierarchialDataTemplate.</Description>
+      </Feature>
+      <Feature name="CollapseExpand"
+               type="OrgChartSamples.CollapseExpand">
+        <Description>Demonstrates binding elements to properties of the C1OrgChart to create collapsible nodes.</Description>
+      </Feature>
+    </Control>
+    <!-- Sparkline -->
+    <Control name="Sparkline"
+             iconName="Sparkline"
+             assembly="C1.Xaml.Sparkline"
+             source="/C1.Xaml.Sparkline/CS/CS.zip">
+      <Feature type="SparklineSamplesLib.MainSample"
+               name="See it in Action">
+        <Description>Based off Microsoft Excel, the C1SparkLine control supports three different types of sparklines.</Description>
+      </Feature>
+      <Feature name="Customization"
+               type="SparklineSamplesLib.AppearanceSample">
+        <Description>This demo shows the variety of properties you can set to customize the appearance of your sparklines.</Description>
+      </Feature>
+      <Feature name="Data Binding"
+               type="SparklineSamplesLib.RegionSales"
+               supportThemes="false">
+        <Description>This demo shows sparklines in a data bound ListBox.</Description>
+      </Feature>
+      <Feature name="FlexGrid Integration"
+               type="SparklineSamplesLib.FlexGridIntegration">
+        <Description>Use the C1SparkLine control as a cell template in the C1FlexGrid control for the full datagrid experience.</Description>
+      </Feature>
+    </Control>
+  </Group>
+  <Group name="Input and Editing">
+   
+    <!-- ColorPicker -->
+    <Control name="ColorPicker"
+             iconName="ColorPicker"
+             assembly="C1.Xaml.Extended"
+             source="/C1.Xaml.Extended/CS/ExtendedSamples/ExtendedSamples.zip">
+      <Feature type="ExtendedSamples.C1ColorPickerDemo"
+               name="See it in Action">
+        <Description>Select colors from professionally-designed palettes or build your own custom colors including support for transparency.</Description>
+      </Feature>
+    </Control>
+    <!-- DateTime Editors -->
+    <Control name="DateTimeEditors"
+             iconName="DateTimeEditors"
+             assembly="C1.Xaml">
+      <Feature name="DatePicker"
+               type="C1.Xaml.DateTimeEditors.C1DatePicker"
+               assemblyName="C1.Xaml.DateTimeEditors"
+               packageUri="C1.Xaml.DateTimeEditors.zip">
+        <Description>C1DatePicker allows users to type DateTime values or select a date from the drop-down calendar.</Description>
+      </Feature>
+      <Feature name="TimeEditor"
+               type="C1.Xaml.DateTimeEditors.C1TimeEditor"
+               assemblyName="C1.Xaml.DateTimeEditors"
+               packageUri="C1.Xaml.DateTimeEditors.zip">
+        <Description>C1TimeEditor allows users to type TimeSpan values (use the UP/DOWN keys to skip by an increment).</Description>
+      </Feature>
+      <Feature name="DateTimePicker"
+               type="C1.Xaml.DateTimeEditors.C1DateTimePicker"
+               assemblyName="C1.Xaml.DateTimeEditors"
+               packageUri="C1.Xaml.DateTimeEditors.zip">
+        <Description>C1DateTimePicker combines C1DatePicker and C1TimeEditor to allow users to select both dates and times.</Description>
+      </Feature>
+      <Feature name="DateTimeSelector"
+               type="C1.Xaml.C1DateTimeSelector"
+               assemblyName="C1.Xaml"
+               packageUri="C1.Xaml.zip">
+        <Description>C1DateTimeSelector can handle a date input, a time input, or both at the same time.</Description>
+      </Feature>
+      <Feature name="TimeSelector"
+               type="C1.Xaml.C1TimeSelector"
+               assemblyName="C1.Xaml"
+               packageUri="C1.Xaml.zip">
+        <Description>The C1TimeSelector control provides a simple selector for time values.</Description>
+      </Feature>
+      <Feature name="DateSelector"
+               type="C1.Xaml.C1DateSelector"
+               assemblyName="C1.Xaml"
+               packageUri="C1.Xaml.zip">
+        <Description>The C1DateSelector control provides a simple selector for date values.</Description>
+      </Feature>
+    </Control>
+    <!-- DropDown -->
+    <Control name="DropDown"
+             iconName="DropDown"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature type="BasicLibrarySamples.View.DropDownDemo"
+               name="See it in Action">
+        <Description>Create a drop-down for just about anything! Easily host any UI elements in a drop-down with the C1DropDown control.</Description>
+      </Feature>
+      <Feature name="AutoComplete"
+               type="BasicLibrarySamples.View.AutoCompleteDropDown">
+        <Description>This demo shows how you can use the C1DropDown control to create an auto-complete textbox.</Description>
+      </Feature>
+      <Feature name="Hierarchical"
+               type="BasicLibrarySamples.View.HierarchicalDropDown">
+        <Description>Create a hierarchical drop-down combobox by putting a C1TreeView control inside C1DropDown.</Description>
+      </Feature>
+    </Control>
+    <!-- Input -->
+    <Control name="Input"
+             iconName="Input"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature name="MultiSelect"
+              type="InputSamples.MultiSelect">
+        <Description>The C1MultiSelect control allows users to select multiple objects from either a drop-down checklist or by a editing list of tags. Both DropDown and Header are customizable, and data can range from simple strings to custom objects.</Description>
+      </Feature>
+      <Feature name="CheckList"
+               type="InputSamples.CheckList">
+        <Description>The C1CheckList control allows users to select multiple items from a list with check boxes. The control supports options for databinding and UI customization.</Description>
+      </Feature>
+      <Feature name="TagEditor"
+               type="InputSamples.TagEditor">
+        <Description>Use the C1TagEditor control to edit a collection of tags by either adding or removing them. It can represent tags as either text with separators or as button-like UI elements.</Description>
+      </Feature>
+      <Feature name="MaskedTextBox"
+               type="MaskedTextBoxSamples.MainPage">
+        <Description>The C1MaskedTextBox control allows users to type text that conforms to a given mask.</Description>
+      </Feature>
+      <Feature name="NumericBox"
+               type="NumericBoxSamples.MainPage">
+        <Description>The C1NumericBox control allows users to type formatted numeric values (use the UP/DOWN buttons to skip by an increment).</Description>
+      </Feature>
+      <Feature name="RangeSlider"
+               type="RangeSlider">
+        <Description>RangeSlider control. Drag thumbs to change lower or upper value. Drag area between thumbs to change the whole range.</Description>
+      </Feature>
+    </Control>
+    <!--InputPanel-->
+    <Control name="InputPanel"
+             iconName="InputPanel"
+             assembly="C1.Xaml.InputPanel"
+             source="/C1.Xaml.InputPanel/CS/InputPanelSamples/InputPanelSamplesLib.zip">
+      <Feature name="See it in Action"
+               type="InputPanelSamples.BindToInputPanel">
+        <Description>Use C1InputPanel control to create data input applications with minimal coding.</Description>
+      </Feature>
+      <Feature name="Custom Template"
+               type="InputPanelSamples.CustomTemplate">
+        <Description>This sample shows how to use custom ItemsTemplate in C1InputPanel.</Description>
+      </Feature>
+      <Feature name="Integration C1FlexGrid"
+               type="InputPanelSamples.IntegrationC1FlexGrid">
+        <Description>This sample shows how to use C1InputPanel to display and edit row details in the C1FlexGrid control.</Description>
+      </Feature>
+    </Control>
+    <!-- RichTextBox -->
+    <Control name="RichTextBox"
+             iconName="RichTextBox"
+             isTop="true" isNew="true"
+             assembly="C1.Xaml.RichTextBox"
+             source="/C1.Xaml.RichTextBox/CS/RichTextBoxSamples/RichTextBoxSamples.zip">
+      <Feature type="RichTextBoxSamples.DemoRichTextBox"
+               name="See it in Action" isNew="true"
+               supportThemes="false">
+        <Description>Display and edit formatted text as HTML documents with the C1RichTextBox control. Edit and format text containing multiple fonts, decorations, sizes, colors, hyperlinks and more. Toggle the line numbers visibility as needed.
+        </Description>
+      </Feature>
+      <Feature name="Formatting"
+               type="RichTextBoxSamples.RichTextBoxFormatting"
+               supportThemes="false">
+        <Description>This demo shows most of the formatting features supported by the C1RichTextBox control.</Description>
+      </Feature>
+      <Feature name="Spell checking"
+               supportThemes="false"
+               type="RichTextBoxSamples.AsYouTypeSpellCheck">
+        <Description>C1RichTextBox supports as-you-type spell-checking with custom dictionary support for any language.</Description>
+      </Feature>
+      <Feature name="Import &amp; Export"
+               type="RichTextBoxSamples.DemoRtfFilter"
+               supportThemes="false">
+        <Description>Import or export HTML and RTF content directly to C1RichTextBox.</Description>
+      </Feature>
+      <Feature name="Printing"
+               type="RichTextBoxSamples.Printing"
+               supportThemes="false">
+        <Description>This demo shows how to view your documents in paged view and print them using the Windows printing API.</Description>
+      </Feature>
+      <Feature name="Syntax highlight"
+               type="RichTextBoxSamples.SyntaxHighlight"
+               supportThemes="false">
+        <Description>This demo shows how to implement a syntax highlighting editor using StyleOverrides.</Description>
+      </Feature>
+      <Feature name="Multi Language"
+               type="RichTextBoxSamples.MultiLanguageSpellCheck"
+               supportThemes="false">
+        <Description>This demo shows how to do multilanguage spell check by using C1SpellChecker.</Description>
+      </Feature>
+    </Control>
+  </Group>  
+  <Group name="Reporting and Documents">
+    <!-- Excel -->
+    <Control name="Excel"
+             iconName="Excel"
+             assembly="C1.Xaml.Excel"
+             source="/C1.Xaml.Excel/CS/ExcelSamples/ExcelSamples.zip">
+      <Feature type="ExcelSamples.DemoPage"
+               name="See it in Action">
+        <Description>The sample shows how you can create, open and save Excel (xlsx) files using the C1XLBook component on the UWP platform.</Description>
+      </Feature>
+    </Control>
+    <!--FlexReport-->
+    <Control name="FlexReport"
+             iconName="FlexReport"
+             assembly="C1.Xaml.FlexReport">
+      <Feature type="FlexReportSamples.ViewerPage"
+               name="FlexViewer">
+        <Description>FlexViewer is an integrated control that provides a rich UI for viewing a FlexReport or a PDF, and for performing various operations such as text search, export or printing. You can pick a report or a PDF document to load into the viewer from the drop-down list.</Description>
+      </Feature>
+      <Feature type="FlexReportSamples.ViewerPanePage"
+               name="FlexViewerPane">
+        <Description>FlexViewerPane is a basic control that can show a FlexReport, and provides programmatic control of the UI. You can pick a report to load into the viewer from the drop-down list.
+        </Description>
+      </Feature>
+      <Feature type="FlexReportSamples.ExportPage"
+               name="Export">
+        <Description>FlexReport can generate output in a number of formats using one of built-in export filters. Pick a report from the list, select an export filter and click "Export" to save the generated report in the temporary app data store, or click "Export to..." to select an output location.
+        </Description>
+      </Feature>
+      <Feature type="FlexReportSamples.PrintPage"
+               name="Printing">
+        <Description>Pick a report from the built-in FlexCommonTasks_UWP.flxr, or browse for a .flxr report definition file on your device. Then click the "Print..." button to generate and print the selected report using the standard UWP print preview UI.
+        </Description>
+      </Feature>
+    </Control>
+    <!--FlexViewer-->
+    <Control name="FlexViewer"
+             iconName="FlexViewer"
+             isTop="true"
+             assembly="C1.Xaml.FlexViewer">
+      <Feature type="PdfDocumentSourceSamples.PdfViewPage"
+               name="Pdf Viewer">
+        <Description>Demonstrates how to use C1FlexViewer and C1PdfDocumentSource to create simple PDF viewer.</Description>
+      </Feature>
+      <Feature type="FlexReportSamples.ViewerPage"
+               name="FlexViewer">
+        <Description>FlexViewer is an integrated control that provides a rich UI for viewing a FlexReport or a PDF, and for performing various operations such as text search, export or printing. You can pick a report or a PDF document to load into the viewer from the drop-down list.</Description>
+      </Feature>
+      <Feature type="FlexReportSamples.ViewerPanePage"
+               name="FlexViewerPane">
+        <Description>FlexViewerPane is a basic control that can show a FlexReport, and provides programmatic control of the UI. You can pick a report to load into the viewer from the drop-down list.
+        </Description>
+      </Feature>
+    </Control>
+    <!--PdfDocumentSource-->
+    <Control name="PdfSource"
+             iconName="PdfDocumentSource"
+             assembly="C1.Xaml.Document">
+      <Feature type="PdfDocumentSourceSamples.PdfViewPage"
+               name="Viewer">
+        <Description>Demonstrates how to use C1FlexViewer and C1PdfDocumentSource to create simple PDF viewer.</Description>
+      </Feature>
+      <Feature type="PdfDocumentSourceSamples.ExportPage"
+               name="Export">
+        <Description>Demonstrates how C1PdfDocumentSource can be used without a viewer to export documents from code.</Description>
+      </Feature>
+      <Feature type="PdfDocumentSourceSamples.PrintPage"
+               name="Printing">
+        <Description>Demonstrates how C1PdfDocumentSource can be used without a viewer to print documents from code.</Description>
+      </Feature>
+    </Control>
+    <!-- PDF -->
+    <Control name="PDF"
+             iconName="PDF"
+             assembly="C1.Xaml.Pdf">
+      <Feature type="PdfSamples.BasicTextPage"
+               name="Basic text page">
+        <Description>Dynamically create PDFs in code with the ComponentOne PDF library. This demo shows how to position and align text.</Description>
+      </Feature>
+      <Feature name="Quotes"
+               type="PdfSamples.QuotesPage">
+        <Description>This demo creates a document with quotations from www.quoteland.com. Shows DrawString, MeasureString, NewPage.</Description>
+      </Feature>
+      <Feature name="Table of Contents"
+               type="PdfSamples.TOCPage">
+        <Description>This demo creates a document with a Table of Contents. </Description>
+      </Feature>
+      <Feature name="Text Flow"
+               type="PdfSamples.TextFlowPage">
+        <Description>This demo shows how to flow text into columns and pages.</Description>
+      </Feature>
+      <Feature name="Paper Sizes"
+               type="PdfSamples.PaperSizesPage">
+        <Description>This demo creates a document containing multiple paper sizes and orientations.</Description>
+      </Feature>
+      <Feature name="Images"
+               type="PdfSamples.ImagesPage">
+        <Description>This demo creates a document with some images. It shows how you can align and scale images.</Description>
+      </Feature>
+      <Feature name="Graphics"
+               type="PdfSamples.GraphicsPage">
+        <Description>This demo shows how to use graphics to draw rectangles, lines, ellipses, etc.</Description>
+      </Feature>
+      <Feature name="Export UI"
+               type="PdfSamples.RenderUIPage">
+        <Description>This demo exports alive visual tree into Pdf document. Clik Refresh button to re-generate PDF.</Description>
+      </Feature>
+    </Control>
+    <!-- Word -->
+    <Control name="Word"
+             iconName="Word"
+             assembly="C1.Xaml.Word"
+             source="/C1.Xaml.Word/CS/WordSamples/WordSamples.zip">
+      <Feature type="WordSamples.TextFlowPage"
+               name="See it in Action">
+        <Description>The C1Word library generates rich rtf content in rtf, text and OpenXml formats.</Description>
+      </Feature>
+    </Control>
+  </Group>
+  <Group name="Utilities">
+    <!-- BarCode -->
+    <Control name="BarCode"
+             iconName="BarCode"
+             assembly="C1.Xaml.BarCode"
+             source="/C1.Xaml.BarCode/CS/BarCodeSamples/BarCodeSamples.zip">
+      <Feature type="BarCodeSamples.DemoBarCode"
+               name="See it in Action">
+        <Description>The C1BarCode control generates bar and qr codes of different types.</Description>
+      </Feature>
+      <Feature type="BarCodeSamples.NewBarcodes"
+               name="New Barcode Types">
+        <Description>Explore new bar and qr code types added in 2018.</Description>
+      </Feature>
+    </Control>
+    <!-- ExpressionEditor -->
+    <Control name="Expressions"
+             iconName="ExpressionEditor"
+             assembly="C1.Xaml.ExpressionEditor"
+             source="/C1.Xaml/CS/ExpressionEditorSamples/ExpressionEditorSamples.zip">
+      <Feature name="ColumnCalculation"
+               type="ExpressionEditorSamples.ColumnCalculation">
+        <Description>This demo shows how you can perform column calculations within FlexGrid using ExpressionEditor.</Description>
+      </Feature>
+      <Feature name="Filtering"
+               type="ExpressionEditorSamples.SupportFilter">
+        <Description>This sample demonstrates how you can filter data within FlexGrid using ExpressionEditor.</Description>
+      </Feature>
+      <Feature name="Grouping"
+              type="ExpressionEditorSamples.SupportGrouping">
+        <Description>This demo shows how you can group data within FlexGrid using ExpressionEditor.</Description>
+      </Feature>
+    </Control>
+    <!-- Imaging -->
+    <Control name="Imaging"
+             iconName="Imaging"
+             assembly="C1.Xaml.Imaging"
+             source="/C1.Xaml.Imaging/CS/ImageSamples/ImageSamples.zip">
+      <Feature name="Animated GIF"
+               type="ImageSamples.DemoGifImage"
+               supportThemes="false">
+        <Description>C1Image is an enhanced Image control which also renders GIF and animated GIF files</Description>
+      </Feature>
+      <Feature name="Crop"
+               type="ImageSamples.Crop"
+               supportThemes="false">
+        <Description>Demonstrates how to crop an image using C1Bitmap. Click and drag to select the section of the image to export.</Description>
+      </Feature>
+      <Feature name="FaceWarp"
+               type="ImageSamples.FaceWarp"
+               supportThemes="false">
+        <Description>Demonstrates programmatic image importing, editing, and exporting using C1Bitmap. Click and drag to warp the image.</Description>
+      </Feature>
+    </Control>
+    <!-- Zip -->
+    <Control name="Zip"
+             iconName="Zip"
+             assembly="C1.Xaml.Zip"
+             source="/C1.Xaml.Zip/CS/ZipSamples/ZipSamples.zip">
+      <Feature type="ZipSamples.DemoZip"
+               name="See it in Action">
+        <Description>Shows how to create, open, and edit standard ZIP files. You can list the entries in the zip file, add, remove, expand or view files and folders.</Description>
+      </Feature>
+    </Control>
+  </Group>
+  <Group name="Scheduling">
+    <!-- Calendar -->
+    <Control name="Calendar"
+             iconName="Calendar"
+             assembly="C1.Xaml.Calendar"
+             source="/C1.Xaml.Calendar/CS/CalendarSamples/CalendarSamples.zip">
+      <Feature type="CalendarSample.DefaultView"
+               name="Default">
+        <Description>The C1Calendar control represents a customizable single-month calendar with multi-selection and bolded dates. Tap on month header to switch into year/decade mode for fast navigation to historical dates.</Description>
+      </Feature>
+      <Feature type="CalendarSample.BoldedDayTemplate"
+               name="Bolded days">
+        <Description>The C1Calendar control allows you to set custom DataTemplates to represent bolded days. Use the C1Calendar.BoldedDaySlotTemplate property to alter the appearance of all bolded days.</Description>
+      </Feature>
+      <Feature type="CalendarSample.DaySlotTemplateSelector"
+               name="Custom days">
+        <Description>Use DataTemplate selectors to customize calendar days. Display a different appearance for weekends, today's date, holidays or any other days.</Description>
+      </Feature>
+      <Feature type="CalendarSample.CustomData"
+               name="Custom data">
+        <Description>Bind your calendar to custom data and show a list of events for each day. In this demo you can double tap to create new events (even create several events for the same day) and press the Delete key to remove an event.</Description>
+      </Feature>
+    </Control>
+    <!-- Scheduler -->
+    <Control name="Scheduler"
+             iconName="Scheduler"
+             assembly="C1.Xaml.Schedule"
+             source="/C1.Xaml.Schedule/CS/ScheduleSamples/ScheduleSamples.zip">
+      <Feature type="ScheduleSamples.Samples.DefaultView"
+               supportThemes="false"
+               name="Default view">
+        <Description>Build your own scheduling apps with C1Scheduler. Schedule one-time, all day, or recurring appointments with reminders, labels, and availability status just like Microsoft Outlook® and the Windows 8 Calendar app. In this demo you can double click/tap to add a new appointment.</Description>
+      </Feature>
+      <Feature type="ScheduleSamples.Samples.BusinessObjectsBinding"
+               supportThemes="false"
+               name="Objects binding">
+        <Description>This demo shows how to bind the C1Scheduler control to a collection of custom business objects. Open the top AppBar to switch views.</Description>
+      </Feature>
+
+    </Control>
+  </Group>
+  <Group name="Navigation and Layout">
+    <!-- Bitmap -->
+    <Control name="Bitmap"
+             iconName="Bitmap"
+             assembly="C1.Xaml.Bitmap"
+             source="/C1.Xaml.Bitmap/CS/BitmapSamples/BitmapSamples.zip">
+      <Feature name="Crop"
+               type="BitmapSamples.Crop"
+               supportThemes="false">
+        <Description>Shows how to use C1Bitmap to crop an image.</Description>
+      </Feature>
+      <Feature name="FaceWarp"
+               type="BitmapSamples.FaceWarp"
+               supportThemes="false">
+        <Description>Shows how to use C1Bitmap and vertex shader to distort an image.</Description>
+      </Feature>
+    </Control>
+    <!-- Book -->
+    <Control name="Book"
+             iconName="Book"
+             assembly="C1.Xaml.Extended"
+             source="/C1.Xaml.Extended/CS/ExtendedSamples/ExtendedSamples.zip">
+      <Feature type="ExtendedSamples.C1BookDemo"
+               name="See it in Action">
+        <Description>The C1Book control provides an interactive and unique way to visualize items like pages in a magazine.</Description>
+      </Feature>
+      <Feature name="Page Span"
+               type="ExtendedSamples.C1BookPageSpan">
+        <Description>The C1Book allows to add a cover page and span content across both pages. Drag to turn the page.</Description>
+      </Feature>
+    </Control>
+    <!-- Layout Panels -->
+    <Control name="Layout"
+             iconName="Layout"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature name="WrapPanel"
+               type="WrapPanelSample"
+               supportThemes="false">
+        <Description>Create flow type layouts that wrap content vertically or horizontally using the C1WrapPanel control.</Description>
+      </Feature>
+      <Feature name="DockPanel"
+               type="DockPanelSample"
+               supportThemes="false">
+        <Description>Dock content along the edges of the page with the C1DockPanel control.</Description>
+      </Feature>
+      <Feature name="UniformGrid"
+               type="UniformGridSample"
+               supportThemes="false">
+        <Description>Neatly display content in a grid with columns and rows using the C1UniformGrid control.</Description>
+      </Feature>
+      <Feature name="RadialPanel"
+               type="RadialPanelSample"
+               supportThemes="false">
+        <Description>Display content in a circle.</Description>
+      </Feature>
+      <Feature name="GridSplitter"
+               type="GridSplitterSample">
+        <Description>Use grid splitter to redistribute the space between grid rows and columns.</Description>
+      </Feature>
+    </Control>
+    <!-- Menu -->
+    <Control name="Menu"
+             iconName="Menu"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature type="MenuSample"
+               name="See it in Action"
+               supportThemes="false">
+        <Description>Shows a hierarchical list of items in a menu structure.</Description>
+      </Feature>
+      <Feature name="Vertical Menu"
+               type="VerticalMenu"
+               supportThemes="false">
+        <Description>Shows a vertical menu.</Description>
+      </Feature>
+      <Feature name="Context Menu"
+               type="ContextMenu"
+               supportThemes="false">
+        <Description>Shows a context menu.</Description>
+      </Feature>
+      <Feature name="Radial Menu"
+               type="RadialMenu"
+               supportThemes="false">
+        <Description>Shows a radial menu.</Description>
+      </Feature>
+    </Control>
+    <!-- TabControl -->
+    <Control name="TabControl"
+             iconName="TabControl"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature type="EntranceTab"
+               name="Entrance Tab"
+               supportThemes="false">
+        <Description>Display multiple pages of content using the C1TabControl, an ItemsControl for space-saving layouts. </Description>
+      </Feature>
+      <Feature type="ClearStyleTabControl"
+               name="Tab Alignment">
+        <Description>Align the tabs along any edge of the control to create different layouts.</Description>
+      </Feature>
+      <Feature name="Pin and Close"
+               type="TabControlSample">
+        <Description>The C1TabControl supports four built-in tab shapes, over-flow scrolling, alignment options and a menu for tab selection. This demo shows a classic looking tab control complete with close and pin buttons.</Description>
+      </Feature>
+    </Control>
+    <!-- Tiles -->
+    <Control name="Tiles"
+             iconName="Tiles"
+             assembly="C1.Xaml.Tile"
+             source="/C1.Xaml.Tile/CS/TileSamples/TileSamples.zip">
+      <Description>Create tiled displays and navigation hubs with ComponentOne Tiles.</Description>
+      <Feature type="TileSamples.Samples.C1TileListBoxSample"
+               name="Overview">
+        <Description>Different C1Tile controls allows you to animate your content in different ways.</Description>
+      </Feature>
+      <Feature type="TileSamples.Samples.GridViewSample"
+               name="GridView">
+        <Description>ComponentOne Tiles can be used in any ItemsControl. Drag and drop tiles like your start screen tiles.</Description>
+      </Feature>
+      <Feature type="TileSamples.Samples.ListBoxSample"
+               name="Flickr Photo"
+               supportThemes="false">
+        <Description>This demo uses a custom delegate command with the C1Tile control. Click on tile to view the image.</Description>
+      </Feature>
+      <Feature type="TileSamples.Samples.ContentSourceSample"
+               name="Updatable">
+        <Description>Update tile content from any IEnumerable ContentSource collection.</Description>
+      </Feature>
+    </Control>
+    <!-- TileView -->
+    <Control name="TileView"
+             iconName="TileView"
+             assembly="C1.Xaml.TileView"
+             source="/C1.Xaml.TileView/CS/TileViewSamples/TileViewSamples.zip">
+      <Feature type="TileDashboard.MainPage"
+               name="Dashboard">
+        <Description>Interactively browse through your data by double tapping the tile headers. The C1TileView control allows you to expand and collapse tiles to view more or less information. This control is great for dashboards, detail views, photo galleries and more.</Description>
+      </Feature>
+      <Feature type="TileDashboard.MainPage2"
+               name="Custom Style">
+        <Description>This demo customizes the tile header appearance.</Description>
+      </Feature>
+      <Feature type="TileViewVirtualization.MainPage"
+               name="Virtualization">
+        <Description>Hundreds of items load instantly with C1TileView UI virtualization support. Double tap or click the tile headers to maximize or minimize.</Description>
+      </Feature>
+    </Control>
+    <!-- TreeView -->
+    <Control name="TreeView"
+             iconName="TreeView"
+             assembly="C1.Xaml"
+             source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
+      <Feature type="TreeViewSample"
+               name="See it in Action">
+        <Description>Shows a hierarchical list of items in nodes that can be collapsed or expanded.</Description>
+      </Feature>
+      <Feature name="Editable Nodes"
+               type="TreeViewSamples.Edit">
+        <Description>Add editing support to the nodes of the C1TreeView. Press F2 on the selected node to edit, you can also press and hold the node to edit in touch mode.</Description>
+      </Feature>
+      <Feature name="Checkbox Nodes"
+               type="TreeViewSamples.CheckBox">
+        <Description>Display check boxes on the nodes of the C1TreeView.</Description>
+      </Feature>
+      <Feature name="Drag &amp; drop"
+               type="TreeViewSamples.DragDrop">
+        <Description>Shows built-in support for drag-and-drop operations. The Beta version supports drag-and-drop by mouse only.</Description>
+      </Feature>
+      <Feature name="Hierarchical"
+               type="TreeViewSamples.HierarchicalTemplate"
+               supportThemes="false">
+        <Description>Support for Hierarchical Data Templates allows you to easily customize the appearance of the C1Treeview nodes based upon the data items.</Description>
+      </Feature>
+    </Control>
+  </Group>
+  <Group name="Legacy Controls">
+    <!-- PdfViewer -->
+    <Control name="PdfViewer"
+             iconName="PdfViewer"
+             assembly="C1.Xaml.PdfViewer"
+             source="/C1.Xaml.PdfViewer/CS/PdfViewerSamples/PdfViewerSamples.zip">
+      <Feature type="PdfViewerSamples.PdfViewerDemoPage"
+               name="See it in Action">
+        <Description>Display PDF documents in your Windows Store apps with ComponentOne PdfViewer WinRT Edition. The C1PdfViewer control supports smooth scrolling and zooming on touch devices. It also supports the latest Windows 8.1 PDF rendering API that is the most reliable way to display PDFs in your applications.</Description>
+      </Feature>
+      <Feature name="Large Files"
+               type="PdfViewerSamples.LargeFile">
+        <Description>You can load large files from the Web asynchronously with one line of code.</Description>
+      </Feature>
+      <Feature name="Printing"
+               type="PdfViewerSamples.Printing">
+        <Description>This demo shows how to print from the C1PdfViewer control. Swipe out the Devices charm or click the Print button to invoke printing.</Description>
+      </Feature>
+    </Control>
+  </Group>
+</Controls>

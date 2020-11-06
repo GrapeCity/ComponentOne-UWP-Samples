@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.DockPanelSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="700">
+    <c1:C1DockPanel>
+        <Border c1:C1DockPanel.Dock="Top" Height="100" Background="#88bde6" Margin="5">
+            <TextBlock Text="{Binding MaskedTextBoxSample_TB_Top_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60" FontWeight="Light" Foreground="WhiteSmoke"/>
+        </Border>
+        <Border c1:C1DockPanel.Dock="Bottom" Height="100" Background="#90cd97" Margin="5">
+            <TextBlock Text="{Binding MaskedTextBoxSample_TB_Bottom_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60" FontWeight="Light" Foreground="WhiteSmoke"/>
+        </Border>
+        <Border c1:C1DockPanel.Dock="Left" Background="#fbb258" Margin="5">
+            <TextBlock Text="{Binding MaskedTextBoxSample_TB_Left_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60" FontWeight="Light" Foreground="WhiteSmoke">
+                <TextBlock.Projection>
+                    <PlaneProjection RotationZ="90"/>
+                </TextBlock.Projection>
+            </TextBlock>
+        </Border>
+        <Border c1:C1DockPanel.Dock="Right" Background="#f6aac9" Margin="5">
+            <TextBlock Text="{Binding MaskedTextBoxSample_TB_Right_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="60" FontWeight="Light" Foreground="WhiteSmoke">
+                <TextBlock.Projection>
+                    <PlaneProjection RotationZ="-90"/>
+                </TextBlock.Projection>
+            </TextBlock>
+        </Border>
+        <Border Background="#bfa554"  Margin="5">
+            <TextBlock Text="{Binding MaskedTextBoxSample_TB_Center_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60" FontWeight="Light" Foreground="#FF303030"/>
+        </Border>
+    </c1:C1DockPanel>
+</Page>

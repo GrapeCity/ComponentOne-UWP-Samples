@@ -1,0 +1,160 @@
+﻿<Page
+    x:Class="DashboardUWP.Dashboard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DashboardUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:chart="using:C1.Xaml.Chart"
+    xmlns:grid="using:C1.Xaml.FlexGrid"
+    xmlns:gauge="using:C1.Xaml.Gauge"
+    mc:Ignorable="d" Loaded="OnLoaded">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Style/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="#f7f7f7">
+        <Grid Style="{ThemeResource RootGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="3">
+                <TextBlock x:Uid="DashboardPageTitle" Style="{ThemeResource Tilte}" />
+                <Border BorderBrush="{ThemeResource DividerLineColor}" BorderThickness="0.5" VerticalAlignment="Bottom"/>
+            </Grid>
+            <Border Margin="0,10,5,5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{ThemeResource TileBorder}">
+                <chart:C1FlexChart x:Name="CurrentProfitVSPriorProfit" x:Uid="BudgetVSProfit" Style="{ThemeResource TilePanelTitleChart}" BindingX="Date" ChartType="LineSymbols" LegendPosition="Top">
+                    <chart:Series x:Uid="CurrentYear" Binding="Profit" />
+                    <chart:Series x:Uid="PriorYear" Binding="ProirProfit" />
+                    <chart:C1FlexChart.AxisX>
+                        <chart:Axis AxisLine="True" MajorGrid="True" Position="Bottom" MajorTickMarks="None"/>
+                    </chart:C1FlexChart.AxisX>
+                    <chart:C1FlexChart.AxisY>
+                        <chart:Axis AxisLine="True" MajorGrid="True" Format="#,##0,,.##M" Position="Left" MajorTickMarks="None"/>
+                    </chart:C1FlexChart.AxisY>
+                </chart:C1FlexChart>
+            </Border>
+            <Border Margin="0,5,5,0" Style="{ThemeResource TileBorder}" Grid.Row="3">
+                <chart:C1FlexChart x:Name="TopSaleProducts" x:Uid="TopSaleProducts" Style="{ThemeResource TilePanelTitleChart}" BindingX="Name" ChartType="Column" LegendPosition="None">
+                    <chart:Series x:Uid="Sale" Binding="Sales" />
+                    <chart:Series x:Uid="Profit" Binding="Profit"/>
+                    <chart:C1FlexChart.AxisY>
+                        <chart:Axis MajorTickMarks="None" AxisLine="False" Format="#,##0,,.##M" MajorGrid="True" />
+                    </chart:C1FlexChart.AxisY>
+                </chart:C1FlexChart>
+            </Border>
+            <Border Margin="5,5,5,0" Style="{ThemeResource TileBorder}" Grid.Row="3" Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Uid="TopSaleCustomer" Margin="10" Style="{ThemeResource TilePanelTitleText}" Grid.ColumnSpan="2" />
+                    <grid:C1FlexGrid x:Name="TopSaleCustomer" FontSize="12" Margin="10,5" Grid.Row="1" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Grid.ColumnSpan="2">
+                        <grid:C1FlexGrid.Columns>
+                            <grid:Column ColumnName="Name" Width="4*" Binding="{Binding Name}"/>
+                            <grid:Column ColumnName="Sales" Width="3*" Format="C0" Binding="{Binding Sales}"/>
+                            <grid:Column ColumnName="Profit" Width="3*" Format="C0" Binding="{Binding Profit}"/>
+                        </grid:C1FlexGrid.Columns>
+                    </grid:C1FlexGrid>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1" Grid.RowSpan="3" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Margin="5,10,0,5" Grid.Row="1" Grid.Column="3" Style="{ThemeResource TileBorder}">
+                    <Grid Margin="0,0,20,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="10" x:Uid="CategorySales" Style="{ThemeResource TilePanelTitleText}" />
+                        <TextBlock Margin="10" Style="{ThemeResource TilePanelTitleText}" x:Uid="Unit" HorizontalAlignment="Right"/>
+                        <ItemsControl  x:Name="CategortySales" Margin="10,0,0,0" Grid.Row="1">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding Name}" FontSize="10" VerticalAlignment="Center"/>
+                                        <gauge:C1LinearGauge Grid.Column="1" Height="15" Background="Transparent" Value="{Binding Goal, Converter={StaticResource UnitConverter}}" Maximum="100" BorderBrush="Transparent" PointerStroke="Black" PointerLength="0.8" PointerWidth="0.004" PointerOffset="0.1">
+                                            <gauge:C1GaugeRange Width="1" Fill="#4C000000" From="0" To="{Binding Goal, Converter={StaticResource GoodValueConverter}}"/>
+                                            <gauge:C1GaugeRange Width="1" Fill="#26000000" From="0" To="{Binding Goal, Converter={StaticResource BadValueConverter}}"/>
+                                            <gauge:C1GaugeRange Width="0.4" Fill="{Binding CompletePrecent,Converter={StaticResource BarColorConverter}}" From="0" To="{Binding Sales, Converter={StaticResource UnitConverter}}" Location="0.3"/>
+                                        </gauge:C1LinearGauge>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <gauge:C1LinearGauge Grid.Row="2" Margin="90,0,0,0" Height="20" Background="Transparent" Maximum="100" BorderBrush="Transparent" PointerLength="0" VerticalAlignment="Top">
+                            <gauge:C1GaugeMark Location="0.5" Interval="20" From="0" To="100"/>
+                            <gauge:C1GaugeLabel Location="1" Interval="20" Format="C0" Foreground="#FF4E7383" AlignmentOffset="-9" From="0" To="100"/>
+                        </gauge:C1LinearGauge>
+                    </Grid>
+                </Border>
+                <Border Margin="5,5,0,5" Style="{ThemeResource TileBorder}">
+                    <chart:C1FlexChart x:Name="SalesAndProfits" x:Uid="ProfitAndSales" Style="{ThemeResource TilePanelTitleChart}" Palette="Midnight" BindingX="Date" LegendPosition="Right">
+                        <chart:Series Binding="Sales,Sales" x:Uid="Sale" ChartType="Column"/>
+                        <chart:Series Binding="Profit,Profit" x:Uid="Profit" ChartType="Line"/>
+                        <chart:C1FlexChart.AxisX>
+                            <chart:Axis AxisLine="False" />
+                        </chart:C1FlexChart.AxisX>
+                        <chart:C1FlexChart.AxisY>
+                            <chart:Axis AxisLine="True" Format="#,##0,,.##M" MajorGrid="True" />
+                        </chart:C1FlexChart.AxisY>
+                    </chart:C1FlexChart>
+                </Border>
+                <Border Margin="5,5,0,0" Grid.Row="2" Style="{ThemeResource TileBorder}">
+                    <Grid Margin="0,0,20,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="10" x:Uid="RegionSales" Style="{ThemeResource TilePanelTitleText}" />
+                        <TextBlock Margin="10" Style="{ThemeResource TilePanelTitleText}" x:Uid="Unit" HorizontalAlignment="Right"/>
+                        <ItemsControl  x:Name="RegionSales" Margin="10,0,0,0" Grid.Row="1">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding Name}" FontSize="10" VerticalAlignment="Center"></TextBlock>
+                                        <gauge:C1LinearGauge Grid.Column="1" Height="15" Background="Transparent" Value="{Binding Goal, Converter={StaticResource UnitConverter}}" Maximum="100" BorderBrush="Transparent" PointerStroke="Black" PointerLength="0.8" PointerWidth="0.004" PointerOffset="0.1">
+                                            <gauge:C1GaugeRange Width="1" Fill="#4C000000" From="0" To="{Binding Goal, Converter={StaticResource GoodValueConverter}}"/>
+                                            <gauge:C1GaugeRange Width="1" Fill="#26000000" From="0" To="{Binding Goal, Converter={StaticResource BadValueConverter}}"/>
+                                            <gauge:C1GaugeRange Width="0.4" Fill="{Binding CompletePrecent,Converter={StaticResource BarColorConverter}}" From="0" To="{Binding Sales, Converter={StaticResource UnitConverter}}" Location="0.3"/>
+                                        </gauge:C1LinearGauge>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <gauge:C1LinearGauge Grid.Row="2" Margin="90,0,0,0"  Height="20" Background="Transparent" Maximum="100" BorderBrush="Transparent" PointerLength="0" VerticalAlignment="Top">
+                            <gauge:C1GaugeMark Location="0.5" Interval="20" From="0" To="100"/>
+                            <gauge:C1GaugeLabel Location="1" Interval="20" Format="C0" Foreground="#FF4E7383" AlignmentOffset="-9" From="0" To="100"/>
+                        </gauge:C1LinearGauge>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

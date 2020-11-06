@@ -1,0 +1,165 @@
+﻿<local:WorldCupGroupList
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="using:BasicLibrarySamples">
+    <local:WorldCupGroup GroupName = "Group A">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "South Africa"
+                                CountryName = "South Africa"
+                                TopScorer = "Kagisho DIKGACOI"
+                                WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Mexico"
+                                CountryName = "Mexico"
+                                TopScorer = "Jared BORGETTI"
+                                WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Uruguay"
+                                CountryName = "Uruguay"
+                                TopScorer = "Diego FORLAN"
+                                WorldCupWon = "2"/>
+            <local:WorldCupTeam ShortName = "France"
+                                CountryName = "France"
+                                TopScorer = "Andre-Pierre GIGNAC"
+                                WorldCupWon = "1"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group B">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "Argentina"
+                            CountryName = "Argentina"
+                            TopScorer = "Sergio AGUERO"
+                            WorldCupWon = "2"/>
+            <local:WorldCupTeam ShortName = "Nigeria"
+                            CountryName = "Nigeria"
+                            TopScorer = "Victor OBINNA"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Korea South"
+                            CountryName = "Korea Republic"
+                            TopScorer = "PARK Ji Sung"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Greece"
+                            CountryName = "Greece"
+                            TopScorer = "Theofanis GEKAS"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group C">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "England"
+                            CountryName = "England"
+                            TopScorer = "Wayne ROONEY"
+                            WorldCupWon = "1"/>
+            <local:WorldCupTeam ShortName = "United States"
+                            CountryName = "USA"
+                            TopScorer = "Jozy ALTIDORE"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Algeria"
+                            CountryName = "Algeria"
+                            TopScorer = "Rafik SAIFI"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Slovenia"
+                            CountryName = "Slovenia"
+                            TopScorer = "Milivoje NOVAKOVIC"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group D">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "Germany"
+                            CountryName = "Germany"
+                            TopScorer = "Miroslav KLOSE"
+                            WorldCupWon = "3"/>
+            <local:WorldCupTeam ShortName = "Australia"
+                            CountryName = "Australia"
+                            TopScorer = "Tim CAHILL"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Serbia"
+                            CountryName = "Serbia"
+                            TopScorer = "Milan JOVANOVIC"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Ghana"
+                            CountryName = "Ghana"
+                            TopScorer = "Matthew AMOAH"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group E">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "Netherlands"
+                            CountryName = "Netherlands"
+                            TopScorer = "Klaas HUNTELAAR"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Denmark"
+                            CountryName = "Denmark"
+                            TopScorer = "Soren LARSEN"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Japan"
+                            CountryName = "Japan"
+                            TopScorer = "Shunsuke NAKAMURA"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Cameroon"
+                            CountryName = "Cameroon"
+                            TopScorer = "Samuel ETOO"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group F">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "Italy"
+                            CountryName = "Italy"
+                            TopScorer = "Alberto GILARDINO"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Paraguay"
+                            CountryName = "Paraguay"
+                            TopScorer = "Salvador CABANAS"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "NewZealand"
+                            CountryName = "New Zealand"
+                            TopScorer = "Shane SMELTZ"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Slovak Republic"
+                            CountryName = "Slovakia"
+                            TopScorer = "Stanislav SESTAK"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group G">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "Brazil"
+                            CountryName = "Brazil"
+                            TopScorer = "LUIS FABIANO"
+                            WorldCupWon = "5"/>
+            <local:WorldCupTeam ShortName = "Korea North"
+                            CountryName = "Korea DPR"
+                            TopScorer = "JONG Chol Min"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Cote Dlvoire"
+                            CountryName = "Côte d'Ivoire"
+                            TopScorer = "Didier DROGBA"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Portugal"
+                            CountryName = "Portugal"
+                            TopScorer = "SIMAO"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+    <local:WorldCupGroup GroupName = "Group H">
+        <local:WorldCupGroup.Teams>
+            <local:WorldCupTeam ShortName = "Spain"
+                            CountryName = "Spain"
+                            TopScorer = "David VILLA"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Switzerland"
+                            CountryName = "Switzerland"
+                            TopScorer = "Alexander FREI"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Honduras"
+                            CountryName = "Honduras"
+                            TopScorer = "Carlos PAVON"
+                            WorldCupWon = "0"/>
+            <local:WorldCupTeam ShortName = "Chile"
+                            CountryName = "Chile"
+                            TopScorer = "Humberto SUAZO"
+                            WorldCupWon = "0"/>
+        </local:WorldCupGroup.Teams>
+    </local:WorldCupGroup>
+</local:WorldCupGroupList>

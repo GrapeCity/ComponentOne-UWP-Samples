@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlignCenter" xml:space="preserve">
+    <value>Align Center</value>
+  </data>
+  <data name="AlignLeft" xml:space="preserve">
+    <value>Align Left</value>
+  </data>
+  <data name="AlignRight" xml:space="preserve">
+    <value>Align Right</value>
+  </data>
+  <data name="AppBarDescription" xml:space="preserve">
+    <value>Shows how to edit and format HTML text using AppBar buttons.</value>
+  </data>
+  <data name="AppBarName" xml:space="preserve">
+    <value>AppBar</value>
+  </data>
+  <data name="AppBarTitle" xml:space="preserve">
+    <value>AppBar</value>
+  </data>
+  <data name="AppName_Text" xml:space="preserve">
+    <value>RichTextBoxSamples</value>
+  </data>
+  <data name="Argentina" xml:space="preserve">
+    <value>Spanish (Argentina)</value>
+  </data>
+  <data name="Bokmal" xml:space="preserve">
+    <value>Norwegian (Bokmal)</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>Portuguese (Brazil)</value>
+  </data>
+  <data name="BulletedList" xml:space="preserve">
+    <value>Bulleted List</value>
+  </data>
+  <data name="Canada" xml:space="preserve">
+    <value>English (Canada)</value>
+  </data>
+  <data name="CanadaFrench" xml:space="preserve">
+    <value>French (Canada)</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ChoosePic_Content" xml:space="preserve">
+    <value>Choose Picture...</value>
+  </data>
+  <data name="ClearFormat" xml:space="preserve">
+    <value>Clear Formatting</value>
+  </data>
+  <data name="ColNum_Text" xml:space="preserve">
+    <value>Number of columns:</value>
+  </data>
+  <data name="ComboBoxItemDraft_Content" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="ComboBoxItemPrint_Content" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="DecreaseFont" xml:space="preserve">
+    <value>Decrease Font Size</value>
+  </data>
+  <data name="DemoDescription" xml:space="preserve">
+    <value>Edit and format HTML text containing multiple fonts, decorations, sizes, colors and more.</value>
+  </data>
+  <data name="DemoName" xml:space="preserve">
+    <value>See it in action</value>
+  </data>
+  <data name="DemoTitle" xml:space="preserve">
+    <value>See it in action</value>
+  </data>
+  <data name="Denmark" xml:space="preserve">
+    <value>Danish (Denmark)</value>
+  </data>
+  <data name="DownloadingText_Text" xml:space="preserve">
+    <value>Downloading dictionary from Web...</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="FindSample" xml:space="preserve">
+    <value>Display and edit formatted text as HTML and RTF documents with ComponentOne RichTextBox for WinRT XAML. The C1RichTextBox control supports rich formatting, CSS, lists, hyperlinks, tables, images, and more. Use the control to display HTML content from the Web or use it as a rich text editor.</value>
+  </data>
+  <data name="FindText_Text" xml:space="preserve">
+    <value>Find Text:</value>
+  </data>
+  <data name="FormatDataAnd.Text" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="FormatDataAuto.Text" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="FormatDataBackground.Text" xml:space="preserve">
+    <value>background</value>
+  </data>
+  <data name="FormatDataBold.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="FormatDataBottom.Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="FormatDataBSpace.Text" xml:space="preserve">
+    <value>Border spacing:</value>
+  </data>
+  <data name="FormatDataCBorder.Text" xml:space="preserve">
+    <value>Collapsible borders:</value>
+  </data>
+  <data name="FormatDataCell.Text" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="FormatDataComma.Text" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="FormatDataCRBack.Text" xml:space="preserve">
+    <value>Row and column backgrounds:</value>
+  </data>
+  <data name="FormatDataCRSpan.Text" xml:space="preserve">
+    <value>Column and row spans:</value>
+  </data>
+  <data name="FormatDataCWidth.Text" xml:space="preserve">
+    <value>Column widths:</value>
+  </data>
+  <data name="FormatDataElement.Text" xml:space="preserve">
+    <value>Uneditable, but deletable, elements</value>
+  </data>
+  <data name="FormatDataE.Text" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="FormatDataFamilies.Text" xml:space="preserve">
+    <value>families</value>
+  </data>
+  <data name="FormatDataFiftyPer.Text" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="FormatDataFifty.Text" xml:space="preserve">
+    <value>50px</value>
+  </data>
+  <data name="FormatDataFont.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="FormatDataForeground.Text" xml:space="preserve">
+    <value>Foreground</value>
+  </data>
+  <data name="FormatDataF.Text" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="FormatDataImg.Text" xml:space="preserve">
+    <value>images</value>
+  </data>
+  <data name="FormatDataInline.Text" xml:space="preserve">
+    <value>Inline</value>
+  </data>
+  <data name="FormatDataItalic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="FormatDataI.Text" xml:space="preserve">
+    <value>i</value>
+  </data>
+  <data name="FormatDataMiddle.Text" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="FormatDataMisc.Text" xml:space="preserve">
+    <value>Miscellaneous:</value>
+  </data>
+  <data name="FormatDataN.Text" xml:space="preserve">
+    <value>n</value>
+  </data>
+  <data name="FormatDataO.Text" xml:space="preserve">
+    <value>o</value>
+  </data>
+  <data name="FormatDataPara1.Text" xml:space="preserve">
+    <value>Left, center, right and justify alignments:</value>
+  </data>
+  <data name="FormatDataPara2.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </value>
+  </data>
+  <data name="FormatDataPara3.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </value>
+  </data>
+  <data name="FormatDataPara4.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </value>
+  </data>
+  <data name="FormatDataPara5.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </value>
+  </data>
+  <data name="FormatDataPara6.Text" xml:space="preserve">
+    <value>Margins, border, padding and background:</value>
+  </data>
+  <data name="FormatDataPara7.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </value>
+  </data>
+  <data name="FormatDataPara8.Text" xml:space="preserve">
+    <value>Indent and line height:</value>
+  </data>
+  <data name="FormatDataPara9.Text" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </value>
+  </data>
+  <data name="FormatDataParaFormat.Text" xml:space="preserve">
+    <value>Paragraph formatting:</value>
+  </data>
+  <data name="FormatDataRBoder.Text" xml:space="preserve">
+    <value>round borders</value>
+  </data>
+  <data name="FormatDataScript.Text" xml:space="preserve">
+    <value>script</value>
+  </data>
+  <data name="FormatDataSpace.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="FormatDataSub.Text" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="FormatDataSuper.Text" xml:space="preserve">
+    <value>Super</value>
+  </data>
+  <data name="FormatDataS.Text" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="FormatDataTableFormat.Text" xml:space="preserve">
+    <value>Table formatting:</value>
+  </data>
+  <data name="FormatDataTextFormat.Text" xml:space="preserve">
+    <value>Text formatting:</value>
+  </data>
+  <data name="FormatDataTop.Text" xml:space="preserve">
+    <value>Top&amp;#xA;&amp;#xA;&amp;#xA;&amp;#xA;&amp;#xA;</value>
+  </data>
+  <data name="FormatDataT.Text" xml:space="preserve">
+    <value>t</value>
+  </data>
+  <data name="FormatDataVAlign.Text" xml:space="preserve">
+    <value>Vertical alignment:</value>
+  </data>
+  <data name="FormatDataZ.Text" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="FormattingDescription" xml:space="preserve">
+    <value>This demo shows most of the formatting features supported by the C1RichTextBox control.</value>
+  </data>
+  <data name="FormattingName" xml:space="preserve">
+    <value>Formatting</value>
+  </data>
+  <data name="FormattingTitle" xml:space="preserve">
+    <value>Formatting</value>
+  </data>
+  <data name="France" xml:space="preserve">
+    <value>French (France)</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>German (Germany)</value>
+  </data>
+  <data name="Greece" xml:space="preserve">
+    <value>Greek (Greece)</value>
+  </data>
+  <data name="HtmlTab_Header" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="IncreaseFont" xml:space="preserve">
+    <value>Increase Font Size</value>
+  </data>
+  <data name="InitializationException" xml:space="preserve">
+    <value>Failed to create initial page.</value>
+  </data>
+  <data name="InsertHyperlink_Content" xml:space="preserve">
+    <value>Hyperlink</value>
+  </data>
+  <data name="InsertPic_Content" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="InsertTable_Content" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>Italian (Italy)</value>
+  </data>
+  <data name="Justify" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="LanguageText_Text" xml:space="preserve">
+    <value>Language:</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>Spanish (Mexico)</value>
+  </data>
+  <data name="MultiLanguageDescription" xml:space="preserve">
+    <value>C1RichTextBox supports multiple language spell-checking using the C1SpellChecker component. Select a language from the combo box to see this feature in action.</value>
+  </data>
+  <data name="MultiLanguageName" xml:space="preserve">
+    <value>Multi Language</value>
+  </data>
+  <data name="MultiLanguageTitle" xml:space="preserve">
+    <value>Multi Language</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Navigate</value>
+  </data>
+  <data name="NavigateMessage" xml:space="preserve">
+    <value>The document is requesting to navigate to </value>
+  </data>
+  <data name="Netherlands" xml:space="preserve">
+    <value>Dutch (The Netherlands)</value>
+  </data>
+  <data name="Next_Content" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NumberedList" xml:space="preserve">
+    <value>Numbered List</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PdfFile" xml:space="preserve">
+    <value>Pdf Files (*.pdf)</value>
+  </data>
+  <data name="Portugal" xml:space="preserve">
+    <value>Portuguese (Portugal)</value>
+  </data>
+  <data name="Previous_Content" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="PrintDescription" xml:space="preserve">
+    <value>Send pages to a printer device. Swipe out the Devices charm or click the Print button to invoke printing.</value>
+  </data>
+  <data name="PrintException" xml:space="preserve">
+    <value>Failed to print.</value>
+  </data>
+  <data name="PrintName" xml:space="preserve">
+    <value>Printing</value>
+  </data>
+  <data name="PrintTitle" xml:space="preserve">
+    <value>Printing</value>
+  </data>
+  <data name="Print_Content" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="ReplaceAll_Content" xml:space="preserve">
+    <value>Replace All</value>
+  </data>
+  <data name="ReplaceText_Text" xml:space="preserve">
+    <value>Replace Text:</value>
+  </data>
+  <data name="Replace_Content" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="RichTextBoxTab_Header" xml:space="preserve">
+    <value>C1RichTextBox</value>
+  </data>
+  <data name="RowNum_Text" xml:space="preserve">
+    <value>Number of rows:</value>
+  </data>
+  <data name="RtbSample" xml:space="preserve">
+    <value>RichTextBoxSamples</value>
+  </data>
+  <data name="RtfFilterDescription" xml:space="preserve">
+    <value>This demo shows how to convert between HTML and RTF using the RtfFilter library.</value>
+  </data>
+  <data name="RtfFilterName" xml:space="preserve">
+    <value>RTF Filter</value>
+  </data>
+  <data name="RtfFilterTitle" xml:space="preserve">
+    <value>RTF Filter</value>
+  </data>
+  <data name="RtfSample" xml:space="preserve">
+    <value>&lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                        td
+                        {
+                            border: solid 1px Black;
+                            padding: 2px;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body style="font-family: Verdana; font-size: medium;"&gt;
+                &lt;p&gt;
+                &lt;b&gt;C1RichTextBox&lt;/b&gt; supports importing and exporting to &lt;span style='text-decoration: underline'&gt;HTML&lt;/span&gt; and &lt;span style='text-decoration: underline'&gt;RTF&lt;/span&gt;.
+                &lt;/p&gt;
+                &lt;p style='text-align:center; background-color:#FFFFCC; font-size:9pt'&gt;
+                    Switch the tabs to see the underying HTML and RTF formats of this document.
+                &lt;/p&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;</value>
+  </data>
+  <data name="RtfTab_Header" xml:space="preserve">
+    <value>RTF</value>
+  </data>
+  <data name="Russia" xml:space="preserve">
+    <value>Russian (Russia)</value>
+  </data>
+  <data name="SaveMessage" xml:space="preserve">
+    <value>The document was saved to </value>
+  </data>
+  <data name="Save_Content" xml:space="preserve">
+    <value>Save as PDF...</value>
+  </data>
+  <data name="SearchDescription" xml:space="preserve">
+    <value>Shows how to implement find and replace in C1RichTextBox.</value>
+  </data>
+  <data name="SearchName" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="SessionStateErrorMessage" xml:space="preserve">
+    <value>Frames must be either be registered before accessing frame session state, or not registered at all.</value>
+  </data>
+  <data name="SessionStateKeyErrorMessage" xml:space="preserve">
+    <value>Frames can only be registered to one session state key.</value>
+  </data>
+  <data name="Spain" xml:space="preserve">
+    <value>Spanish (Spain)</value>
+  </data>
+  <data name="SpellCheck" xml:space="preserve">
+    <value>Some facts about Mark Twain (spelling errors intentional ;-)
+A steambat pilot neded a vast knowldege of the ever-chaging river to be able to stop at any of the hundreds of ports and wood-lots along the river banks. Twain meticulosly studied 2,000 miles (3,200 km) of the Mississipi for more than two years before he received his steamboat pilot license in 1859.
+While training, Samuel covinced his younger brother Henry to work with him. Heny was killed on June 21, 1858, when the steamboat he was working on, the Pennsylvania, exploded. Twain had foreseen this death in a detailed dream a month earlier, [13] which inspired his interest in parasychology; he was an early member of the Society for Psychical Research.[14] Twain was guilt-strcken over his brother's death and held himself responsible for the rest of his life. However, he continued to work on the river and served as a river pilot until the American Civil War broke out in 1861 and traffic along the Mississipi was curtaled.
+Missouri was a slave state and considered by many to be part of the South, and was represented in both the Confederate and Federal governments during the Civil War. When the war began, Twain and his friends formed a Confederate militia (depcted in an 1885 short story, "The Private History of a Campaign That Failed"), which drilled for only two weeks before disbanding.[15] Twain joinded his brother, Orion, who had been apointed secretary to the teritorial govenor of Nevada, James W. Nye, and headed west.
+Twain then traveled to San Francisco, California, where he comtinued as a journalist and began lecturing. He met other writers such as Bret Harte, Artemus Ward and Dan DeQuille. An assignment in Hawaii became the basis for his first lectures.[18] In 1867, a local newspaper funded a trip to the Mediterrannean. During his tohr of Europe and the Midddle East, he wrote a popular colection of travel letters wich were compled as The Inocents Abroad in 1869.</value>
+  </data>
+  <data name="SpellCheckDescription" xml:space="preserve">
+    <value>C1RichTextBox supports modal and as-you-type spell-checking using the C1SpellChecker component.</value>
+  </data>
+  <data name="SpellCheckName" xml:space="preserve">
+    <value>Spell Checking</value>
+  </data>
+  <data name="SpellCheckTitle" xml:space="preserve">
+    <value>Spell Checking</value>
+  </data>
+  <data name="Strikethrough" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="SuspensionManagerErrorMessage" xml:space="preserve">
+    <value>SuspensionManager failed.</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>Swedish (Sweden)</value>
+  </data>
+  <data name="Switzerland" xml:space="preserve">
+    <value>German (Switzerland)</value>
+  </data>
+  <data name="SyntaxDescription" xml:space="preserve">
+    <value>Shows how to implement syntax highlighting using StyleOverrides.</value>
+  </data>
+  <data name="SyntaxName" xml:space="preserve">
+    <value>Syntax Highlight</value>
+  </data>
+  <data name="SyntaxTitle" xml:space="preserve">
+    <value>Syntax Highlight</value>
+  </data>
+  <data name="Text_Text" xml:space="preserve">
+    <value>Text:</value>
+  </data>
+  <data name="UK" xml:space="preserve">
+    <value>English (United Kingdom)</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="UniqueIdItemsArgumentException" xml:space="preserve">
+    <value>Only 'AllItems' is supported as a collection of items.</value>
+  </data>
+  <data name="UnValidUrlMessage" xml:space="preserve">
+    <value>Please enter a valid url.</value>
+  </data>
+  <data name="Url_Text" xml:space="preserve">
+    <value>Url:</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>English (United States)</value>
+  </data>
+  <data name="ViewModeText_Text" xml:space="preserve">
+    <value>View Mode: </value>
+  </data>
+  <data name="FontColor" xml:space="preserve">
+    <value>FontColor</value>
+  </data>
+  <data name="Highlight" xml:space="preserve">
+    <value>Highlight</value>
+  </data>
+  <data name="Line_Number" xml:space="preserve">
+    <value>Line Numbers:</value>
+  </data>
+  <data name="LineNumberMode_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="LineNumberMode_Continuous" xml:space="preserve">
+    <value>Continuous</value>
+  </data>
+  <data name="LineNumberMode_RestartEachPage" xml:space="preserve">
+    <value>Restart Each Page</value>
+  </data>
+</root>

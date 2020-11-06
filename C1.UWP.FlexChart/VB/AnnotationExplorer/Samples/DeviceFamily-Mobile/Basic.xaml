@@ -1,0 +1,70 @@
+﻿<Page x:Class="AnnotationExplorer.Basic"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="using:AnnotationExplorer"
+      xmlns:Chart="using:C1.Xaml.Chart"
+      xmlns:Annotation="using:C1.Xaml.Chart.Annotation"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <local:AnnotationViewModel />
+        </Grid.DataContext>
+        <Chart:C1FlexChart x:Name="flexChart" ChartType="Line" ToolTipContent="{}{y}" ItemsSource="{Binding Data}" LegendPosition="Bottom">
+            <Chart:C1FlexChart.AxisY>
+                <Chart:Axis Min="0" Max="100" MajorUnit="10" AxisLine="False" MajorGrid="True" MajorTickMarks="None"/>
+            </Chart:C1FlexChart.AxisY>
+            <Chart:Series SeriesName="Base dataList" Binding="Y" BindingX="X"/>
+            <Chart:C1FlexChart.Layers>
+                <Annotation:AnnotationLayer>
+                    <Annotation:AnnotationLayer.Annotations>
+                        <Annotation:Text Content="Relative" Location="0.4, 0.05" Attachment="Relative" TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=PhoneTextTooltip}">
+                            <Annotation:Text.Style>
+                                <Chart:ChartStyle FontSize="15" Stroke="White" FontFamily="GenericSansSerif" />
+                            </Annotation:Text.Style>
+                        </Annotation:Text>
+                        <Annotation:Ellipse Content="Relative" Location="0.4, 0.45" Width="120" Height="80" Attachment="Relative"
+                                    TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=EllipseTooltip}">
+                            <Annotation:Ellipse.Style>
+                                <Chart:ChartStyle Fill="Goldenrod" Stroke="DarkGoldenrod" FontWeight="Bold" FontSize="10" FontFamily="GenericSansSerif" />
+                            </Annotation:Ellipse.Style>
+                        </Annotation:Ellipse>
+                        <Annotation:Circle Content="DataIndex" Radius="50" SeriesIndex="0" PointIndex="27" Attachment="DataIndex"
+                                   TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=CircleTooltip}">
+                            <Annotation:Circle.Style>
+                                <Chart:ChartStyle Fill="LightSeaGreen" FontSize="10" Stroke="DarkCyan" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </Annotation:Circle.Style>
+                        </Annotation:Circle>
+                        <Annotation:Rectangle Content="DataCoordinate" Width="130" Height="100" Location="37, 80" Attachment="DataCoordinate"
+                                      TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=PhoneRectangleTooltip}">
+                            <Annotation:Rectangle.Style>
+                                <Chart:ChartStyle Fill="SlateBlue" FontSize="10" Stroke="DarkSlateBlue" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </Annotation:Rectangle.Style>
+                        </Annotation:Rectangle>
+                        <Annotation:Square Content="DataIndex" Length="80" SeriesIndex="0" PointIndex="40" Attachment="DataIndex"
+                                      TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=PhoneSquareTooltip}">
+                            <Annotation:Square.Style>
+                                <Chart:ChartStyle Fill="SandyBrown" FontSize="10" Stroke="Chocolate" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </Annotation:Square.Style>
+                        </Annotation:Square>
+                        <Annotation:Polygon x:Name="polygonAnno" Content="Absolute" Attachment="Absolute"
+                                      TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=PhonePolygonTooltip}">
+                            <Annotation:Polygon.Style>
+                                <Chart:ChartStyle Fill="Red" StrokeThickness="3" FontSize="10" Stroke="DarkTurquoise" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </Annotation:Polygon.Style>
+                        </Annotation:Polygon>
+                        <Annotation:Line Content="Absolute" Start="50, 200" End="300, 350" Attachment="Absolute"
+                                      TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=LineTooltip}">
+                            <Annotation:Line.Style>
+                                <Chart:ChartStyle StrokeThickness="4" FontSize="10" Stroke="DarkTurquoise" FontFamily="GenericSansSerif" FontWeight="Bold" />
+                            </Annotation:Line.Style>
+                        </Annotation:Line>
+                        <Annotation:Image Location="12, 20" x:Name="imageAnno" Attachment="DataCoordinate" TooltipText="{Binding Source={StaticResource AnnotationExplorerLocalization}, Path=PhoneImageTooltip}"/>
+                    </Annotation:AnnotationLayer.Annotations>
+                </Annotation:AnnotationLayer>
+            </Chart:C1FlexChart.Layers>
+        </Chart:C1FlexChart>
+    </Grid>
+</Page>

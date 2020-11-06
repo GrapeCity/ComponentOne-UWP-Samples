@@ -1,0 +1,31 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml" FontSize="16"
+    x:Name="page"
+    x:Class="BasicLibrarySamples.AutoCompleteDropDown"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20">
+            <TextBlock x:Name="_txtStockSymbol" Text="{Binding AutoCompleteDropDown_TB_Text,Source={StaticResource BasicLibrarySamplesLocalization}}" Margin="5" />
+            <c1:C1DropDown x:Name="searchSymbols" FocusCuesVisibility="Collapsed" ShowButton="False" DropDownWidth="300" Width="200"  HeaderPadding="0" Padding="0" RequestedTheme="Light">
+                <c1:C1DropDown.Header>
+                    <Border Height="28">
+                        <c1:C1TextBoxBase x:Name="txtSymbol" BorderThickness="0" TextWrapping="Wrap" TextChanged="txtSymbol_TextChanged" KeyDown="txtSymbol_KeyDown" LostFocus="txtSymbol_LostFocus" Margin="0" />
+                    </Border>
+                </c1:C1DropDown.Header>
+                <Border BorderBrush="{StaticResource ComboBoxPopupBorderThemeBrush}" BorderThickness="{StaticResource ComboBoxPopupBorderThemeThickness}" Background="{StaticResource ComboBoxPopupBackgroundThemeBrush}">
+                    <StackPanel>
+                        <TextBox x:Name="txt" TextChanged="txtSymbol_TextChanged" KeyDown="txtSymbol_KeyDown"></TextBox>
+                        <ItemsControl x:Name="listBox" Margin="10" />
+                    </StackPanel>
+                </Border>
+            </c1:C1DropDown>
+        </StackPanel>
+    </Grid>
+</Page>

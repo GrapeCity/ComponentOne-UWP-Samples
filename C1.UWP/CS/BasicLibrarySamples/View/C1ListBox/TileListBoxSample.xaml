@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="BasicLibrarySamples.TileListBoxSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicLibrarySamples"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:c1="using:C1.Xaml"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+    <Grid>
+        <StackPanel x:Name="loading" VerticalAlignment="Center">
+            <TextBlock Text="Retrieving data from YouTube..." TextAlignment="Center"/>
+            <c1:C1ProgressBar IsIndeterminate="True" IndeterminateForeground="#FF2C383D" Height="4"/>
+        </StackPanel>
+        <Button x:Name="retry" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Retry" Visibility="Collapsed" Click="Retry_Click" />
+        <c1:C1TileListBox x:Name="tileListBox" 
+                          Background="Transparent"
+                          Foreground="White"
+                          SelectedBackground="#FF0AC2FF"
+                          ItemWidth="180" ItemHeight="180"
+                          Padding="0 0 0 20"
+                          Visibility="Collapsed" 
+                          ItemContainerLoaded="tileListBox_ItemContainerLoaded_1"
+                          ItemTapped="tileListBox_ItemTapped"
+                          HorizontalContentAlignment="Stretch"
+                          VerticalContentAlignment="Stretch">
+            <!--<c1:C1TileListBox.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition FromVerticalOffset="100" FromHorizontalOffset="0" />
+                </TransitionCollection>
+            </c1:C1TileListBox.ItemContainerTransitions>-->
+            <c1:C1TileListBox.PreviewItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Gray"/>
+                </DataTemplate>
+            </c1:C1TileListBox.PreviewItemTemplate>
+            <c1:C1TileListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="#33666666">
+                        <Image Source="{Binding Thumbnail}" Stretch="UniformToFill"/>
+                        <TextBlock Text="{Binding Title}" Foreground="White" Margin="4 0 0 4" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </DataTemplate>
+            </c1:C1TileListBox.ItemTemplate>
+        </c1:C1TileListBox>
+    </Grid>
+</Page>

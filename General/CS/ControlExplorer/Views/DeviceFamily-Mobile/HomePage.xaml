@@ -1,0 +1,144 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="ControlExplorer.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ControlExplorer"
+    xmlns:common="using:ControlExplorer.Common"
+    xmlns:Xaml="using:C1.Xaml"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ControlExplorerBackgroundThemeBrush}">
+        <Grid.Resources>
+            <CollectionViewSource x:Name="groupViewSource" Source="{Binding DefaultViewModel.Groups}"/>
+            <ControlTemplate x:Key="SplitViewTogglePaneButtonTemplate" TargetType="Button">
+                <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Target="RootGrid.Background" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                    <Setter Target="ContentPresenter.Foreground" Value="{ThemeResource SystemControlHighlightBaseMediumHighBrush}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Target="RootGrid.Background" Value="{ThemeResource SystemControlBackgroundBaseMediumLowBrush}" />
+                                    <Setter Target="ContentPresenter.Foreground" Value="{ThemeResource SystemControlHighlightBaseMediumBrush}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Target="ContentPresenter.Foreground" Value="{ThemeResource SystemControlForegroundBaseLowBrush}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <ContentPresenter
+                                      x:Name="ContentPresenter"
+                                      Padding="{TemplateBinding Padding}"
+                                      BorderBrush="{TemplateBinding BorderBrush}"
+                                      BorderThickness="{TemplateBinding BorderThickness}"
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      AutomationProperties.AccessibilityView="Raw"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      ContentTransitions="{TemplateBinding ContentTransitions}" />
+                </Grid>
+            </ControlTemplate>
+            <Style x:Key="SplitViewTogglePaneButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
+                <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Top" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="UseSystemFocusVisuals" Value="True" />
+                <Setter Property="FontFamily" Value="{ThemeResource SymbolThemeFontFamily}" />
+                <Setter Property="Content" Value="&#xE700;" />
+                <Setter Property="Height" Value="48" />
+                <Setter Property="Width" Value="48" />
+                <Setter Property="FontWeight" Value="Normal" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Template" Value="{StaticResource SplitViewTogglePaneButtonTemplate}" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Margin="2 0">
+            <Button x:Name="splitViewToggle" Style="{StaticResource SplitViewTogglePaneButtonStyle}" Visibility="Visible" Click="splitViewToggle_Click" />
+            <Image x:Name="logo" HorizontalAlignment="Right" Source="/Assets/c1logo.png" Height="50" />
+        </Grid>
+        <SplitView x:Name="splitter" IsPaneOpen="False" DisplayMode="Overlay" Grid.Row="1" Margin="0 5 0 0">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.Resources>
+                        <DataTemplate x:Key="SubFeatureTemplate">
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                        <Xaml:C1HierarchicalDataTemplate x:Key="FeatureTemplate" ItemsSource="{Binding SubFeatures}" ItemTemplate="{StaticResource SubFeatureTemplate}">
+                            <Xaml:C1HierarchicalDataTemplate.Template>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </Xaml:C1HierarchicalDataTemplate.Template>
+                        </Xaml:C1HierarchicalDataTemplate>
+                        <Xaml:C1HierarchicalDataTemplate x:Key="ControlTemplate" ItemsSource="{Binding Features}" ItemTemplate="{StaticResource FeatureTemplate}">
+                            <Xaml:C1HierarchicalDataTemplate.Template>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </Xaml:C1HierarchicalDataTemplate.Template>
+                        </Xaml:C1HierarchicalDataTemplate>
+                        <Xaml:C1HierarchicalDataTemplate x:Key="GroupTemplate" ItemsSource="{Binding Controls}" ItemTemplate="{StaticResource ControlTemplate}">
+                            <Xaml:C1HierarchicalDataTemplate.Template>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </Xaml:C1HierarchicalDataTemplate.Template>
+                        </Xaml:C1HierarchicalDataTemplate>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel Margin="12 0" Background="{Binding ElementName=tree, Path=Background}">
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Home_Text}" Click="homeButton_Click" />
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=About_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/uwp" Grid.Column="3" />
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Support_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/support/contact"/>
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Pricing_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/pricing" />
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=FreeTrial_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/download/ultimate" />
+                    </StackPanel>
+                    <Xaml:C1TreeView x:Name="tree" Grid.Row="1" ItemTemplate="{StaticResource GroupTemplate}" ItemsSource="{Binding Source={StaticResource groupViewSource}}" SelectionMode="None" ItemClick="tree_ItemClick"/>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame x:Name="frame">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition>
+                                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                    <EntranceNavigationTransitionInfo />
+                                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            </NavigationThemeTransition>
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B459069-9701-4F1F-8526-A03704E4B0CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TileSamples</RootNamespace>
+    <AssemblyName>TileSamplesLib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+	<ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+</PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG,TRACE,NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE,NETFX_CORE,WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+	<Import Include="Microsoft.VisualBasic" />
+	<Import Include="System" />
+	<Import Include="System.Collections" />
+	<Import Include="System.Collections.Generic" />
+	<Import Include="System.Collections.ObjectModel" />
+	<Import Include="System.ComponentModel" />
+	<Import Include="System.Diagnostics" />
+	<Import Include="System.IO" />
+	<Import Include="System.Linq" />
+	<Import Include="System.Runtime.CompilerServices" />
+	<Import Include="System.Runtime.InteropServices.WindowsRuntime" />
+	<Import Include="System.Threading.Tasks" />
+	<Import Include="System.Windows.Input" />
+	<Import Include="System.Xml.Linq" />
+	<Import Include="Windows.ApplicationModel" />
+	<Import Include="Windows.ApplicationModel.Activation" />
+	<Import Include="Windows.Foundation" />
+	<Import Include="Windows.Foundation.Collections" />
+	<Import Include="Windows.Graphics.Display" />
+	<Import Include="Windows.UI.ViewManagement" />
+	<Import Include="Windows.UI.Xaml" />
+	<Import Include="Windows.UI.Xaml.Controls" />
+	<Import Include="Windows.UI.Xaml.Controls.Primitives" />
+	<Import Include="Windows.UI.Xaml.Data" />
+	<Import Include="Windows.UI.Xaml.Input" />
+	<Import Include="Windows.UI.Xaml.Media" />
+	<Import Include="Windows.UI.Xaml.Media.Imaging" />
+	<Import Include="Windows.UI.Xaml.Navigation" />
+  </ItemGroup>  
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+    <PRIResource Include="Strings\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DelegateCommand.vb" />
+    <Compile Include="Data\FlickrData.vb" />
+    <Compile Include="Data\SampleData.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Samples\C1TileListBoxSample.xaml.vb">
+      <DependentUpon>C1TileListBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ContentSourceSample.xaml.vb">
+      <DependentUpon>ContentSourceSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\GridViewSample.xaml.vb">
+      <DependentUpon>GridViewSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\ListBoxSample.xaml.vb">
+      <DependentUpon>ListBoxSample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\Strings.vb" />
+    <Content Include="My Project\TileSamplesLib.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Samples\C1TileListBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ContentSourceSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\GridViewSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\ListBoxSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="C1.UWP.Tile, Version=10.0">
+      <Name>C1.UWP.Tile</Name>
+    </SDKReference>
+    <SDKReference Include="C1.UWP, Version=10.0">
+      <Name>C1.UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
