@@ -1,5 +1,5 @@
 ## Gauges Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Gauge/VB/GaugeSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Gauge/VB/GaugeSamples)
 ____
 #### Shows samples of each gauge control included in C1.UWP.Gauge.
 ____

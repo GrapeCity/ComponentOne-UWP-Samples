@@ -1,5 +1,5 @@
 ## PdfDocumentSourceSamples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Document/CS/PdfDocumentSourceSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Document/CS/PdfDocumentSourceSamples)
 ____
 #### Demonstrates the major features of C1PdfDocumentSource for UWP.
 ____

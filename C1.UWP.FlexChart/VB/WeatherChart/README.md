@@ -1,5 +1,5 @@
 ## WeatherChart
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/WeatherChart)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/WeatherChart)
 ____
 #### Shows features of RangeSlider.
 ____

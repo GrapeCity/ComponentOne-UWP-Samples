@@ -1,5 +1,5 @@
 ## TileView Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.TileView/CS/TileViewSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.TileView/CS/TileViewSamples)
 ____
 #### Shows various samples with the C1TileView control.
 ____

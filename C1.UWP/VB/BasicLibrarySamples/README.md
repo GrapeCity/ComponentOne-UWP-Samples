@@ -1,5 +1,5 @@
 ## Basic Library Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP/VB/BasicLibrarySamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP/VB/BasicLibrarySamples)
 ____
 #### Shows the key features of controls from the basic library (C1.UWP).
 ____

@@ -1,5 +1,5 @@
 ## C1Calendar_Demo
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Calendar/VB/CalendarSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Calendar/VB/CalendarSamples)
 ____
 #### Shows the key features of the C1Calendar control.
 ____

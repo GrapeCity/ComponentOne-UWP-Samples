@@ -1,5 +1,5 @@
 ## FlexChartMvvmDemo
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/FlexChartMvvmDemo)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexChart/VB/FlexChartMvvmDemo)
 ____
 #### MVVM demo application.
 ____
