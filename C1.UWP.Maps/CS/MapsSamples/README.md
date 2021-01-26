@@ -1,5 +1,5 @@
 ## C1Maps Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Maps/CS/MapsSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Maps/CS/MapsSamples)
 ____
 #### Shows samples of the controls in the C1.UWP.Maps dll.
 ____

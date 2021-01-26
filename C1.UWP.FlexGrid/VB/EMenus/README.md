@@ -1,5 +1,5 @@
 ## EMenus
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexGrid/VB/EMenus)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.FlexGrid/VB/EMenus)
 ____
 #### This desktop application provides an easy-to-use interface, a quick selection menu, and a smartly designed app-interface that lets you choose food items of your choice and also serves as a cart list. Primary controls include C1FlexGrid and C1TreeView.
 ____

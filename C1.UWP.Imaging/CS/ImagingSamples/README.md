@@ -1,5 +1,5 @@
 ## C1Imaging Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Imaging/CS/ImagingSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Imaging/CS/ImagingSamples)
 ____
 #### Shows samples of the controls in the C1.UWP.Imaging dll.
 ____

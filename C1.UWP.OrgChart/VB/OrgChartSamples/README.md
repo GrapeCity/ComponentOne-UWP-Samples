@@ -1,5 +1,5 @@
 ## OrgChart Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.OrgChart/VB/OrgChartSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.OrgChart/VB/OrgChartSamples)
 ____
 #### Demonstrates basic features of the C1OrgChart control.
 ____

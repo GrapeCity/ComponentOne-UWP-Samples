@@ -1,5 +1,5 @@
 ## Word Samples
-#### [Download as zip](https://downgit.github.io/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Word/VB/WordSamples)
+#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-UWP-Samples/tree/master/C1.UWP.Word/VB/WordSamples)
 ____
 #### Show cases the main features of the C1.UWP.Word library.
 ____
