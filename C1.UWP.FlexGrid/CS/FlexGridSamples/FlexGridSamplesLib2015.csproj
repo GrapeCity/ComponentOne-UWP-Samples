@@ -179,6 +179,9 @@
     <SDKReference Include="C1.UWP.DateTimeEditors, Version=10.0">
       <Name>C1.UWP.DateTimeEditors</Name>
     </SDKReference>
+    <SDKReference Include="C1.UWP.Extended, Version=10.0">
+      <Name>C1.UWP.Extended</Name>
+    </SDKReference>
     <SDKReference Include="C1.UWP.FlexGrid, Version=10.0">
       <Name>C1.UWP.FlexGrid</Name>
     </SDKReference>

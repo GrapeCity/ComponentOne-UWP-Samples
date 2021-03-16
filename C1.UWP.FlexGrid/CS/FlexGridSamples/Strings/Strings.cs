@@ -1036,6 +1036,20 @@ namespace FlexGridSamples
                 return _loader.GetString("AllowFreezing_Both");
             }
         }
+        public static string MouseHoverTitle
+        {
+            get
+            {
+                return _loader.GetString("MouseHoverTitle");
+            }
+        }
 
+        public static string MouseHoverDescription
+        {
+            get
+            {
+                return _loader.GetString("MouseHoverDescription");
+            }
+        }
     }
 }
