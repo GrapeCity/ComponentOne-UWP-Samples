@@ -73,6 +73,10 @@ Drag the freezing line to change the number of frozen columns or rows.
               type="SparklineSamplesLib.FlexGridIntegration">
         <Description>Use the C1SparkLine control as a cell template in the C1FlexGrid control for the full datagrid experience.</Description>
       </Feature>
+	  <Feature name="Mouse Hover" 
+              type="FlexGridSamples.MouseHoverDemo">
+        <Description>Mouse Hover Demonstration.</Description>
+      </Feature>
     </Control>
     <!-- ListBox -->
     <Control name="ListBox"

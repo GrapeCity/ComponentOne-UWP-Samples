@@ -49,6 +49,10 @@
 			<Feature name="スパークライン" type="SparklineSamplesLib.FlexGridIntegration">
 				<Description>C1SparkLine コントロールを C1FlexGrid コントロールのセルテンプレートとして使用して、完全なデータグリッド体験を実現します。</Description>
 			</Feature>
+            <Feature name="Mouse Hover"
+              type="FlexGridSamples.MouseHoverDemo">
+                <Description>Mouse Hover Demonstration.</Description>
+            </Feature>
 		</Control>
 		<!-- ListBox -->
 		<Control name="ListBox" iconName="ListBox" assembly="C1.Xaml" source="/C1.Xaml/CS/BasicLibrarySamples/BasicLibrarySamples.zip">
