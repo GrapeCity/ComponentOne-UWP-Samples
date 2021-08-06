@@ -60,7 +60,7 @@ namespace WordSamples
             // add title paragraph
             word.AddParagraph(Strings.QuotesAuthors, titleFont, Colors.DeepPink, RtfHorizontalAlignment.Center);
             word.AddParagraph(string.Empty);
-            height += 2 * word.MeasureString(Strings.QuotesAuthors, titleFont, rcPage.Width).Height;
+            height += 2 * C1WordDocument.MeasureString(Strings.QuotesAuthors, titleFont, rcPage.Width).Height;
 
             // build document
             foreach (string s in GetQuotes())
@@ -71,10 +71,10 @@ namespace WordSamples
                 var text = authorQuote[1];
 
                 // if it won't fit this page, do a page break
-                var h = word.MeasureString(author, hdrFont, rcPage.Width).Height;
+                var h = C1WordDocument.MeasureString(author, hdrFont, rcPage.Width).Height;
                 var sf = new StringFormat();
                 sf.Alignment = HorizontalAlignment.Stretch;
-                h += word.MeasureString(text, txtFont, rcPage.Width, sf).Height;
+                h += C1WordDocument.MeasureString(text, txtFont, rcPage.Width, sf).Height;
                 h += 20;
                 if (height + h > rcPage.Bottom)
                 {

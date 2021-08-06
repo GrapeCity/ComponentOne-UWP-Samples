@@ -74,7 +74,7 @@ namespace WordSamples
 
                 // create it header (as a link target and outline entry)
                 string header = string.Format("{0}. {1}", i + 1, BuildRandomTitle());
-                var h = 2 * doc.MeasureString(header, headerFont, rcPage.Width).Height;
+                var h = 2 * C1WordDocument.MeasureString(header, headerFont, rcPage.Width).Height;
 
                 // create some text
                 for (int j = 0; j < 3 + _rnd.Next(20); j++)
@@ -83,7 +83,7 @@ namespace WordSamples
                     string text = BuildRandomParagraph();
                     var sf = new StringFormat();
                     sf.Alignment = HorizontalAlignment.Stretch;
-                    h += doc.MeasureString(text, bodyFont, rcPage.Width, sf).Height;
+                    h += C1WordDocument.MeasureString(text, bodyFont, rcPage.Width, sf).Height;
                     h += 6;
 
                     // test next page

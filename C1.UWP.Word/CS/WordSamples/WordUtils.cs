@@ -93,7 +93,7 @@ namespace WordSamples
         public static Rect RenderParagraph(this C1WordDocument doc, string text, Font font, Rect rcPage, Rect rc, bool outline, bool linkTarget)
         {
             // if it won't fit this page, do a page break
-            rc.Height = doc.MeasureString(text, font, rc.Width).Height;
+            rc.Height = C1WordDocument.MeasureString(text, font, rc.Width).Height;
             if (rc.Bottom > rcPage.Bottom)
             {
                 doc.PageBreak();
