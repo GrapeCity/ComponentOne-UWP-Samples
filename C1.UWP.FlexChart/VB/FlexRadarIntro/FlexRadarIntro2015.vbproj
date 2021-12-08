@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <EmbeddedResource Include=".gclicx" />
     <None Include="FlexRadarIntro2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

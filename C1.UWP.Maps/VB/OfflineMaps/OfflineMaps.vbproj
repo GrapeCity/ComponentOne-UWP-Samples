@@ -94,6 +94,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

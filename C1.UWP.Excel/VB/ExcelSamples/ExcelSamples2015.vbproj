@@ -129,6 +129,7 @@
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="My Project\Default.rd.xml" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="ExcelSamples2015_TemporaryKey.pfx">
     </None>
   </ItemGroup>

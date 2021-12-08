@@ -28,62 +28,6 @@ namespace Binding
         /// </summary>
         public App()
         {
-            C1.UWP.LicenseManager.Key=
-            "ABYBFgIWB29CAGkAbgBkAGkAbgBnAB2V0igGyjDd3UfKOM3DPbINR+rPwUVDTphw" +
-            "Vxn2Xy4tOPLpHkhhRCIBQ1L9RUJGBURdhGorXaj2qnwL8HRNWnw3LskzASyatVKX" +
-            "hRCDhGlWVpqtq8HABn93Kmu13nNidA69zXCZ+X0SlHTvFqTiGuVHiClbJNtzQY/A" +
-            "cXSa6NfClH1AJOopZDkVF+hRhs94lxheTGtclfjtQ6xpCxUypMoxTM2PFyi6xstE" +
-            "030ccnZiwENwvlpiSxW9XSITm19MSZEHWmvLc+tISj9XbOjxyhVVHtcZoFE3YzAL" +
-            "IcR76BKnPT9NXh693jBxyl83kmZrin00aiPUmkFGx8ChFg8fSTlveqTibayEHPA0" +
-            "N95c3dJFwQGDmG+vkCiLIK6VbaaE9+AFlJmcor/+6EdvZxhtj1281hRuyV5zmpKv" +
-            "zJbXxB9d/oBp8XRh7g38ZW6SF2d5oX/ojNSEqcANk+SChN9OMu37RTEsNjPFu6oz" +
-            "0P6Z/1PYswRrBWXj1g8WsgQ7nSwxZwvf1OEw0+5IwyxqDhGUJw+X/BM8Mm39SMdx" +
-            "hK2klyiQE9QQudLjkvqnQNg/iKjQSRns95D1h59sTDNkpQOJ5uF53B4PA2mMqQ+Y" +
-            "gKkXzMGcEramUpNxYCYtF1hEFXuRJf2fwya17VgCyweOUOAAigvgxUT/RI8C41l3" +
-            "D+4uqGX3MIIFVTCCBD2gAwIBAgIQQQN40iY2WXoW2ybGvRCUizANBgkqhkiG9w0B" +
-            "AQUFADCBtDELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8w" +
-            "HQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBv" +
-            "ZiB1c2UgYXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykxMDEuMCwG" +
-            "A1UEAxMlVmVyaVNpZ24gQ2xhc3MgMyBDb2RlIFNpZ25pbmcgMjAxMCBDQTAeFw0x" +
-            "NDEyMTEwMDAwMDBaFw0xNTEyMjIyMzU5NTlaMIGGMQswCQYDVQQGEwJKUDEPMA0G" +
-            "A1UECBMGTWl5YWdpMRgwFgYDVQQHEw9TZW5kYWkgSXp1bWkta3UxFzAVBgNVBAoU" +
-            "DkdyYXBlQ2l0eSBpbmMuMRowGAYDVQQLFBFUb29scyBEZXZlbG9wbWVudDEXMBUG" +
-            "A1UEAxQOR3JhcGVDaXR5IGluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK" +
-            "AoIBAQDBAvbKZVuylaQKkQelVQe1yZvPmutMe/B2VjZrwI7P3q5qe6W4fDPR2LhF" +
-            "U0Y/B+G2l8RWKuIu+XuZDa+7PpxmyeVHzOgpXam3kbEOM70W+p6X67XDgcH2DsdM" +
-            "KHmEHyOlcy1c4T2xo1AyuqnR2S3/xHL0iCr0W7tyCzhN5LrsdO4EJG/vq60gVMiS" +
-            "l1PJ1vHPivvbH1qh2D2/BRdiGs1sYZnyHSKAzSso696/8CJ940Ho6an2pohzbFPz" +
-            "tuiktBHLwkuQhTig0+r73ZwJHpN5Mi1nn/nGv3GxaO+L2sGBrZsNsM8P4XMJQDSE" +
-            "GggMc/uSR0Gd0hIPCy0mfgvBOE/vAgMBAAGjggGNMIIBiTAJBgNVHRMEAjAAMA4G" +
-            "A1UdDwEB/wQEAwIHgDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vc2Yuc3ltY2Iu" +
-            "Y29tL3NmLmNybDBmBgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYIKwYBBQUH" +
-            "AgEWF2h0dHBzOi8vZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkMF2h0dHBz" +
-            "Oi8vZC5zeW1jYi5jb20vcnBhMBMGA1UdJQQMMAoGCCsGAQUFBwMDMFcGCCsGAQUF" +
-            "BwEBBEswSTAfBggrBgEFBQcwAYYTaHR0cDovL3NmLnN5bWNkLmNvbTAmBggrBgEF" +
-            "BQcwAoYaaHR0cDovL3NmLnN5bWNiLmNvbS9zZi5jcnQwHwYDVR0jBBgwFoAUz5mp" +
-            "6nsm9EvJjo/X8AUm7+PSp50wHQYDVR0OBBYEFABa8K2l1Hg19YQSqCwFDvhWG46O" +
-            "MBEGCWCGSAGG+EIBAQQEAwIEEDAWBgorBgEEAYI3AgEbBAgwBgEBAAEB/zANBgkq" +
-            "hkiG9w0BAQUFAAOCAQEAiMKYWjeOW+VYirEXwgOoW1XqjITQiZi+uJqsXWL8N4LB" +
-            "eKDgg6IjOpFoctTaFHdi6XK/T43xieeWV+LGZaqMXn5U6R4J1/DDybiqQwbJO1pI" +
-            "YhLuuXwcG/oPcEBzDH4GNIIxyAENmRH9jyek00hXL49uMIe93bMqnJo9vdH6cA7R" +
-            "2hdoxOaav7UATifLw5DeOsLeKjIRupyKToHPSp4Miy3RDu1d+CjNTW/rDfSZKk1l" +
-            "zaDapTn+0I2B8JcOyru1t5CBivn9ZD9cakwaV8LARObC5Z7oz/iQKlfGipQSQykS" +
-            "NyIZaxvQiVJqhTYZmdn+UBOYwLz0Hl3ry5zGIqia4DCCAsQwggGsoAMCAQICBA7u" +
-            "7u4wDQYJKoZIhvcNAQEFBQAwJDEiMCAGA1UEAwwZR0MtVVdQIEludGVybmFsIERl" +
-            "dmVsb3BlcjAeFw0xNzAxMDEwOTIwNTZaFw0zNzEyMzEwOTIwNTZaMCQxIjAgBgNV" +
-            "BAMMGUdDLVVXUCBJbnRlcm5hbCBEZXZlbG9wZXIwggEiMA0GCSqGSIb3DQEBAQUA" +
-            "A4IBDwAwggEKAoIBAQCxPM7L7BqkB3eOlnMjElg3/LdYH0b6UcI/ENilN8jzuLj9" +
-            "lmBE3kgV5EMJY+UZo0jatQpYY+PHLFr+qR2dsiBh12BD3Bg7Bu5JbPxtCtUPS9pG" +
-            "IS5fWfD3gHZd48C8rWxOofoz4NL4Kk1770mG3XGBQ3hBRinAxItBYkmAHPNpUUcY" +
-            "CYT3DmPjK1w7+KnvzEVs9bWafJ7nRJRyFO41Pe2k4vgA2J0xfU3TUbWBYes+8CPd" +
-            "qSqVkBt42TBbgPmO8Rx4rQ1eImf/49KssAxSNbLJAGPkm9lHbhL8ZjdMQTI5gjPo" +
-            "dEdozMhVgO6EfFuZ9cmvjzaC1ewuThtrzX+9biSPAgMBAAEwDQYJKoZIhvcNAQEF" +
-            "BQADggEBAEgKXE8SnpTN3v9nZN4CLizJ3bPZ+eRXtmw3hE3noCIpe72Tcfd9Ce9T" +
-            "9Uo2UMLXOarNNzDAz5ycKQeJw8JRqFZqivQvZ76grfiAl+rM/M/TUb5jYh2+WTLV" +
-            "PLydgzR9DxooyWjvaekfKdyTeWIkzmd1nyOgHuxyxQckc6fiZo1+DPoysZtGYJxO" +
-            "WGWxq6ELJhMUpXvgybgtSvLCpaPbUPYHJii5oUrBtjJ+lLmPTOQV3794q5HpmOHF" +
-            "H9HzyF1KHaYB6FWE72YGC2vTd5WyDjHExX6YbR8nDmp2vHPPg3aR2QbKxIQsQGA6" +
-            "nCBHf6YlLqOjoN9VVsyeQc4ZJiESaig=";
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

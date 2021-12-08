@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -126,6 +126,7 @@
     </Content>
     <Content Include="Resources\ja\ControlList.xml" />
     <Content Include="Resources\ko\ControlList.xml" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
     <PRIResource Include="Strings\ko\Resources.resw">
       <SubType>Designer</SubType>

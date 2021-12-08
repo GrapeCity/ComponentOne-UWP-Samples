@@ -95,6 +95,7 @@
     </Content>
     <Content Include="Resources\ImgLegend.png" />
     <Content Include="Resources\Img_WaterMark_C1Logo.png" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="CurrencyComparison2015_TemporaryKey.pfx" />
     <EmbeddedResource Include="Resources\CurrencyHistory.csv" />
     <PRIResource Include="Strings\Resources.resw" />

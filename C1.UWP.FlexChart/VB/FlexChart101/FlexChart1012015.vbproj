@@ -122,6 +122,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="FlexChart1012015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

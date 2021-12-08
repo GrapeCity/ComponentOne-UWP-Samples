@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -98,6 +98,7 @@
     <Content Include="Assets\Reports\Controls\FlexChart.flxr" />
     <Content Include="Assets\Reports\Controls\FlexChartGrouping.flxr" />
     <Content Include="Assets\Reports\Controls\FlexChartNavigation.flxr" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="FlexReportExplorer_TemporaryKey.pfx" />
     <EmbeddedResource Include="Resources\C1NWind.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

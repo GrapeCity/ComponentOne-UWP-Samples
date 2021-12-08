@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparklineSamples2015", "SparklineSamples2015.csproj", "{70141FE2-DA00-4D1E-9372-C239161C40F8}"
 EndProject
@@ -24,6 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{70141FE2-DA00-4D1E-9372-C239161C40F8}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{70141FE2-DA00-4D1E-9372-C239161C40F8}.Debug|Any CPU.Build.0 = Debug|x86
+		{70141FE2-DA00-4D1E-9372-C239161C40F8}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{70141FE2-DA00-4D1E-9372-C239161C40F8}.Debug|ARM.ActiveCfg = Debug|ARM
 		{70141FE2-DA00-4D1E-9372-C239161C40F8}.Debug|ARM.Build.0 = Debug|ARM
 		{70141FE2-DA00-4D1E-9372-C239161C40F8}.Debug|ARM.Deploy.0 = Debug|ARM

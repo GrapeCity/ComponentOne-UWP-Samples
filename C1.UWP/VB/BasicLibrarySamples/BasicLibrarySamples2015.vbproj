@@ -73,6 +73,7 @@
     <Import Include="Windows.UI.Xaml.Navigation" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="ApplicationInsights.config" />
   </ItemGroup>
   <ItemGroup>

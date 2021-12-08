@@ -123,6 +123,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="My Project\Default.rd.xml" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
     <None Include="PdfSamples2015_TemporaryKey.pfx">
     </None>

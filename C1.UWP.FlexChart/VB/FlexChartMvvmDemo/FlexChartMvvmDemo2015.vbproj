@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <EmbeddedResource Include=".gclicx" />
     <None Include="FlexChartMvvmDemo2015_TemporaryKey.pfx" />
     <PRIResource Include="Strings\Resources.resw" />
   </ItemGroup>

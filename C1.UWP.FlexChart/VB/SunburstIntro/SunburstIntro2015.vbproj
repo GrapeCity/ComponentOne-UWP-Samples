@@ -111,6 +111,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="SunburstIntro2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

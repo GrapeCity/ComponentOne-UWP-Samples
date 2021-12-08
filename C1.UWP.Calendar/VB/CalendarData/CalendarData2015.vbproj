@@ -120,6 +120,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="CalendarData2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

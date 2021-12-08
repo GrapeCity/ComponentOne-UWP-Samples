@@ -121,6 +121,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="BitmapSamples2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

@@ -28,62 +28,6 @@ namespace StockChart
         /// </summary>
         public App()
         {
-            C1.UWP.LicenseManager.Key=
-            "ABwBHAIcB3VTAHQAbwBjAGsAQwBoAGEAcgB0ACTAtMPTJqvyr3UObFh7A1vfIR2J" +
-            "8hP6P2zAAgFLVg4gJKCjGOvlRJkAZkUE9mPN8qzXhaNDgewonmRpBFRrBzio70k/" +
-            "QVBXNpZrz0Dd/Vxlh1wcYfKxRkbvhi6+jIeGVMCX4IRog3AQVVdvfur60+LpWGTi" +
-            "KjbNbN8DqJ1Ci9IUeutVH4dxEcjnFikv2RUBTuuk3L4lPDQ9qdU+on9qj2wD+9wR" +
-            "WGaFcRBHzQDPHU35l5KIoSUtrK+ghVuqCgX7azydKk02Njzaw0z82RZgyerucHxb" +
-            "f2a5VISQICIX4aqJuEmZEr/s4MsBe6BhYS5bKZQNBQQApmmywu/rzhz69y+ECb+l" +
-            "io8uOILn/kz4kBMzeWajlCRHNe6TtHImJh+7++Va2shKVOBqGpJ/AR/PrLuw4Pw2" +
-            "CSz4c75yrJGEikXjCnZATJu7D9C+4J6YETZKrsa1UsUh6dHhZrIpBH8y1Z21P8oF" +
-            "fM6+PWT27MDuHxbmZhuTn7VotskPfWwInL+77W6075x47XH5cEwotScBfCloRxP6" +
-            "NFyWd25ifsTTyeoIZ0zisVJgbfxy4eUCn16pIGcDyJtHTUcPWRzhSk4vtuoIcvSU" +
-            "Fwwj2SwHocYGQcFzz85vY7NOtHVCjnFImfS/dlvvCJ319DCPD4enm1wpxq7n26Gh" +
-            "/BfWMub6B/A798W8MIIFVTCCBD2gAwIBAgIQQQN40iY2WXoW2ybGvRCUizANBgkq" +
-            "hkiG9w0BAQUFADCBtDELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJ" +
-            "bmMuMR8wHQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJU" +
-            "ZXJtcyBvZiB1c2UgYXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykx" +
-            "MDEuMCwGA1UEAxMlVmVyaVNpZ24gQ2xhc3MgMyBDb2RlIFNpZ25pbmcgMjAxMCBD" +
-            "QTAeFw0xNDEyMTEwMDAwMDBaFw0xNTEyMjIyMzU5NTlaMIGGMQswCQYDVQQGEwJK" +
-            "UDEPMA0GA1UECBMGTWl5YWdpMRgwFgYDVQQHEw9TZW5kYWkgSXp1bWkta3UxFzAV" +
-            "BgNVBAoUDkdyYXBlQ2l0eSBpbmMuMRowGAYDVQQLFBFUb29scyBEZXZlbG9wbWVu" +
-            "dDEXMBUGA1UEAxQOR3JhcGVDaXR5IGluYy4wggEiMA0GCSqGSIb3DQEBAQUAA4IB" +
-            "DwAwggEKAoIBAQDBAvbKZVuylaQKkQelVQe1yZvPmutMe/B2VjZrwI7P3q5qe6W4" +
-            "fDPR2LhFU0Y/B+G2l8RWKuIu+XuZDa+7PpxmyeVHzOgpXam3kbEOM70W+p6X67XD" +
-            "gcH2DsdMKHmEHyOlcy1c4T2xo1AyuqnR2S3/xHL0iCr0W7tyCzhN5LrsdO4EJG/v" +
-            "q60gVMiSl1PJ1vHPivvbH1qh2D2/BRdiGs1sYZnyHSKAzSso696/8CJ940Ho6an2" +
-            "pohzbFPztuiktBHLwkuQhTig0+r73ZwJHpN5Mi1nn/nGv3GxaO+L2sGBrZsNsM8P" +
-            "4XMJQDSEGggMc/uSR0Gd0hIPCy0mfgvBOE/vAgMBAAGjggGNMIIBiTAJBgNVHRME" +
-            "AjAAMA4GA1UdDwEB/wQEAwIHgDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vc2Yu" +
-            "c3ltY2IuY29tL3NmLmNybDBmBgNVHSAEXzBdMFsGC2CGSAGG+EUBBxcDMEwwIwYI" +
-            "KwYBBQUHAgEWF2h0dHBzOi8vZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkM" +
-            "F2h0dHBzOi8vZC5zeW1jYi5jb20vcnBhMBMGA1UdJQQMMAoGCCsGAQUFBwMDMFcG" +
-            "CCsGAQUFBwEBBEswSTAfBggrBgEFBQcwAYYTaHR0cDovL3NmLnN5bWNkLmNvbTAm" +
-            "BggrBgEFBQcwAoYaaHR0cDovL3NmLnN5bWNiLmNvbS9zZi5jcnQwHwYDVR0jBBgw" +
-            "FoAUz5mp6nsm9EvJjo/X8AUm7+PSp50wHQYDVR0OBBYEFABa8K2l1Hg19YQSqCwF" +
-            "DvhWG46OMBEGCWCGSAGG+EIBAQQEAwIEEDAWBgorBgEEAYI3AgEbBAgwBgEBAAEB" +
-            "/zANBgkqhkiG9w0BAQUFAAOCAQEAiMKYWjeOW+VYirEXwgOoW1XqjITQiZi+uJqs" +
-            "XWL8N4LBeKDgg6IjOpFoctTaFHdi6XK/T43xieeWV+LGZaqMXn5U6R4J1/DDybiq" +
-            "QwbJO1pIYhLuuXwcG/oPcEBzDH4GNIIxyAENmRH9jyek00hXL49uMIe93bMqnJo9" +
-            "vdH6cA7R2hdoxOaav7UATifLw5DeOsLeKjIRupyKToHPSp4Miy3RDu1d+CjNTW/r" +
-            "DfSZKk1lzaDapTn+0I2B8JcOyru1t5CBivn9ZD9cakwaV8LARObC5Z7oz/iQKlfG" +
-            "ipQSQykSNyIZaxvQiVJqhTYZmdn+UBOYwLz0Hl3ry5zGIqia4DCCAsQwggGsoAMC" +
-            "AQICBA7u7u4wDQYJKoZIhvcNAQEFBQAwJDEiMCAGA1UEAwwZR0MtVVdQIEludGVy" +
-            "bmFsIERldmVsb3BlcjAeFw0xNzA2MTQxMzUzMzBaFw0zNzA2MTQxMzUzMzBaMCQx" +
-            "IjAgBgNVBAMMGUdDLVVXUCBJbnRlcm5hbCBEZXZlbG9wZXIwggEiMA0GCSqGSIb3" +
-            "DQEBAQUAA4IBDwAwggEKAoIBAQCS9Byny47bwV8tkZRwDvn8Qp9rQBXqtIWUNDiC" +
-            "1B2xg9jgcz/xIoxWmqTxbzMUF1wHyI/p5QgJYktYdFdhRzMiNBUHQ+xIQXNc4h9B" +
-            "4cUXIUv26qQzBP2DqOMiWLmbXJAPI6delmVptlu2fnU2h2DzKRkqZ6CTutu+ReP6" +
-            "oyGy41inc3GBuPIddGRkzH1IbQylXavfLEMa8j7Lq8M5ZN9F/YRD4mbF46l1feou" +
-            "gk7PzDCsgSiktz1lZzc3t3ei/RpEZM5JyFKlksgFmcb2zSfrDd+aVkHWPbAx3Z6+" +
-            "teP111uG9VSOEXrJWseMrdD9C/I5b+dW4eK5W1GxCEF5qOZ1AgMBAAEwDQYJKoZI" +
-            "hvcNAQEFBQADggEBABRyPCVqMBo+uZMjLG0CCXoTpsoVNeDXWdnujy/JtyaTnOuZ" +
-            "z20zwcwF55XIlZrHncb1TmntLQK0+HiJt9qRE4wqy+D/KZ+xj7khajObMwpmqqHA" +
-            "gqhOmFtOJauviVgB57GdiawSkweojLx+NRSMZGoCwLFmFLPxDRKIvbwLOzi8Laap" +
-            "23hmbaDDqVBDzJQRi9MLAPabvqCthLTYr/xHMeCaMoF/GfU3Ae1vvHbS/lZ/vT1e" +
-            "buENM/RIzYJKg1kX/7C02t2Peu8RNWBZYVaJXEkU7G7QtgRU/HHyAHky3EZ+ZeZ5" +
-            "kAaZhPRoy5GuwYtRvo8Kl+rLQaywJjbhgtHzbLI=";
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;

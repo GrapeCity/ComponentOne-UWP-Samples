@@ -100,6 +100,7 @@
     <Content Include="Assets\Reports\Controls\FlexChart.flxr" />
     <Content Include="Assets\Reports\Controls\FlexChartGrouping.flxr" />
     <Content Include="Assets\Reports\Controls\FlexChartNavigation.flxr" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

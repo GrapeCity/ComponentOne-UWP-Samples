@@ -117,6 +117,7 @@
     <PRIResource Include="Strings\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="WeatherChart2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

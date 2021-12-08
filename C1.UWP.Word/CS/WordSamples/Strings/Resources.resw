@@ -377,4 +377,13 @@ Font: [Tahoma 18pt]</value>
   <data name="PaperSizesWarning" xml:space="preserve">
     <value>For view various size of the pages of the document please use MS Word</value>
   </data>
+  <data name="WordSamplesExportRichTextDescription" xml:space="preserve">
+    <value>Creates a document from C1RichTextBox's document</value>
+  </data>
+  <data name="WordSamplesExportRichTextName" xml:space="preserve">
+    <value>Export RichText</value>
+  </data>
+  <data name="WordSamplesExportRichTextTitle" xml:space="preserve">
+    <value>Export RichText</value>
+  </data>
 </root>

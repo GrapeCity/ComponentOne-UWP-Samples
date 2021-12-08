@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaugeSamples2015", "GaugeSamples2015.csproj", "{829E16E1-82DB-48B5-8D39-F3B18396F44B}"
 EndProject
@@ -24,6 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{829E16E1-82DB-48B5-8D39-F3B18396F44B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{829E16E1-82DB-48B5-8D39-F3B18396F44B}.Debug|Any CPU.Build.0 = Debug|x86
+		{829E16E1-82DB-48B5-8D39-F3B18396F44B}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{829E16E1-82DB-48B5-8D39-F3B18396F44B}.Debug|ARM.ActiveCfg = Debug|ARM
 		{829E16E1-82DB-48B5-8D39-F3B18396F44B}.Debug|ARM.Build.0 = Debug|ARM
 		{829E16E1-82DB-48B5-8D39-F3B18396F44B}.Debug|ARM.Deploy.0 = Debug|ARM

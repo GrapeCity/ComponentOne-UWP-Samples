@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -96,6 +96,7 @@
     </Content>
     <Content Include="Resources\ImgLegend.png" />
     <Content Include="Resources\Img_WaterMark_C1Logo.png" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="CurrencyComparison2015_TemporaryKey.pfx" />
     <EmbeddedResource Include="Resources\CurrencyHistory.csv" />
     <PRIResource Include="Strings\Resources.resw" />

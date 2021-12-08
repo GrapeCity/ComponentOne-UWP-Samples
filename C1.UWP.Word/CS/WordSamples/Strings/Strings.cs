@@ -694,5 +694,29 @@ namespace WordSamples
                 return _loader.GetString("WordSamplesWordLink");
             }
         }
+
+        public static string WordSamplesExportRichTextTitle
+        {
+            get
+            {
+                return _loader.GetString("WordSamplesExportRichTextTitle");
+            }
+        }
+
+        public static string WordSamplesExportRichTextDescription
+        {
+            get
+            {
+                return _loader.GetString("WordSamplesExportRichTextDescription");
+            }
+        }
+
+        public static string WordSamplesExportRichTextName
+        {
+            get
+            {
+                return _loader.GetString("WordSamplesExportRichTextName");
+            }
+        }
     }
 }

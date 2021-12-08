@@ -94,6 +94,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\C1.png" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="AxisScrollbar2015_TemporaryKey.pfx" />
     <PRIResource Include="Strings\Resources.resw">
       <SubType>Designer</SubType>

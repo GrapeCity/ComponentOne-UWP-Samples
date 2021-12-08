@@ -92,6 +92,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
     <PRIResource Include="String\Resources.resw" />
   </ItemGroup>

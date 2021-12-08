@@ -97,6 +97,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
     <EmbeddedResource Include="Resources\Reports.flxr" />
     <PRIResource Include="Strings\Resources.resw" />

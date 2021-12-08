@@ -148,6 +148,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="StockChart_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

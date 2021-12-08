@@ -93,6 +93,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include=".gclicx" />
     <None Include="LineMarkerSample2015_TemporaryKey.pfx" />
     <PRIResource Include="Strings\Resources.resw" />
   </ItemGroup>

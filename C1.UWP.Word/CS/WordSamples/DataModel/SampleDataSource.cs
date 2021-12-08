@@ -213,6 +213,12 @@ namespace WordSamples.Data
                   "Assets/MediumGray.png",
                   typeof(WordSamples.RenderUIPage),
                   Strings.WordSamplesExportUIName));
+            _allItems.Add(new SampleDataItem("Export RichTextBox",
+                  Strings.WordSamplesExportRichTextTitle,
+                  Strings.WordSamplesExportRichTextDescription,
+                  "Assets/BasicText.png",
+                  typeof(WordSamples.ExportRichText),
+                  Strings.WordSamplesExportRichTextName));
 
         }
     }

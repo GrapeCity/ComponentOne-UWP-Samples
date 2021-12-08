@@ -99,38 +99,39 @@
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-30px.png" />
     <Content Include="My Project\Default.rd.xml" />
+    <EmbeddedResource Include=".gclicx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-	<Import Include="Microsoft.VisualBasic" />
-	<Import Include="System" />
-	<Import Include="System.Collections" />
-	<Import Include="System.Collections.Generic" />
-	<Import Include="System.Collections.ObjectModel" />
-	<Import Include="System.ComponentModel" />
-	<Import Include="System.Diagnostics" />
-	<Import Include="System.IO" />
-	<Import Include="System.Linq" />
-	<Import Include="System.Runtime.CompilerServices" />
-	<Import Include="System.Runtime.InteropServices.WindowsRuntime" />
-	<Import Include="System.Threading.Tasks" />
-	<Import Include="System.Windows.Input" />
-	<Import Include="System.Xml.Linq" />
-	<Import Include="Windows.ApplicationModel" />
-	<Import Include="Windows.ApplicationModel.Activation" />
-	<Import Include="Windows.Foundation" />
-	<Import Include="Windows.Foundation.Collections" />
-	<Import Include="Windows.Graphics.Display" />
-	<Import Include="Windows.UI.ViewManagement" />
-	<Import Include="Windows.UI.Xaml" />
-	<Import Include="Windows.UI.Xaml.Controls" />
-	<Import Include="Windows.UI.Xaml.Controls.Primitives" />
-	<Import Include="Windows.UI.Xaml.Data" />
-	<Import Include="Windows.UI.Xaml.Input" />
-	<Import Include="Windows.UI.Xaml.Media" />
-	<Import Include="Windows.UI.Xaml.Media.Imaging" />
-	<Import Include="Windows.UI.Xaml.Navigation" />
-  </ItemGroup>  
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Collections.ObjectModel" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Runtime.CompilerServices" />
+    <Import Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Windows.ApplicationModel" />
+    <Import Include="Windows.ApplicationModel.Activation" />
+    <Import Include="Windows.Foundation" />
+    <Import Include="Windows.Foundation.Collections" />
+    <Import Include="Windows.Graphics.Display" />
+    <Import Include="Windows.UI.ViewManagement" />
+    <Import Include="Windows.UI.Xaml" />
+    <Import Include="Windows.UI.Xaml.Controls" />
+    <Import Include="Windows.UI.Xaml.Controls.Primitives" />
+    <Import Include="Windows.UI.Xaml.Data" />
+    <Import Include="Windows.UI.Xaml.Input" />
+    <Import Include="Windows.UI.Xaml.Media" />
+    <Import Include="Windows.UI.Xaml.Media.Imaging" />
+    <Import Include="Windows.UI.Xaml.Navigation" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
