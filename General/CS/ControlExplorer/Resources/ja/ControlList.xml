@@ -49,9 +49,9 @@
 			<Feature name="スパークライン" type="SparklineSamplesLib.FlexGridIntegration">
 				<Description>C1SparkLine コントロールを C1FlexGrid コントロールのセルテンプレートとして使用して、完全なデータグリッド体験を実現します。</Description>
 			</Feature>
-            <Feature name="Mouse Hover"
+            <Feature name="マウスホバー"
               type="FlexGridSamples.MouseHoverDemo">
-                <Description>Mouse Hover Demonstration.</Description>
+                <Description>マウスホバーのデモです。</Description>
             </Feature>
 		</Control>
 		<!-- ListBox -->
@@ -261,7 +261,7 @@
 				</SubFeatures>
 			</Feature>
 			<Feature name="つまみ" type="GaugeSamples.Knob" iconName="Knobs">
-				<Description>The C1Knob control allows users to drag the pointer to a value. Also included is the unique C1RegionKnob with customizable regions. Knob gauges offer an alternative to text-based editors or sliders.</Description>
+				<Description>C1Knob コントロールを使用すると、ユーザーはポインターを値にドラッグできます。また、カスタマイズ可能なリージョンを備えた独自の C1RegionKnob も含まれています。Knob ゲージは、テキストベースのエディターまたはスライダーの代替手段を提供します。</Description>
 				<SubFeatures>
 					<SubFeature name="Knob" type="GaugeSamples.Knob"/>
 					<SubFeature name="RegionKnob" type="GaugeSamples.RegionKnob"/>

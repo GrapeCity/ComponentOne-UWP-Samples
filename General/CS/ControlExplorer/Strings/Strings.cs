@@ -135,7 +135,8 @@ namespace ControlExplorer
         {
             get
             {
-                return _loader.GetString("LeftPanelTB1_Text");
+                //return _loader.GetString("LeftPanelTB1_Text");
+                return DateTime.Now.Year.ToString();
             }
         }
 

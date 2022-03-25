@@ -212,7 +212,7 @@ namespace FlexReportSamples
                 // ask for file
                 FileSavePicker fsp = new FileSavePicker();
                 fsp.DefaultFileExtension = "." + ep.DefaultExtension;
-                fsp.FileTypeChoices.Add(ep.FormatName + " (." + ep.DefaultExtension + ")", new string[] { "." + ep.DefaultExtension });
+                fsp.FileTypeChoices.Add(ep.FormatName, new string[] { "." + ep.DefaultExtension });
                 fsp.FileTypeChoices.Add(Strings.ZipFiles, new string[] { ".zip" });
                     fsp.SuggestedFileName = defFileName;
                 ef.StorageFile = await fsp.PickSaveFileAsync();

@@ -243,7 +243,7 @@ namespace AnnotationExplorer
             var dataList = _model.FinancialData;
             if (infoAnnotation!=null && flexChart.PlotRect.Contains(pos))
             {
-                var ht = flexChart.HitTest(pos);
+                var ht = flexChart.HitTest(pos, false);
                 var low = dataList[ht.PointIndex].Low;
                 var hight = dataList[ht.PointIndex].Hight;
                 var open = dataList[ht.PointIndex].Open;
