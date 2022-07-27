@@ -20,7 +20,7 @@
                 <TextBlock Margin="10, 0, 0, 0" Text="Flex Stock" VerticalAlignment="Bottom" Foreground="White" FontSize="28" />
             </StackPanel>
             <TextBlock Grid.Row="1" Margin="10" FontSize="14" Foreground="White" TextWrapping="Wrap">
-            <Run Text="This application was developed using GrapeCity's Wijmo 5 controls and shows advanced functionality of Wijmo FinancialChart." />
+            <Run Text="This application was developed using Component One (C1) controls and shows advanced functionality of C1 FinancialChart." />
             <LineBreak/>
             <LineBreak/>
             <Run Text="The sample uses the FinancialChart to display and compare quote information. The various advanced financial charting features are also demonstrated including markers, trend lines, annotations and data range selector." />

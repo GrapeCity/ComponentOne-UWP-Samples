@@ -20,6 +20,7 @@ namespace FlexRadarIntro
 
         private void PolarChart_Loaded(object sender, RoutedEventArgs e)
         {
+            polarChart.ChartType = C1.Chart.RadarChartType.LineSymbols;
             polarChart.ItemsSource = CreateData(10, 2);
         }
 

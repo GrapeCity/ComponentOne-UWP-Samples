@@ -39,7 +39,7 @@
                 <Xaml:C1NumericBox x:Name="numericUpDown2" Value="2" Minimum="0" Maximum="5" Increment="0.1" Format="f1" ValueChanged="OnNumericBoxValueChanged" />
             </StackPanel>
         </StackPanel>
-        <Chart:C1FlexRadar x:Name="polarChart" BindingX="X" Binding="Y" ChartType="LineSymbols" Grid.Row="1">
+        <Chart:C1FlexRadar x:Name="polarChart" BindingX="X" Binding="Y" Grid.Row="1">
             <Chart:RadarSeries SymbolSize="4" />
             <Chart:C1FlexRadar.AxisY>
                 <Chart:Axis Min="0" AxisLine="False" MajorGrid="True" MajorTickMarks="None" />

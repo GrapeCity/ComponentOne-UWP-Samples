@@ -191,7 +191,7 @@ namespace StockChart.ViewModel
             {
                 if (indexDataSource == null)
                 {
-                    indexDataSource = DataService.Instance.GetSymbolData("INX");
+                    indexDataSource = DataService.Instance.GetSymbolData("SP");
                 }
                 return indexDataSource;
             }

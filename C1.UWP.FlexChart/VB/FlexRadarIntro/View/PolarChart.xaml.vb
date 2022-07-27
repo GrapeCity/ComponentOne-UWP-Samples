@@ -15,6 +15,7 @@ Partial Public Class PolarChart
     End Sub
 
     Private Sub PolarChart_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
+        polarChart.ChartType = C1.Chart.RadarChartType.LineSymbols
         polarChart.ItemsSource = CreateData(10, 2)
     End Sub
 

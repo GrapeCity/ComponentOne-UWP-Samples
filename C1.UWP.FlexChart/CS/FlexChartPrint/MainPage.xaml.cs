@@ -89,14 +89,14 @@ namespace FlexChartPrint
         {
             printHelper.PagePrinting = (pageNumber) => {
                 Content = null;
-                pnlOptions.Visibility = Visibility.Collapsed;// hide buttons
+                pnlTitle.Visibility = pnlOptions.Visibility = Visibility.Collapsed;// hide buttons
                 return root; // print root grid element
             };
 
             printHelper.PagePrinted = (pageNumber, visual) => {
                 // restore visual tree
                 Content = root;
-                pnlOptions.Visibility = Visibility.Visible;
+                pnlTitle.Visibility = pnlOptions.Visibility = Visibility.Visible;
             };
         }
 

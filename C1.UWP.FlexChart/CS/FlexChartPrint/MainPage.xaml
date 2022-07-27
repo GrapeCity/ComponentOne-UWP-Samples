@@ -30,7 +30,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Border BorderBrush="LightGray" BorderThickness="1" Grid.ColumnSpan="2">
+        <Border x:Name="pnlTitle" BorderBrush="LightGray" BorderThickness="1" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Image Source="ms-appx:///Resources/C1.png" Width="80" Height="80"/>
                 <Grid Margin="20 0">
