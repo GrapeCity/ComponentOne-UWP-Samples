@@ -53,6 +53,7 @@
     <Compile Include="ConnectionStringParser.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="SQLiteLink.vb" />
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="My Project\FlexReport.SQLite.rd.xml" />
   </ItemGroup>
   <ItemGroup>

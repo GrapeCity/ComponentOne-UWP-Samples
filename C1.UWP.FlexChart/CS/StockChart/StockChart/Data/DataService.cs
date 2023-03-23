@@ -89,7 +89,7 @@ namespace StockChart
             // not in cache, get now
             var t = DateTime.Today;
             var startDate = new DateTime(t.Year - 10, 1, 1);
-            var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
+            var fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full";
             var url = string.Format(fmt, symbol);
 
 

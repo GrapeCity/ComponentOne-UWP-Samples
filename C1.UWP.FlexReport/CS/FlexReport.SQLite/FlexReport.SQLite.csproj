@@ -41,6 +41,7 @@
     <Compile Include="ConnectionStringParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLiteLink.cs" />
+    <EmbeddedResource Include=".gclicx" />
     <EmbeddedResource Include="Properties\FlexReport.SQLite.rd.xml" />
   </ItemGroup>
   <ItemGroup>

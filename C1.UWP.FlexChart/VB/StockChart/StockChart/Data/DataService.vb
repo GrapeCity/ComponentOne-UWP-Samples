@@ -63,7 +63,7 @@ Class DataService
         ' not in cache, get now
         Dim t = DateTime.Today
         Dim startDate = New DateTime(t.Year - 10, 1, 1)
-        Dim fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full"
+        Dim fmt = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={0}&apikey=IF6RVQ6S90CZZ7VJ&datatype=csv&outputsize=full"
         Dim url = String.Format(fmt, symbol)
 
         ' get content

@@ -145,7 +145,7 @@ Public Class ChartViewModel
     Public ReadOnly Property IndexDataSource() As QuoteData
         Get
             If _indexDataSource Is Nothing Then
-                _indexDataSource = DataService.Instance.GetSymbolData("INX")
+                _indexDataSource = DataService.Instance.GetSymbolData("SP")
             End If
             Return _indexDataSource
         End Get

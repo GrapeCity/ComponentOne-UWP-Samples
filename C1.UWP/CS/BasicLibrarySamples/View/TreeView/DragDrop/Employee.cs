@@ -41,5 +41,10 @@ namespace BasicLibrarySamples
         {
             return this.MemberwiseClone() as Employee;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

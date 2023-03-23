@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29609.76
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicLibrarySamples2015", "BasicLibrarySamples2015.csproj", "{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}"
 EndProject
@@ -48,6 +48,8 @@ Global
 		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.GCRelease|x86.Build.0 = Release|x86
 		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.GCRelease|x86.Deploy.0 = Release|x86
 		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.Release|Any CPU.ActiveCfg = Release|x86
+		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.Release|Any CPU.Build.0 = Release|x86
+		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.Release|Any CPU.Deploy.0 = Release|x86
 		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.Release|ARM.ActiveCfg = Release|ARM
 		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.Release|ARM.Build.0 = Release|ARM
 		{74296147-D4C8-4AC1-9DA8-8DBB89350ED2}.Release|ARM.Deploy.0 = Release|ARM
