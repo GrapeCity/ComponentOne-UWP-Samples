@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29609.76
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexGridSamples2015", "FlexGridSamples2015.csproj", "{9AF64A27-D887-4C89-B088-1220A82540D4}"
 EndProject
@@ -48,6 +48,8 @@ Global
 		{9AF64A27-D887-4C89-B088-1220A82540D4}.GCRelease|x86.Build.0 = Release|x86
 		{9AF64A27-D887-4C89-B088-1220A82540D4}.GCRelease|x86.Deploy.0 = Release|x86
 		{9AF64A27-D887-4C89-B088-1220A82540D4}.Release|Any CPU.ActiveCfg = Release|x86
+		{9AF64A27-D887-4C89-B088-1220A82540D4}.Release|Any CPU.Build.0 = Release|x86
+		{9AF64A27-D887-4C89-B088-1220A82540D4}.Release|Any CPU.Deploy.0 = Release|x86
 		{9AF64A27-D887-4C89-B088-1220A82540D4}.Release|ARM.ActiveCfg = Release|ARM
 		{9AF64A27-D887-4C89-B088-1220A82540D4}.Release|ARM.Build.0 = Release|ARM
 		{9AF64A27-D887-4C89-B088-1220A82540D4}.Release|ARM.Deploy.0 = Release|ARM
