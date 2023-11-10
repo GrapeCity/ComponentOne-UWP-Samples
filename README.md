@@ -2,7 +2,7 @@
 
 A complete suite of 60+ UI controls for the Universal Windows Platform.
 
-This repository contains the samples for [ComponentOne UWP Edition](https://www.grapecity.com/componentone/uwp-ui-controls). These samples provide complete implementation details for the UWP control features. They are also included with the full download and install from grapecity.com/componentone. 
+This repository contains the samples for [ComponentOne UWP Edition](https://developer.mescius.com/componentone/uwp-ui-controls). These samples provide complete implementation details for the UWP control features. They are also included with the full download and install from developer.mescius.com/componentone. 
 
 The samples reference, but do not include, the control packages. The control packages can be downloaded from nuget.org.
 
@@ -20,9 +20,9 @@ This will install any needed dependencies, build the project, and run the projec
  
 ## Resources
 
-* Product Details: https://www.grapecity.com/componentone/uwp-ui-controls
-* Documentation: https://www.grapecity.com/componentone/docs/uwp
-* Support Forum: https://www.grapecity.com/forums/uwp-edition
+* Product Details: https://developer.mescius.com/componentone/uwp-ui-controls
+* Documentation: https://developer.mescius.com/componentone/docs/uwp
+* Support Forum: https://developer.mescius.com/forums/uwp-edition
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dotnet/winforms/blob/master/LICENSE.TXT)
  
