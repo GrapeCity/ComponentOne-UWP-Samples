@@ -95,28 +95,28 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\en\c1logo.png" />
-    <Content Include="Assets\en\grapecity_150.png" />
     <Content Include="Assets\en\ico-Home.png" />
     <Content Include="Assets\en\Logo.png" />
     <Content Include="Assets\en\logo_Studio_UWP_0215.png" />
+    <Content Include="Assets\en\MESCIUS_Logo_Style-C_RGB.png" />
     <Content Include="Assets\en\SmallLogo.png" />
     <Content Include="Assets\en\SplashScreen.png" />
     <Content Include="Assets\en\StoreLogo.png" />
     <Content Include="Assets\en\uwpLogo_64.png" />
     <Content Include="Assets\ja\c1logo.png" />
-    <Content Include="Assets\ja\grapecity_150.png" />
     <Content Include="Assets\ja\ico-Home.png" />
     <Content Include="Assets\ja\Logo.png" />
     <Content Include="Assets\ja\logo_Studio_UWP_0215.png" />
+    <Content Include="Assets\ja\MESCIUS_Logo_Style-C_RGB.png" />
     <Content Include="Assets\ja\SmallLogo.png" />
     <Content Include="Assets\ja\SplashScreen.png" />
     <Content Include="Assets\ja\StoreLogo.png" />
     <Content Include="Assets\ja\uwpLogo_64.png" />
     <Content Include="Assets\ko\c1logo.png" />
-    <Content Include="Assets\ko\grapecity_150.png" />
     <Content Include="Assets\ko\ico-Home.png" />
     <Content Include="Assets\ko\Logo.png" />
     <Content Include="Assets\ko\logo_Studio_UWP_0215.png" />
+    <Content Include="Assets\ko\MESCIUS_Logo_Style-C_RGB.png" />
     <Content Include="Assets\ko\SmallLogo.png" />
     <Content Include="Assets\ko\SplashScreen.png" />
     <Content Include="Assets\ko\StoreLogo.png" />

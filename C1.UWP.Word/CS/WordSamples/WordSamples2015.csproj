@@ -126,7 +126,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BasicText.png" />
-    <Content Include="Assets\c1logo.png" />
     <Content Include="Assets\Graphics.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\MediumGray.png" />

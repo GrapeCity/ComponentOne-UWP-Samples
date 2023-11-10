@@ -32,9 +32,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Footer -->
-        <Image x:Name="logo" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="120 20" Grid.Row="2" Source="/Assets/c1logo.png" Width="200" Height="34"/>
-
         <!-- Horizontal scrolling grid used in most view states -->
         <GridView
             x:Name="itemGridView"

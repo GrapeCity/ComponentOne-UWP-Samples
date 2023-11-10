@@ -10,7 +10,7 @@ Imports System.Reflection
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("BitmapSamples")>
-<Assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

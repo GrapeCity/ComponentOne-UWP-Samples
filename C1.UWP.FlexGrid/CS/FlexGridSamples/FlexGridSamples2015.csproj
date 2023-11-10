@@ -79,7 +79,6 @@
     <None Include="FlexGridSamples2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\c1logo.png" />
     <Content Include="Assets\CellMerging.png" />
     <Content Include="Assets\CollectionView.png" />
     <Content Include="Assets\CustomColumns.png" />

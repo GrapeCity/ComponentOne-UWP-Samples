@@ -180,7 +180,7 @@ Designed for modern user interfaces and touch-first user experiences, the unique
     <value>Collapse All</value>
   </data>
   <data name="Copyright_Text" xml:space="preserve">
-    <value>© 2016 GrapeCity, Inc. All Rights Reserved.</value>
+    <value>© MESCIUS inc. All rights reserved.</value>
   </data>
   <data name="ExpandAll_Text" xml:space="preserve">
     <value>Expand All</value>
@@ -201,15 +201,15 @@ Designed for modern user interfaces and touch-first user experiences, the unique
     <value>Home</value>
   </data>
   <data name="About_Url" xml:space="preserve">
-    <value>https://www.grapecity.com/en/uwp</value>
+    <value>https://developer.mescius.com/uwp</value>
   </data>
   <data name="Pricing_Url" xml:space="preserve">
-    <value>https://www.grapecity.com/en/pricing</value>
+    <value>https://developer.mescius.com/pricing</value>
   </data>
   <data name="Support_Url" xml:space="preserve">
-    <value>https://www.grapecity.com/en/support/contact</value>
+    <value>https://developer.mescius.com/support/contact</value>
   </data>
   <data name="Trial_Url" xml:space="preserve">
-    <value>https://www.grapecity.com/en/download/ultimate</value>
+    <value>https://developer.mescius.com/download/ultimate</value>
   </data>
 </root>

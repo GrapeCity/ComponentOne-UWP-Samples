@@ -8,8 +8,8 @@ Imports System.Reflection
 <Assembly: AssemblyTitle("RichTextBoxSamples")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("GrapeCity, Inc.")>
-<Assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyProduct("RichTextBoxSamples")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>

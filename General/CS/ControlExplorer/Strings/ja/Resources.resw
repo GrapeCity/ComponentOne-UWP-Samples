@@ -180,7 +180,7 @@
     <value>すべて折りたたみ</value>
   </data>
   <data name="Copyright_Text" xml:space="preserve">
-    <value>© 2016 GrapeCity, Inc. All Rights Reserved.</value>
+    <value>© MESCIUS inc. All rights reserved.</value>
   </data>
   <data name="ExpandAll_Text" xml:space="preserve">
     <value>すべて展開</value>
@@ -201,15 +201,15 @@
     <value>ホーム</value>
   </data>
   <data name="About_Url" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/componentone/uwp</value>
+    <value>https://developer.mescius.jp/componentone/uwp</value>
   </data>
   <data name="Pricing_Url" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/purchase</value>
+    <value>https://developer.mescius.jp/purchase</value>
   </data>
   <data name="Support_Url" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/support</value>
+    <value>https://developer.mescius.jp/support</value>
   </data>
   <data name="Trial_Url" xml:space="preserve">
-    <value>https://www.grapecity.co.jp/developer/download</value>
+    <value>https://developer.mescius.jp/download</value>
   </data>
 </root>

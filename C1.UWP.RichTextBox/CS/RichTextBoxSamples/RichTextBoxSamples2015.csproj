@@ -121,7 +121,6 @@
     <None Include="RichTextBoxSamples2015_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\c1logo.png" />
     <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\LightGray.png" />
     <Content Include="Assets\Logo.png" />

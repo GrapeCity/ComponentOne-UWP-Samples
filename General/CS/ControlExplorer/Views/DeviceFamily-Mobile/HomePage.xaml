@@ -81,7 +81,6 @@
         </Grid.RowDefinitions>
         <Grid Margin="2 0">
             <Button x:Name="splitViewToggle" Style="{StaticResource SplitViewTogglePaneButtonStyle}" Visibility="Visible" Click="splitViewToggle_Click" />
-            <Image x:Name="logo" HorizontalAlignment="Right" Source="/Assets/c1logo.png" Height="50" />
         </Grid>
         <SplitView x:Name="splitter" IsPaneOpen="False" DisplayMode="Overlay" Grid.Row="1" Margin="0 5 0 0">
             <SplitView.Pane>
@@ -118,10 +117,10 @@
                     </Grid.RowDefinitions>
                     <StackPanel Margin="12 0" Background="{Binding ElementName=tree, Path=Background}">
                         <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Home_Text}" Click="homeButton_Click" />
-                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=About_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/uwp" Grid.Column="3" />
-                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Support_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/support/contact"/>
-                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Pricing_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/pricing" />
-                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=FreeTrial_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://www.grapecity.com/en/download/ultimate" />
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=About_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://developer.mescius.com/uwp" Grid.Column="3" />
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Support_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://developer.mescius.com/support/contact"/>
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Pricing_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://developer.mescius.com/pricing" />
+                        <HyperlinkButton Content="{Binding Source={StaticResource ControlExplorerLocalization}, Path=FreeTrial_Text}" Command="{Binding NavigationHelper.NavigateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" Tag="https://developer.mescius.com/download/ultimate" />
                     </StackPanel>
                     <Xaml:C1TreeView x:Name="tree" Grid.Row="1" ItemTemplate="{StaticResource GroupTemplate}" ItemsSource="{Binding Source={StaticResource groupViewSource}}" SelectionMode="None" ItemClick="tree_ItemClick"/>
                 </Grid>

@@ -125,7 +125,6 @@
     <Content Include="Assets\BadgeLogo.scale-150.png" />
     <Content Include="Assets\BadgeLogo.scale-200.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
-    <Content Include="Assets\c1logo.png" />
     <Content Include="Assets\clear.png" />
     <Content Include="Assets\flexgrid.png" />
     <Content Include="Assets\flexgrid_columns.png" />

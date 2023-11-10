@@ -159,7 +159,7 @@ In addition to binding, this sample shows the effect of the interpolateNulls and
     <value>SuspensionManager failed.</value>
   </data>
   <data name="FlexChart_Footer" xml:space="preserve">
-    <value>copyright (c) ComponentOne</value>
+    <value></value>
   </data>
   <data name="FlexChart_Header" xml:space="preserve">
     <value>Monthly Sales Summary</value>

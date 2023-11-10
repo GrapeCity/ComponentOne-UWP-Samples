@@ -293,7 +293,7 @@ The tooltip content is generated using a template that may contain the following
     <value>Legend:</value>
   </data>
   <data name="Footer" xml:space="preserve">
-    <value>copyright © GrapeCity, inc.</value>
+    <value></value>
   </data>
   <data name="Header" xml:space="preserve">
     <value>Sample Chart</value>

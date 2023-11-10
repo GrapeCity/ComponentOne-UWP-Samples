@@ -259,7 +259,7 @@
     <value>Web Url</value>
   </data>
   <data name="UrlInitialValue" xml:space="preserve">
-    <value>https://www.grapecity.com/en/componentone</value>
+    <value>https://developer.mescius.com/componentone</value>
   </data>
   <data name="UrlMark" xml:space="preserve">
     <value>Url</value>
@@ -373,7 +373,7 @@
     <value>Developer</value>
   </data>
   <data name="VcardWebsiteCaptionValue" xml:space="preserve">
-    <value>Website(https://www.grapecity.com/en/componentone)</value>
+    <value>Website(https://developer.mescius.com/componentone)</value>
   </data>
   <data name="BarcodeText_Text" xml:space="preserve">
     <value>Data:</value>

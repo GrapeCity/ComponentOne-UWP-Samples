@@ -129,7 +129,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\c1logo.png" />
     <Content Include="Assets\uwpLogo_64.png" />
     <Content Include="Common\ReadMe.txt" />
   </ItemGroup>

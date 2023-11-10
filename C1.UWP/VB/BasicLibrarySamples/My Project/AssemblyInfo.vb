@@ -8,9 +8,9 @@ Imports System.Reflection
 <Assembly: AssemblyTitle("BasicLibrarySamples")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("GrapeCity, Inc.")>
+<Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("BasicLibrarySamples")>
-<Assembly: AssemblyCopyright("(c) GrapeCity, Inc..  All rights reserved.")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

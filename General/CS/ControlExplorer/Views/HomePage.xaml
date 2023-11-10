@@ -154,7 +154,7 @@
                 <RowDefinition Height="Auto" />
                 <!--<RowDefinition Height="Auto" />-->
             </Grid.RowDefinitions>
-            <Image Source="ms-appx:///Assets/grapecity_150.png" Stretch="None" HorizontalAlignment="Left"/>
+            <Image Source="ms-appx:///Assets/MESCIUS_Logo_Style-C_RGB.png" Width="150" Stretch="Fill" HorizontalAlignment="Left"/>
             <!--<TextBlock FontSize="8" FontWeight="Bold" HorizontalAlignment="Left" TextWrapping="Wrap" Grid.Row="1">
                 <TextBlock.Inlines>
                     <Run Text="{Binding Source={StaticResource ControlExplorerLocalization}, Path=Copyright_Text}" />
